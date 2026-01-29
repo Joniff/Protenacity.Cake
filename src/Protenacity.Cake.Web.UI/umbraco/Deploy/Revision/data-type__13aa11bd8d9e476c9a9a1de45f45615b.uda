@@ -1,0 +1,24 @@
+{
+  "Name": "Editor Html Code",
+  "EditorAlias": "Umbraco.Plain.String",
+  "EditorUiAlias": "Umb.PropertyEditorUi.CodeEditor",
+  "Configuration": {
+    "language": [
+      "html"
+    ],
+    "height": 400,
+    "lineNumbers": true,
+    "minimap": true,
+    "wordWrap": false
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/13aa11bd8d9e476c9a9a1de45f45615b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

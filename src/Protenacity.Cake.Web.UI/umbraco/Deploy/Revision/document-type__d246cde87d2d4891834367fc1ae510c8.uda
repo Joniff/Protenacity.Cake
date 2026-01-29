@@ -1,0 +1,41 @@
+{
+  "Name": "Form Settings",
+  "Alias": "editorFormPrimarySettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-light-blue",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/5ef40db9639f4897bca09054f351f4ce",
+  "CompositionContentTypes": [
+    "umb://document-type/53d466e9ec7a44f2918d0575d2101be6",
+    "umb://document-type/730f3e12c4774c9cb4b868f3a9aaab69",
+    "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/d246cde87d2d4891834367fc1ae510c8",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/5ef40db9639f4897bca09054f351f4ce",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/53d466e9ec7a44f2918d0575d2101be6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/730f3e12c4774c9cb4b868f3a9aaab69",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

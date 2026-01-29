@@ -1,0 +1,28 @@
+{
+  "Name": "Cookie Consent Google Tag Manager Services",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Dropdown",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": true,
+    "items": [
+      "Ad Storage",
+      "Ad User Data",
+      "Ad Personalization",
+      "Analytics Storage",
+      "Functionality Storage",
+      "Personization Storage",
+      "Security Storage"
+    ]
+  },
+  "Parent": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+  "Udi": "umb://data-type/dc237a2a0d1e4e468f37d2e35aaa907e",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

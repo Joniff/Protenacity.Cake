@@ -1,0 +1,21 @@
+﻿@model Tuple<bool, IEnumerable<IEditorContent>>
+
+@foreach (var content in Model.Item2)
+{
+    <section class="mb-4 anchor" id="@(content.Id)" role="landmark" aria-labelledby="@(content.Id)-h2">
+        <theme class="expand-background" subtheme="(content.Block?.Settings as IEditorBackgroundSettings)?.SubthemeTyped" shade="(content.Block?.Settings as IEditorBackgroundSettings)?.ThemeShadeTyped" class="p-3" override="(content.Block?.Settings as IEditorBackgroundSettings)?.OverrideColor">
+            @if (Model.Item1)
+            {
+                @:<div class="container">
+            }
+
+            @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.Section.SectionViewComponent.Name, content))
+
+            @if (Model.Item1)
+            {
+                @:</div>
+            }
+
+        </theme>
+    </section>
+}

@@ -1,0 +1,138 @@
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-underline-position: under;
+    text-underline-offset: 0.080rem;
+    color: unset;
+    text-decoration: underline;
+}
+
+.toggle-site-search[aria-expanded="true"] #showSiteSearch {
+    display: none;
+}
+.toggle-site-search[aria-expanded="false"] #hideSiteSearch {
+    display: none;
+}
+.p-nomargin p {
+    margin: 0;
+    margin-block: 0;
+    margin-inline: 0;
+    padding: 0;
+    padding-block: 0;
+    padding-inline: 0;
+}
+
+.not-collapse.collapse:not(.show) {
+    display: inline;
+}
+
+.not-collapse.show, .not-collapse.collapsing {
+    display: none;
+}
+
+/*
+.nav-tabs > .nav-link:not(.active) {
+    border-bottom: solid 2px gray;
+}
+.nav-tabs > .nav-link.active {
+    border-left: solid 2px gray;
+    border-top: solid 2px gray;
+    border-right: solid 2px gray;
+}
+*/
+
+.nav-tabs.tabs-top > .nav-link.active {
+    border-bottom: solid 2px gray;
+    border-radius: unset;
+}
+
+.nav-tabs.tabs-left > .nav-link.active {
+    border-right: solid 2px gray;
+    border-radius: unset;
+}
+
+.nav-tabs.tabs-bottom > .nav-link.active {
+    border-top: solid 2px gray;
+    border-radius: unset;
+}
+
+.nav-tabs.tabs-right > .nav-link.active {
+    border-left: solid 2px gray;
+    border-radius: unset;
+}
+
+.expand-background {
+    margin: -0.5rem;
+    padding: 0.5rem;
+}
+
+.expand-background:before {
+}
+
+.text-white a.nav-link {
+    color: white;
+}
+
+.text-black a.nav-link {
+    color: black;
+}
+
+.text-white .breadcrumb-item a, .text-white .breadcrumb-item.active, .text-white .breadcrumb-item::before {
+    color: white;
+}
+
+.text-black .breadcrumb-item a, .text-black .breadcrumb-item.active a, .text-black .breadcrumb-item::before {
+    color: black;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.glide__arrow, .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+    opacity: 25%;
+}
+
+.carousel-caption {
+    left: 0;
+    right: 0;
+}
+
+@media (min-width:768px) {
+    .hero-banner .carousel-caption {
+        left: 15%;
+        right: 15%;
+    }
+}
+.text-wordwrap-indent {
+    text-indent: -0.5em;
+    padding-left: 0.5em;
+}
+
+h1.promote-page-title {
+    font-size:300%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+ 
+.card-img-left {
+    border-top-left-radius: var(--bs-card-inner-border-radius);
+    border-bottom-left-radius: var(--bs-card-inner-border-radius);
+}
+ 
+.card-img-right {
+    border-top-right-radius: var(--bs-card-inner-border-radius);
+    border-bottom-right-radius: var(--bs-card-inner-border-radius);
+}
+
+.breadcrumb {
+    margin-bottom:0;
+}
+
+.limit-dropdown {
+    max-height: 30rem;
+    overflow-y: scroll;
+}

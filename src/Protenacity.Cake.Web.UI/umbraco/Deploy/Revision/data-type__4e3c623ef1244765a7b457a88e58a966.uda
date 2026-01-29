@@ -1,0 +1,32 @@
+{
+  "Name": "Domain Meta Tags",
+  "EditorAlias": "Umbraco.BlockList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "1cbc9930-6eae-4405-adf7-c66504a8ceb3",
+        "label": "{% named }",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": true,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Parent": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+  "Udi": "umb://data-type/4e3c623ef1244765a7b457a88e58a966",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/1cbc99306eae4405adf7c66504a8ceb3"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

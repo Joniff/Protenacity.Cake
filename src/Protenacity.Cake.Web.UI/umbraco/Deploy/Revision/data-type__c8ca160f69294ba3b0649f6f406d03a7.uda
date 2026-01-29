@@ -1,0 +1,24 @@
+{
+  "Name": "Editor Subtheme Picker",
+  "EditorAlias": "Umbraco.RadioButtonList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.RadioButtonList",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "items": [
+      "Inherit",
+      "Primary",
+      "Secondary",
+      "Tertiary"
+    ]
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/c8ca160f69294ba3b0649f6f406d03a7",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

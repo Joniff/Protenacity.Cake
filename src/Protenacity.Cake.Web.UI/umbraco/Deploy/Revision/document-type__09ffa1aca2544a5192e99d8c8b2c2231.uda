@@ -1,0 +1,41 @@
+{
+  "Name": "Full Size Video Settings",
+  "Alias": "editorVideoPrimarySettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-pink",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/48144a7fe68442498b35cac628e359b1",
+  "CompositionContentTypes": [
+    "umb://document-type/0451ff3d4840454f99fcf79ff231786d",
+    "umb://document-type/53d466e9ec7a44f2918d0575d2101be6",
+    "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/09ffa1aca2544a5192e99d8c8b2c2231",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/48144a7fe68442498b35cac628e359b1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/0451ff3d4840454f99fcf79ff231786d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/53d466e9ec7a44f2918d0575d2101be6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

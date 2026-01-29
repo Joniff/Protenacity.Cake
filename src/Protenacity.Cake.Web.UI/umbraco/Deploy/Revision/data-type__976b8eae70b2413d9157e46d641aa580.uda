@@ -1,0 +1,253 @@
+{
+  "Name": "Editor Contents List",
+  "EditorAlias": "Umbraco.BlockList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "backgroundColor": "#f4cccc",
+        "iconColor": "#660000",
+        "contentElementTypeKey": "ddc6ed43-5815-4f58-a925-2f455ec37331",
+        "settingsElementTypeKey": "578ea88f-577b-4dec-98bb-bccbb961092d",
+        "label": "Text: {% text | strip-html | truncate:20:\u2026}",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "backgroundColor": "#bcbcbc",
+        "iconColor": "#444444",
+        "contentElementTypeKey": "b21e635e-eaec-41c4-911e-3f4b0d228b8c",
+        "settingsElementTypeKey": "384ded8e-0d66-4e5f-844f-58d63e0f47cd",
+        "label": "Images: {% images[0].name}",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "backgroundColor": "#f6b26b",
+        "iconColor": "#b45f06",
+        "contentElementTypeKey": "1a447faf-085b-49a9-be40-0d0f66d9e23b",
+        "settingsElementTypeKey": "f09cdf0d-01c6-47bf-ad6b-4fffe573b57c",
+        "label": "Video {% header}",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "backgroundColor": "#fff2cc",
+        "iconColor": "#7f6000",
+        "contentElementTypeKey": "105a7e47-f799-4969-9e0e-2914050cb5d5",
+        "settingsElementTypeKey": "28f582a5-f4bd-45c4-9c33-ee78977565c6",
+        "label": "Card: {% header}",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "43568e89-0812-4c65-8584-76c4618286fd",
+        "label": "Opening Times: {% header }",
+        "editorSize": "large",
+        "settingsElementTypeKey": "d5554606-8d6d-45d1-819b-449a3915e91a",
+        "backgroundColor": "#f5b7b1",
+        "forceHideContentEditorInOverlay": false,
+        "iconColor": "#943126"
+      },
+      {
+        "backgroundColor": "#d9d2e9",
+        "iconColor": "#20124d",
+        "contentElementTypeKey": "c34f79bb-ca79-40a2-ad47-7bbdec24ae07",
+        "settingsElementTypeKey": "e2a1e522-68a7-4b39-9bd6-c9de1383d9d6",
+        "label": "Table: {% source.name }",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "8a07d629-eeac-45de-be87-77de4a7a3241",
+        "label": "{% header }",
+        "editorSize": "large",
+        "settingsElementTypeKey": "1fd543ab-c64e-47ae-b347-25fc2cf861d8",
+        "backgroundColor": "#a3e4d7",
+        "iconColor": "#117864",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "bf80d0b0-c726-4f75-89ea-92b24a209261",
+        "label": "Map",
+        "settingsElementTypeKey": "bfe5180f-2d1f-495f-bdf1-5ce8467774fc",
+        "backgroundColor": "#d9f4cc",
+        "iconColor": "#226600"
+      },
+      {
+        "backgroundColor": "#660000",
+        "iconColor": "#f4cccc",
+        "contentElementTypeKey": "a7d6bfa0-76ad-477c-b8be-a936c05eface",
+        "settingsElementTypeKey": "05c5e544-b88c-497f-975c-60d95b83bd77",
+        "label": "Web Pages",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "backgroundColor": "#783f04",
+        "iconColor": "#fce5cd",
+        "contentElementTypeKey": "cb3a1ebe-2a6e-458a-8fcd-d60b55b5f5f6",
+        "settingsElementTypeKey": "5896bb7c-40fe-4d63-8709-b6da109cc24d",
+        "label": "Children Web Pages",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "backgroundColor": "#351c75",
+        "iconColor": "#b4a7d6",
+        "contentElementTypeKey": "1b640ac6-7d39-40a9-99e3-bc1a78cd5f7f",
+        "settingsElementTypeKey": "f1e9424a-1d32-44e4-8ded-23259205ec36",
+        "label": "Media Items",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "f93a1640-e87e-48cd-adef-427daaf9d561",
+        "backgroundColor": "#636107",
+        "iconColor": "#c9bba2",
+        "label": "Download Media Items",
+        "editorSize": "large"
+      },
+      {
+        "contentElementTypeKey": "f3a7ab0b-0f81-4dd1-8480-ba2c28eb2fd0",
+        "label": "Form Entries",
+        "editorSize": "large",
+        "settingsElementTypeKey": "f93d3439-d1bc-4c72-9161-b650fc977ef3",
+        "backgroundColor": "#000066",
+        "iconColor": "#ccccf4"
+      },
+      {
+        "contentElementTypeKey": "97ad8159-f8d3-47ae-af1c-7ff6851d58d7",
+        "editorSize": "large",
+        "settingsElementTypeKey": "7965d374-4a29-4484-bc07-8aa8ead0e4c3",
+        "backgroundColor": "#006600",
+        "iconColor": "#ccf4cc",
+        "label": "Rss Feed"
+      },
+      {
+        "contentElementTypeKey": "982be7b6-3450-41d3-943d-076ac53eabe2",
+        "settingsElementTypeKey": "e3ccd0c8-b923-4c5b-aaeb-f8c445b63a0b",
+        "backgroundColor": "#003300",
+        "iconColor": "#ccf4cc",
+        "label": "Categories",
+        "editorSize": "large"
+      },
+      {
+        "backgroundColor": "#990000",
+        "iconColor": "#ea9999",
+        "contentElementTypeKey": "54b71d5f-1062-479c-87c5-e1aef9c78b34",
+        "settingsElementTypeKey": "a196d96c-b789-4fa8-83e0-59f17f56b1da",
+        "label": "Script: {=code | strip-html | truncate:20:\u2026}",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/976b8eae70b2413d9157e46d641aa580",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/05c5e544b88c497f975c60d95b83bd77"
+    },
+    {
+      "Udi": "umb://document-type/105a7e47f79949699e0e2914050cb5d5"
+    },
+    {
+      "Udi": "umb://document-type/1a447faf085b49a9be400d0f66d9e23b"
+    },
+    {
+      "Udi": "umb://document-type/1b640ac67d3940a999e3bc1a78cd5f7f"
+    },
+    {
+      "Udi": "umb://document-type/1fd543abc64e47aeb34725fc2cf861d8"
+    },
+    {
+      "Udi": "umb://document-type/28f582a5f4bd45c49c33ee78977565c6"
+    },
+    {
+      "Udi": "umb://document-type/384ded8e0d664e5f844f58d63e0f47cd"
+    },
+    {
+      "Udi": "umb://document-type/43568e8908124c65858476c4618286fd"
+    },
+    {
+      "Udi": "umb://document-type/54b71d5f1062479c87c5e1aef9c78b34"
+    },
+    {
+      "Udi": "umb://document-type/578ea88f577b4dec98bbbccbb961092d"
+    },
+    {
+      "Udi": "umb://document-type/5896bb7c40fe4d638709b6da109cc24d"
+    },
+    {
+      "Udi": "umb://document-type/7965d3744a294484bc078aa8ead0e4c3"
+    },
+    {
+      "Udi": "umb://document-type/8a07d629eeac45debe8777de4a7a3241"
+    },
+    {
+      "Udi": "umb://document-type/97ad8159f8d347aeaf1c7ff6851d58d7"
+    },
+    {
+      "Udi": "umb://document-type/982be7b6345041d3943d076ac53eabe2"
+    },
+    {
+      "Udi": "umb://document-type/a196d96cb7894fa883e059f17f56b1da"
+    },
+    {
+      "Udi": "umb://document-type/a7d6bfa076ad477cb8bea936c05eface"
+    },
+    {
+      "Udi": "umb://document-type/b21e635eeaec41c4911e3f4b0d228b8c"
+    },
+    {
+      "Udi": "umb://document-type/bf80d0b0c7264f7589ea92b24a209261"
+    },
+    {
+      "Udi": "umb://document-type/bfe5180f2d1f495fbdf15ce8467774fc"
+    },
+    {
+      "Udi": "umb://document-type/c34f79bbca7940a2ad477bbdec24ae07"
+    },
+    {
+      "Udi": "umb://document-type/cb3a1ebe2a6e458a8fcdd60b55b5f5f6"
+    },
+    {
+      "Udi": "umb://document-type/d55546068d6d45d1819b449a3915e91a"
+    },
+    {
+      "Udi": "umb://document-type/ddc6ed4358154f58a9252f455ec37331"
+    },
+    {
+      "Udi": "umb://document-type/e2a1e52268a74b399bd6c9de1383d9d6"
+    },
+    {
+      "Udi": "umb://document-type/e3ccd0c8b9234c5baaebf8c445b63a0b"
+    },
+    {
+      "Udi": "umb://document-type/f09cdf0d01c647bfad6b4fffe573b57c"
+    },
+    {
+      "Udi": "umb://document-type/f1e9424a1d3244e48ded23259205ec36"
+    },
+    {
+      "Udi": "umb://document-type/f3a7ab0b0f814dd18480ba2c28eb2fd0"
+    },
+    {
+      "Udi": "umb://document-type/f93a1640e87e48cdadef427daaf9d561"
+    },
+    {
+      "Udi": "umb://document-type/f93d3439d1bc4c729161b650fc977ef3"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

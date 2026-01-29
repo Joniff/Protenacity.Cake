@@ -1,0 +1,74 @@
+{
+  "Name": "Cookie",
+  "Alias": "cookieConsentCookie",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-birthday-cake color-lime",
+  "Thumbnail": "folder.png",
+  "Description": "Cookie stored in a browser",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "d6602ca7-8d42-4bc9-b4e4-62aaac43dca1",
+      "Name": "Contents",
+      "Type": 1,
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "53834124-aa06-4cb9-b09e-fa972348a383",
+          "Alias": "cookieDescription",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Description of this cookie and why it exists and/or what it does",
+          "Name": "Description",
+          "SortOrder": 3
+        },
+        {
+          "Key": "84d1bd31-d2cd-4584-ad20-3f56accbf1b2",
+          "Alias": "cookieName",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Name of Cookie",
+          "Name": "Name"
+        },
+        {
+          "Key": "c7739483-7660-40d9-bfba-b2b99f10087b",
+          "Alias": "cookieExpiration",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "How long, in length of time, does this cookie stay on a visitor\u0027s browser. eg. 1 Day, 1 Month, 10 Years",
+          "Name": "Expiration",
+          "SortOrder": 2
+        },
+        {
+          "Key": "ec825005-e214-4298-9bda-d53706fdb7c4",
+          "Alias": "cookieDomain",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Url Host of cookie",
+          "Name": "Domain",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/fa8af8936d5447949938db592c148391",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

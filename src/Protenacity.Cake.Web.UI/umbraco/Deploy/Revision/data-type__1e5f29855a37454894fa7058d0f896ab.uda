@@ -1,0 +1,26 @@
+{
+  "Name": "Editor Video Ratio",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Dropdown",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      "21:9 (2650x1080 or 3440x1440)",
+      "16:9 (1280x720 or 1920x1080)",
+      "4:3 (640x480)",
+      "1:1 (1024x1024)"
+    ],
+    "umbMigrationV14": "2025-04-01T10:00:43.1259597\u002B00:00"
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/1e5f29855a37454894fa7058d0f896ab",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

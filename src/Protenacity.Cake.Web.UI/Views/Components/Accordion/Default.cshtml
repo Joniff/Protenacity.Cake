@@ -1,0 +1,25 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Accordion.AccordionViewModel
+
+<div class="accordion" id="@Model.Id">
+    <div class="accordion-item">
+        @foreach (var panel in Model.Panels)
+        {
+            <h2 class="accordion-header" id="@(Model.Id)-@(panel.Item2.Index)-header">
+                <button class="accordion-button @(panel.Item1 ? null : "collapsed")" type="button" data-bs-toggle="collapse" data-bs-target="#@(Model.Id)-@(panel.Item2.Index)-panel" aria-expanded="@(panel.Item1 ? "true" : "false")" aria-controls="@(Model.Id)-@(panel.Item2.Index)-panel">
+                    <span>
+                        @if (!string.IsNullOrWhiteSpace((panel.Item2.Block?.Content as IEditorPanelName)?.PanelIcon))
+                        {
+                            @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.NamedIcon.NamedIconViewComponent.Name, (panel.Item2.Block.Content as IEditorPanelName)?.PanelIconTyped))
+                        }
+                        @Html.Raw(@panel.Item2.Header?.ToHeader())
+                    </span>
+                </button>
+            </h2>
+            <div id="@(Model.Id)-@(panel.Item2.Index)-panel" class="accordion-collapse collapse @(panel.Item1 ? "show" : null)" aria-labelledby="@(Model.Id)-@(panel.Item2.Index)-header" data-bs-parent="@(Model.InitialStates != EditorAccordionInitialStates.AllPanelsExpanded ? "#@Model.Id" : null)">
+                <div class="accordion-body">
+                    @(await Component.InvokeAsync(panel.Item2.EditorComponent, panel.Item2))
+                </div>
+            </div>
+        }
+    </div>
+</div>

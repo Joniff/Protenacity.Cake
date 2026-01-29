@@ -1,0 +1,84 @@
+{
+  "Name": "Sub Table Settings",
+  "Alias": "editorTableEmbeddedSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-pink",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/690556d68e2e4b409476cdade9eca12e",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "bfc395f6-109e-41df-9931-c3ba4cc8f3f8",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "128450ed-4437-42fc-9747-682635ff35b2",
+          "Alias": "alternateBackgroundColumns",
+          "DataType": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+          "Description": "Colour to use for background of every even numbered column",
+          "Name": "Alternate Background Columns",
+          "SortOrder": 3
+        },
+        {
+          "Key": "3133439c-64ab-41ea-b79f-431f840a742e",
+          "Alias": "firstRowIsHeader",
+          "DataType": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+          "Description": "If the first row is a header, then will highlight top row",
+          "Name": "First row is Header"
+        },
+        {
+          "Key": "b6c068a2-198f-4e3f-bb7a-8a64f4b4e759",
+          "Alias": "pageSize",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "Maximum number of rows to display.\n0 = unlimited",
+          "Name": "Page Size",
+          "SortOrder": 4
+        },
+        {
+          "Key": "ec525eba-b1af-43c4-bb84-ce03b3285e5b",
+          "Alias": "firstColumnIsHeader",
+          "DataType": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+          "Description": "If the first column is a header, then will highlight first column",
+          "Name": "First column is Header ",
+          "SortOrder": 1
+        },
+        {
+          "Key": "f7b67ec2-6eda-490a-bbf8-276a835040ad",
+          "Alias": "alternateBackgroundRows",
+          "DataType": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+          "Description": "Color to use for background of every even row",
+          "Name": "Alternate Background Rows",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c3192391128a4ba1ba0ffe0280f23d49",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/690556d68e2e4b409476cdade9eca12e",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

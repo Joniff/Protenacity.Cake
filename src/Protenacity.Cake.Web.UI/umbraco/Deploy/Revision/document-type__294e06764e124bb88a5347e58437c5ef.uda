@@ -1,0 +1,56 @@
+{
+  "Name": "Rss Feeds Data",
+  "Alias": "rssFeedsData",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-folder color-grey",
+  "Thumbnail": "folder.png",
+  "Description": "Folder of Rss Feeds",
+  "Permissions": {
+    "AllowedChildContentTypes": [
+      "umb://document-type/f9d05ee3a30048b496268736ccf62f19"
+    ]
+  },
+  "ListView": "c0808dd3-8133-4e4b-8ce8-e2bea84a96a4",
+  "Parent": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "4fec554b-5b1c-4628-b58d-29cb87d5433c",
+      "Name": "Contents",
+      "Type": 1,
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "2525eadd-a6f4-4557-8f4d-71b515ea867a",
+          "Alias": "label",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "Collection of Rss Feeds",
+          "Name": "_"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/294e06764e124bb88a5347e58437c5ef",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/c0808dd381334e4b8ce8e2bea84a96a4",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/f9d05ee3a30048b496268736ccf62f19",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

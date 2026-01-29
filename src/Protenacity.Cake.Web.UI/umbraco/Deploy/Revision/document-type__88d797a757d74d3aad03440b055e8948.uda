@@ -1,0 +1,61 @@
+{
+  "Name": "Search Settings",
+  "Alias": "editorSearchPrimarySettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-blue",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/50586f69f00642889c4898b5d8d9f788",
+  "CompositionContentTypes": [
+    "umb://document-type/78c14bc3517e4c3e81ed596070bf9b33",
+    "umb://document-type/97e21745dec5451a82f03be21b0a8639",
+    "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "1973d903-93ca-4feb-8260-fda47c704868",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "1e26ed11-6670-437c-a31c-ef563b53b775",
+          "Alias": "resultOutput",
+          "DataType": "umb://data-type/edc5c51ad4074ac6a602146589a5baa5",
+          "Description": "Highlight = Show searched criteria as highlighted text in results.\nAbstract = Show Abstract or if blank, Description, from Seo tab.",
+          "Name": "Result Output",
+          "SortOrder": 1001
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/88d797a757d74d3aad03440b055e8948",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/edc5c51ad4074ac6a602146589a5baa5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/50586f69f00642889c4898b5d8d9f788",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/78c14bc3517e4c3e81ed596070bf9b33",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/97e21745dec5451a82f03be21b0a8639",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

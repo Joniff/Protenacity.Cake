@@ -1,0 +1,23 @@
+{
+  "Name": "Aside Offset",
+  "EditorAlias": "Umbraco.Slider",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Slider",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "minVal": 1,
+    "maxVal": 5,
+    "initVal1": 1,
+    "initVal2": 0,
+    "step": 1
+  },
+  "Parent": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+  "Udi": "umb://data-type/2450a8a0dfeb45d5b0a2d8f26fc1e436",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,32 @@
+{
+  "Name": "Script Panel Settings",
+  "Alias": "editorScriptPanelSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-indigo",
+  "Thumbnail": "folder.png",
+  "Description": "Settings for script",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/ab5e472e28104835bd2868c2e912ff5f",
+  "CompositionContentTypes": [
+    "umb://document-type/a196d96cb7894fa883e059f17f56b1da"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/80fca2cbf68e447b99b0235a242575c7",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/ab5e472e28104835bd2868c2e912ff5f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/a196d96cb7894fa883e059f17f56b1da",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

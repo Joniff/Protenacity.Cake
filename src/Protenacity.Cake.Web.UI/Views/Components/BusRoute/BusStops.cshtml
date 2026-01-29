@@ -1,0 +1,30 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.BusRoute.BusRouteViewModel
+
+<div class="w-100">
+    <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="w-100">
+        <calcite-shell>
+            <arcgis-map item-id="457fb3cd9857408eb3b37c004fdf2ea0" 
+                class="bus-stop-map" 
+                data-extent="@(Html.Raw(HttpUtility.HtmlEncode(JsonSerializer.Serialize(Model.Extent?.Extent))))" 
+                data-ratio="@(Model.Ratio)" 
+                data-results="@(Html.Raw(HttpUtility.HtmlEncode(JsonSerializer.Serialize(Model.Result))))"
+                data-locality="@Model.LocalityUrl"
+                data-postcode="@Model.PostcodeUrl"
+                data-address="@Model.AddressUrl"
+                data-busstop="@Model.BusStopUrl"
+                style="width:100px;height:100px">
+
+                <arcgis-zoom position="bottom-right"></arcgis-zoom>
+                @if (Model.ShowSearch) 
+                {
+                    <arcgis-search position="top-right"></arcgis-search>
+                }
+                <arcgis-legend position="bottom-left"></arcgis-legend>
+
+            </arcgis-map>
+        </calcite-shell>
+        <calcite-loader></calcite-loader>
+
+        <script type="module" src="/script/arcgis/arcgis.js"></script>
+    </theme>
+</div>

@@ -1,0 +1,22 @@
+{
+  "Name": "Editor Text Color",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Dropdown",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "items": [
+      "Default",
+      "Alternate"
+    ]
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/dd519066a7b648349a00a09bc10ab580",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

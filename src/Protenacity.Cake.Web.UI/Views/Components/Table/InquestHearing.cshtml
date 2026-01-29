@@ -1,0 +1,83 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Table.TableCoronerViewModel<Protenacity.Cake.Web.Presentation.Coroner.ICoronerInquestHearing>
+
+@if (Model.Rows.Any())
+{
+    <vc:paging render="@PageRenders.SearchBox" model="Model"></vc:paging>
+
+    <div id="@Model.Id" class="table-responsive">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>
+                        Date and time
+                    </th>
+                    <th>
+                        Location of hearing
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Age
+                    </th>
+                    <th>
+                        Residence
+                    </th>
+                    <th>
+                        Length of hearing
+                    </th>
+                    <th>
+                        Hearing type
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var row in Model.Rows.Select((Row,Index) => (Row,Index)))
+                {
+                    var style = (!string.IsNullOrWhiteSpace(Model.AlternateBackgroundRows) && row.Index % 2 == 0 ? "background-color:" + Model.AlternateBackgroundRows : null);
+                    var style2 = style == null && !string.IsNullOrWhiteSpace(Model.AlternateBackgroundColumns) ? "background-color:" + Model.AlternateBackgroundColumns : style;
+                    <tr>
+                        @if (Model.FirstColumnIsHeader)
+                        {
+                            <th>
+                                @Html.Raw(row.Row.ListingDate.ToString(Model.CustomDateFormat + " " + Model.CustomTimeFormat))
+                            </th>
+                        }
+                        else
+                        {
+                            <td style="@style2">
+                                @Html.Raw(row.Row.ListingDate.ToString(Model.CustomDateFormat + " " + Model.CustomTimeFormat))
+                            </td>
+                        }
+                        <td style="@style">
+                            @Html.Raw(row.Row.Location?.Replace(" ", "&nbsp;").Replace("\r", "").Replace("\n", ", "))
+                        </td>
+                        <td style="@style2">
+                            @row.Row.Fullname
+                        </td>
+                        <td style="@style">
+                            @row.Row.Age
+                        </td>
+                        <td style="@style2">
+                            @row.Row.Residence
+                        </td>
+                        <td style="@style">
+                            @row.Row.LengthOfHearing
+                        </td>
+                        <td style="@style2">
+                            @row.Row.HearingType
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <vc:paging render="@PageRenders.Paging" model="Model"></vc:paging>
+}
+else
+{
+    <p>No Inquest Hearings</p>
+}
+

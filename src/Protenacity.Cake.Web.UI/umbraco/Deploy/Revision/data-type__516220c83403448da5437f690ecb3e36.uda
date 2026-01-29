@@ -1,0 +1,24 @@
+{
+  "Name": "Editor Opacity",
+  "EditorAlias": "Umbraco.Slider",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Slider",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "minVal": -10,
+    "maxVal": 10,
+    "initVal1": 0,
+    "initVal2": 0,
+    "step": 1,
+    "enableRange": false
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/516220c83403448da5437f690ecb3e36",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

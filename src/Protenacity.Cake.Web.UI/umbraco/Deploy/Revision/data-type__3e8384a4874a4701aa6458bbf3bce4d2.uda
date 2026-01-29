@@ -1,0 +1,51 @@
+{
+  "Name": "Global Coroner Picker",
+  "EditorAlias": "Umbraco.MultiNodeTreePicker",
+  "EditorUiAlias": "Umb.PropertyEditorUi.ContentPicker",
+  "Configuration": {
+    "minNumber": 0,
+    "maxNumber": 1,
+    "filter": "28449bcf-8baa-4bba-bad9-217c1d93d592,d76de89c-6aa9-43ff-86f6-40303b9ae1aa",
+    "startNode": {
+      "type": "content",
+      "dynamicRoot": {
+        "originAlias": "Root",
+        "querySteps": [
+          {
+            "unique": "79d34c8e-5925-474a-b101-392b32871827",
+            "alias": "NearestAncestorOrSelf",
+            "anyOfDocTypeKeys": [
+              "bbe97008-6f87-4752-9a09-bcdb5a7cb752"
+            ]
+          },
+          {
+            "unique": "0cf82149-caca-4bc0-925a-dd6c0de56ff7",
+            "alias": "NearestDescendantOrSelf",
+            "anyOfDocTypeKeys": [
+              "72323902-7de7-4590-89b2-f28975a20521"
+            ]
+          }
+        ]
+      }
+    },
+    "ignoreUserStartNodes": true
+  },
+  "Parent": "umb://data-type-container/2a3c80de640f4a6c99d284358aedb5d1",
+  "Udi": "umb://data-type/3e8384a4874a4701aa6458bbf3bce4d2",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/2a3c80de640f4a6c99d284358aedb5d1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/28449bcf8baa4bbabad9217c1d93d592",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/d76de89c6aa943ff86f640303b9ae1aa",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

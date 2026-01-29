@@ -1,0 +1,37 @@
+{
+  "Name": "Card",
+  "Alias": "editorNoteEmbedded",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-credit-card-alt color-orange",
+  "Thumbnail": "folder.png",
+  "Description": "Text with optional image, header and either link or button",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/a9ed09e263e346feb7563da53460a78d",
+  "CompositionContentTypes": [
+    "umb://document-type/9d2d4e2645f74ea8b640e734b31a2068",
+    "umb://document-type/f3cc025e405a4a8a88ea232946b5c97e"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/105a7e47f79949699e0e2914050cb5d5",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/a9ed09e263e346feb7563da53460a78d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/9d2d4e2645f74ea8b640e734b31a2068",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/f3cc025e405a4a8a88ea232946b5c97e",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

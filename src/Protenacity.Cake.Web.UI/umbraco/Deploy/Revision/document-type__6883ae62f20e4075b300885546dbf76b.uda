@@ -1,0 +1,112 @@
+{
+  "Name": "Rss Feed Entry Tab",
+  "Alias": "rssFeedEntryTab",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-rss color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Rss Feed Entry",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "639983e8-d9c2-460f-a222-60e872a5fa6a",
+      "Name": "Channel Info",
+      "SortOrder": 1,
+      "Alias": "channelInfo",
+      "PropertyTypes": [
+        {
+          "Key": "16f0cbb3-2afe-4eb2-984d-37d81450dfa7",
+          "Alias": "copyright",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Copyright information",
+          "Name": "Copyright",
+          "SortOrder": 2
+        },
+        {
+          "Key": "27fdb979-6375-4f0e-9ddb-836cf7b55787",
+          "Alias": "description",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Description of Rss Feed",
+          "Name": "Description",
+          "SortOrder": 1
+        },
+        {
+          "Key": "46c5572c-0b12-4068-ba94-1a1bfbfbecfa",
+          "Alias": "cache",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How many minutes do we cache the information",
+          "Name": "Cache in Minutes",
+          "SortOrder": 3
+        },
+        {
+          "Key": "aaf38ef8-fa7c-483c-85bf-d31ad93109bf",
+          "Alias": "title",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Title for Rss Feed",
+          "Name": "Title"
+        }
+      ]
+    },
+    {
+      "Key": "b580bbd9-b10f-4a1e-aa8f-fb10f65b6419",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "770cefc1-4ffd-4758-920d-1cf1e9d317f2",
+          "Alias": "source",
+          "DataType": "umb://data-type/fd1e0da556064862b6795d0cf3a52a59",
+          "Description": "Select parent page of children that will be used as source information for RSS ",
+          "Name": "Source",
+          "SortOrder": 1
+        },
+        {
+          "Key": "a6fd0bca-cf6b-4b19-857e-ae0b1c446d9d",
+          "Alias": "url",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Complete Url, exclude host but do include \u003Cstrong\u003E.rss\u003C/strong\u003E at the end",
+          "Name": "Url"
+        },
+        {
+          "Key": "f3e7befb-499e-457e-be84-6628fd29afba",
+          "Alias": "includeAllDescendants",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "Do we include all descendants including grandchildren and great grandchildren pages ",
+          "Name": "Include All Descendants",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/6883ae62f20e4075b300885546dbf76b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/fd1e0da556064862b6795d0cf3a52a59",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

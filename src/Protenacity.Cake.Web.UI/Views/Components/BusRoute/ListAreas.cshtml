@@ -1,0 +1,39 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.BusRoute.BusRouteViewModel
+
+<div class="w-100">
+    <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="w-100">
+
+        @if (Model.Result?.Features?.Any() == true)
+        {
+            <div class="accordion" id="@Model.Id">
+                <div class="accordion-item">
+                    @foreach (var panels in Model.Result.Features.GroupBy(f => f.Attribute?.District).OrderBy(d => d.Key))
+                    {
+                        var id = Model.Id + HttpUtility.HtmlEncode(panels.Key!.Replace(" ", ""));
+
+                        <h2 class="accordion-header" id="@(id)-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#@(id)-panel" aria-expanded="false" aria-controls="@(id)-panel">
+                                @Html.Raw(panels.Key.ToTitleCase())
+                            </button>
+                        </h2>
+                        <div id="@(id)-panel" class="accordion-collapse collapse" aria-labelledby="@(id)-header" data-bs-parent="#@Model.Id">
+                            <div class="accordion-body">
+                                @foreach (var local in panels.Select(p => p.Attribute?.Locality).OrderBy(l => l))
+                                {
+                                    <div>
+                                        <a href="@Model.LinkUrl?@(Protenacity.Cake.Web.Presentation.Editor.BusRoute.BusRouteViewComponent.QueryString)=@(HttpUtility.HtmlEncode(local + "," + panels.Key.ToTitleCase()))">@local</a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+        else
+        {
+            <p>No Districts Found</p>
+        }
+
+    </theme>
+</div>

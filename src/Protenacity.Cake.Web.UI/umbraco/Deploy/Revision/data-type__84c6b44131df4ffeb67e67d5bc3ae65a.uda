@@ -1,0 +1,17 @@
+{
+  "Name": "Upload File",
+  "EditorAlias": "Umbraco.UploadField",
+  "EditorUiAlias": "Umb.PropertyEditorUi.UploadField",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {},
+  "Parent": "umb://data-type-container/97d8a173fdf14a0baf03f40e1158dd3b",
+  "Udi": "umb://data-type/84c6b44131df4ffeb67e67d5bc3ae65a",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/97d8a173fdf14a0baf03f40e1158dd3b",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

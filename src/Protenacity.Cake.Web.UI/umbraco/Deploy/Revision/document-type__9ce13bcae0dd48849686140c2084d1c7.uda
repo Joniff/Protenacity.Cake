@@ -1,0 +1,69 @@
+{
+  "Name": "Category Heading Data",
+  "Alias": "categoryHeaderData",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-utilities color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Collection of Categories, selectable by a user by letter or number",
+  "Permissions": {
+    "AllowedChildContentTypes": [
+      "umb://document-type/05cc6f51bd3b41828c46aad20ae18fa4"
+    ]
+  },
+  "ListView": "c0808dd3-8133-4e4b-8ce8-e2bea84a96a4",
+  "Parent": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "f37b6b10-802f-4f99-8c2f-5c6ffc9a9f02",
+      "Name": "Contents",
+      "Type": 1,
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "9494a977-0ddd-4a9b-9856-6fb713b6022b",
+          "Alias": "headingDescription",
+          "DataType": "umb://data-type/7cba2f6b082a4db394dbef4402258aaf",
+          "Description": "Display this description when this heading is selected. Only valid if Heading Description Status is Show or Inherits an Show status",
+          "Name": "Heading Description",
+          "SortOrder": 2
+        },
+        {
+          "Key": "fbf23d73-ae70-4e7b-a67d-5b1c303489f4",
+          "Alias": "headingDescriptionStatus",
+          "DataType": "umb://data-type/37154ad464504181a3391afe4fa433a8",
+          "Description": "Inherit = Show or hide the heading description depending on what the parent node has set.\nShow/Hide = Show or hide our own Heading title",
+          "Name": "Heading Description Status",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/9ce13bcae0dd48849686140c2084d1c7",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/37154ad464504181a3391afe4fa433a8",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/7cba2f6b082a4db394dbef4402258aaf",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c0808dd381334e4b8ce8e2bea84a96a4",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/05cc6f51bd3b41828c46aad20ae18fa4",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

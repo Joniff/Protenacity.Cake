@@ -1,0 +1,66 @@
+{
+  "Name": "Table Source",
+  "Alias": "editorTableSource",
+  "Icon": "icon-grid color-green",
+  "Thumbnail": "folder.png",
+  "Description": "Source for a table",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://media-type-container/ea695293f65640aab911e72dac2075b1",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "b2a226c8-ada1-4e9f-a164-93b73410edb6",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "204c3680-6d50-441c-b16d-60b9508cbbca",
+          "Alias": "umbracoFile",
+          "DataType": "umb://data-type/6cb66fafb9574f61993d50d671bb8691",
+          "Description": "Upload data file",
+          "Name": "File"
+        },
+        {
+          "Key": "9941544f-a115-413f-82e7-8147eddd33bb",
+          "Alias": "umbracoExtension",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "File extension",
+          "Name": "Type",
+          "SortOrder": 1
+        },
+        {
+          "Key": "c9220941-c578-4d73-95a3-f1f6bda888f3",
+          "Alias": "umbracoBytes",
+          "DataType": "umb://data-type/930861bfe2624eada704f99453565708",
+          "Description": "File size in bytes",
+          "Name": "Size",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://media-type/149d102282554a7ab4723104ff44d384",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/6cb66fafb9574f61993d50d671bb8691",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/930861bfe2624eada704f99453565708",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://media-type-container/ea695293f65640aab911e72dac2075b1",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.MediaTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,81 @@
+{
+  "Name": "Note Base",
+  "Alias": "editorNoteBase",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-credit-card-alt color-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Base Card",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/a9ed09e263e346feb7563da53460a78d",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "c8b3cf5d-b482-4a68-b57a-26eb97df60c8",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "1eb2819d-8fba-4412-be60-41ed88c38873",
+          "Alias": "text",
+          "DataType": "umb://data-type/7cba2f6b082a4db394dbef4402258aaf",
+          "Description": "Body of Card",
+          "Name": "Text",
+          "SortOrder": 3
+        },
+        {
+          "Key": "8c38c3db-ff84-4225-83ab-9def60a622e1",
+          "Alias": "header",
+          "DataType": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+          "Description": "Header for Card",
+          "Name": "Header",
+          "SortOrder": 1
+        },
+        {
+          "Key": "ef842f79-9fbb-45ca-b0ff-4c03516c9b45",
+          "Alias": "date",
+          "DataType": "umb://data-type/e4d66c0fb935420081f0025f7256b89a",
+          "Description": "Optional Date and/or Time",
+          "Name": "Date",
+          "SortOrder": 2
+        },
+        {
+          "Key": "fdecf085-c33d-448f-a774-caa6a0c57d8a",
+          "Alias": "image",
+          "DataType": "umb://data-type/5a50c29b79294a339055b9f9d9d9c921",
+          "Description": "Optional Image",
+          "Name": "Image"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/f3cc025e405a4a8a88ea232946b5c97e",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/5a50c29b79294a339055b9f9d9d9c921",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/7cba2f6b082a4db394dbef4402258aaf",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/e4d66c0fb935420081f0025f7256b89a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/a9ed09e263e346feb7563da53460a78d",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

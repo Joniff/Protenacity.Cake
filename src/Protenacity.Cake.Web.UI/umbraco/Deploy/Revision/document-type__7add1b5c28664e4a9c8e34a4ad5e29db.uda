@@ -1,0 +1,57 @@
+{
+  "Name": "Social Media",
+  "Alias": "furnitureSocialItem",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-backspace color-deep-purple",
+  "Thumbnail": "folder.png",
+  "Description": "Social Media Item",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "d00a7088-d075-418e-896a-4735e3eb3848",
+      "Name": "Social Media",
+      "Alias": "socialMedia",
+      "PropertyTypes": [
+        {
+          "Key": "2562ff2a-6f16-46c8-bf53-5b8b111f158c",
+          "Alias": "socialType",
+          "DataType": "umb://data-type/1dc8f6fb8df24ea1b26b203a06ff5f88",
+          "Description": "What type of social media link is this",
+          "Name": "Type"
+        },
+        {
+          "Key": "4182c7de-b622-431b-ac39-0e4f2702936b",
+          "Alias": "link",
+          "DataType": "umb://data-type/61066af4261e48c49b87fda07d24eb4d",
+          "Description": "Link to this social media",
+          "Name": "Link",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/7add1b5c28664e4a9c8e34a4ad5e29db",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/1dc8f6fb8df24ea1b26b203a06ff5f88",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/61066af4261e48c49b87fda07d24eb4d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

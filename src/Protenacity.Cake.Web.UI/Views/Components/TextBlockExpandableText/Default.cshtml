@@ -1,0 +1,14 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Text.TextBlockExpandableTextViewModel
+
+<div class="text-block-expandable m-2">
+    <div>
+        <a href="javascript:;" data-bs-toggle="collapse" aria-expanded="@(Model.InitialState == EditorTextExpandableInitialStates.Expanded ? "true" : "false")" aria-controls="@Model.Id" data-bs-target=".@Model.Id">
+            <i class="bi bi-caret-right-fill not-collapse @Model.Id @(Model.InitialState == EditorTextExpandableInitialStates.Expanded ? "show" : null)" style="@(Model.IconColor != null ? "color:" + Model.IconColor : null)"></i><i class="bi bi-caret-down-fill collapse @Model.Id @(Model.InitialState == EditorTextExpandableInitialStates.Expanded ? "show" : null)" style="@(Model.IconColor != null ? "color:" + Model.IconColor : null)"></i><span class="ms-1">@Html.Raw(Model.Header.ToHeader())</span>
+        </a>
+    </div>
+    <theme subtheme="Model.Subtheme" shade="Model.Shade" override="Model.OverrideColor" class="collapse @Model.Id ms-3 mt-1 @(Model.InitialState == EditorTextExpandableInitialStates.Expanded ? "show" : null)">
+        <span class="d-inline-block p-1 p-nomargin">
+            @Html.Raw(Model.Text)
+        </span>
+    </theme>
+</div>

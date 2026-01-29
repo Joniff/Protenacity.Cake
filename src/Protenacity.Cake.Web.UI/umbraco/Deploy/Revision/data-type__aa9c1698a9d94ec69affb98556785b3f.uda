@@ -1,0 +1,35 @@
+{
+  "Name": "Editor Card Action Style",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Dropdown",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      "Button",
+      "Link",
+      "Link with Icon",
+      "Header",
+      "Hide",
+      "Button (Primary)",
+      "Button (Secondary)",
+      "Button (Success)",
+      "Button (Danger)",
+      "Button (Warning)",
+      "Button (Info)",
+      "Button (Light)",
+      "Button (Dark)"
+    ],
+    "umbMigrationV14": "2025-04-01T10:00:43.1275658\u002B00:00"
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/aa9c1698a9d94ec69affb98556785b3f",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

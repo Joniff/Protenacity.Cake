@@ -1,0 +1,31 @@
+{
+  "Name": "Table Panel Settings",
+  "Alias": "editorTablePanelSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-pink",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/690556d68e2e4b409476cdade9eca12e",
+  "CompositionContentTypes": [
+    "umb://document-type/c3192391128a4ba1ba0ffe0280f23d49"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/cffeb07de649421fae9f9392237bf214",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/690556d68e2e4b409476cdade9eca12e",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/c3192391128a4ba1ba0ffe0280f23d49",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

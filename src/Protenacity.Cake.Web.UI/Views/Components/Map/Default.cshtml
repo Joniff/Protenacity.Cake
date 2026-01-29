@@ -1,0 +1,72 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Map.MapViewModel
+
+<div class="w-100">
+    @switch (Model.MapType)
+    {
+        case EditorMapTypes.Standard:
+            <text>
+                <iframe hidden src="https://lancashirecounty.maps.arcgis.com/apps/instant/basic/index.html?appid=9897685898214d4aaae25c1a120d6721&marker=@(Model.Longitude);@(Model.Latitude);4326;@(System.Uri.EscapeDataString(Model.Name));@(Model.IconUrl)&level=@(Model.Zoom)"
+                        width="100"
+                        height="100"
+                        frameborder="0"
+                        style="border:0" allowfullscreen
+                        class="iframe-map" data-ratio="@Model.Ratio">
+                    iFrames are not supported on this page.
+                </iframe>
+            </text>
+            break;
+
+        case EditorMapTypes.PublicRightOfWay:
+            <text>
+                <iframe id="map-@(Model.Id)" hidden src="https://lancashirecounty.maps.arcgis.com/apps/instant/basic/index.html?appid=256e53bf473140dc93d669fb5d2d577c&marker=@(Model.Longitude);@(Model.Latitude);4326;@(System.Uri.EscapeDataString(Model.Name));@(Model.IconUrl)&level=@(Model.Zoom)"
+                        width="100"
+                        height="100"
+                        frameborder="0"
+                        style="border:0" allowfullscreen
+                        class="iframe-map" data-ratio="@Model.Ratio">
+                    iFrames are not supported on this page.
+                </iframe>
+            </text>
+            break;
+
+        case EditorMapTypes.Gritting:
+            <text>
+                <iframe id="map-@(Model.Id)" hidden src="https://lancashirecounty.maps.arcgis.com/apps/instant/basic/index.html?appid=0478ecf1681c44af837734e76ba64576&marker=@(Model.Longitude);@(Model.Latitude);4326;@(System.Uri.EscapeDataString(Model.Name));&level=@(Model.Zoom)"
+                        width="100"
+                        height="100"
+                        frameborder="0"
+                        style="border:0" allowfullscreen
+                        class="iframe-map" data-ratio="@Model.Ratio">
+                    iFrames are not supported on this page.
+                </iframe>
+            </text>
+            break;
+
+        case EditorMapTypes.Regions:
+            <text>
+                <iframe id="map-@(Model.Id)" hidden src="https://lancashirecounty.maps.arcgis.com/apps/instant/sidebar/index.html?appid=4fa1f052bb5544f0a74b851bcbcca1dd&zone=@(System.Uri.EscapeDataString(Model.Name))&urlParamAsFilter=true&level=@(Model.Zoom)"
+                        width="100"
+                        height="100"
+                        frameborder="0"
+                        style="border:0" allowfullscreen
+                        class="iframe-map" data-ratio="@Model.Ratio">
+                    iFrames are not supported on this page.
+                </iframe>
+            </text>
+            break;
+
+        case EditorMapTypes.CycleRoutes:
+            <text>
+                <iframe id="map-@(Model.Id)" hidden src="https://lancashirecounty.maps.arcgis.com/apps/instant/sidebar/index.html?appid=079a59affa254332aeada54fb3b0bc38&level=@(Model.Zoom)"
+                        width="100"
+                        height="100"
+                        frameborder="0"
+                        style="border:0" allowfullscreen
+                        class="iframe-map" data-ratio="@Model.Ratio">
+                    iFrames are not supported on this page.
+                </iframe>
+            </text>
+            break;
+    }
+    <script src="/script/map.js"></script>
+</div>

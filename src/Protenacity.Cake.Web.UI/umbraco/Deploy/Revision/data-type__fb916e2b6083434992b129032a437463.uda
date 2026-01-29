@@ -1,0 +1,28 @@
+{
+  "Name": "Editor Theme Picker",
+  "EditorAlias": "Umbraco.RadioButtonList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.RadioButtonList",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "items": [
+      "Inherit",
+      "Default",
+      "Venice",
+      "Metallic Seaweed",
+      "Deep Dairei",
+      "Cactus Flower",
+      "Mystic Tulip",
+      "Poinciana"
+    ]
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/fb916e2b6083434992b129032a437463",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,47 @@
+{
+  "Name": "Global Rss Feed Picker",
+  "EditorAlias": "Umbraco.MultiNodeTreePicker",
+  "EditorUiAlias": "Umb.PropertyEditorUi.ContentPicker",
+  "Configuration": {
+    "minNumber": 0,
+    "maxNumber": 1,
+    "filter": "f9d05ee3-a300-48b4-9626-8736ccf62f19",
+    "startNode": {
+      "type": "content",
+      "dynamicRoot": {
+        "originAlias": "Root",
+        "querySteps": [
+          {
+            "unique": "79d34c8e-5925-474a-b101-392b32871827",
+            "alias": "NearestAncestorOrSelf",
+            "anyOfDocTypeKeys": [
+              "bbe97008-6f87-4752-9a09-bcdb5a7cb752"
+            ]
+          },
+          {
+            "unique": "f1452dd6-4754-440e-b644-002c31c869a4",
+            "alias": "NearestDescendantOrSelf",
+            "anyOfDocTypeKeys": [
+              "294e0676-4e12-4bb8-8a53-47e58437c5ef"
+            ]
+          }
+        ]
+      }
+    },
+    "ignoreUserStartNodes": true
+  },
+  "Parent": "umb://data-type-container/2a3c80de640f4a6c99d284358aedb5d1",
+  "Udi": "umb://data-type/b7b544b659424f3dbeef81b8b989d0b0",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/2a3c80de640f4a6c99d284358aedb5d1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/f9d05ee3a30048b496268736ccf62f19",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

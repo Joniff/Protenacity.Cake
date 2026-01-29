@@ -1,0 +1,44 @@
+{
+  "Name": "Action Settings",
+  "Alias": "editorTextBlockActionSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-plugin",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/d0c9dcd29a834e9d8bd85bb546395781",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "fb5f4ba6-ccbc-4fd1-b0af-f70d2339c09c",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "1db9eff7-3535-492b-bcaf-14d63f3229df",
+          "Alias": "styleAction",
+          "DataType": "umb://data-type/9ca78cc95e594012a72edbe47fb27a6f",
+          "Description": "Select colour for button.\n\nButton = Uses current theme to colour button.\nPrimary = Blue\nSecondary = Grey\nSuccess = Green\nDanger = Red\nWarning = Yellow\nInfo = Cyan\nLight = White\nDark = Black\n",
+          "Name": "Button Style"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/e61a4ac3ddec48d09d59d2574ab66108",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/9ca78cc95e594012a72edbe47fb27a6f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/d0c9dcd29a834e9d8bd85bb546395781",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

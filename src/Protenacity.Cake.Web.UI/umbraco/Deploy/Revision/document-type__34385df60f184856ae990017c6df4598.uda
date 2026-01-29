@@ -1,0 +1,37 @@
+{
+  "Name": "Tabs",
+  "Alias": "editorTabsPrimary",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-tab color-deep-orange",
+  "Thumbnail": "folder.png",
+  "Description": "Tab Strip with selectable panels",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8c2b0b6bed1941089ede5558e303f125",
+  "CompositionContentTypes": [
+    "umb://document-type/aacb5e90d20244f58212b90391e2bbfd",
+    "umb://document-type/c9aa2cd749c64ed18971fee1f171d91d"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/34385df60f184856ae990017c6df4598",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/8c2b0b6bed1941089ede5558e303f125",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/aacb5e90d20244f58212b90391e2bbfd",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/c9aa2cd749c64ed18971fee1f171d91d",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

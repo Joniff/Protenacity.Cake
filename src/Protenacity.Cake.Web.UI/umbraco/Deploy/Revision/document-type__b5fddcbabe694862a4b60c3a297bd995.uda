@@ -1,0 +1,155 @@
+{
+  "Name": "Seo Tab",
+  "Alias": "seoTab",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-search color-lime",
+  "Thumbnail": "folder.png",
+  "Description": "Search Engine Optimisation",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "caff98df-8676-4a8e-b431-6c3df0360bdd",
+      "Name": "Seo",
+      "SortOrder": 1200,
+      "Type": 1,
+      "Alias": "seo",
+      "PropertyTypes": [
+        {
+          "Key": "128d1c34-2863-4329-848c-3230c3864555",
+          "Alias": "seoStatus",
+          "DataType": "umb://data-type/7905c1d55cc34b7c80b591c084917a9e",
+          "Description": "\u003Cb\u003EInherit\u003C/b\u003E index status from parent page or \u003Cb\u003Eenable\u003C/b\u003E/\u003Cb\u003Edisable\u003C/b\u003E this page from being able to be indexed by search engines like \u003Ca href=\u0022https://developers.google.com/search/docs/fundamentals/how-search-works\u0022\u003EGoogle\u003C/a\u003E",
+          "Name": "Status"
+        },
+        {
+          "Key": "1a05ece9-1632-4d10-89c8-6346ea21bdb3",
+          "Alias": "seoThumbnail",
+          "DataType": "umb://data-type/5a50c29b79294a339055b9f9d9d9c921",
+          "Description": "Image shown when linked from search engines like Google or from other pages within this site",
+          "Name": "Thumbnail",
+          "SortOrder": 2
+        },
+        {
+          "Key": "33a47c82-175f-422d-9320-b42f6db5a346",
+          "Alias": "seoCanonicalUrl",
+          "DataType": "umb://data-type/2c457913dddd4ebc9134fc3e4c60cad4",
+          "Description": "The definitive Url for a specific piece of content when multiple Urls exist for that same content, preventing duplicate content issues for search engines. \n\nLeave blank if this page is the definitive and/or source of original content.",
+          "Name": "Canonical Url",
+          "SortOrder": 11
+        },
+        {
+          "Key": "36302d27-8b21-40db-b626-81562f15e5b3",
+          "Alias": "seoPriority",
+          "DataType": "umb://data-type/794c23a43516429bbb9fd393c0eb7925",
+          "Description": "How important is this web page compared to others web pages within this site. Search engines use this value to rank your pages with similar keywords/content. Setting all pages to the same value has no effect and is counter-productive",
+          "Name": "Priority",
+          "SortOrder": 8
+        },
+        {
+          "Key": "4186f1e5-1da1-45f9-9e9c-ffb8b683c46d",
+          "Alias": "seoPromotedSearchTerms",
+          "DataType": "umb://data-type/298a56db8f4e4c9db2242231515c55ed",
+          "Description": "Keywords that are promoted for our own search page  ",
+          "Name": "Promoted Search Terms",
+          "SortOrder": 7
+        },
+        {
+          "Key": "510c52a6-2a41-4ef7-842f-8d5b2dfd06b2",
+          "Alias": "title",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Title for page, if left blank will use name of page",
+          "Name": "Title",
+          "SortOrder": 3
+        },
+        {
+          "Key": "699cb1f8-64c9-49d3-81f8-8d5514b07726",
+          "Alias": "seoAbstract",
+          "DataType": "umb://data-type/7cba2f6b082a4db394dbef4402258aaf",
+          "Description": "Brief summary of this page, used whenever this page is linked from other sources and rich text can be used. \nIf blank will use Description instead.",
+          "Name": "Abstract",
+          "SortOrder": 5
+        },
+        {
+          "Key": "7b2c78b3-b9f6-4a99-8241-b505f7498216",
+          "Alias": "seoDatePublished",
+          "DataType": "umb://data-type/5046194e4237453ca54715db3a07c4e1",
+          "Description": "Select a date for when this page was originally published. If empty will use date this page was last updated",
+          "Name": "Date Published",
+          "SortOrder": 9
+        },
+        {
+          "Key": "81ecd739-24af-4b07-a027-bf876f6b1fbc",
+          "Alias": "seoDescription",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Brief summary of this page, used whenever this page is linked from other sources and only plain text can be used.",
+          "Name": "Description",
+          "SortOrder": 4
+        },
+        {
+          "Key": "ae9ec0f5-91d8-4017-9d2a-0a50a5d13f39",
+          "Alias": "umbracoUrlAlias",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Override the default url name of this page ",
+          "Name": "Change Url",
+          "SortOrder": 10
+        },
+        {
+          "Key": "fdbdb7c0-57f2-42aa-8ba4-66c6319142e4",
+          "Alias": "keywords",
+          "DataType": "umb://data-type/298a56db8f4e4c9db2242231515c55ed",
+          "Description": "Most important words for search engines to notice on this page. Don\u0027t use same keywords across all pages.",
+          "Name": "Keywords",
+          "SortOrder": 6
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/b5fddcbabe694862a4b60c3a297bd995",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/298a56db8f4e4c9db2242231515c55ed",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2c457913dddd4ebc9134fc3e4c60cad4",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/5046194e4237453ca54715db3a07c4e1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/5a50c29b79294a339055b9f9d9d9c921",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/7905c1d55cc34b7c80b591c084917a9e",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/794c23a43516429bbb9fd393c0eb7925",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/7cba2f6b082a4db394dbef4402258aaf",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

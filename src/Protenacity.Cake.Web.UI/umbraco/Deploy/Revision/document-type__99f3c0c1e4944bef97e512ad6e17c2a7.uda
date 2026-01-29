@@ -1,0 +1,46 @@
+{
+  "Name": "Share Icon Color Settings",
+  "Alias": "editorTextIconColorSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-plugin",
+  "Thumbnail": "folder.png",
+  "Description": "Set Icon Colour",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/d0c9dcd29a834e9d8bd85bb546395781",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "7605cc7c-e026-411e-8a3d-b9e0f0de9516",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "e07c6a0c-5a4e-4e00-90af-7e5b1f0cca1b",
+          "Alias": "iconColor",
+          "DataType": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+          "Description": "Set colour of the Icon",
+          "Name": "Icon Colour",
+          "SortOrder": 250
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/99f3c0c1e4944bef97e512ad6e17c2a7",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/d0c9dcd29a834e9d8bd85bb546395781",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

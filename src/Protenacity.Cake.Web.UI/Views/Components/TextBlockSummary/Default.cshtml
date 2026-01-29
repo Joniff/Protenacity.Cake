@@ -1,0 +1,15 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Text.TextBlockSummaryViewModel
+
+<div class="text-block-icon m-2">
+    <theme subtheme="Model.Subtheme" shade="Model.Shade" override="Model.OverrideColor" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="pt-2 pb-3 ps-2 pe-2">
+        @if (Model.Header != null)
+        {
+            <h3>
+                @Html.Raw(Model.Header)
+            </h3>
+        }
+        <span class="p-nomargin d-inline-block align-middle">
+            @Html.Raw(Model.Text)
+        </span>
+    </theme>
+</div>

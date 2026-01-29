@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.5"
+  },
+  "devDependencies": {
+    "eslint": "^9.25.1"
+  }
+}

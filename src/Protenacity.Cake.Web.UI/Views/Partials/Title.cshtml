@@ -1,0 +1,17 @@
+﻿@model Tuple<bool, Protenacity.Cake.Web.Presentation.Pages.Editor.EditorPageViewModel>
+
+<theme class="expand-background" subtheme="Model.Item2.PageTitleSubtheme" shade="Model.Item2.PageTitleThemeShade">
+    @if (Model.Item1)
+    {
+        @:<div class="container">
+    }    
+    <div class="row pb-3">
+        <h1 class="@(Model.Item2.FurniturePageTitlePromote ? "promote-page-title" : null)">
+            @Html.Raw(Model.Item2.PageHeader?.HasContent() == true ? Model.Item2.PageHeader.ToHeader() : (string.IsNullOrWhiteSpace(Model.Item2.Title) ? Model.Item2.Name : Model.Item2.Title))
+        </h1>
+    </div>
+    @if (Model.Item1)
+    {
+        @:</div>
+    }
+</theme>

@@ -1,0 +1,32 @@
+{
+  "Name": "Opening Times Settings",
+  "Alias": "editorOpeningTimesEmbeddedSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-light-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Settings",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/aee3b45c00c442e59095c9da9c351742",
+  "CompositionContentTypes": [
+    "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/d55546068d6d45d1819b449a3915e91a",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/aee3b45c00c442e59095c9da9c351742",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

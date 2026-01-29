@@ -1,0 +1,31 @@
+{
+  "Name": "Editor Text Field Picker",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Dropdown",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "items": [
+      "Day of Week",
+      "Day of Month",
+      "Month",
+      "Year",
+      "Search Criteria",
+      "Category",
+      "Category Heading",
+      "Bus Route",
+      "Bus Route Description",
+      "Bus Stop",
+      "Bus Day"
+    ]
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/ad7daa9a119c4837a9ae049334b39f50",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

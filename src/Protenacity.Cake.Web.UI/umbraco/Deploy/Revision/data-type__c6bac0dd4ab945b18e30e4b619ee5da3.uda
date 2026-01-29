@@ -1,0 +1,16 @@
+{
+  "Name": "Textarea",
+  "EditorAlias": "Umbraco.TextArea",
+  "EditorUiAlias": "Umb.PropertyEditorUi.TextArea",
+  "Configuration": {},
+  "Parent": "umb://data-type-container/97d8a173fdf14a0baf03f40e1158dd3b",
+  "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/97d8a173fdf14a0baf03f40e1158dd3b",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

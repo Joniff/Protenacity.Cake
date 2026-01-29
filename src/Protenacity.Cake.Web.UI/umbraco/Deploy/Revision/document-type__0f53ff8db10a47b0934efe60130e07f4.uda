@@ -1,0 +1,42 @@
+{
+  "Name": "Full Sized Images Settings",
+  "Alias": "editorImagePrimarySettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-pink",
+  "Thumbnail": "folder.png",
+  "Description": "Setting for image when not embedded inside other containers",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/035afa6edd274a1c8782b98dbf0beb4c",
+  "CompositionContentTypes": [
+    "umb://document-type/384ded8e0d664e5f844f58d63e0f47cd",
+    "umb://document-type/53d466e9ec7a44f2918d0575d2101be6",
+    "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/0f53ff8db10a47b0934efe60130e07f4",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/035afa6edd274a1c8782b98dbf0beb4c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/384ded8e0d664e5f844f58d63e0f47cd",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/53d466e9ec7a44f2918d0575d2101be6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

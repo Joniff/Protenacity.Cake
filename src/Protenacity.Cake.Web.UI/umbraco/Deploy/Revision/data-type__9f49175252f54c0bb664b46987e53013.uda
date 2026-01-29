@@ -1,0 +1,32 @@
+{
+  "Name": "Editor Step List",
+  "EditorAlias": "Umbraco.BlockList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "d8868e70-1361-475a-b72b-eade36553be6",
+        "label": "{% header }",
+        "editorSize": "large",
+        "settingsElementTypeKey": "8c0e1a8e-5e8e-4a52-b2f7-2b847c83372a"
+      }
+    ],
+    "useSingleBlockMode": true
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/9f49175252f54c0bb664b46987e53013",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/8c0e1a8e5e8e4a52b2f72b847c83372a"
+    },
+    {
+      "Udi": "umb://document-type/d8868e701361475ab72beade36553be6"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

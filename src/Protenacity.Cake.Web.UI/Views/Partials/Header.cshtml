@@ -1,0 +1,165 @@
+﻿@model IFurnitureTab
+
+@if (Model.FurnitureHeaderSticky)
+{
+    var pixel = (Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.BelowLeft || Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.BelowRight) ? "130px" : "100px";
+
+    <style>
+        .anchor::before {
+        display: block;
+        content: " ";
+        margin-top: -@(pixel);
+        height: @(pixel);
+        visibility: hidden;
+        pointer-events: none;
+        }
+    </style>
+}
+
+<header id="site_header" aria-label="Global" class="@(Model.FurnitureHeaderSticky ? "sticky-top" : null)">
+    <theme class="py-2" subtheme="Model.HeaderSubthemeTyped" shade="Model.HeaderThemeShadeTyped" override="Model.FurnitureHeaderColor">
+        <div class="header">
+            <div class="navbar navbar-expand-lg pt-0 pb-0">
+                <div class="container">
+                    @if (Model.FurnitureLogoImage != null)
+                    {
+                        <a class="navbar-brand" href="@View.CurrentFurnitureUrl">
+                            <img src="@Model.FurnitureLogoImage.Url()" style="height:60px;width:@(Math.Floor(60.0 * Model.FurnitureLogoRatioCalculated))px" alt="@View.CurrentDomainPage.Title">
+                        </a>
+                    }
+                    @if (Model.FurnitureShowHeaderMenuOnLargerDevices && Model.FurnitureHeaderMenu?.Any() == true &&
+                        Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.InsideLeft)
+                    {
+                        <div class="@(Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.InsideLeft ? "me-auto" : "ms-auto")">
+                            @(await Html.PartialAsync("MainMenu", Model.FurnitureHeaderMenu.Select(m => (FurnitureMenuItem)m.Content)))
+                        </div>
+                    }
+
+                    <div class="navbar-text ms-auto d-flex">
+
+                        @if (Model.FurnitureShowHeaderMenuOnLargerDevices && Model.FurnitureHeaderMenu?.Any() == true &&
+                            Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.InsideRight)
+                        {
+                            <div class="d-none d-lg-block @(Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.InsideLeft ? "me-auto" : "ms-auto")">
+                                @(await Html.PartialAsync("MainMenu", Model.FurnitureHeaderMenu.Select(m => (FurnitureMenuItem)m.Content)))
+                            </div>
+                        }
+
+                        @if (Model.FurnitureShowAllServices && !string.IsNullOrEmpty(View.CurrentDomainPage.AllServices?.Url))
+                        {
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="@View.CurrentDomainPage.AllServices.Url" target="@(string.IsNullOrWhiteSpace(View.CurrentDomainPage.AllServices.Target) ? "_self" : View.CurrentDomainPage.AllServices.Target)">
+                                        @(string.IsNullOrWhiteSpace(View.CurrentDomainPage.AllServices.Name) ? "Services" : View.CurrentDomainPage.AllServices.Name)
+                                    </a>
+                                </li>
+                            </ul>
+                        }
+                        @if (View.CurrentDomainPage.Search != null && Model.FurnitureShowSearchBar)
+                        {
+                            <div class="ps-3">
+                                <div class="d-lg-none justify-content-end">
+                                    <button class="btn btn-light toggle-site-search" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSiteSearch" aria-expanded="false" aria-controls="collapseSiteSearch">
+                                        <span id="showSiteSearch" class="fa-solid fa-magnifying-glass"></span>
+                                        <span id="hideSiteSearch" class="fa-solid fa-xmark"></span>
+                                    </button>
+                                </div>
+                                <form class="d-none d-lg-block" role="search" method="get" action="@View.CurrentDomainPage.Search.Url">
+                                    <div class="input-group">
+                                        <input type="search" class="form-control border-0" name="@Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString" aria-label="Search @View.CurrentDomainPage.Title" value="@View.CurrentSearchCriteria(Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString)">
+                                        <button class="btn btn-link bg-white input-group-append" type="submit">
+                                            <span class="fa-solid fa-magnifying-glass"></span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        }
+
+                    </div>
+                    @if (Model.FurnitureShowHeaderMenuOnSmallerDevices && Model.FurnitureHeaderMenu?.Any() == true)
+                    {
+                        <div class="navbar-toggler">
+                            <btn class="btn btn-light toggle-site-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvas@(Model.GetHashCode())" aria-controls="offcanvas@(Model.GetHashCode())">
+                                <span class="bi bi-list"></span>
+                            </btn>
+                        </div>
+                    }
+                </div>
+            </div>
+            @if (Model.FurnitureShowHeaderMenuOnLargerDevices && Model.FurnitureHeaderMenu?.Any() == true &&
+               (Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.BelowLeft || Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.BelowRight))
+            {
+                <div class="navbar navbar-expand-lg pt-0 pb-0">
+                    <div class="container">
+                        <div class="@(Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.BelowLeft ? "me-auto" : "ms-auto")">
+                            @(await Html.PartialAsync("MainMenu", Model.FurnitureHeaderMenu.Select(m => (FurnitureMenuItem)m.Content)))
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (View.CurrentDomainPage.Search != null && Model.FurnitureShowSearchBar)
+            {
+                <div class="collapse" id="collapseSiteSearch">
+                    <form class="d-block d-lg-none bg-light p-3" role="search" method="get" action="@View.CurrentDomainPage.Search.Url">
+                        <div class="container">
+                            <div class="input-group">
+                                <input type="search" class="form-control" name="Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString" aria-label="Search @View.CurrentDomainPage.Title" value="@View.CurrentSearchCriteria(Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString)">
+                                <button class="btn btn-dark input-group-append" type="submit">
+                                    <span class="fa-solid fa-magnifying-glass"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            }
+        </div>
+    </theme>
+</header>
+
+@if (Model.FurnitureShowHeaderMenuOnSmallerDevices && Model.FurnitureHeaderMenu?.Any() == true)
+{
+    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvas@(Model.GetHashCode())" aria-labelledby="offcanvas@(Model.GetHashCode())Label">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvas@(Model.GetHashCode())Label">Menu</h5>
+            <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav flex-grow-1 pe-3">
+                @foreach (var link in Model.FurnitureHeaderMenu.Select(m => (FurnitureMenuItem)m.Content))
+                {
+                    @if (link.TopMenu != null && !string.IsNullOrWhiteSpace(link.TopMenu.Url))
+                    {
+                        if (link.Submenus?.Any() == true)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link pl-0 text-white dropdown-toggle" href="#smallmenu@(link.Key)" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="smallmenu@(link.Key)">
+                                    @(string.IsNullOrWhiteSpace(link.TopMenu.Name) ? link.TopMenu.Url : link.TopMenu.Name)
+                                </a>
+                                <ul class="bg-dark collapse list-inline" id="smallmenu@(link.Key)">
+                                    @foreach (var sublink in link.Submenus)
+                                    {
+                                        <li>
+                                            <a class="dropdown-item pl-0 text-white" href="@sublink.Url" target="@(string.IsNullOrWhiteSpace(sublink.Target) ? "_self" : sublink.Target)">
+                                                &nbsp;&nbsp;
+                                                @(string.IsNullOrWhiteSpace(sublink.Name) ? sublink.Url : sublink.Name)
+                                            </a>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link pl-0 text-white" href="@link.TopMenu.Url" target="@(string.IsNullOrWhiteSpace(link.TopMenu.Target) ? "_self" : link.TopMenu.Target)">
+                                    @(string.IsNullOrWhiteSpace(link.TopMenu.Name) ? link.TopMenu.Url : link.TopMenu.Name)
+                                </a>
+                            </li>
+                        }
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+}

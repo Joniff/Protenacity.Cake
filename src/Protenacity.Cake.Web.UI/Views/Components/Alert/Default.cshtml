@@ -1,0 +1,57 @@
+﻿@model IAlertTab
+@{
+    var alertTheme = "alert-primary";
+    var alertIcon = "binfo-circle-fill";
+
+    switch (Model.AlertTypeTyped)
+    {
+
+        case AlertTypes.Warning:
+            alertTheme = "theme-alert-warning";
+            alertIcon = "bi-exclamation-octagon-fill";
+            break;
+
+        case AlertTypes.Primary:
+            alertTheme = "theme-alert-primary";
+            alertIcon = "bi-info-square-fill";
+            break;
+
+        case AlertTypes.Secondary:
+            alertTheme = "theme-alert-secondary";
+            alertIcon = "bi-info-square-fill";
+            break;
+
+        case AlertTypes.Success:
+            alertTheme = "theme-alert-success";
+            alertIcon = "bi-check-square-fill";
+            break;
+
+        case AlertTypes.Info:
+            alertTheme = "theme-alert-info";
+            alertIcon = "bi-info-square-fill";
+            break;
+    }
+    var id = "alert-" + Model.Key.ToString("n") + ((IPublishedContent)Model).UpdateDate.Ticks.ToString();
+}
+
+@if (!Context.Request.Cookies.ContainsKey(id))
+{
+    <div id="@id" class="alert @alertTheme m-0 alert-dismissible fade show" role="alert">
+        <div class="text-end">
+            <button type="button" class="btn-close float-right" aria-label="Close" data-bs-dismiss="alert"></button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-auto align-self-start">
+                    <div class="bi @alertIcon fs-1"></div>
+                </div>
+                <div class="col">
+                    <h4 class="alert-heading">@Model.AlertTitle</h4>
+                    <div>
+                        @Html.Raw(Model.AlertText)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

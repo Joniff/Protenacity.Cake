@@ -1,0 +1,57 @@
+{
+  "Name": "Video Base Settings",
+  "Alias": "editorVideoBaseSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Base settings for video blocks",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/48144a7fe68442498b35cac628e359b1",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "9e9aad55-9011-42db-b3c3-13676f95d909",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "13b2f696-3489-4f60-98bc-134ab07ccd32",
+          "Alias": "showControls",
+          "DataType": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+          "Description": "Show controls to stop, start and skip",
+          "Name": "Show Controls",
+          "SortOrder": 1
+        },
+        {
+          "Key": "e6e8c4a8-c111-4bd6-84f0-4527e82d8309",
+          "Alias": "ratio",
+          "DataType": "umb://data-type/1e5f29855a37454894fa7058d0f896ab",
+          "Description": "Dimensions of the source Video. Usually 16:9 is standard",
+          "Name": "Ratio"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/0451ff3d4840454f99fcf79ff231786d",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/1e5f29855a37454894fa7058d0f896ab",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/48144a7fe68442498b35cac628e359b1",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

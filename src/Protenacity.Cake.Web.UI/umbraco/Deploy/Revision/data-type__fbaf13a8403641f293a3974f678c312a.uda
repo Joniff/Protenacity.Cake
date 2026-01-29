@@ -1,0 +1,17 @@
+{
+  "Name": "Checkbox list",
+  "EditorAlias": "Umbraco.CheckBoxList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.CheckBoxList",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {},
+  "Parent": "umb://data-type-container/97d8a173fdf14a0baf03f40e1158dd3b",
+  "Udi": "umb://data-type/fbaf13a8403641f293a3974f678c312a",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/97d8a173fdf14a0baf03f40e1158dd3b",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "17.0.1"
+}

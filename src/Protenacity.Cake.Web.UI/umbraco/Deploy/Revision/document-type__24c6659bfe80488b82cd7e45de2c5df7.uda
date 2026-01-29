@@ -1,0 +1,42 @@
+{
+  "Name": "List Panel Settings",
+  "Alias": "editorListPanelSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-pink",
+  "Thumbnail": "folder.png",
+  "Description": "Settings for List Panel",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/1ea31dd18f9d4c95b90f72426ad153d5",
+  "CompositionContentTypes": [
+    "umb://document-type/7d5903fe301049929c341e3ac30b2e05",
+    "umb://document-type/a57b559b1f68414b80734074c55c876b",
+    "umb://document-type/b48afb4ceb1447819cf2365c2e90fe48"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/24c6659bfe80488b82cd7e45de2c5df7",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/1ea31dd18f9d4c95b90f72426ad153d5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/7d5903fe301049929c341e3ac30b2e05",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/a57b559b1f68414b80734074c55c876b",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/b48afb4ceb1447819cf2365c2e90fe48",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

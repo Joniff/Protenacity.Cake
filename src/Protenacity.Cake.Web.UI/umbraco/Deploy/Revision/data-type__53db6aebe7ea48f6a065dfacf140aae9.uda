@@ -1,0 +1,32 @@
+{
+  "Name": "Editor Select Web Pages",
+  "EditorAlias": "Umbraco.MultiNodeTreePicker",
+  "EditorUiAlias": "Umb.PropertyEditorUi.ContentPicker",
+  "Configuration": {
+    "startNode": {
+      "type": "content",
+      "id": null,
+      "dynamicRoot": null
+    },
+    "filter": "7c6590a9-8700-401a-9cb2-aabaa11a3bc4",
+    "minNumber": 0,
+    "maxNumber": 0,
+    "showOpenButton": false,
+    "ignoreUserStartNodes": false,
+    "umbMigrationV14": "2025-04-01T10:00:43.1100048\u002B00:00"
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/53db6aebe7ea48f6a065dfacf140aae9",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/7c6590a98700401a9cb2aabaa11a3bc4",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

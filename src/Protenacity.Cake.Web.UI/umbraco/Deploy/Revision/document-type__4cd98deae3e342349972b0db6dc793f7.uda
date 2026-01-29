@@ -1,0 +1,45 @@
+{
+  "Name": "Media Download",
+  "Alias": "editorSelectMediaDownloadSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-deep-orange",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/e25adf4fa7c643e3af75a3ee28ef195f",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "9be58a31-dd88-4dcf-8418-7283e70b51be",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "b45657c3-2d26-4f33-bfb2-93bd62e56087",
+          "Alias": "download",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "Specify that the Media Items should be downloaded to the clients machine and not shown in browser",
+          "Name": "Download",
+          "SortOrder": 990
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/4cd98deae3e342349972b0db6dc793f7",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/e25adf4fa7c643e3af75a3ee28ef195f",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

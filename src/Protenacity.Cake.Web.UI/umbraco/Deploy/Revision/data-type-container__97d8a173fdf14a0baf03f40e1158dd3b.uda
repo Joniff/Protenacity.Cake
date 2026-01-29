@@ -1,0 +1,8 @@
+{
+  "Name": "Standard",
+  "ContainedObjectType": "30a2a501-1978-4ddb-a57b-f7efed43ba3c",
+  "Udi": "umb://data-type-container/97d8a173fdf14a0baf03f40e1158dd3b",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContainerArtifact",
+  "__version": "16.0.4"
+}

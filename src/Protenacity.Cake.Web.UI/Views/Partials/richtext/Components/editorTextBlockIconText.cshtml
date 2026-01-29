@@ -1,0 +1,3 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.RichTextBlockItem>
+
+@(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.Text.TextBlockIconTextViewComponent.Name, Model))

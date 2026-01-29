@@ -1,0 +1,15 @@
+﻿@model Tuple<bool, IEnumerable<IEditorContent>?>
+
+@if (Model.Item2?.Any() == true)
+{
+    <div class="@(Model.Item1 ? "position-sticky" : null)" style="top:1rem;">
+        @foreach (var aside in Model.Item2)
+        {
+            <div class="mt-3 mb-3">
+                <theme subtheme="(aside.Block?.Settings as IEditorBackgroundSettings)?.SubthemeTyped" shade="(aside.Block?.Settings as IEditorBackgroundSettings)?.ThemeShadeTyped" class="p-3" override="(aside.Block?.Settings as IEditorBackgroundSettings)?.OverrideColor" border-color="@(!string.IsNullOrWhiteSpace((aside.Block?.Settings as IEditorBorderSettings)?.BorderColor?.Color) ? (aside.Block?.Settings as IEditorBorderSettings)?.BorderColor : View.CurrentDomainPage.ConfigDefaultAsideBorderColor)" border-edges="@((aside.Block?.Settings as IEditorBorderSettings)?.BorderEdges?.Any() == true ? (aside.Block?.Settings as IEditorBorderSettings)?.BorderEdgesTyped : View.CurrentDomainPage.ConfigDefaultAsideBorderEdgesTyped) ?? EditorBorderEdges.All">
+                    @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.Group.GroupViewComponent.Name, aside))
+                </theme>
+            </div>
+        }
+    </div>
+}

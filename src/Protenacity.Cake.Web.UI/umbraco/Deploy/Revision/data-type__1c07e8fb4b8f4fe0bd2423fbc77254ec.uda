@@ -1,0 +1,27 @@
+{
+  "Name": "Editor Video Picker",
+  "EditorAlias": "Umbraco.MediaPicker3",
+  "EditorUiAlias": "Umb.PropertyEditorUi.MediaPicker",
+  "Configuration": {
+    "filter": "57405335-9e59-4ed7-8be7-b56dbb542668",
+    "multiple": false,
+    "validationLimit": {},
+    "enableLocalFocalPoint": false,
+    "ignoreUserStartNodes": false,
+    "umbMigrationV14": "2025-04-01T10:00:43.125526\u002B00:00"
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/1c07e8fb4b8f4fe0bd2423fbc77254ec",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://media-type/574053359e594ed78be7b56dbb542668",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

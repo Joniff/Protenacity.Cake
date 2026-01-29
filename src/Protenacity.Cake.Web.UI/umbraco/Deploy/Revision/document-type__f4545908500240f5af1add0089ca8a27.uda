@@ -1,0 +1,457 @@
+{
+  "Name": "Domain Configuration Tab",
+  "Alias": "domainConfigurationTab",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-lime",
+  "Thumbnail": "folder.png",
+  "Description": "Values that change website functionality",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "1d3502c6-3e2e-459d-a514-eee54eb69b8a",
+      "Name": "Page",
+      "SortOrder": 9,
+      "Alias": "config/page",
+      "PropertyTypes": [
+        {
+          "Key": "456fc79a-9d57-4428-81a0-edfaa32f0f43",
+          "Alias": "configPageSizeMaximum",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "Maximum allowed size of a page",
+          "Name": "Maximum Page Size",
+          "SortOrder": 1
+        },
+        {
+          "Key": "73a250a6-4f21-438d-858a-58876522f464",
+          "Alias": "configPageMaximum",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "Maximum allowed pages of results",
+          "Name": "Maximum Allowed Pages",
+          "SortOrder": 2
+        },
+        {
+          "Key": "8eb94a0b-93e3-413c-8ef2-dc34c06ab2e7",
+          "Alias": "configPageSizeDefault",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "Default Page Size of search results",
+          "Name": "Default Page Size"
+        }
+      ]
+    },
+    {
+      "Key": "4065c65e-99c7-4fc8-b613-c465605fab94",
+      "Name": "Card",
+      "SortOrder": 8,
+      "Alias": "config/card",
+      "PropertyTypes": [
+        {
+          "Key": "9660c2b8-2448-442e-8825-ff538507bf4e",
+          "Alias": "configCardDateFormat",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Date format used on Cards to display Date. Formats include dd/MM/yyyy",
+          "Name": "Date Format"
+        },
+        {
+          "Key": "df26fa85-8cab-4e4a-9cc9-9c334e9fd86a",
+          "Alias": "configCardTimeFormat",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Time format used on Cards to display Time. Formats include HH:mm",
+          "Name": "Time Format",
+          "SortOrder": 1
+        }
+      ]
+    },
+    {
+      "Key": "4a7bab8c-142b-45f1-9674-1cd52b68eaaf",
+      "Name": "Form",
+      "SortOrder": 2,
+      "Alias": "config/form",
+      "PropertyTypes": [
+        {
+          "Key": "0896675f-3c72-4a84-9112-e0cf2207d682",
+          "Alias": "configUmbracoFormFieldNameDefault",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Text displayed when a user doesn\u0027t fill in their Name field",
+          "Name": "Default Select Form Entries Field Name",
+          "SortOrder": 9
+        },
+        {
+          "Key": "09671316-38fe-4e58-a4bf-caad54d36f12",
+          "Alias": "configUmbracoFormFieldName",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Name of the field that stores the Name in an Umbraco Form",
+          "Name": "Select Form Entries Field Name",
+          "SortOrder": 7
+        },
+        {
+          "Key": "35483123-2dd9-4832-a5c6-f803849b02d8",
+          "Alias": "configFormFromEmail",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "When sending emails as part of submit workflow, who to send the email from",
+          "Name": "From Email ",
+          "SortOrder": 11,
+          "Validation": "[a-zA-Z0-9_.\u002B-]\u002B@[a-zA-Z0-9-]\u002B\\.[a-zA-Z0-9-.]\u002B"
+        },
+        {
+          "Key": "487961fb-5529-4427-a08e-ea9d7cd2e2c7",
+          "Alias": "configUmbracoFormCacheLength",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How long in minutes should we cache Umbraco Form Results when displayed on front end. As each call is a hit on the database, its best to cache for as long as possible.",
+          "Name": "Cache Length For Form Entries",
+          "SortOrder": 10
+        },
+        {
+          "Key": "8e9c7b8b-71a3-471a-95f2-ccfaf6d75e42",
+          "Alias": "configUmbracoFormFieldMessage",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Name of the field that stores the Message in an Umbraco Form",
+          "Name": "Select Form Entries Message Field",
+          "SortOrder": 8
+        }
+      ]
+    },
+    {
+      "Key": "4de358de-2e0e-4bdb-8026-4915e0a1a0a1",
+      "Name": "Images",
+      "Alias": "config/images",
+      "PropertyTypes": [
+        {
+          "Key": "57ef0fd6-a8ff-4f80-8ad8-c448b5bec4ce",
+          "Alias": "configDefaultImageMissingColor",
+          "DataType": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+          "Description": "Colour used when an image is missing",
+          "Name": "Default Image Missing Colour",
+          "SortOrder": 6
+        },
+        {
+          "Key": "8913da6a-65c5-40aa-940c-2cb1ddad6132",
+          "Alias": "configImageQuality",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "Select number between 1 to 100.\n1 = Awful images but fast.\n100 = Perfect images, but slow.",
+          "Name": "Image Quality"
+        }
+      ]
+    },
+    {
+      "Key": "5a73e792-56fa-4d80-8b25-30520985764f",
+      "Name": "Theme",
+      "SortOrder": -1,
+      "Alias": "config/theme",
+      "PropertyTypes": [
+        {
+          "Key": "6116da73-ac91-4803-a517-6067fee8e47f",
+          "Alias": "configTheme",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Actual css folder where themes is stored.\n\u003Ci\u003Ewwwroot/style/themes\u003C/i\u003E Folder",
+          "Name": "Name"
+        }
+      ]
+    },
+    {
+      "Key": "6bd56cb1-0608-4c15-b7af-b88d0e899af7",
+      "Name": "Search",
+      "SortOrder": 5,
+      "Alias": "config/search",
+      "PropertyTypes": [
+        {
+          "Key": "05ce23ef-a536-41c7-975d-7562f6a23f0f",
+          "Alias": "configSearchH1Boost",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How important is H1 content compared to other content. \n10 = Ten times more important than other content.\n1 = Same as other content",
+          "Name": "H1 Boost"
+        },
+        {
+          "Key": "217b9721-4d42-4a73-8143-e1ded170a591",
+          "Alias": "configSearchH4Boost",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How important is H4 content compared to other content. \n10 = Ten times more important than other content.\n1 = Same as other content",
+          "Name": "H4 Boost",
+          "SortOrder": 3
+        },
+        {
+          "Key": "4686673a-1a7f-4719-a15b-cdd665499fd4",
+          "Alias": "configSearchFuzziness",
+          "DataType": "umb://data-type/5aba26ad48e94859a2e57592fb32f228",
+          "Description": "Required similarity between search query and matching results. \n90 = Close matching only, 1 or 2 characters difference.\n50 = Only half the characters are required to match. \n\nLower the value more matches but slower the search takes to execute. If value is too low, search query will match everything.\n",
+          "Name": "Fuzziness",
+          "SortOrder": 9
+        },
+        {
+          "Key": "4c8e69e9-37b5-4821-8faa-42794bda5967",
+          "Alias": "configSearchH6Boost",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How important is H6 content compared to other content. \n10 = Ten times more important than other content.\n1 = Same as other content",
+          "Name": "H6 Boost",
+          "SortOrder": 5
+        },
+        {
+          "Key": "6dda3e17-764c-4fa7-993d-e1d4642ebc1c",
+          "Alias": "configSearchKeywordsBoost",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How important is Keywords on Seo Tab compared to other content. \n10 = Ten times more important than other content.\n1 = Same as other content",
+          "Name": "Keywords Boost",
+          "SortOrder": 6
+        },
+        {
+          "Key": "71052cff-28e5-4e9c-813f-aee8adcd82f6",
+          "Alias": "configSearchSeoPriorities",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "How important is each of the values of a webpage\u0027s SeoPriority starting from 10 to 0. Rate using comma separated values.",
+          "Name": "SeoPriorities",
+          "SortOrder": 10
+        },
+        {
+          "Key": "9bcdc0d2-ef9b-4a1b-86fb-e590a60b9266",
+          "Alias": "configSearchH3Boost",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How important is H3 content compared to other content. \n10 = Ten times more important than other content.\n1 = Same as other content",
+          "Name": "H3 Boost",
+          "SortOrder": 2
+        },
+        {
+          "Key": "ab66001f-a648-4b8d-961f-e31325c0e1f7",
+          "Alias": "configSearchH5Boost",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How important is H5 content compared to other content. \n10 = Ten times more important than other content.\n1 = Same as other content",
+          "Name": "H5 Boost",
+          "SortOrder": 4
+        },
+        {
+          "Key": "ac904fa6-7c7d-4866-ba23-5a609cafb190",
+          "Alias": "configSearchPromotedSearchTermsBoost",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How important is Promoted Search Terms on Seo Tab compared to other content. \n10 = Ten times more important than other content.\n1 = Same as other content",
+          "Name": "Promoted Search Terms Boost",
+          "SortOrder": 7
+        },
+        {
+          "Key": "bc4d6547-16ce-485f-b821-6cb3281202d1",
+          "Alias": "configSearchH2Boost",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How important is H2 content compared to other content. \n10 = Ten times more important than other content.\n1 = Same as other content",
+          "Name": "H2 Boost",
+          "SortOrder": 1
+        },
+        {
+          "Key": "fb0cba49-0273-40a8-abb4-b36ba5d5fd7b",
+          "Alias": "configSearchImplementFuzzyResults",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "Implement Fuzzy matching on query when results from exact matching returns less than this value",
+          "Name": "Implement Fuzzy Results ",
+          "SortOrder": 8
+        }
+      ]
+    },
+    {
+      "Key": "6bfb1cdc-6675-4094-88ad-c8cf4aa5ab1d",
+      "Name": "Category",
+      "SortOrder": 10,
+      "Alias": "config/category",
+      "PropertyTypes": [
+        {
+          "Key": "6809c994-a827-4183-9ee0-c0b129753b5d",
+          "Alias": "configCategoryCache",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How long, in minutes, to cache Category information when reading them. The cache uses Examine\u0027s Editor Index to collect data.",
+          "Name": "Default Cache Length"
+        }
+      ]
+    },
+    {
+      "Key": "8417b061-7f04-455a-8f65-5d2cd5b0c34a",
+      "Name": "Config",
+      "SortOrder": 1000,
+      "Type": 1,
+      "Alias": "config",
+      "PropertyTypes": []
+    },
+    {
+      "Key": "b68538b2-d917-4762-85e0-6bdf40495690",
+      "Name": "Review",
+      "SortOrder": 3,
+      "Alias": "config/review",
+      "PropertyTypes": [
+        {
+          "Key": "2ff1e161-c540-452b-9978-759781c457a3",
+          "Alias": "configReviewEmailFrequency",
+          "DataType": "umb://data-type/71a05ae3811f48c8bb32fd27573ec497",
+          "Description": "Which days of the week would you like to send review content emails",
+          "Name": "Review Email Frequency",
+          "SortOrder": 3
+        },
+        {
+          "Key": "7187b2cb-5822-44cb-ba9d-4a3e3cf35866",
+          "Alias": "configReviewEmailBody",
+          "DataType": "umb://data-type/7cba2f6b082a4db394dbef4402258aaf",
+          "Description": "Email body for review content email",
+          "Name": "Review Email Body",
+          "SortOrder": 2
+        },
+        {
+          "Key": "80d39d80-ffdf-4de8-a53d-3da4a83773be",
+          "Alias": "configReviewEmailSubject",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Subject element for emails sent out when content requires review",
+          "Name": "Review Email Subject",
+          "SortOrder": 1
+        },
+        {
+          "Key": "851b57eb-dad3-4ec5-9ab2-c95eeb11a4fe",
+          "Alias": "configReviewEmailFrom",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Which email address should we use to send review emails from",
+          "Name": "Review From Email",
+          "Validation": "[a-zA-Z0-9_.\u002B-]\u002B@[a-zA-Z0-9-]\u002B\\.[a-zA-Z0-9-.]\u002B"
+        }
+      ]
+    },
+    {
+      "Key": "ba8a02cd-cacb-4b70-b206-eb4880ccd051",
+      "Name": "Coroner",
+      "SortOrder": 6,
+      "Alias": "config/coroner",
+      "PropertyTypes": [
+        {
+          "Key": "1978ba0c-6f15-47c3-b300-2e55b060bb67",
+          "Alias": "configCoronerDateFormat",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Date format used to display Coroner dates. Formats include dd/MM/yyyy",
+          "Name": "Date Format"
+        },
+        {
+          "Key": "47d7ec26-3675-47e3-baad-3287230e6d93",
+          "Alias": "configCoronerTimeFormat",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Time format used to display Coroner times. Formats include HH:mm",
+          "Name": "Time Format",
+          "SortOrder": 1
+        }
+      ]
+    },
+    {
+      "Key": "bddd6bb9-cb7d-418a-b574-0593a3580707",
+      "Name": "Opening Times",
+      "SortOrder": 4,
+      "Alias": "config/openingTimes",
+      "PropertyTypes": [
+        {
+          "Key": "27998c03-708f-4625-afe9-7aca49ef9fc7",
+          "Alias": "configOpeningTimesCustomTimeFormat",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Allows custom time formatitng. See \u003Ca href=\u0022https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings\u0022\u003ECustom date and time format\u003C/a\u003E for details",
+          "Name": "Custom Time Format"
+        }
+      ]
+    },
+    {
+      "Key": "d4f65a52-c137-4fc4-95a8-13c53baf9ceb",
+      "Name": "Aside",
+      "SortOrder": 1,
+      "Alias": "config/aside",
+      "PropertyTypes": [
+        {
+          "Key": "02e57c6d-47ff-4b7b-b0af-12c7b3ca3a8f",
+          "Alias": "configDefaultAsideBorderColor",
+          "DataType": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+          "Description": "Default border colour around side panels",
+          "Name": "Default Aside Border Colour",
+          "SortOrder": 4
+        },
+        {
+          "Key": "49d74527-609a-4a6b-9dcb-b61c663982de",
+          "Alias": "configAsideRightWidth",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "Pick a number between 1 and 12. Each consecutive number makes the side panel 8% wider.\n2 = side panel takes up \u003Cspan style=\u0022font-size: 70%; vertical-align: 0.7ex;\u0022\u003E2\u003C/span\u003E\u0026frasl;\u003Cspan style=\u0022font-size: 70%; vertical-align: -0.3ex;\u0022\u003E12\u003C/span\u003E\u003Csup\u003Eth\u003C/sup\u003E of the page leaving \u003Cspan style=\u0022font-size: 70%; vertical-align: 0.7ex;\u0022\u003E10\u003C/span\u003E\u0026frasl;\u003Cspan style=\u0022font-size: 70%; vertical-align: -0.3ex;\u0022\u003E12\u003C/span\u003E\u003Csup\u003Eth\u003C/sup\u003E for main content. \n4 = side panel takes up \u003Cspan style=\u0022font-size: 70%; vertical-align: 0.7ex;\u0022\u003E4\u003C/span\u003E\u0026frasl;\u003Cspan style=\u0022font-size: 70%; vertical-align: -0.3ex;\u0022\u003E12\u003C/span\u003E\u003Csup\u003Eth\u003C/sup\u003E of the page leaving \u003Cspan style=\u0022font-size: 70%; vertical-align: 0.7ex;\u0022\u003E8\u003C/span\u003E\u0026frasl;\u003Cspan style=\u0022font-size: 70%; vertical-align: -0.3ex;\u0022\u003E12\u003C/span\u003E\u003Csup\u003Eth\u003C/sup\u003E for main content.",
+          "Name": "Side Panel Right Width",
+          "SortOrder": 2
+        },
+        {
+          "Key": "698b3fd1-de25-4707-9720-68aaed0a605f",
+          "Alias": "configAsideLeftWidth",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "Pick a number between 1 and 12. Each consecutive number makes the side panel 8% wider.\n1 = side panel takes up \u003Cspan style=\u0022font-size: 70%; vertical-align: 0.7ex;\u0022\u003E1\u003C/span\u003E\u0026frasl;\u003Cspan style=\u0022font-size: 70%; vertical-align: -0.3ex;\u0022\u003E12\u003C/span\u003E\u003Csup\u003Eth\u003C/sup\u003E of the page leaving \u003Cspan style=\u0022font-size: 70%; vertical-align: 0.7ex;\u0022\u003E11\u003C/span\u003E\u0026frasl;\u003Cspan style=\u0022font-size: 70%; vertical-align: -0.3ex;\u0022\u003E12\u003C/span\u003E\u003Csup\u003Eth\u003C/sup\u003E for main content. \n3 = side panel takes up \u003Cspan style=\u0022font-size: 70%; vertical-align: 0.7ex;\u0022\u003E3\u003C/span\u003E\u0026frasl;\u003Cspan style=\u0022font-size: 70%; vertical-align: -0.3ex;\u0022\u003E12\u003C/span\u003E\u003Csup\u003Eth\u003C/sup\u003E of the page leaving \u003Cspan style=\u0022font-size: 70%; vertical-align: 0.7ex;\u0022\u003E9\u003C/span\u003E\u0026frasl;\u003Cspan style=\u0022font-size: 70%; vertical-align: -0.3ex;\u0022\u003E12\u003C/span\u003E\u003Csup\u003Eth\u003C/sup\u003E for main content.",
+          "Name": "Side Panel Left Width"
+        },
+        {
+          "Key": "91361355-3d41-4a58-8892-c92e10108eaa",
+          "Alias": "configDefaultAsideBorderEdges",
+          "DataType": "umb://data-type/22a3a197888948e09a51823e4b61d9c3",
+          "Description": "Default edges that are shown around the side panel",
+          "Name": "Default Aside Border Edges",
+          "SortOrder": 5
+        },
+        {
+          "Key": "c342e8e9-7064-4b07-8004-94daa830e461",
+          "Alias": "configDefaultAsideBackground",
+          "DataType": "umb://data-type/d19af56c46484f91b72a1739f08ebf16",
+          "Description": "Default background used for side panels",
+          "Name": "Default Aside Background",
+          "SortOrder": 3
+        }
+      ]
+    },
+    {
+      "Key": "da69bc74-2ae8-4a4b-a941-7889969e5c14",
+      "Name": "Rss Feed Reader",
+      "SortOrder": 7,
+      "Alias": "config/rssFeedReader",
+      "PropertyTypes": [
+        {
+          "Key": "21ea6e41-a45c-44d3-ace2-47c993dd2190",
+          "Alias": "configRssFeedReaderCache",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How long, in minutes, to cache Rss Feed when reading them, if the Rss Feed itself doesn\u0027t broadcast its cache rate/TTL.",
+          "Name": "Default Cache Length"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/f4545908500240f5af1add0089ca8a27",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/22a3a197888948e09a51823e4b61d9c3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/5aba26ad48e94859a2e57592fb32f228",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/71a05ae3811f48c8bb32fd27573ec497",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/7cba2f6b082a4db394dbef4402258aaf",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d19af56c46484f91b72a1739f08ebf16",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

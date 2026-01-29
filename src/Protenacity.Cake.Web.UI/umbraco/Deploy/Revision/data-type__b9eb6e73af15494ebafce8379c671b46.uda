@@ -1,0 +1,22 @@
+{
+  "Name": "Furniture Status",
+  "EditorAlias": "Umbraco.RadioButtonList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.RadioButtonList",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "items": [
+      "Inherit",
+      "Show"
+    ]
+  },
+  "Parent": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+  "Udi": "umb://data-type/b9eb6e73af15494ebafce8379c671b46",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,184 @@
+﻿.theme-default, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana {
+    --lcc-l-abtn-fg: #ffffff;
+    --lcc-l-abtn-bg: #317918;
+    --lcc-l-abtnhover-fg: #ffffff;
+    --lcc-l-abtnhover-bg: #245912;
+    --lcc-l-abtnprimary-fg: #ffffff;
+    --lcc-l-abtnprimary-bg: #245912;
+    --lcc-l-abtnprimaryhover-fg: #ffffff;
+    --lcc-l-abtnprimaryhover-bg: #00487f;
+    --lcc-l-abtndanger-fg: #ffffff;
+    --lcc-l-abtndanger-bg: #8e0b18;
+    --lcc-l-abtndangerhover-fg: #ffffff;
+    --lcc-l-abtndangerhover-bg: #8e0b18;
+    --lcc-l-abtninfo-fg: #ffffff;
+    --lcc-l-abtninfo-bg: #1191b3;
+    --lcc-l-abtninfohover-fg: #ffffff;
+    --lcc-l-abtninfohover-bg: #0e7590;
+    --lcc-l-cbc-bg: #ced4de;
+
+    --lcc-d-abtn-bg: #ffffff;
+    --lcc-d-abtn-fg: #317918;
+    --lcc-d-abtnhover-bg: #ffffff;
+    --lcc-d-abtnhover-fg: #245912;
+    --lcc-d-abtnprimary-bg: #ffffff;
+    --lcc-d-abtnprimary-fg: #245912;
+    --lcc-d-abtnprimaryhover-bg: #ffffff;
+    --lcc-d-abtnprimaryhover-fg: #00487f;
+    --lcc-d-abtndanger-bg: #ffffff;
+    --lcc-d-abtndanger-fg: #8e0b18;
+    --lcc-d-abtndangerhover-bg: #ffffff;
+    --lcc-d-abtndangerhover-fg: #8e0b18;
+    --lcc-d-abtninfo-bg: #ffffff;
+    --lcc-d-abtninfo-fg: #1191b3;
+    --lcc-d-abtninfohover-bg: #ffffff;
+    --lcc-d-abtninfohover-fg: #0e7590;
+    --lcc-d-cbc-bg: #005ea5;
+}
+
+.theme-light a.btn {
+    color: var(--lcc-l-abtn-fg, white);
+    background-color: var(--lcc-l-abtn-bg, black);
+}
+
+.theme-light a.btn:visited {
+    color: var(--lcc-l-abtn-fg, white);
+    background-color: var(--lcc-l-abtn-bg, black);
+}
+
+.theme-light a.btn:hover {
+    color: var(--lcc-l-abtnhover-fg, white);
+    background-color: var(--lcc-l-abtnhover-bg, black);
+}
+
+.theme-light a.btn-primary {
+    color: var(--lcc-l-abtnprimary-fg, white);
+    background-color: var(--lcc-l-abtnprimary-bg, black);
+}
+
+.theme-light a.btn-primary:visited {
+    color: var(--lcc-l-abtnprimary-fg, white);
+    background-color: var(--lcc-l-abtnprimary-bg, black);
+}
+
+.theme-light a.btn-primary:hover {
+    color: var(--lcc-l-abtnprimaryhover-fg, white);
+    background-color: var(--lcc-l-abtnprimaryhover-bg, black);
+}
+
+.theme-light a.btn-danger {
+    color: var(--lcc-l-abtndanger-fg, white);
+    background-color: var(--lcc-l-abtndanger-bg, black);
+}
+
+.theme-light a.btn-danger:visited {
+    color: var(--lcc-l-abtndanger-fg, white);
+    background-color: var(--lcc-l-abtndanger-bg, black);
+}
+
+.theme-light a.btn-danger:hover {
+    color: var(--lcc-l-abtndangerhover-fg, white);
+    background-color: var(--lcc-l-abtndangerhover-bg, black);
+}
+
+.theme-light a.btn-info {
+    color: var(--lcc-l-abtninfo-fg, white);
+    background-color: var(--lcc-l-abtninfo-bg, black);
+}
+
+.theme-light a.btn-info:visited {
+    color: var(--lcc-l-abtninfo-fg, white);
+    background-color: var(--lcc-l-abtninfo-bg, black);
+}
+
+.theme-light a.btn-info:hover {
+    color: var(--lcc-l-abtninfohover-fg, white);
+    background-color: var(--lcc-l-abtninfohover-bg, black);
+}
+
+.theme-dark a.btn {
+    color: var(--lcc-d-abtn-fg, white);
+    background-color: var(--lcc-d-abtn-bg, black);
+}
+
+.theme-dark a.btn:visited {
+    color: var(--lcc-d-abtn-fg, white);
+    background-color: var(--lcc-d-abtn-bg, black);
+}
+
+.theme-dark a.btn:hover {
+    color: var(--lcc-d-abtnhover-fg, white);
+    background-color: var(--lcc-d-abtnhover-bg, black);
+}
+
+.theme-dark a.btn-primary {
+    color: var(--lcc-d-abtnprimary-fg, white);
+    background-color: var(--lcc-d-abtnprimary-bg, black);
+}
+
+.theme-dark a.btn-primary:visited {
+    color: var(--lcc-d-abtnprimary-fg, white);
+    background-color: var(--lcc-d-abtnprimary-bg, black);
+}
+
+.theme-dark a.btn-primary:hover {
+    color: var(--lcc-d-abtnprimaryhover-fg, white);
+    background-color: var(--lcc-d-abtnprimaryhover-bg, black);
+}
+
+.theme-dark a.btn-danger {
+    color: var(--lcc-d-abtndanger-fg, white);
+    background-color: var(--lcc-d-abtndanger-bg, black);
+}
+
+.theme-dark a.btn-danger:visited {
+    color: var(--lcc-d-abtndanger-fg, white);
+    background-color: var(--lcc-d-abtndanger-bg, black);
+}
+
+.theme-dark a.btn-danger:hover {
+    color: var(--lcc-d-abtndangerhover-fg, white);
+    background-color: var(--lcc-d-abtndangerhover-bg, black);
+}
+
+.theme-dark a.btn-info {
+    color: var(--lcc-d-abtninfo-fg, white);
+    background-color: var(--lcc-d-abtninfo-bg, black);
+}
+
+.theme-dark a.btn-info:hover {
+    color: var(--lcc-d-abtninfohover-fg, white);
+    background-color: var(--lcc-d-abtninfohover-bg, black);
+}
+
+
+.theme-light .show-click-arrow .carousel-control-next-icon {
+    filter:invert(1) grayscale(100);
+    background-color:unset;
+    opacity:1;
+}
+
+.theme-dark .show-click-arrow {
+    filter:invert(1) grayscale(100);
+}
+
+.theme-dark .show-click-arrow .carousel-control-next-icon {
+    background-color:unset;
+    opacity:1;
+}
+
+.theme-light .category-button-container {
+    background-color: var(--lcc-l-cbc-bg, white);
+}
+
+.theme-light .category-button-container .nav-link:not(.active) {
+    color: var(--lcc-l-cbc-fg, black) !important;
+}
+
+.theme-dark .category-button-container {
+    background-color: var(--lcc-d-cbc-bg, black);
+}
+
+.theme-dark .category-button-container .nav-link:not(.active) {
+    color: var(--lcc-d-cbc-fg, white) !important;
+}

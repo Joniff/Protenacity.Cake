@@ -1,0 +1,45 @@
+{
+  "Name": "Blocks Settings",
+  "Alias": "editorTableSourceBlocksSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-pink",
+  "Thumbnail": "folder.png",
+  "Description": "Settings for when blocks are used as source for table",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/690556d68e2e4b409476cdade9eca12e",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "a985f950-ee5c-45bd-987a-07771b330693",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "2a99e7d8-f3f4-447e-ab38-6da7c203ede8",
+          "Alias": "columns",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "How many columns are there. \n\nThe number of rows will be calculated by how many blocks are added",
+          "Name": "Columns"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/0e84b563bd7144e08e86594939c0f7b0",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/690556d68e2e4b409476cdade9eca12e",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

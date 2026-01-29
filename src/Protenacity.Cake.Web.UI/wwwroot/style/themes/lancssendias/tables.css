@@ -1,0 +1,31 @@
+﻿.theme-default, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana {
+    --lcc-l-th-bg: #0b0c0c;
+    --lcc-l-th-fg: #ffffff;
+    --lcc-l-td-bg: #ffffff;
+    --lcc-l-td-fg: #0b0c0c;
+
+    --lcc-d-th-bg: #ffffff;
+    --lcc-d-th-fg: #0b0c0c;
+    --lcc-d-td-bg: #0b0c0c;
+    --lcc-d-td-fg: #ffffff;
+}
+
+.theme-light th {
+    color: var(--lcc-l-th-fg, black);
+    background-color: var(--lcc-l-th-bg, black);
+}
+
+.theme-light td {
+    color: var(--lcc-l-td-fg, black);
+    background-color: var(--lcc-l-td-bg, black);
+}
+
+.theme-dark th {
+    color: var(--lcc-d-th-fg, white);
+    background-color: var(--lcc-d-th-bg, black);
+}
+
+.theme-dark td {
+    color: var(--lcc-d-td-fg, white);
+    background-color: var(--lcc-d-td-bg, black);
+}

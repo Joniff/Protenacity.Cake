@@ -1,0 +1,10 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Paging.IPagingViewModel
+
+<form class="mb-5" role="search" method="get" action="@View.CurrentPage.Url()">
+    <div class="input-group w-100 border border-dark">
+        <input type="search" class="form-control" name="@Model.QueryString" placeholder="@Model.Title" aria-label="@Model.Title" value="@Model.Criteria">
+        <button class="btn btn-outline-light input-group-append" type="submit">
+            <span class="fa-solid fa-magnifying-glass input-group-text"></span>
+        </button>
+    </div>
+</form>

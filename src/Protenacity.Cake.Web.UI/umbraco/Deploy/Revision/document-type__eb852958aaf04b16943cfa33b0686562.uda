@@ -1,0 +1,45 @@
+{
+  "Name": "Expandable Section Base",
+  "Alias": "editorExpandableSectionBase",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-plugin",
+  "Thumbnail": "folder.png",
+  "Description": "Base properties for a Section",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/f247b22d9fe94d04b98470d7805eaa99",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "bc108dc1-9957-41a8-b2e2-300851b6fc76",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "473e82c2-094b-484e-be49-03ff90a885eb",
+          "Alias": "body",
+          "DataType": "umb://data-type/c9dcf10e90c040258830717b0b5aadd7",
+          "Description": "Main content for Section ",
+          "Name": "Body"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/eb852958aaf04b16943cfa33b0686562",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/c9dcf10e90c040258830717b0b5aadd7",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/f247b22d9fe94d04b98470d7805eaa99",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

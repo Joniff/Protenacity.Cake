@@ -1,0 +1,58 @@
+{
+  "Name": "Shared Border Settings",
+  "Alias": "editorBorderSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-checkbox-dotted color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Sets border around item",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "b6c99e49-b4f2-400c-89e4-8977cda79590",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "09868e90-d524-4bf3-b036-463d4e8918fd",
+          "Alias": "borderColor",
+          "DataType": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+          "Description": "Colour of border around item",
+          "Name": "Border Colour",
+          "SortOrder": 250
+        },
+        {
+          "Key": "208f5720-8347-40aa-94d4-a705e761775a",
+          "Alias": "borderEdges",
+          "DataType": "umb://data-type/22a3a197888948e09a51823e4b61d9c3",
+          "Description": "Which edges do you wish the border to be displayed on. Select all 4 options to complete the border",
+          "Name": "Border Edges",
+          "SortOrder": 251
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/97e21745dec5451a82f03be21b0a8639",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/22a3a197888948e09a51823e4b61d9c3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

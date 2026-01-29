@@ -1,0 +1,117 @@
+{
+  "Name": "Note Base Settings",
+  "Alias": "editorNoteBaseSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-blue",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/a9ed09e263e346feb7563da53460a78d",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "9d300529-0385-40a4-b105-18d615c7bb6d",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "5423cd25-f8a9-423b-b7de-171feacde774",
+          "Alias": "styleDate",
+          "DataType": "umb://data-type/963d717974b14722b802b0a9f550079c",
+          "Description": "Do we show the Date",
+          "Name": "Date",
+          "SortOrder": 53
+        },
+        {
+          "Key": "9f83a842-252f-43f2-8668-95cdb49f26fe",
+          "Alias": "styleImage",
+          "DataType": "umb://data-type/22fc639518774c7c88fced82f52aa23a",
+          "Description": "Where to place the image in relations to the other elements",
+          "Name": "Image Location",
+          "SortOrder": 50
+        },
+        {
+          "Key": "a2c1e7d9-3bc2-4199-89e0-dff02c0c9d34",
+          "Alias": "styleText",
+          "DataType": "umb://data-type/e7403b923841414baf68fb9be798b2c6",
+          "Description": "Do we show the Text",
+          "Name": "Text",
+          "SortOrder": 55
+        },
+        {
+          "Key": "a661dff9-b059-4ce3-88f5-ba9419477ca7",
+          "Alias": "styleTime",
+          "DataType": "umb://data-type/c60cc871fedf404990a33c173b32d310",
+          "Description": "Do we show the Time",
+          "Name": "Time",
+          "SortOrder": 54
+        },
+        {
+          "Key": "c1e670b3-dfda-43d2-98e2-6e54dee8f599",
+          "Alias": "showClickArrow",
+          "DataType": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+          "Description": "Show a click arror aligned to the right, giving an indication that clicking this card will provide an event. ",
+          "Name": "Show Click Arrow",
+          "SortOrder": 56
+        },
+        {
+          "Key": "d15bb0b6-0b81-4d02-b5b2-841d737907a0",
+          "Alias": "styleHeader",
+          "DataType": "umb://data-type/d76d391390cf4a8fbd437f6966fafb4c",
+          "Description": "Do we show the Header",
+          "Name": "Header",
+          "SortOrder": 52
+        },
+        {
+          "Key": "ed7ea359-fde5-4538-ac4b-cb11f41afabc",
+          "Alias": "styleImageSize",
+          "DataType": "umb://data-type/2f53eec1a21d4ef9a295a4bd6cee3926",
+          "Description": "How to size image compared to rest of the card information",
+          "Name": "Image Size",
+          "SortOrder": 51
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/cc01ac840c6b47aab61edd83f7d1c8d7",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/22fc639518774c7c88fced82f52aa23a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2f53eec1a21d4ef9a295a4bd6cee3926",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/963d717974b14722b802b0a9f550079c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c60cc871fedf404990a33c173b32d310",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d76d391390cf4a8fbd437f6966fafb4c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/e7403b923841414baf68fb9be798b2c6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/a9ed09e263e346feb7563da53460a78d",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

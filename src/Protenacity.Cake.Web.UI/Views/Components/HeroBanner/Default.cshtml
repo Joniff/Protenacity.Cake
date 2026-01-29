@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Protenacity.Cake.Web.Presentation.Editor.HeroBanner.HeroBannerViewModel>
+
+<div id="carousel@(Model.GetHashCode())" class="hero-banner carousel slide" data-bs-ride="carousel">
+    @if (Model.Count() > 1)
+    {
+        <div class="carousel-indicators">
+            @foreach (var slide in Model)
+            {
+                <button type="button" data-bs-target="#carousel@(Model.GetHashCode())" data-bs-slide-to="@slide.Index" class="@(slide.Index == 0 ? "active" : null)" aria-current="true" aria-label="Slide @(slide.Index + 1)"></button>
+            }
+        </div>
+    }
+    <div class="carousel-inner">
+        @foreach (var slide in Model)
+        {
+            <div class="carousel-item @(slide.Index == 0 ? "active" : null)">
+
+                <div class="d-block w-100" style="max-height:600px">
+                    @if (string.IsNullOrWhiteSpace(slide.Block.Content.Image?.Url()))
+                    {
+                        <picture>
+                            <source media="(min-width:2560px)" srcset="/images/transparent.png?width=5120&amp;height=600&amp;quality=70">
+                            <source media="(min-width:1200px)" srcset="/images/transparent.png?width=2560&amp;height=600&amp;quality=70">
+                            <source media="(min-width:768px)" srcset="/images/transparent.png?width=1200&amp;height=480&amp;quality=70">
+                            <source media="(min-width:480px)" srcset="/images/transparent.png?width=768&amp;height=320&amp;quality=70">
+                            <img src="/images/transparent.png?width=480&amp;height=240&amp;quality=70" alt="transparent" class="w-100 h-100" style="background-color:@(slide.Block.Settings?.Color ?? "#ffffff")" aria-hidden="true">
+                        </picture>
+                    }
+                    else
+                    {
+                        @(await Component.InvokeAsync(ResponsiveImageViewComponent.Name, new ResponsiveImage
+                        {
+                            Image = slide.Block.Content.Image,
+                            ImageCrop = EditorImageCrops.Banner,
+                            AlternateTitle = slide.Block.Content.Image.AlternateText()
+                        }))
+                    }
+                </div>
+
+                @if (slide.Block.Content.Title?.HasContent() == true || slide.Block.Content.Description?.HasContent() == true || !string.IsNullOrWhiteSpace(slide.Block.Content.Link?.Url))
+                {
+                    <div class="">
+                        <div class="carousel-caption p-1 @(slide.Block.Settings?.AlignmentTyped == EditorHeroBannerTextAlignments.Left ? "text-start" : (slide.Block.Settings?.AlignmentTyped == EditorHeroBannerTextAlignments.Right ? "text-end" : null))" 
+                            style="@(slide.Block.Settings?.Darken == true ? "background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));" : null)">
+
+                            <div class="card bg-transparent border-0">
+                                <div class="card-body">
+                                    <h2 class="card-title text-light">@Html.Raw(slide.Block.Content.Title?.ToHeader())</h2>
+                                    <span class="card-text text-light">@Html.Raw(slide.Block.Content.Description)</span>
+                                    @if (!string.IsNullOrWhiteSpace(slide.Block.Content.Link?.Url))
+                                    {
+                                        <a href="@slide.Block.Content.Link?.Url" target="@(string.IsNullOrWhiteSpace(slide.Block.Content.Link?.Target) ? "_self" : slide.Block.Content.Link?.Target)" class="btn btn-primary">
+                                            @(string.IsNullOrWhiteSpace(slide.Block.Content.Link?.Name) ? slide.Block.Content.Link?.Url : slide.Block.Content.Link?.Name)
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+    @if (Model.Count() > 1)
+    {
+        <div class="d-none d-md-block">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel@(Model.GetHashCode())" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel@(Model.GetHashCode())" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    }
+</div>

@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<!-- Umbraco 17 -->
+	<ItemGroup>
+		<PackageReference Include="Umbraco.Cms.Core" Version="[17.1.0,21.0.0)" />
+		<PackageReference Include="Umbraco.Cms.Infrastructure" Version="[17.1.0,21.0.0)" />
+		<PackageReference Include="Umbraco.Cms.Web.Common" Version="[17.1.0,21.0.0)" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.2" />
+		<PackageReference Include="ZiggyCreatures.FusionCache" Version="2.5.0" />
+	</ItemGroup>
+	
+	<PropertyGroup>
+		<StaticWebAssetBasePath>/</StaticWebAssetBasePath>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Folder Include="wwwroot\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Protenacity.Web.OpenStreetMap\Protenacity.Web.OpenStreetMap.csproj" />
+	</ItemGroup>
+
+</Project>

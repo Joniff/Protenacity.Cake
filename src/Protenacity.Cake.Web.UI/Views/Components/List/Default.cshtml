@@ -1,0 +1,94 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.List.ListViewModel
+
+@switch (Model.ListType)
+{
+    case ListTypes.Grid:
+        <text>
+            <div class="row row-cols-1 row-cols-md-@(Model.MaxColumns > 1 ? 2 : 1) row-cols-lg-@Model.MaxColumns">
+                @foreach (var block in Model.Blocks)
+                {
+                    <div class="col mb-2">
+                        @(await Component.InvokeAsync(block.EditorComponent, block))
+                    </div>
+                }
+            </div>
+
+            @if (Model.Paging != null)
+            {
+                <vc:paging render="@PageRenders.Paging" model="Model.Paging"></vc:paging>
+            }
+        </text>
+        break;
+
+    case ListTypes.Carousel:
+        @* 
+            Using GlideJs 
+            https://github.com/glidejs/glide
+        *@
+
+        <text>
+            <div id="glide-@(Model.Id)" class="glide">
+                <div data-glide-el="track" class="glide__track">
+                    <ul class="glide__slides">
+                        @foreach (var block in Model.Blocks)
+                        {
+                            <li class="glide__slide">
+                                @(await Component.InvokeAsync(block.EditorComponent, block))
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <script>
+                (function() {
+                    document.addEventListener('DOMContentLoaded', function(event) {
+                        let glide = new Glide('#glide-@(Model.Id)', {
+                        type: 'carousel',
+                        perView: @(Model.MaxColumns),
+                        breakpoints: {
+                            @if (Model.MaxColumns > 6)
+                            {
+                                <text>
+                                    1200: {
+                                        perView: 6
+                                    },
+                                </text>
+                            }
+                            @if (Model.MaxColumns > 4)
+                            {
+                                <text>
+                                    992: {
+                                        perView: 4
+                                    },
+                                </text>
+                            }
+                            @if (Model.MaxColumns > 2)
+                            {
+                                <text>
+                                    768: {
+                                        perView: 2
+                                    },
+                                </text>
+                            }
+                            576: {
+                                perView: 1
+                            }
+                        }
+                        }).mount();
+                    });
+                })();
+            </script>
+        </text>
+        break;
+}

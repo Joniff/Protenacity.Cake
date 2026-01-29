@@ -1,0 +1,25 @@
+﻿@model BlockListItem<IEditorImageEmbedded, IEditorImageEmbeddedSettings>
+
+@if (Model.Content.Images?.Any() == true)
+{
+    foreach (var image in Model.Content.Images)
+    {
+        @if (Model.Settings?.Fullscreen == true)
+        {
+            @:<a href="@image.Url()" data-toggle="lightbox">
+        }
+
+        <div class="d-block w-100 mb-2">
+            @(await Component.InvokeAsync(ResponsiveImageViewComponent.Name, new ResponsiveImage
+            {
+                Image = image,
+                ImageCrop = EditorImageCrops.Full
+            }))
+        </div>
+
+        @if (Model.Settings?.Fullscreen == true)
+        {
+            @:</a>
+        }
+    }
+}

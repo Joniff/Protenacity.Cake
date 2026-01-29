@@ -1,0 +1,10 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.SectionLinks.SectionLinksViewModel
+
+<theme border-color="@Model.BorderColor" border-edges="@Model.BorderEdges">
+    @foreach (var action in Model.Actions)
+    {
+        <div>
+            @(await Component.InvokeAsync(ActionViewComponent.Name, action))
+        </div>
+    }
+</theme>

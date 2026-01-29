@@ -1,0 +1,22 @@
+{
+  "Name": "Redirect Type",
+  "EditorAlias": "Umbraco.RadioButtonList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.RadioButtonList",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "items": [
+      "Redirect",
+      "Rewrite"
+    ]
+  },
+  "Parent": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+  "Udi": "umb://data-type/84e88f1691e342418edc82030b5fed17",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

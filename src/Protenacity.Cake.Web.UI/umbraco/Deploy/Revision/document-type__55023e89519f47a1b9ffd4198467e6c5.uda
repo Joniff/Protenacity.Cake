@@ -1,0 +1,37 @@
+{
+  "Name": "Full Size Map",
+  "Alias": "editorMapPrimary",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-map-marker color-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Show a venue\u0027s location on an interactive map",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/fc8fe87fc7c442bf960b4d050b75b132",
+  "CompositionContentTypes": [
+    "umb://document-type/1871a002b7ea4de3967a644bd2a87045",
+    "umb://document-type/c9aa2cd749c64ed18971fee1f171d91d"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/55023e89519f47a1b9ffd4198467e6c5",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/fc8fe87fc7c442bf960b4d050b75b132",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/1871a002b7ea4de3967a644bd2a87045",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/c9aa2cd749c64ed18971fee1f171d91d",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

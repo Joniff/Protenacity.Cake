@@ -1,0 +1,170 @@
+{
+  "Name": "Editor All Colors",
+  "EditorAlias": "Umbraco.ColorPicker",
+  "EditorUiAlias": "Umb.PropertyEditorUi.ColorPicker",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "useLabel": false,
+    "items": [
+      {
+        "value": "ffffff",
+        "label": ""
+      },
+      {
+        "value": "f3f7fa",
+        "label": ""
+      },
+      {
+        "value": "2c5a77",
+        "label": ""
+      },
+      {
+        "value": "1e394b",
+        "label": ""
+      },
+      {
+        "value": "0d7d88",
+        "label": ""
+      },
+      {
+        "value": "a93d6a",
+        "label": ""
+      },
+      {
+        "value": "802427",
+        "label": ""
+      },
+      {
+        "value": "a9003d",
+        "label": ""
+      },
+      {
+        "value": "c83020",
+        "label": ""
+      },
+      {
+        "value": "bdc3c9",
+        "label": ""
+      },
+      {
+        "value": "4c5054",
+        "label": ""
+      },
+      {
+        "value": "505a5f",
+        "label": ""
+      },
+      {
+        "value": "0b0c0c",
+        "label": ""
+      },
+      {
+        "value": "000000",
+        "label": ""
+      },
+      {
+        "value": "0c3571",
+        "label": ""
+      },
+      {
+        "value": "0e2c5b",
+        "label": ""
+      },
+      {
+        "value": "3b1e7c",
+        "label": ""
+      },
+      {
+        "value": "ffc107",
+        "label": ""
+      },
+      {
+        "value": "317918",
+        "label": ""
+      },
+      {
+        "value": "245912",
+        "label": ""
+      },
+      {
+        "value": "005ea5",
+        "label": ""
+      },
+      {
+        "value": "00487f",
+        "label": ""
+      },
+      {
+        "value": "b10e1e",
+        "label": ""
+      },
+      {
+        "value": "8e0b18",
+        "label": ""
+      },
+      {
+        "value": "1191b3",
+        "label": ""
+      },
+      {
+        "value": "0e7590",
+        "label": ""
+      },
+      {
+        "value": "feedd6",
+        "label": ""
+      },
+      {
+        "value": "efcfd2",
+        "label": ""
+      },
+      {
+        "value": "ccdfed",
+        "label": ""
+      },
+      {
+        "value": "d6e4d1",
+        "label": ""
+      },
+      {
+        "value": "cfe9f0",
+        "label": ""
+      },
+      {
+        "value": "32210a",
+        "label": ""
+      },
+      {
+        "value": "230306",
+        "label": ""
+      },
+      {
+        "value": "230306",
+        "label": ""
+      },
+      {
+        "value": "001321",
+        "label": ""
+      },
+      {
+        "value": "0a1805",
+        "label": ""
+      },
+      {
+        "value": "0e7590",
+        "label": ""
+      }
+    ],
+    "umbMigrationV14": "2025-04-01T10:00:43.0886887\u002B00:00"
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,57 @@
+{
+  "Name": "Virtual Agent Data",
+  "Alias": "virtualAgentData",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-company color-green",
+  "Thumbnail": "folder.png",
+  "Description": "Users can ask questions and get responses from AI",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "72efe2a5-b9dd-4f46-ba9b-8f45038afcc9",
+      "Name": "Contents",
+      "Type": 1,
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "09a4d9b6-893e-4afc-acc5-8910f71f6781",
+          "Alias": "workspaceId",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Workspace ",
+          "Name": "Workspace Id",
+          "Validation": "(\\{{0,1}([0-9a-fA-F]){8}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){12}\\}{0,1})",
+          "ValidationMessage": "Guid in Format \u002700000000-0000-0000-0000-000000000000\u0027"
+        },
+        {
+          "Key": "1f1f2259-baca-4e27-9815-1cf43910981b",
+          "Alias": "definitionId",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Definition",
+          "Name": "Definition Id",
+          "SortOrder": 1,
+          "Validation": "(\\{{0,1}([0-9a-fA-F]){8}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){12}\\}{0,1})",
+          "ValidationMessage": "Guid in Format \u002700000000-0000-0000-0000-000000000000\u0027"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/8d9f06af2c9c497e8ba2452afb72c0b2",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

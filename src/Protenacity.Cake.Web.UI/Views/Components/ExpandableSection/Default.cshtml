@@ -1,0 +1,42 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.ExpandableSection.ExpandableSectionViewModel
+
+<script src="/script/expandablesection.js"></script>
+
+<theme subtheme="Model.Subtheme" shade="Model.ThemeShades" class="expandable-section" 
+    data-collapse="@(Model.CollapsedSize)@(Model.CollapsedSizeUnit == EditorExpandableSectionCollapseSizeUnits.FixedHeight ? "em" : "%")"
+    data-initialstate="@Model.InitialState">
+    <div class="expandable-section-content" id="@(Model.Id)-content" style="overflow:hidden;">
+        @foreach (var content in Model.Body)
+        {
+            <div>
+                @(await Component.InvokeAsync(content.EditorComponent, content))
+            </div>
+        }
+    </div>
+    <div class="mx-auto pt-2">
+        <button class="expandable-section-action mx-auto" data-collapse="true" data-target="@(Model.Id)-content" style="display:none;">
+            @switch (Model.ExpandCollapseMethod)
+            {
+                case EditorExpandableSectionExpandCollapseMethods.Button:
+                    <text>More</text>
+                    break;
+
+                case EditorExpandableSectionExpandCollapseMethods.Arrow:
+                    <text><i class="fa-solid fa-angle-down"></i></text>
+                    break;
+            }
+        </button>
+        <button class="expandable-section-action mx-auto" data-collapse="false" data-target="@(Model.Id)-content" style="display:none;">
+            @switch (Model.ExpandCollapseMethod)
+            {
+                case EditorExpandableSectionExpandCollapseMethods.Button:
+                    <text>Less</text>
+                    break;
+
+                case EditorExpandableSectionExpandCollapseMethods.Arrow:
+                    <text><i class="fa-solid fa-angle-up"></i></text>
+                    break;
+            }
+        </button>
+    </div>
+</theme>

@@ -1,0 +1,46 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.BusTimeTable.BusTimeTableViewModel<IDictionary<string, string>>
+
+<div class="w-100">
+    <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="w-100">
+
+        @if (Model.ServiceCode != null)
+        {
+            <div class="mb-3 mt-3">
+                @if (Model.Result?.Any() == true)
+                {
+                    <h3>
+                        Results @((Model.Page * Model.PageSize) + 1) @(Model.Result.Count() > 1 ? "to " + ((Model.Page * Model.PageSize) + Model.Result.Count()) : null) of @(Model.TotalResults)
+                    </h3>
+                    <div>
+                        @foreach (var result in Model.Result)
+                        {
+                            <div class="row mt-3 mb-3">
+                                <div class="col-11">
+                                    <a class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover" href="@(Model.LinkUrl)?@(Protenacity.Cake.Web.Presentation.Editor.BusRoute.BusRouteViewComponent.QueryString)=@(Model.ServiceCode),@(result.Key)" title="View Bus route as a list of Bus Stops">
+                                        @result.Value
+                                    </a>
+                                    @if (Model.MapUrl != null)
+                                    {
+                                        <a class="ms-3 link-underline link-underline-opacity-0 link-underline-opacity-100-hover" href="@(Model.MapUrl)?@(Protenacity.Cake.Web.Presentation.Editor.BusRoute.BusRouteViewComponent.QueryString)=@(Model.ServiceCode),@(result.Key)" title="View Bus route on a map">
+                                            Map
+                                        </a>
+                                    }
+                                </div>
+
+                            </div>
+                        }
+                    </div>
+
+                    <vc:paging render="@PageRenders.Paging" model="Model"></vc:paging>
+                }
+                else
+                {
+                    <h3>
+                        No Results
+                    </h3>
+                }
+            </div>
+        }
+
+    </theme>
+</div>

@@ -1,0 +1,26 @@
+{
+  "Name": "Editor Table Source File Separator",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Dropdown",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "multiple": false,
+    "items": [
+      "Comma ( , )",
+      "Semicolon ( ; )",
+      "Tab ( \\t )",
+      "Pipe ( | )"
+    ],
+    "umbMigrationV14": "2025-04-01T10:00:43.1248775\u002B00:00"
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/67527ceb05184a55963b27acab8970f6",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

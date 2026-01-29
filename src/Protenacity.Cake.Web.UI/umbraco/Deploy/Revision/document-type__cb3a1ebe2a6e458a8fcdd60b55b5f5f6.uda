@@ -1,0 +1,45 @@
+{
+  "Name": "Children Web Pages",
+  "Alias": "editorChildNodes",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-school color-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Displays all children web page in multiple blocks",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/34cdf0a7eb2b42cf9e9d0484931097e2",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "ddca38be-b6a3-4317-9375-178242e6f519",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "1898bf76-e72a-41cd-81b5-9f4654101532",
+          "Alias": "label",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "Will show children web pages",
+          "Name": "_"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/cb3a1ebe2a6e458a8fcdd60b55b5f5f6",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/34cdf0a7eb2b42cf9e9d0484931097e2",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

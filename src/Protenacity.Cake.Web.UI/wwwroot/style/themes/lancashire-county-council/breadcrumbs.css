@@ -1,0 +1,43 @@
+﻿.theme-default, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana {
+    --lcc-l-bread: #0c3571;
+    --lcc-l-breadactive: #0e2c5b;
+    --lcc-l-breadhover: #3b1e7c;
+    --lcc-l-breadbefore: #0c3571;
+
+    --lcc-d-bread: #ffffff;
+    --lcc-d-breadactive: #ffffff;
+    --lcc-d-breadhover: #ffffff;
+    --lcc-d-breadbefore: #ffffff;
+}
+
+.theme-light .breadcrumb a, .theme-light .breadcrumb a:visited  {
+    color: var(--lcc-l-bread, black);
+}
+
+.theme-light .breadcrumb .active {
+    color: var(--lcc-l-breadactive, black);
+}
+
+.theme-light .breadcrumb a:hover {
+    color: var(--lcc-l-breadhover, black);
+}
+
+.theme-light .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--lcc-l-breadbefore, black);
+}
+
+.theme-dark .breadcrumb a, .theme-dark .breadcrumb a:visited  {
+    color: var(--lcc-d-bread, white);
+}
+
+.theme-dark .breadcrumb .active {
+    color: var(--lcc-d-breadactive, white);
+}
+
+.theme-dark .breadcrumb a:hover {
+    color: var(--lcc-d-breadhover, white);
+}
+
+.theme-dark .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--lcc-d-breadbefore, white);
+}

@@ -1,0 +1,26 @@
+{
+  "Name": "Section Links",
+  "Alias": "editorSectionLinksEmedded",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-newspaper-alt color-light-blue",
+  "Thumbnail": "folder.png",
+  "Description": "List of links to each section of this page",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/38d737addc164a2399a50f877f2c4272",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/3b381ffc8be548b080ea4c8ecc15a820",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/38d737addc164a2399a50f877f2c4272",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

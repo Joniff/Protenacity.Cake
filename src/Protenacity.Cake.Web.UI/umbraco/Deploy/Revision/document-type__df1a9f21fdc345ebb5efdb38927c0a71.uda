@@ -1,0 +1,45 @@
+{
+  "Name": "Bus Time Table Data Api",
+  "Alias": "editorBusTimeTableDataApi",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": "Share Api",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/881c7a560fd54302b0b700281288f58a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "6753a9f0-9abc-46bd-bbea-94c9dae557ce",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "71b6ecd8-5b6f-4ab9-bd93-2c4549337f58",
+          "Alias": "busTimeTableDataApi",
+          "DataType": "umb://data-type/ad3cc16cb2914f6f8bdce9365fa539f0",
+          "Name": "Bus Time Table Data Api",
+          "SortOrder": -4
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/df1a9f21fdc345ebb5efdb38927c0a71",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/ad3cc16cb2914f6f8bdce9365fa539f0",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/881c7a560fd54302b0b700281288f58a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

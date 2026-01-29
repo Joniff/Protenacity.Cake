@@ -1,0 +1,108 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.BusTimeTable.BusTimeTableViewModel<IDictionary<DayOfWeek, IDictionary<KeyValuePair<string, string>, IDictionary<DateTime, string>>>>
+
+<div class="w-100">
+    <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="w-100">
+
+        @if (Model.Services?.Any() == true)
+        {
+            <div class="pb-3">
+                @foreach (var route in Model.Services)
+                {
+                    <a class="btn pe-3 @(route.Key == Model.ServiceCode ? "btn-primary" : null)" role="button" href="?@(Protenacity.Cake.Web.Presentation.Editor.BusRoute.BusRouteViewComponent.QueryString)=@(route.Key),@(Model.Day)">
+                        @route.Value
+                    </a>
+                }
+            </div>
+        }
+
+        @if (Model.Stops?.Any() == true)
+        {
+            <div class="pb-3">
+                @foreach (var busStop in Model.Stops)
+                {
+                    <a class="btn pe-3 @(busStop.Key == Model.StopCode ? "btn-primary" : null)" role="button" href="?@(Protenacity.Cake.Web.Presentation.Editor.BusRoute.BusRouteViewComponent.QueryString)=@(Model.ServiceCode),@(busStop.Key),@(Model.Day)">
+                        @busStop.Value
+                    </a>
+                }
+            </div>
+        }
+
+        @if (Model.Result?.Any() == true)
+        {
+            <ul class="nav nav-pills" role="tablist">
+                @foreach (var day in Model.Result)
+                {
+                    <button id="tab-@(day.Key)" class="nav-link @(day.Key == Model.Day ? "active" : null)" data-bs-toggle="tab" data-bs-target="#@(day.Key)" type="button" role="tab" aria-controls="@(day.Key)" aria-selected="@(day.Key == Model.Day ? "true" : "false")">
+                        @switch (day.Key)
+                        {
+                            case DayOfWeek.Monday:
+                                <text>
+                                    Monday to Friday
+                                </text>
+                                break;
+
+                            case DayOfWeek.Saturday:
+                                <text>
+                                    Saturday
+                                </text>
+                                break;
+
+                            case DayOfWeek.Sunday:
+                                <text>
+                                    Sunday
+                                </text>
+                                break;
+                        }
+                    </button>
+                }
+            </ul>
+            <div class="tab-content p-3">
+                @foreach (var day in Model.Result)
+                {
+                    var timeCount = day.Value.First().Value.Count();
+                    var maxHeadings = 5;
+
+                    <div id="@(day.Key)" class="tab-pane fade @(day.Key == Model.Day ? "show active" : null)" id="@(day.Key)" role="tabpanel" aria-labelledby="tab-@(day.Key)">
+
+                        @for (var skip = 0; skip <= timeCount; skip += maxHeadings)
+                        {
+                            <table class="table mb-3">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Bus Stop
+                                        </th>
+                                        @for (var column = skip; column <= timeCount && column < skip + maxHeadings; column++)
+                                        {
+                                            <th>
+                                                -
+                                            </th>
+                                        }
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        @foreach (var busStop in day.Value)
+                                        {
+                                            <td>
+                                                @busStop.Value
+                                            </td>
+                                            @for (var column = skip; column <= timeCount && column < skip + maxHeadings; column++)
+                                            {
+                                                var time = busStop.Value.ElementAt(column);
+
+                                                <td title="@time.Value">
+                                                    @time.Key.ToString("hh:mm tt")
+                                                </td>
+                                            }
+                                        }
+                                    </tr>
+                                </tbody>
+                            </table>
+                        }
+                    </div>
+                }
+            </div>
+        }
+    </theme>
+</div>

@@ -1,0 +1,150 @@
+﻿@model VideoViewModel
+@using Protenacity.Cake.Web.Presentation.Editor.Video
+
+@{
+    var ratio = "";
+
+    @switch (Model.Ratio)
+    {
+        case EditorVideoRatios.TwentyOneByNine:
+            ratio = "ratio-21x9";
+            break;
+
+        case EditorVideoRatios.FourByThree:
+            ratio = "ratio-4x3";
+            break;
+
+        case EditorVideoRatios.OneByOne:
+            ratio = "ratio-1x1";
+            break;
+
+        default:
+            ratio = "ratio-16x9";
+            break;
+    }
+}
+
+<div class="link-danger" data-bs-toggle="modal" data-bs-target="#@Model.Id">
+    <div class="d-block h-100 mb-2 position-relative cursor-pointer">
+        <span class="position-absolute top-50 start-50 translate-middle w-25">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><polygon points="10 8 16 12 10 16 10 8" /></svg>
+        </span>
+        @if (Model.Urls.FirstOrDefault()?.Item1 == null)
+        {
+            @switch (Model.SourceType)
+            {
+                case VideoViewModel.SourceTypes.YouTube:
+                    <text>
+                        <img src="https://img.youtube.com/vi/@(Model.SourceCode)/hqdefault.jpg" class="h-100 w-100" />
+                    </text>
+                    break;
+
+                case VideoViewModel.SourceTypes.Vimeo:
+                    <text>
+                        <img src="https://vumbnail.com/@(Model.SourceCode).jpg" class="h-100 w-100" />
+                    </text>
+                    break;
+
+                default:
+                    <text>
+                        @(await Component.InvokeAsync(ResponsiveImageViewComponent.Name, Model))
+                    </text>
+                    break;
+            }
+        }
+        else
+        {
+            @(await Component.InvokeAsync(ResponsiveImageViewComponent.Name, Model))
+        }
+    </div>
+</div>
+
+<div class="modal fade" id="@Model.Id" aria-labelledby="video-@Model.Id" aria-hidden="true">
+    <div class="modal-dialog top-50 translate-middle" style="max-width:75%;left:37% !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Html.Raw(Model.Header?.ToHeader())</h5>
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+
+            <div class="modal-body ratio @ratio m-0 p-0">
+                @switch (Model.SourceType)
+                {
+                    case VideoViewModel.SourceTypes.YouTube:
+                        <text>
+                            <iframe id="@(Model.Id)-iframe" data-src="@Model.SourceCode" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen allowscriptaccess="always"></iframe>
+                            <script>
+                                (function() {
+                                    document.addEventListener('DOMContentLoaded', function(event) {
+                                        var modal = document.getElementById('@Model.Id');
+                                        var video = document.getElementById('@(Model.Id)-iframe');
+                                        var src = video.getAttribute('data-src');
+                                        modal.addEventListener('shown.bs.modal',(e)=>{
+                                            video.setAttribute('src', 'https://www.youtube.com/embed/' + src + '?autoplay=1&amp;controls=@(Model.ShowControls ? "1" : "0")&amp;fs=0&amp;rel=0');
+                                        });
+                                        modal.addEventListener('hide.bs.modal',(e)=>{
+                                            video.setAttribute('src', '');
+                                        });
+                                    });
+                                })();
+                            </script>
+                        </text>
+                        break;
+
+                    case VideoViewModel.SourceTypes.Vimeo:
+                        <text>
+                            <iframe id="@(Model.Id)-iframe" data-src="@Model.SourceCode" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen allowscriptaccess="always"></iframe>
+                            <script>
+                                (function() {
+                                    document.addEventListener('DOMContentLoaded', function(event) {
+                                        var modal = document.getElementById('@Model.Id');
+                                        var video = document.getElementById('@(Model.Id)-iframe');
+                                        var src = video.getAttribute('data-src');
+                                        modal.addEventListener('shown.bs.modal',(e)=>{
+                                            video.setAttribute('src', 'https://player.vimeo.com/video/' + src + '?autoplay=1&controls=@(Model.ShowControls ? "true" : "false")');
+                                        });
+                                        modal.addEventListener('hide.bs.modal',(e)=>{
+                                            video.setAttribute('src', '');
+                                        });
+                                    });
+                                })();
+                            </script>
+                        </text>
+                        break;
+
+                    case VideoViewModel.SourceTypes.Media:
+                        <text>
+                            <video id="@(Model.Id)-video" @(Model.ShowControls ? "controls" : null) preload="auto" loop>
+                                <source src="@Model.SourceCode" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <script>
+                                (function() {
+                                    document.addEventListener('DOMContentLoaded', function(event) {
+                                        var modal = document.getElementById('@Model.Id');
+                                        var video = document.getElementById('@(Model.Id)-video');
+                                        modal.addEventListener('shown.bs.modal',(e)=>{
+                                             video.play.bind(video)();
+                                        });
+                                        modal.addEventListener('hide.bs.modal',(e)=>{
+                                            video.pause();
+                                        });
+                                    });
+                                })();
+                            </script>
+                        </text>
+                        break;
+                }
+            </div>
+            @if (Model.Copyright?.HasContent() == true)
+            {
+                <div class="modal-footer">
+                    &copy;@Html.Raw(Model.Copyright)
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

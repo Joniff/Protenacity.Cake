@@ -1,0 +1,23 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.BusRoute.BusRouteViewModel
+
+<div class="w-100">
+    <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="w-100">
+
+        <arcgis-map 
+            item-id="789b39df66534a8c98b6f1818c1600ee" 
+            class="bus-route-map" 
+            data-extent="@(Html.Raw(HttpUtility.HtmlEncode(JsonSerializer.Serialize(Model.Extent?.Extent))))" 
+            data-service="@(Model.Result?.Features?.FirstOrDefault()?.Attribute?.ServiceId)" 
+            data-ratio="@(Model.Ratio)" 
+            style="width:100px;height:100px">
+
+            <arcgis-zoom position="bottom-right"></arcgis-zoom>
+            @*<arcgis-search position="top-right"></arcgis-search>*@
+            <arcgis-legend position="bottom-left"></arcgis-legend>
+
+        </arcgis-map>
+        <calcite-loader></calcite-loader>
+
+        <script type="module" src="/script/arcgis/arcgis.js"></script>
+    </theme>
+</div>

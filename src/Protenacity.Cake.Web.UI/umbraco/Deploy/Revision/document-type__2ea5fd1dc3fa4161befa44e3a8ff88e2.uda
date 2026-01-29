@@ -1,0 +1,37 @@
+{
+  "Name": "Venue Opening Times",
+  "Alias": "editorOpeningTimesPrimary",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-alarm-clock color-light-blue",
+  "Thumbnail": "folder.png",
+  "Description": "When is a venue open",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/aee3b45c00c442e59095c9da9c351742",
+  "CompositionContentTypes": [
+    "umb://document-type/43568e8908124c65858476c4618286fd",
+    "umb://document-type/c9aa2cd749c64ed18971fee1f171d91d"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/2ea5fd1dc3fa4161befa44e3a8ff88e2",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/aee3b45c00c442e59095c9da9c351742",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/43568e8908124c65858476c4618286fd",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/c9aa2cd749c64ed18971fee1f171d91d",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

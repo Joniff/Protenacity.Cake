@@ -1,0 +1,36 @@
+{
+  "Name": "Editor Hero Banner",
+  "EditorAlias": "Umbraco.BlockList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "22222d3f-e002-4059-b55b-4443ebf6e1a6",
+        "settingsElementTypeKey": "7d07f6fb-d10f-4b1e-9a83-8d0a525d9f3a",
+        "label": "{% title }",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": true,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/70dbfba945c24cf6a12a027093bd159c",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/22222d3fe0024059b55b4443ebf6e1a6"
+    },
+    {
+      "Udi": "umb://document-type/7d07f6fbd10f4b1e9a838d0a525d9f3a"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

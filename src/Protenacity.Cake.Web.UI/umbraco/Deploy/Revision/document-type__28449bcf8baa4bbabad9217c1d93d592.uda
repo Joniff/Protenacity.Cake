@@ -1,0 +1,65 @@
+{
+  "Name": "Coroner Data Version 1",
+  "Alias": "coronerDataVersion1",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-database color-green",
+  "Thumbnail": "folder.png",
+  "Description": "Coroner Api Version 1",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "e6dd0490-9428-45b1-a075-a5ff8aa7dae6",
+      "Name": "Contents",
+      "Type": 1,
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "0b81cb30-b29d-46cc-b4f3-7aba521a0239",
+          "Alias": "label",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "Version 1",
+          "Name": "_"
+        },
+        {
+          "Key": "16c463f9-22ec-4048-800b-a5807bc5a922",
+          "Alias": "endpoint",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Url for where we source the Coroner\u0027s data from. Include https://",
+          "Name": "Endpoint",
+          "SortOrder": 1
+        },
+        {
+          "Key": "76ad10d6-e97a-4685-b3fb-2ad797aad6f3",
+          "Alias": "authentication",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Secret authentication code",
+          "Name": "Authentication",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/28449bcf8baa4bbabad9217c1d93d592",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,45 @@
+{
+  "Name": "Local",
+  "Alias": "editorVideoSourceMedia",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-camera-roll color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Video previously uploaded to the Media section in Umbraco",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/48144a7fe68442498b35cac628e359b1",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "e0a9c89f-c95a-462f-97f0-41cd81fd717a",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "53f9170a-c8e2-44be-b30f-327a2a6dfde1",
+          "Alias": "video",
+          "DataType": "umb://data-type/1c07e8fb4b8f4fe0bd2423fbc77254ec",
+          "Description": "Video to show",
+          "Name": "Video"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/898aa9d3a6d44e2b950cc05c085f2727",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/1c07e8fb4b8f4fe0bd2423fbc77254ec",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/48144a7fe68442498b35cac628e359b1",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

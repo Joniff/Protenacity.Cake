@@ -1,0 +1,112 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.BusTimeTable.BusTimeTableViewModel<IDictionary<DayOfWeek, IDictionary<DateTime, string>>>
+
+<div class="w-100">
+    <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="w-100">
+
+        @if (Model.Services?.Any() == true)
+        {
+            <div class="pb-3">
+                @foreach (var route in Model.Services)
+                {
+                    <a class="btn pe-3 @(route.Key == Model.ServiceCode ? "btn-primary" : null)" role="button" href="?@(Protenacity.Cake.Web.Presentation.Editor.BusRoute.BusRouteViewComponent.QueryString)=@(route.Key),@(Model.StopCode),@(Model.Day)">
+                        @route.Value
+                    </a>
+                }
+            </div>
+        }
+
+        @if (Model.Stops?.Any() == true)
+        {
+            <div class="pb-3 dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select Bus Stop
+                </a>
+                <ul class="dropdown-menu limit-dropdown">
+                    @foreach (var busStop in Model.Stops)
+                    {
+                        <li>
+                            <a class="dropdown-item @(busStop.Key == Model.StopCode ? "active" : null)" href="?@(Protenacity.Cake.Web.Presentation.Editor.BusRoute.BusRouteViewComponent.QueryString)=@(Model.ServiceCode),@(busStop.Key),@(Model.Day)">
+                                @busStop.Value
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+
+        @if (Model.Result?.Any() == true)
+        {
+            <ul class="nav nav-pills" role="tablist">
+                @foreach (var day in Model.Result)
+                {
+                    <button id="tab-@(day.Key)" class="nav-link @(day.Key == Model.Day ? "active" : null)" data-bs-toggle="tab" data-bs-target="#@(day.Key)" type="button" role="tab" aria-controls="@(day.Key)" aria-selected="@(day.Key == Model.Day ? "true" : "false")">
+                        @switch (day.Key)
+                        {
+                            case DayOfWeek.Monday:
+                                <text>
+                                    Monday to Friday
+                                </text>
+                                break;
+
+                            case DayOfWeek.Saturday:
+                                <text>
+                                    Saturday
+                                </text>
+                                break;
+
+                            case DayOfWeek.Sunday:
+                                <text>
+                                    Sunday
+                                </text>
+                                break;
+                        }
+                    </button>
+                }
+            </ul>
+            <div class="tab-content p-3">
+                @foreach (var day in Model.Result)
+                {
+                    <div id="@(day.Key)" class="tab-pane fade @(day.Key == Model.Day ? "show active" : null)" id="@(day.Key)" role="tabpanel" aria-labelledby="tab-@(day.Key)">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Depart
+                                    </th>
+                                    <th>
+                                        Service
+                                    </th>
+                                    <th>
+                                        Route
+                                    </th>
+                                    <th>
+                                        Notes
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var time in day.Value)
+                                {
+                                    <tr>
+                                        <td>
+                                            @time.Key.ToString("hh:mm tt")
+                                        </td>
+                                        <td>
+                                            @Model.BusRouteCode
+                                        </td>
+                                        <td>
+                                            @Model.BusRouteName
+                                        </td>
+                                        <td>
+                                            @time.Value
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+            </div>
+        }
+    </theme>
+</div>

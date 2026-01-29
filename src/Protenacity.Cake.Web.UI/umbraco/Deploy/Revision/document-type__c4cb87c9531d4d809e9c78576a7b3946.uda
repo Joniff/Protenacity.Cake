@@ -1,0 +1,64 @@
+{
+  "Name": "Virtual Agents Data",
+  "Alias": "virtualAgentsData",
+  "DefaultTemplate": "umb://template/ff56d5fb90e04b90bd228b5af313c58d",
+  "AllowedTemplates": [
+    "umb://template/ff56d5fb90e04b90bd228b5af313c58d"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-folder color-grey",
+  "Thumbnail": "folder.png",
+  "Description": "Collection of Virtual Agents",
+  "Permissions": {
+    "AllowedChildContentTypes": [
+      "umb://document-type/8d9f06af2c9c497e8ba2452afb72c0b2"
+    ]
+  },
+  "ListView": "c0808dd3-8133-4e4b-8ce8-e2bea84a96a4",
+  "Parent": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "46e4eb60-3041-4180-ad58-4fc0258e596f",
+      "Name": "Contents",
+      "Type": 1,
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "194fbd0c-ef4c-4fa4-a043-381aa5e22b9d",
+          "Alias": "label",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "Collection of Virtual Agents",
+          "Name": "_"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c4cb87c9531d4d809e9c78576a7b3946",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/c0808dd381334e4b8ce8e2bea84a96a4",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/8d9f06af2c9c497e8ba2452afb72c0b2",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/ff56d5fb90e04b90bd228b5af313c58d",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

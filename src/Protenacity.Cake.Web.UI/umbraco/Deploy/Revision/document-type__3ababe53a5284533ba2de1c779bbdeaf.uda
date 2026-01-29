@@ -1,0 +1,81 @@
+{
+  "Name": "Timeslot",
+  "Alias": "editorTimeslot",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-alarm-clock color-red",
+  "Thumbnail": "folder.png",
+  "Description": "When venue is open",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/aee3b45c00c442e59095c9da9c351742",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "56636ed3-f91b-423f-9928-1f16a109efa4",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "5aa48de3-8592-452c-bce4-0a7b702484f1",
+          "Alias": "text",
+          "DataType": "umb://data-type/e606b3fb15f0491a8365763bcd9b3485",
+          "Description": "Optional comment about this timeslot",
+          "Name": "Text",
+          "SortOrder": 1
+        },
+        {
+          "Key": "7b95fc84-9eb4-40c0-87ce-3c19e87c7eee",
+          "Alias": "day",
+          "DataType": "umb://data-type/ecb08bf6a1f04775b142a9083102e332",
+          "Description": "Which day of week is this venue open",
+          "Name": "Day of Week"
+        },
+        {
+          "Key": "865d239d-c229-4f84-a707-0e042af08170",
+          "Alias": "close",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "End time of this venue opening in 24 hour clock. 00:00 to 23:59",
+          "Name": "Close Time",
+          "SortOrder": 3,
+          "Validation": "^([01][0-9]|2[0-3]):([0-5][0-9])$",
+          "ValidationMessage": "00:00 to 23:59"
+        },
+        {
+          "Key": "e7d01005-5e47-4331-94ec-81f64cd16901",
+          "Alias": "open",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Start time of this venue opening in 24 hour clock. 00:00 to 23:59",
+          "Name": "Open Time",
+          "SortOrder": 2,
+          "Validation": "^([01][0-9]|2[0-3]):([0-5][0-9])$",
+          "ValidationMessage": "00:00 to 23:59"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/3ababe53a5284533ba2de1c779bbdeaf",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/e606b3fb15f0491a8365763bcd9b3485",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ecb08bf6a1f04775b142a9083102e332",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/aee3b45c00c442e59095c9da9c351742",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

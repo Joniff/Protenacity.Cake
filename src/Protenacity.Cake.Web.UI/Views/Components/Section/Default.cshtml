@@ -1,0 +1,24 @@
+﻿@model IEditorContent
+@{
+    var primary = Model.Block?.Content as IEditorBlockPrimary;
+    var primarySettings = Model.Block?.Settings as IEditorBlockPrimarySettings;
+}
+
+<div>
+    <div class="row">
+        <div class="col-auto">
+            <h2 id="@(Model.Id)-h2">
+                @Html.Raw(primary?.MainTitle?.ToHeader())
+            </h2>
+        </div>
+        @if (!string.IsNullOrWhiteSpace(primary?.MainLink?.Url))
+        {
+            <div class="col text-end">
+                <a href="@primary?.MainLink?.Url" target="@primary?.MainLink?.Target">
+                    @primary?.MainLink?.Name
+                </a>
+            </div>
+        }
+    </div>
+    @(await Component.InvokeAsync(Model.EditorComponent, Model))
+</div>

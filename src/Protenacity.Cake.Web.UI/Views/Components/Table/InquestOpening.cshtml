@@ -1,0 +1,65 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Table.TableCoronerViewModel<Protenacity.Cake.Web.Presentation.Coroner.ICoronerInquestOpening>
+
+@if (Model.Rows.Any())
+{
+    <vc:paging render="@PageRenders.SearchBox" model="Model"></vc:paging>
+
+    <div id="@Model.Id" class="table-responsive">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>
+                        Opening Date
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Age
+                    </th>
+                    <th>
+                        Residence
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var row in Model.Rows.Select((Row,Index) => (Row,Index)))
+                {
+                    var style = (!string.IsNullOrWhiteSpace(Model.AlternateBackgroundRows) && row.Index % 2 == 0 ? "background-color:" + Model.AlternateBackgroundRows : null);
+                    var style2 = style == null && !string.IsNullOrWhiteSpace(Model.AlternateBackgroundColumns) ? "background-color:" + Model.AlternateBackgroundColumns : style;
+                    <tr>
+                        @if (Model.FirstColumnIsHeader)
+                        {
+                            <th>
+                                @Html.Raw(row.Row.OpeningDate.ToString(Model.CustomDateFormat))
+                            </th>
+                        }
+                        else
+                        {
+                            <td style="@style2">
+                                @Html.Raw(row.Row.OpeningDate.ToString(Model.CustomDateFormat))
+                            </td>
+                        }
+                        <td style="@style">
+                            @row.Row.Fullname
+                        </td>
+                        <td style="@style2">
+                            @row.Row.Age
+                        </td>
+                        <td style="@style">
+                            @row.Row.Residence
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <vc:paging render="@PageRenders.Paging" model="Model"></vc:paging>
+}
+else
+{
+    <p>No Inquest Hearings</p>
+}
+

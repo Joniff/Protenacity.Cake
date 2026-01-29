@@ -1,0 +1,18 @@
+﻿@model Tuple<IEditorContents, IEnumerable<IEditorContent>>
+
+@if (Model.Item1.Gap)
+{
+    <hr />
+}
+
+@if (Model.Item1.Header != null)
+{
+    <h5>
+        @Html.Raw(Model.Item1.Header.ToHeader())
+    </h5>
+}
+
+@foreach (var aside in Model.Item2)
+{
+    @(await Component.InvokeAsync(aside.EditorComponent, aside))
+}

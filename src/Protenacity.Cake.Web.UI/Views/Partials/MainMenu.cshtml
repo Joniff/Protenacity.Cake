@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FurnitureMenuItem>
+
+<div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+        @foreach (var link in Model)
+        {
+            @if (link.TopMenu != null && !string.IsNullOrWhiteSpace(link.TopMenu.Url))
+            {
+                if (link.Submenus?.Any() == true)
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="fullmenu@(link.Key)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            @(string.IsNullOrWhiteSpace(link.TopMenu.Name) ? link.TopMenu.Url : link.TopMenu.Name)
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="fullmenu@(link.Key)">
+                            @foreach (var sublink in link.Submenus)
+                            {
+                                <li>
+                                    <a class="dropdown-item" href="@sublink.Url" target="@(string.IsNullOrWhiteSpace(sublink.Target) ? "_self" : sublink.Target)">
+                                        @(string.IsNullOrWhiteSpace(sublink.Name) ? sublink.Url : sublink.Name)
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="@link.TopMenu.Url" target="@(string.IsNullOrWhiteSpace(link.TopMenu.Target) ? "_self" : link.TopMenu.Target)">
+                            @(string.IsNullOrWhiteSpace(link.TopMenu.Name) ? link.TopMenu.Url : link.TopMenu.Name)
+                        </a>
+                    </li>
+                }
+            }
+        }
+    </ul>
+</div>

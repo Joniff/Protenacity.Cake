@@ -1,0 +1,45 @@
+{
+  "Name": "Mp4",
+  "Alias": "mp4",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-security-camera color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Custom cloud hosted Mp4",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/48144a7fe68442498b35cac628e359b1",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "84ddf4d3-2491-4312-bcd1-61d53e85bff7",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "540ef9fb-b544-440a-a770-790da96bdc50",
+          "Alias": "url",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Complete Url to a cloud hosted Mp4.",
+          "Name": "Url"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/095be6f45ac04538a8d7505af16dd9f3",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/48144a7fe68442498b35cac628e359b1",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

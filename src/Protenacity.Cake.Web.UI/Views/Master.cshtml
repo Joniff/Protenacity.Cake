@@ -1,0 +1,113 @@
+﻿@inherits UmbracoViewPage
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@View.CurrentSeo.Title - @(View.CurrentDomainPage.Title ?? View.CurrentDomainPage.Name)</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    @if (View.CurrentSeo.Enable == false || View.CurrentDomainPage.EnableIndexing == false)
+    {
+        <meta name="robots" content="noindex" />
+    }
+    else if (View.CurrentDomainPage.EnableSnippets == false)
+    {
+        <meta name="robots" content="nosnippet">
+    }
+    <meta name="author" content="@View.CurrentDomainPage.Publisher" />
+    <meta name="publisher" content="@View.CurrentDomainPage.Publisher" />
+    <meta name="eGMS.accessibility" content="Double-A" scheme="eGMS.WCAG10">
+    <meta name="DC.language" content="eng" scheme="DCTERMS.ISO639-2">
+    <meta name="DC.publisher" content="@View.CurrentDomainPage.Publisher">
+    <meta property="og:site_name" content="@(View.CurrentDomainPage.Title ?? View.CurrentDomainPage.Name)" />
+    <meta property="og:locale" content="en_GB" />
+    @if (!string.IsNullOrEmpty(View.CurrentDomainPage.FacebookVerification))
+    {
+        <meta name="facebook-domain-verification" content="@View.CurrentDomainPage.FacebookVerification" />
+    }
+    @if (!string.IsNullOrEmpty(View.CurrentDomainPage.GoogleVerification))
+    {
+        <meta name="google-site-verification" content="@View.CurrentDomainPage.GoogleVerification" />
+    }
+    @if (!string.IsNullOrEmpty(View.CurrentDomainPage.BingVerification))
+    {
+        <meta name="msvalidate.01" content="@View.CurrentDomainPage.BingVerification" />
+    }
+    @if (View.CurrentSeo.Thumbnail != null)
+    {
+        <meta property="og:image" content="@View.CurrentSeo.Thumbnail.GetCropUrl(EditorImageCrops.Card)" />
+        <meta property="twitter:image" content="@View.CurrentSeo.Thumbnail.GetCropUrl(EditorImageCrops.Card)" />
+    }
+
+    <link rel="canonical" href="@View.CanonicalUri.ToString()" />
+    <meta property="og:title" content="@View.CurrentSeo.Title" />
+    <meta property="og:description" content="@View.CurrentSeo.Description" />
+    <meta property="og:url" content="@View.CanonicalUri.ToString()" />
+    <meta name="description" content="@View.CurrentSeo.Description" />
+    <meta name="PageID" content="@Model.Key" />
+    <meta name="theme-color" content="#343a40" media="(prefers-color-scheme: @(View.CurrentThemeShade == EditorThemeShades.Light ? "light" : "dark"))" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/css/img/apple-touch-icon.png" />
+    <link href="/style/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css" rel="stylesheet">
+    @if (View.CurrentDomainPage.CookieConsentEnable)
+    {
+        <link href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@@3.1.0/dist/cookieconsent.css" rel="stylesheet" />
+    }
+    <link href="/style/css/stepper.css" rel="stylesheet">
+    <link href="/style/css/site.css" rel="stylesheet">
+    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/alerts.css" rel="stylesheet">
+    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/blocks.css" rel="stylesheet">
+    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/text.css" rel="stylesheet">
+    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/buttons.css" rel="stylesheet">
+    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/breadcrumbs.css" rel="stylesheet">
+    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/tables.css" rel="stylesheet">
+</head>
+
+<body>
+    @RenderBody()
+
+    @*<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>*@
+    <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@@1.8.3/dist/index.bundle.min.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    @if (View.CurrentDomainPage.CookieConsentEnable)
+    {
+        <script type="module" src="/script/cookies.js" data-cookies="@(Html.Raw(View.CurrentCookies))"></script>
+        <script type="text/plain" data-category="necessary">
+            @Html.Raw(View.CurrentDomainPage.CookieConsentNecessaryScript)
+        </script>
+
+        @if (View.CurrentDomainPage.CookieConsentAnalyticEnable)
+        {
+            <script type="text/plain" data-category="analytics">
+                @Html.Raw(View.CurrentDomainPage.CookieConsentAnalyticScript)
+            </script>
+        }
+
+        @if (View.CurrentDomainPage.CookieConsentBespokeEnable)
+        {
+            <script type="text/plain" data-category="bespoke">
+                @Html.Raw(View.CurrentDomainPage.CookieConsentBespokeScript)
+            </script>
+        }
+    }
+    @Html.RenderUmbracoFormDependencies(Url)
+    @if (View.CurrentVirtualAgent != null)
+    {
+        <script src="/script/virtualagent.js" data-virtual-agent="@(View.CurrentVirtualAgent.WorkspaceId),@(View.CurrentVirtualAgent.DefinitionId)"></script>
+    }
+    <script src="/script/alert.js"></script>
+    <script src="/script/return-to-top.js"></script>
+</body>
+
+</html>

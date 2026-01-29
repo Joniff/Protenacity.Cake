@@ -1,0 +1,20 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Text.TextBlockIconTextViewModel
+
+<div class="text-block-icon m-2">
+    <theme subtheme="Model.Subtheme" shade="Model.Shade" override="Model.OverrideColor" class="pt-2 pb-3 ps-2 pe-2">
+        <span class="align-middle" style="@(Model.IconColor != null ? "color:" + Model.IconColor : null)">
+            @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.NamedIcon.NamedIconViewComponent.Name, Model.Icon))
+        </span>
+        @if (Model.HasLinkUrl)
+        {
+            @:<a href="@Model.LinkUrl" target="@(Model.LinkTarget == ActionTargets.NewTab ? "_blank" : "_self")">
+        }
+        <span class="p-nomargin d-inline-block align-middle @(Model.HasLinkUrl ? "text-decoration-underline" : null)">
+            @Html.Raw(Model.Text)
+        </span>
+        @if (Model.HasLinkUrl)
+        {
+            @:</a>
+        }
+    </theme>
+</div>

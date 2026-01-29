@@ -1,0 +1,74 @@
+/* headings spacing */
+h6:not(:first-child),
+.h6:not(:first-child),
+h5:not(:first-child),
+.h5:not(:first-child),
+h4:not(:first-child),
+.h4:not(:first-child),
+h3:not(:first-child),
+.h3:not(:first-child),
+h2:not(:first-child),
+.h2:not(:first-child),
+h1:not(:first-child),
+.h1:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.theme-default, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana {
+    --lcc-l-a: #0c3571;
+    --lcc-l-ahover: #0e2c5b;
+    --lcc-l-avisited: #3b1e7c;
+
+    --lcc-d-a: #ffffff;
+    --lcc-d-ahover: #ffffff;
+    --lcc-d-avisited: #ffffff;
+}
+
+.theme-light .text a:not(.btn), 
+.text .theme-light a:not(.btn), 
+.theme-light .breadcrumb-item a, 
+.theme-light .header a, 
+.theme-light .footer a {
+    color: var(--lcc-l-a, black);
+}
+
+.theme-light .text a:hover:not(.btn), 
+.text .theme-light a:hover:not(.btn), 
+.theme-light .breadcrumb-item a:hover, 
+.theme-light .header a:hover, 
+.theme-light .footer a:hover {
+    color: var(--lcc-l-ahover, black);
+}
+
+.theme-light .text a:visited:not(.btn), 
+.text .theme-light a:visited:not(.btn), 
+.theme-light .breadcrumb-item a:visited,
+.theme-light .header a:visited,
+.theme-light .footer a:visited {
+    color: var(--lcc-l-avisited, black);
+}
+
+.theme-dark .text a:not(.btn), 
+.text .theme-dark a:not(.btn), 
+.theme-dark .breadcrumb-item a,
+.theme-dark .header a,
+.theme-dark .footer a {
+    color: var(--lcc-d-a, white);
+    text-decoration: unset;
+}
+
+.theme-dark .text a:hover:not(.btn), 
+.text .theme-dark a:hover:not(.btn), 
+.theme-dark .breadcrumb-item a:hover,
+.theme-dark .header a:hover,
+.theme-dark .footer a:hover {
+    color: var(--lcc-d-ahover, white);
+}
+
+.theme-dark .text a:visited:not(.btn), 
+.text .theme-dark a:visited:not(.btn), 
+.theme-dark .breadcrumb-item a:visited,
+.theme-dark .header a:visited,
+.theme-dark .footer a:visited {
+    color: var(--lcc-d-avisited, white);
+}

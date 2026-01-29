@@ -1,0 +1,130 @@
+﻿@model IFurnitureTab
+
+<footer id="site_footer" class="site-footer" aria-label="Global">
+    <theme subtheme="Model.FooterSubthemeTyped" shade="Model.FooterThemeShadeTyped" override="Model.FurnitureFooterColor">
+        <div class="footer container py-4">
+            <div class="row">
+                <div class="col-lg align-content-center">
+                    @if (Model.FurnitureFooterMenu?.Any() == true)
+                    {
+                        <nav class="navbar navbar-expand justify-content-center justify-content-lg-start pt-0" aria-label="Footer navigation">
+                            <ul class="navbar-nav">
+                                @foreach (var link in Model.FurnitureFooterMenu.Select(m => (FurnitureMenuItem)m.Content))
+                                {
+                                    @if (link.TopMenu != null && !string.IsNullOrWhiteSpace(link.TopMenu.Url))
+                                    {
+                                        <li class="nav-item">
+                                            <a class="nav-link ps-0 text-decoration-underline" href="@link.TopMenu.Url" target="@(string.IsNullOrWhiteSpace(link.TopMenu.Target) ? "_self" : link.TopMenu.Target)">
+                                                @(string.IsNullOrWhiteSpace(link.TopMenu.Name) ? link.TopMenu.Url : link.TopMenu.Name)
+                                            </a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </nav>
+                    }
+                    <div class="small text-center text-lg-start">
+                        @Html.Raw(View.Parse(Model.FurnitureFooterInformation))
+                    </div>
+                </div>
+                @if (Model.FurnitureFooterSocialMediaLinks?.Any() == true)
+                {
+                    <div class="col-lg d-flex justify-content-center justify-content-lg-end">
+                        <div class="list-social-media align-content-lg-center">
+                            <ul class="nav">
+                                @foreach (var socialMedia in Model.FurnitureFooterSocialMediaLinks.Select(s => (FurnitureSocialItem)s.Content).Where(s => !string.IsNullOrWhiteSpace(s.Link?.Url)))
+                                {
+                                    @switch (socialMedia.SocialType)
+                                    {
+                                        case "Facebook":
+                                            <text>
+                                                <li class="nav-item fb">
+                                                    <a href="@socialMedia.Link?.Url" target="_blank">
+                                                        <span class="sr-only">@(socialMedia.Link?.Name ?? "Facebook")</span>
+                                                        <span class="fa-stack fa-2x">
+                                                            <span class="fas fa-stack-2x" aria-hidden="true"></span>
+                                                            <span class="fab fa-facebook-f fa-stack-1x fa-inverse" aria-hidden="true"></span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </text>
+                                            break;
+
+                                        case "Twitter":
+                                            <text>
+                                                <li class="nav-item xtw">
+                                                    <a href="@socialMedia.Link?.Url" target="_blank">
+                                                        <span class="sr-only">@(socialMedia.Link?.Name ?? "X (formally Twitter)")</span>
+                                                        <span class="fa-stack fa-2x">
+                                                            <span class="fas fa-stack-2x" aria-hidden="true"></span>
+                                                            <span class="fab fa-x-twitter fa-stack-1x fa-inverse" aria-hidden="true"></span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </text>
+                                            break;
+
+                                        case "YouTube":
+                                            <text>
+                                                <li class="nav-item yt">
+                                                    <a href="@socialMedia.Link?.Url" target="_blank">
+                                                        <span class="sr-only">@(socialMedia.Link?.Name ?? "YouTube")</span>
+                                                        <span class="fa-stack fa-2x">
+                                                            <span class="fas fa-stack-1x" aria-hidden="true"></span>
+                                                            <span class="fab fa-youtube fa-stack-1x fa-inverse" aria-hidden="true"></span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </text>
+                                            break;
+
+                                        case "Flickr":
+                                            <text>
+                                                <li class="nav-item fr">
+                                                    <a href="@socialMedia.Link?.Url" target="_blank">
+                                                        <span class="sr-only">@(socialMedia.Link?.Name ?? "Flickr")</span>
+                                                        <span class="fa-stack fa-2x">
+                                                            <span class="fas fa-stack-1x fa-inverse" aria-hidden="true"></span>
+                                                            <span class="fab fa-flickr fa-stack-1x fa-inverse" aria-hidden="true"></span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </text>
+                                            break;
+
+                                        case "Rss":
+                                            <text>
+                                                <li class="nav-item rss">
+                                                    <a href="@socialMedia.Link?.Url" target="_blank">
+                                                        <span class="fa-stack fa-2x">
+                                                            <span class="fas fa-stack-1x fa-inverse" aria-hidden="true"></span>
+                                                            <span class="fas fa-rss fa-stack-1x fa-inverse" aria-hidden="true"></span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </text>
+                                            break;
+
+                                        case "Bluesky":
+                                            <text>
+                                                <li class="nav-item bluesky">
+                                                    <a href="@socialMedia.Link?.Url" target="_blank">
+                                                        <span class="sr-only">@(socialMedia.Link?.Name ?? "Bluesky")</span>
+                                                        <span class="fa-stack fa-2x">
+                                                            <span class="fas fa-stack-2x" aria-hidden="true"></span>
+                                                            <span class="fas fa-bluesky fa-stack-1x fa-inverse" aria-hidden="true"></span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </text>
+                                            break;
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </theme>
+</footer>

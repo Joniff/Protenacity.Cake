@@ -1,0 +1,15 @@
+{
+  "Name": "Select Media",
+  "ContainedObjectType": "a2cb7800-f571-4787-9638-bc48539a0efb",
+  "Parent": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+  "Udi": "umb://document-type-container/e25adf4fa7c643e3af75a3ee28ef195f",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContainerArtifact",
+  "__version": "16.0.4"
+}

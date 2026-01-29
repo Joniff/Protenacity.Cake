@@ -1,0 +1,44 @@
+{
+  "Name": "Script Settings",
+  "Alias": "editorScriptEmbeddedSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-indigo",
+  "Thumbnail": "folder.png",
+  "Description": "Settings for Html Script",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/ab5e472e28104835bd2868c2e912ff5f",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "67b47185-88aa-425c-a912-8f9a3f744308",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "7be3aa0a-cb29-4d59-8f61-996652d00893",
+          "Alias": "label",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Name": "_"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/a196d96cb7894fa883e059f17f56b1da",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/ab5e472e28104835bd2868c2e912ff5f",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

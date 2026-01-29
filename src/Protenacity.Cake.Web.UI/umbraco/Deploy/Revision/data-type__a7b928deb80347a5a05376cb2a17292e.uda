@@ -1,0 +1,24 @@
+{
+  "Name": "Editor Gradient Type",
+  "EditorAlias": "Umbraco.RadioButtonList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.RadioButtonList",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "items": [
+      "Linear gradient starting along top edge and finishing along bottom edge",
+      "Linear gradient starting along left edge and finishing along right edge",
+      "Linear gradient starting in top left corner and finishing in bottom right corner",
+      "Radial gradient starting dead centre and radiating outwards"
+    ]
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/a7b928deb80347a5a05376cb2a17292e",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

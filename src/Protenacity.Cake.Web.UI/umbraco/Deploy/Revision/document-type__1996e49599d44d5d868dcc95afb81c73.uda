@@ -1,0 +1,37 @@
+{
+  "Name": "Form Panel",
+  "Alias": "editorFormPanel",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-edit color-light-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Umbraco Form",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/5ef40db9639f4897bca09054f351f4ce",
+  "CompositionContentTypes": [
+    "umb://document-type/1a6efa0c770043edb0247ef30bb84968",
+    "umb://document-type/5fc29d885bef42e0876e2501ef70ae08"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1996e49599d44d5d868dcc95afb81c73",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/5ef40db9639f4897bca09054f351f4ce",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/1a6efa0c770043edb0247ef30bb84968",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/5fc29d885bef42e0876e2501ef70ae08",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,57 @@
+{
+  "Name": "Stepper Settings",
+  "Alias": "editorStepperEmbeddedSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-light-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Settings for Stepper",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/71acd75fbd654a8484c574657e6d231a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "4c2e931c-1aa6-45fe-b853-b8a20664bf53",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "1a01a8dc-7877-496d-83bf-463ca62ddcbe",
+          "Alias": "orientation",
+          "DataType": "umb://data-type/d843226e8c8e488bacda094832ed8050",
+          "Description": "Direction of steps",
+          "Name": "Orientation"
+        },
+        {
+          "Key": "395a77b4-9a7b-4c3b-9ce0-bf8d5efe651d",
+          "Alias": "iconCircle",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "Draw a circle around each Icon",
+          "Name": "Icon Circle",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1fd543abc64e47aeb34725fc2cf861d8",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d843226e8c8e488bacda094832ed8050",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/71acd75fbd654a8484c574657e6d231a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

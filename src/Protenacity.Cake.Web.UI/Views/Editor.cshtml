@@ -1,0 +1,122 @@
+﻿@inherits UmbracoViewPage<Protenacity.Cake.Web.Presentation.Pages.Editor.EditorPageViewModel>
+@{
+    Layout = "Master.cshtml";
+}
+
+<theme theme="Model.Theme" subtheme="Model.Subtheme" shade="Model.ThemeShade">
+
+    @(await Html.PartialAsync("Header", View.CurrentFurniture))
+
+    @if (Model.Alert != null)
+    {
+        @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.Alert.AlertViewComponent.Name, Model.Alert))
+    }
+
+    @if (View.CurrentBanner?.BannerStatusTyped == BannerStatuses.ShowBanners && View.CurrentBanner?.BannerContent?.Any() == true)
+    {
+        @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.HeroBanner.HeroBannerViewComponent.Name, View.CurrentBanner?.BannerContent))
+    }
+    else if (View.CurrentBanner?.BannerStatusTyped == BannerStatuses.ShowImage && View.CurrentBanner?.BannerHeroImage != null)
+    {
+        <img class="img-fluid img-hero-banner" src="@View.CurrentBanner?.BannerHeroImage.MediaUrl()" />
+    }
+
+    @if (Model.Breadcrumbs?.Any() == true)
+    {
+        <theme subtheme="Model.BreadcrumbSubtheme" shade="Model.BreadcrumbThemeShade" override="Model.BreadcrumbsColor">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        @foreach (var breadcrumb in Model.Breadcrumbs)
+                        {
+                            <li class="breadcrumb-item">
+                                <a href="@breadcrumb.Item2">
+                                    @breadcrumb.Item1
+                                </a>
+                            </li>
+                        }
+                        <li class="breadcrumb-item active" aria-current="page">@View.CurrentSeo.Title</li>
+                    </ol>
+                </nav>
+            </div>
+        </theme>
+    }
+
+    <div class="pt-1 pb-3">
+
+        @if (Model.AboveContents?.Item2.Any() == true)
+        {
+            @if (Model.BelowContents?.Item2.Any() != true)
+            {
+                @:<main>
+            }
+            @(await Html.PartialAsync("Title", new Tuple<bool, Protenacity.Cake.Web.Presentation.Pages.Editor.EditorPageViewModel>(true, Model)))
+            @(await Html.PartialAsync("MainContent", Model.AboveContents))
+            @if (Model.BelowContents?.Item2.Any() != true)
+            {
+                @:</main>
+            }
+        }
+
+        @switch (Model.PageLayout)
+        {
+            case AsideStatuses.Left:
+                <text>
+                    @(await Html.PartialAsync("AsideMobile", new Tuple<bool, IEnumerable<IEditorContent>?>(true, Model.AsideMobile)))
+
+                    @if (Model.BelowContents?.Item2.Any() == true)
+                    {
+                        <div class="container">
+                            <div class="row">
+                                <aside class="col-md-@View.CurrentDomainPage.ConfigAsideLeftWidth d-none d-md-block pb-1">
+                                    @(await Html.PartialAsync("AsideDesktop", new Tuple<bool, IEnumerable<IEditorContent>?>(Model.AsideFixed, Model.AsideDesktop)))
+                                </aside>
+                                <main class="col-md-@(12 - View.CurrentDomainPage.ConfigAsideLeftWidth)">
+                                    @if (Model.AboveContents?.Item2.Any() != true)
+                                    {
+                                        @(await Html.PartialAsync("Title", new Tuple<bool, Protenacity.Cake.Web.Presentation.Pages.Editor.EditorPageViewModel>(false, Model)))
+                                    }
+                                    @(await Html.PartialAsync("MainContent", Model.BelowContents))
+                                </main>
+                            </div>
+                        </div>
+                    }
+                </text>
+                break;
+
+            case AsideStatuses.Right:
+                <text>
+                    @if (Model.BelowContents?.Item2.Any() == true)
+                    {
+                        <div class="container">
+                            <div class="row">
+                                <main class="col-md-@(12 - View.CurrentDomainPage.ConfigAsideRightWidth)">
+                                    @if (Model.AboveContents?.Item2.Any() != true)
+                                    {
+                                        @(await Html.PartialAsync("Title", new Tuple<bool, Protenacity.Cake.Web.Presentation.Pages.Editor.EditorPageViewModel>(false, Model)))
+                                    }
+                                    @(await Html.PartialAsync("MainContent", Model.BelowContents))
+                                </main>
+                                <aside class="col-md-@View.CurrentDomainPage.ConfigAsideRightWidth d-none d-md-block pb-1">
+                                    @(await Html.PartialAsync("AsideDesktop", new Tuple<bool, IEnumerable<IEditorContent>?>(Model.AsideFixed, Model.AsideDesktop)))
+                                </aside>
+                            </div>
+                        </div>
+                    }
+                    @(await Html.PartialAsync("AsideMobile", new Tuple<bool, IEnumerable<IEditorContent>?>(false, Model.AsideMobile)))
+                </text>
+            break;
+    }
+
+    </div>
+
+    @if (Model.Subfooter != null)
+    {
+        @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.Subfooter.SubfooterViewComponent.Name, Model.Subfooter))
+    }
+
+    @(await Html.PartialAsync("Footer", View.CurrentFurniture))
+
+</theme>
+
+

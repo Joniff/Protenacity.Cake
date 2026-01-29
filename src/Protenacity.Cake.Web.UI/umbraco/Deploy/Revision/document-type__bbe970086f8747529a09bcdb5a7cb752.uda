@@ -1,0 +1,77 @@
+{
+  "Name": "Global Data",
+  "Alias": "globalData",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-database color-brown",
+  "Thumbnail": "folder.png",
+  "Description": "Global Data",
+  "Permissions": {
+    "AllowedAtRoot": true,
+    "AllowedChildContentTypes": [
+      "umb://document-type/c4cb87c9531d4d809e9c78576a7b3946",
+      "umb://document-type/723239027de7459089b2f28975a20521",
+      "umb://document-type/294e06764e124bb88a5347e58437c5ef",
+      "umb://document-type/1495b29e751e4e959309f3b10e0ce40a",
+      "umb://document-type/1c96d8dbbd68481e89c6fb0de4fd0468"
+    ]
+  },
+  "ListView": "c0808dd3-8133-4e4b-8ce8-e2bea84a96a4",
+  "Parent": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "d2667c8c-2637-427d-a851-c2938db6d809",
+      "Name": "Contents",
+      "Type": 1,
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "78ce5abf-ca00-4cb8-a82e-03cd1719d1c0",
+          "Alias": "label",
+          "DataType": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+          "Description": "Storage location for Global Data",
+          "Name": "_"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/bbe970086f8747529a09bcdb5a7cb752",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/c0808dd381334e4b8ce8e2bea84a96a4",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://data-type/f0bc4bfbb49940d6ba86058885a5178c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/1495b29e751e4e959309f3b10e0ce40a",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/1c96d8dbbd68481e89c6fb0de4fd0468",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/294e06764e124bb88a5347e58437c5ef",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/723239027de7459089b2f28975a20521",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/c4cb87c9531d4d809e9c78576a7b3946",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,57 @@
+{
+  "Name": "Tabs Panel Settings",
+  "Alias": "editorTabsEmbeddedSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-pink",
+  "Thumbnail": "folder.png",
+  "Description": "Tab element",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8c2b0b6bed1941089ede5558e303f125",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "fa973534-6516-4560-b56e-eafb85cfdf50",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "31d3962b-52fa-4a94-8501-ebe55203d516",
+          "Alias": "style",
+          "DataType": "umb://data-type/25b272232fc54eec94cea1e337afdb5a",
+          "Description": "Select style of Panel selectors\n\nTabs = Uses lines to signify which panel is active.\nPills = Uses highlighted button to signify active panel.",
+          "Name": "Style",
+          "SortOrder": 1
+        },
+        {
+          "Key": "a1adde52-de2f-4e23-a8dd-3ff68eee6e82",
+          "Alias": "placement",
+          "DataType": "umb://data-type/e48f6c2af4114285bdeb73c08541cd51",
+          "Description": "Where to place tab strip",
+          "Name": "Placement"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/aecdcf60de874338ac7758ca066b1551",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/25b272232fc54eec94cea1e337afdb5a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/e48f6c2af4114285bdeb73c08541cd51",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/8c2b0b6bed1941089ede5558e303f125",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

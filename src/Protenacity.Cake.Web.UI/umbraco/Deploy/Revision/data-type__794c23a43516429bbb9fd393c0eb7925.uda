@@ -1,0 +1,20 @@
+{
+  "Name": "Seo Priority",
+  "EditorAlias": "Umbraco.Integer",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Integer",
+  "DatabaseType": "Integer",
+  "Configuration": {
+    "min": 1,
+    "max": 10
+  },
+  "Parent": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+  "Udi": "umb://data-type/794c23a43516429bbb9fd393c0eb7925",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,19 @@
+{
+  "Name": "Label (integer)",
+  "EditorAlias": "Umbraco.Label",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Label",
+  "DatabaseType": "Integer",
+  "Configuration": {
+    "umbracoDataValueType": "INT"
+  },
+  "Parent": "umb://data-type-container/97d8a173fdf14a0baf03f40e1158dd3b",
+  "Udi": "umb://data-type/8e7f995cbd8146279932c40e568ec788",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/97d8a173fdf14a0baf03f40e1158dd3b",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

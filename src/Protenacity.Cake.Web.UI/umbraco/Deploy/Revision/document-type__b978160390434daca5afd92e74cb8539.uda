@@ -1,0 +1,42 @@
+{
+  "Name": "Tabs Settings",
+  "Alias": "editorTabsPrimarySettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Settings for tabs",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8c2b0b6bed1941089ede5558e303f125",
+  "CompositionContentTypes": [
+    "umb://document-type/53d466e9ec7a44f2918d0575d2101be6",
+    "umb://document-type/aecdcf60de874338ac7758ca066b1551",
+    "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/b978160390434daca5afd92e74cb8539",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/8c2b0b6bed1941089ede5558e303f125",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/53d466e9ec7a44f2918d0575d2101be6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/aecdcf60de874338ac7758ca066b1551",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

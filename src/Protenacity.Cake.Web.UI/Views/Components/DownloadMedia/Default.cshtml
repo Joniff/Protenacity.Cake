@@ -1,0 +1,9 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Card.DownloadMediaViewModel
+
+<div class="d-flex h-100">
+    <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" override="Model.OverrideColor" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="w-100">
+        <i class="far fa-arrow-alt-circle-down"></i>
+        <a href="@Model.Action.Url" download>@Html.Raw(Model.Header.ToHeader())</a>
+        @Html.Raw(Model.Text)
+    </theme>
+</div>

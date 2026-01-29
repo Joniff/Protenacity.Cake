@@ -1,0 +1,77 @@
+{
+  "Name": "Opening Times",
+  "Alias": "editorOpeningTimesEmbedded",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-alarm-clock color-light-blue",
+  "Thumbnail": "folder.png",
+  "Description": "When is a venue open",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/aee3b45c00c442e59095c9da9c351742",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "e6ec821a-2634-4ae4-a6fd-5c4de0b3ecb2",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "3c561f96-ec20-4fc0-8d1c-778db0330666",
+          "Alias": "times",
+          "DataType": "umb://data-type/acfeb844b0814d15a2930d87a6673ec9",
+          "Description": "Enter start and end time for when the venue is open. If the venue closes in middle of the day, then create a start and end timeslot for the morning and create a separate timeslot with its own start and end time for the afternoon.",
+          "Name": "Times",
+          "SortOrder": 2
+        },
+        {
+          "Key": "d6013bb3-2706-4132-9394-af7022f51287",
+          "Alias": "header",
+          "DataType": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+          "Description": "Header for Opening Times",
+          "Name": "Header"
+        },
+        {
+          "Key": "f8ff1f95-12a6-4311-b9d4-520c3a3c95e2",
+          "Alias": "text",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Text placed above the opening times",
+          "Name": "Text",
+          "SortOrder": 1
+        },
+        {
+          "Key": "fc73a4ec-d4e6-4a33-ab05-7516923fcd4f",
+          "Alias": "footer",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Text placed below opening times",
+          "Name": "Footer",
+          "SortOrder": 3
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/43568e8908124c65858476c4618286fd",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/acfeb844b0814d15a2930d87a6673ec9",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/aee3b45c00c442e59095c9da9c351742",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

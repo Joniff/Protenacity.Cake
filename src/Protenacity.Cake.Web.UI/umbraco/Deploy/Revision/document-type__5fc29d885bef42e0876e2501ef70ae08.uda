@@ -1,0 +1,58 @@
+{
+  "Name": "Shared Panel Name",
+  "Alias": "editorPanelName",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-name-badge color-deep-orange",
+  "Thumbnail": "folder.png",
+  "Description": "Name of Panel",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "06a027c0-9270-45c9-a49e-34ca7c4b4bdd",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "167bf7ac-0e9c-49af-9098-291a84a0a2e2",
+          "Alias": "panelIcon",
+          "DataType": "umb://data-type/053a651eaa434035b5aeb8569b32756d",
+          "Description": "Optional Icon placed on the left hand side of the Name",
+          "Name": "Icon",
+          "SortOrder": -150
+        },
+        {
+          "Key": "93ebf927-466e-4053-ac4e-0eb32c32714b",
+          "Alias": "panelName",
+          "DataType": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+          "Description": "Text used to select panel in tab strip or accordion",
+          "Name": "Name",
+          "SortOrder": -149
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/5fc29d885bef42e0876e2501ef70ae08",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/053a651eaa434035b5aeb8569b32756d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

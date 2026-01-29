@@ -1,0 +1,45 @@
+{
+  "Name": "Sub Table",
+  "Alias": "editorTableEmbedded",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-grid color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Show contents as a table element",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/690556d68e2e4b409476cdade9eca12e",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "3479e94e-8e14-4a5e-8c85-613951ead6d1",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "46fb5f57-ca71-40c2-a925-5d5a439b9d03",
+          "Alias": "source",
+          "DataType": "umb://data-type/fda76680e3a046278ce58d0c032cf755",
+          "Description": "Source of data",
+          "Name": "Source"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c34f79bbca7940a2ad477bbdec24ae07",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/fda76680e3a046278ce58d0c032cf755",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/690556d68e2e4b409476cdade9eca12e",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

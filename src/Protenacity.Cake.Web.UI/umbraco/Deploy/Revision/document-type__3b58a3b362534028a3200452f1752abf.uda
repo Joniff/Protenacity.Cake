@@ -1,0 +1,31 @@
+{
+  "Name": "Map Panel Settings",
+  "Alias": "editorMapPanelSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/fc8fe87fc7c442bf960b4d050b75b132",
+  "CompositionContentTypes": [
+    "umb://document-type/17e2f28dfa2d4924a4d891e0c134193f"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/3b58a3b362534028a3200452f1752abf",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/fc8fe87fc7c442bf960b4d050b75b132",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/17e2f28dfa2d4924a4d891e0c134193f",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

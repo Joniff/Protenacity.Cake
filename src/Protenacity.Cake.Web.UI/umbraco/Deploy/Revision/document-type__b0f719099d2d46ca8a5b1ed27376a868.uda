@@ -1,0 +1,45 @@
+{
+  "Name": "YouTube",
+  "Alias": "editorVideoSourceYoutube",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-camcorder color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Video stored on YouTube",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/48144a7fe68442498b35cac628e359b1",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "6403f9e0-7dea-475a-80e8-a7d2020d43c3",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "ee749207-5268-4913-89a7-5a79a99a1d45",
+          "Alias": "url",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Copy and paste the share link from any \u003Ca href=\u0027https://youtu.be/Ya_4rht4DG8\u0027\u003EYouTube Video\u003C/a\u003E. Usually starts with \u003Ca href=\u0027https://youtu.be/\u0027\u003Ehttps://youtu.be/\u003C/a\u003E",
+          "Name": "Url"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/b0f719099d2d46ca8a5b1ed27376a868",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/48144a7fe68442498b35cac628e359b1",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

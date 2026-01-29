@@ -1,0 +1,52 @@
+{
+  "Name": "File",
+  "Alias": "editorTableSourceFile",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-hard-drive-alt color-pink",
+  "Thumbnail": "folder.png",
+  "Description": "Use a data file as source for table",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/690556d68e2e4b409476cdade9eca12e",
+  "CompositionContentTypes": [
+    "umb://document-type/9ba0416a017a4944a132959ddc286ec5"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "0cf5312a-715c-42f7-83ff-b046909d42ea",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "16d77373-c2b1-4727-9fa3-aa8f72719182",
+          "Alias": "file",
+          "DataType": "umb://data-type/3d91a179dd764f888f0e7bd317a0b665",
+          "Description": "Link to a CSV or XLSX file used as source for Table",
+          "Name": "File",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/a0c08459b02846a3813d6a34b230e90a",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3d91a179dd764f888f0e7bd317a0b665",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/690556d68e2e4b409476cdade9eca12e",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/9ba0416a017a4944a132959ddc286ec5",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,118 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Category.CategoryViewModel
+
+<div class="w-100">
+    <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="w-100">
+
+        @switch (Model.Placement)
+        {
+            case EditorTabStripPlacements.Left:
+                <text>
+                    <div class="d-flex align-items-start">
+                        @(await Tabstrip(Model.Id, "flex-column me-3 tabs-left", Model.Heading))
+                        @(await Panels(Model.Id, Model.Heading, Model.ShowHeadingDescription, Model.ShowSeparator))
+                    </div>
+                </text>
+                break;
+
+            case EditorTabStripPlacements.Top:
+                <text>
+                    <div>
+                        @(await Tabstrip(Model.Id, "mb-3 tabs-top", Model.Heading))
+                        @(await Panels(Model.Id, Model.Heading, Model.ShowHeadingDescription, Model.ShowSeparator))
+                    </div>
+                </text>
+                break;
+
+            case EditorTabStripPlacements.Bottom:
+                <text>
+                    <div>
+                        @(await Panels(Model.Id, Model.Heading, Model.ShowHeadingDescription, Model.ShowSeparator))
+                        @(await Tabstrip(Model.Id, "mt-3 tabs-bottom", Model.Heading))
+                    </div>
+                </text>
+                break;
+
+            case EditorTabStripPlacements.Right:
+                <text>
+                    <div class="d-flex">
+                        @(await Panels(Model.Id, Model.Heading, Model.ShowHeadingDescription, Model.ShowSeparator))
+                        @(await Tabstrip(Model.Id, "flex-column ms-3 tabs-right", Model.Heading))
+                    </div>
+                </text>
+                break;
+        }
+
+    </theme>
+</div>
+
+@functions
+{
+    private async Task<object?> Tabstrip(string id, string css, IEnumerable<Protenacity.Cake.Web.Presentation.Category.CategoryHeading> headings)
+    {
+        <text>
+            <nav>
+                <div class="nav nav-pills @css" id="@(id)-tabs">
+                    @foreach (var heading in headings.Select((Content, Index) => (Content, Index)))
+                    {
+                        <div class="category-button-container ms-1 mb-1">
+                            <button class="p-nomargin nav-link @(heading.Index == 0 ? "active" : null)"
+                            id="@(id)-@(heading.Content.Title.GetHashCode())-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#@(id)-@(heading.Content.Title.GetHashCode())"
+                            type="button"
+                            role="tab"
+                            aria-controls="@(id)-@(heading.Content.Title.GetHashCode())"
+                            aria-selected="@(heading.Index == 0 ? "true" : "false")">
+
+                                @heading.Content.Title
+                            </button>
+                        </div>
+                    }
+                </div>
+            </nav>
+        </text>
+        return null;
+    }
+
+    private async Task<object?> Panels(string id, IEnumerable<Protenacity.Cake.Web.Presentation.Category.CategoryHeading> headings, bool showHeadingDescription, bool showSeparator)
+    {
+        <text>
+            <div class="tab-content" id="@(id)-panels">
+                @foreach (var heading in headings.Select((Content, Index) => (Content, Index)))
+                {
+                    <div class="tab-pane fade panel-@id @(heading.Index == 0 ? "show active" : null)"
+                        id="@(id)-@(heading.Content.Title.GetHashCode())"
+                        role="tabpanel"
+                        aria-labelledby="@(id)-@(heading.Content.Title.GetHashCode())-tab">
+
+                        @if (showHeadingDescription == true && heading.Content.Description != null)
+                        {
+                            <h2>
+                                @Html.Raw(heading.Content.Description)
+                            </h2>
+                        }
+                        <dl class="row">
+
+                            @foreach (var name in heading.Content.Names)
+                            {
+                                <dt class="col-sm-3">@name.Name</dt>
+                                <dd class="col-sm-9">
+                                    <ul class="list-unstyled">
+                                        @foreach (var pageName in name.PageNameUrls)
+                                        {
+                                            <li>
+                                                <a href="@pageName.Item2">@pageName.Item1</a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </dd>
+                            }
+                        </dl>
+                    </div>
+                }
+            </div>
+        </text>
+        return null;
+    }
+}
+

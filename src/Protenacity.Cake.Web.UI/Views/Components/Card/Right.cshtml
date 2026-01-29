@@ -1,0 +1,102 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Card.ICardViewModel
+@{
+    var clickable = Model.ActionClickArea == ActionStyleClickAreas.Card && !string.IsNullOrEmpty(Model.Action?.Url);
+    var absolute = (Model.Action?.Alignment & ActionStyleAlignments.Absolute) == ActionStyleAlignments.Absolute ? "position-absolute bottom-0" : null;
+    var align = (Model.Action?.Alignment & ActionStyleAlignments.Left) == ActionStyleAlignments.Left ? "start-0" : ((Model.Action?.Alignment & ActionStyleAlignments.Centre) == ActionStyleAlignments.Centre ? "start-50" : "end-0");
+    if (Model.Action?.Alignment == ActionStyleAlignments.CentreAbsolute)
+    {
+        align += " translate-middle-x";
+    }
+    var imageSize = 5;
+    switch (Model.ImageStyleSize)
+    {
+        case EditorCardStyleImageSizes.XXSmall:
+            imageSize = 2;
+            break;
+
+        case EditorCardStyleImageSizes.XSmall:
+            imageSize = 3;
+            break;
+
+        case EditorCardStyleImageSizes.Small:
+            imageSize = 4;
+            break;
+
+        case EditorCardStyleImageSizes.Large:
+            imageSize = 6;
+            break;
+
+        case EditorCardStyleImageSizes.XLarge:
+            imageSize = 7;
+            break;
+
+        case EditorCardStyleImageSizes.XXLarge:
+            imageSize = 8;
+            break;
+
+        case EditorCardStyleImageSizes.XXXLarge:
+            imageSize = 9;
+            break;
+    }
+}
+
+<div class="d-flex h-100 @(clickable?"cursor-pointer" : null)" @(clickable ? "onclick=this.querySelector('a').click();" : null)>
+    <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" override="Model.OverrideColor" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="card border-0">
+        <div class="row g-0 h-100">
+            <div class="col-md-@(12 - imageSize)">
+                <div class="card-body border-0">
+                    @if (Model.Header?.HasContent() == true && Model.HeaderStyle == EditorCardStyleHeaders.Show)
+                    {
+                        @if (Model.Action?.Style == ActionStyles.Header)
+                        {
+                            <a href="@Model.Action.Url" target="@(Model.Action.Target == ActionTargets.NewTab ? "_blank" : "_self")" @(Model.Action?.Download == true ? "download" : null)>
+                                @Html.Raw(Model.Header.ToHeader())
+                            </a>
+                        }
+                        else
+                        {
+                            <div class="card-title">
+                                @Html.Raw(Model.Header.ToHeader())
+                            </div>
+                        }
+                    }
+                    @if (Model.Date != null && (Model.DateStyle == EditorCardStyleDates.Show || Model.TimeStyle == EditorCardStyleTimes.Show))
+                    {
+                        <time class="card-subtitle" datetime="@(Model.Date.Value.ToString("s"))">
+                            @if (Model.DateStyle == EditorCardStyleDates.Show)
+                            {
+                                @Model.Date.Value.ToString(Model.DateFormat)
+                                @if (Model.TimeStyle == EditorCardStyleTimes.Show)
+                                {
+                                    <text>
+                                        &nbsp;
+                                    </text>
+                                }
+                            }
+                            @if (Model.TimeStyle == EditorCardStyleTimes.Show)
+                            {
+                                @Model.Date.Value.ToString(Model.TimeFormat)
+                            }
+                        </time>
+                    }
+                    @if (Model.Text?.HasContent() == true && Model.TextStyle == EditorCardStyleTexts.Show)
+                    {
+                        <p class="card-text">@Html.Raw(Model.Text)</p>
+                    }
+                </div>
+
+                @if (Model.Action != null && Model.Action.Style != ActionStyles.Hide)
+                {
+                    <div class="card-footer border-0 @absolute @align">
+                        <div class="text-bottom">
+                            @(await Component.InvokeAsync(ActionViewComponent.Name, Model.Action))
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-md-@imageSize">
+                @(await Component.InvokeAsync(ResponsiveImageViewComponent.Name, Model))
+            </div>
+        </div>
+    </theme>
+</div>

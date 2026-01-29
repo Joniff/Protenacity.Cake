@@ -1,0 +1,43 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Table.TableBlocksViewModel
+
+<div class="table-responsive">
+    <table class="table table-sm">
+        @if (Model.FirstRowIsHeader)
+        {
+            <thead>
+                <tr>
+                    @foreach (var cell in Model.Rows.FirstOrDefault(r => r.Item1 == 0)?.Item2 ?? Enumerable.Empty<IEditorContent>())
+                    {
+                        <th>
+                            @(await Component.InvokeAsync(cell.EditorComponent, cell))
+                        </th>
+                    }
+                </tr>
+            </thead>
+        }
+
+        <tbody>
+            @foreach (var row in Model.Rows.Skip(Model.FirstRowIsHeader ? 1 : 0))
+            {
+                <tr>
+                    @foreach (var cell in row.Item2.Select((Value, Index) => (Value, Index)))
+                    {
+                        if (Model.FirstColumnIsHeader && cell.Index == 0)
+                        {
+                            <th scope="row">
+                                @(await Component.InvokeAsync(cell.Value.EditorComponent, cell.Value))
+                            </th>
+                        }
+                        else
+                        {
+                            <td style="@(!string.IsNullOrWhiteSpace(Model.AlternateBackgroundRows) && row.Item1 % 2 == 0 ? "background-color:" + Model.AlternateBackgroundRows :
+                                (!string.IsNullOrWhiteSpace(Model.AlternateBackgroundColumns) && cell.Index % 2 == 0 ? "background-color:" + Model.AlternateBackgroundColumns : null))">
+                                @(await Component.InvokeAsync(cell.Value.EditorComponent, cell.Value))
+                            </td>
+                        }
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

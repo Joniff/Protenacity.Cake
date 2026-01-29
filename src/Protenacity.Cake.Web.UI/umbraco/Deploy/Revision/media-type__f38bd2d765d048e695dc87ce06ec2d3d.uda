@@ -1,0 +1,64 @@
+{
+  "Name": "Folder",
+  "Alias": "Folder",
+  "Icon": "icon-folder color-green",
+  "Thumbnail": "icon-folder",
+  "Permissions": {
+    "AllowedAtRoot": true,
+    "AllowedChildContentTypes": [
+      "umb://media-type/f38bd2d765d048e695dc87ce06ec2d3d",
+      "umb://media-type/44ebd75057414594b61de1298024bc95",
+      "umb://media-type/63e5fc69dd15471a874019a924af70ad",
+      "umb://media-type/4de66e849ef74aff90d32ba19254b5fe",
+      "umb://media-type/149d102282554a7ab4723104ff44d384",
+      "umb://media-type/bc1ee548966c4a8caa8c2d7267d483a3",
+      "umb://media-type/574053359e594ed78be7b56dbb542668"
+    ]
+  },
+  "ListView": "3a0156c4-3b8c-4803-bdc1-6871faa83fff",
+  "Parent": "umb://media-type-container/ea695293f65640aab911e72dac2075b1",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://media-type/f38bd2d765d048e695dc87ce06ec2d3d",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/3a0156c43b8c4803bdc16871faa83fff",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://media-type-container/ea695293f65640aab911e72dac2075b1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://media-type/149d102282554a7ab4723104ff44d384",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://media-type/44ebd75057414594b61de1298024bc95",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://media-type/4de66e849ef74aff90d32ba19254b5fe",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://media-type/574053359e594ed78be7b56dbb542668",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://media-type/63e5fc69dd15471a874019a924af70ad",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://media-type/bc1ee548966c4a8caa8c2d7267d483a3",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://media-type/f38bd2d765d048e695dc87ce06ec2d3d",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.MediaTypeArtifact",
+  "__version": "16.0.4"
+}

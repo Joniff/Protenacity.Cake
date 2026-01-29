@@ -1,0 +1,85 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Stepper.StepperViewModel
+
+@if (Model.Orientation == EditorStepperOrientation.Vertical)
+{
+    <div class="stepper" id="stepper" direction="vertical">
+        <div class="steps">
+            @foreach (var step in Model.Steps)
+            {
+                <div class="step">
+                    <div class="step-icon">
+                        <div class="@(Model.IconCircle ? "step-circle" : "step-square")">
+                            <div class="@(Model.IconCircle ? "step-circle-inner" : null)">
+                                @if (step.IconUrl != null)
+                                {
+                                    <img src="@step.IconUrl" />
+                                }
+                                else
+                                {
+                                    <text>
+                                        @step.IconText
+                                    </text>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <theme subtheme="step.Subtheme" shade="step.ThemeShade" override="step.OverrideColor" border-color="step.BorderColor" border-edges="@step.BorderEdges" class="step-body">
+                        @if (step.Header != null)
+                        {
+                            <h5 class="step-title">
+                                @Html.Raw(step.Header.ToHeader())
+                            </h5>
+                        }
+                        <div class="step-text">@Html.Raw(step.Text)</div>
+                    </theme>
+                </div>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <div class="stepper" id="stepper" direction="horizontal">
+        <div class="steps">
+            <div class="steps-icons">
+                @foreach (var step in Model.Steps)
+                {
+                    <div class="step">
+                        <div class="step-icon">
+                            <div class="@(Model.IconCircle ? "step-circle" : "step-square")">
+                                <div class="@(Model.IconCircle ? "step-circle-inner" : null)">
+                                    @if (step.IconUrl != null)
+                                    {
+                                        <img src="@step.IconUrl" />
+                                    }
+                                    else
+                                    {
+                                        <text>
+                                            @step.IconText
+                                        </text>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="steps-bodies">
+                @foreach (var step in Model.Steps)
+                {
+                    <div class="step">
+                        <theme subtheme="step.Subtheme" shade="step.ThemeShade" override="step.OverrideColor" border-color="step.BorderColor" border-edges="@step.BorderEdges" class="step-body">
+                            @if (step.Header != null)
+                            {
+                                <h5 class="step-title">
+                                    @Html.Raw(step.Header.ToHeader())
+                                </h5>
+                            }
+                            <div class="step-text">@Html.Raw(step.Text)</div>
+                        </theme>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}

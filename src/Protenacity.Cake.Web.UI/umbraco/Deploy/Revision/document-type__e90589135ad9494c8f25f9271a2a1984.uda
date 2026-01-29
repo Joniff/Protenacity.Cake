@@ -1,0 +1,37 @@
+{
+  "Name": "Full Sized Images",
+  "Alias": "editorImagePrimary",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-picture color-orange",
+  "Thumbnail": "folder.png",
+  "Description": "Multiple Images",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/035afa6edd274a1c8782b98dbf0beb4c",
+  "CompositionContentTypes": [
+    "umb://document-type/b21e635eeaec41c4911e3f4b0d228b8c",
+    "umb://document-type/c9aa2cd749c64ed18971fee1f171d91d"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/e90589135ad9494c8f25f9271a2a1984",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/035afa6edd274a1c8782b98dbf0beb4c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/b21e635eeaec41c4911e3f4b0d228b8c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/c9aa2cd749c64ed18971fee1f171d91d",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

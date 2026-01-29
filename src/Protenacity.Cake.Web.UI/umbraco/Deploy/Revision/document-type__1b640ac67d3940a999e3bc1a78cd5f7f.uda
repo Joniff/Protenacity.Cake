@@ -1,0 +1,46 @@
+{
+  "Name": "Media Items",
+  "Alias": "editorSelectMedia",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-pictures-alt-2 color-light-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Select multiple media items",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/e25adf4fa7c643e3af75a3ee28ef195f",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "bbb4738c-67f3-488e-95a3-ae38b4d9b74d",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "e5950eed-cae6-48ee-a8de-4a2404b0940e",
+          "Alias": "mediaItems",
+          "DataType": "umb://data-type/448dbd6febbb4db19c3c35edf1f5d1da",
+          "Description": "Select multiple media files",
+          "Name": "Media Items",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1b640ac67d3940a999e3bc1a78cd5f7f",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/448dbd6febbb4db19c3c35edf1f5d1da",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/e25adf4fa7c643e3af75a3ee28ef195f",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

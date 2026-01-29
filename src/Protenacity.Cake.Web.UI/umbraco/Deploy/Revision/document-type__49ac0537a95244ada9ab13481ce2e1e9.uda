@@ -1,0 +1,32 @@
+{
+  "Name": "Images Panel Settings",
+  "Alias": "editorImagePanelSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-pink",
+  "Thumbnail": "folder.png",
+  "Description": "Setting for image when not embedded inside other containers",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/035afa6edd274a1c8782b98dbf0beb4c",
+  "CompositionContentTypes": [
+    "umb://document-type/384ded8e0d664e5f844f58d63e0f47cd"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/49ac0537a95244ada9ab13481ce2e1e9",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/035afa6edd274a1c8782b98dbf0beb4c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/384ded8e0d664e5f844f58d63e0f47cd",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

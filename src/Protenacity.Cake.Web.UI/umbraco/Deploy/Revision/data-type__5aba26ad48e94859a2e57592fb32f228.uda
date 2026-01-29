@@ -1,0 +1,21 @@
+{
+  "Name": "Search Fuzzy",
+  "EditorAlias": "Umbraco.Integer",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Integer",
+  "DatabaseType": "Integer",
+  "Configuration": {
+    "min": 0,
+    "max": 100,
+    "step": 1
+  },
+  "Parent": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+  "Udi": "umb://data-type/5aba26ad48e94859a2e57592fb32f228",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

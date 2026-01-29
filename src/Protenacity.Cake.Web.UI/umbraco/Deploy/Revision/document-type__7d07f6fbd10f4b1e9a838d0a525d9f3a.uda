@@ -1,0 +1,68 @@
+{
+  "Name": "Hero Banner Item Settings",
+  "Alias": "editorHeroBannerPanelSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-pink",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/660dcee2a58d41928ec40d02eea42d40",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "6adddb6c-c113-40e9-a7fd-60de53f6cc26",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "5fe23d45-361b-4145-8ac9-3d9f7f788197",
+          "Alias": "color",
+          "DataType": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+          "Description": "Background colour when no image",
+          "Name": "Background Colour",
+          "SortOrder": 2
+        },
+        {
+          "Key": "c42be1d0-32de-40b1-9642-36f4fc86655b",
+          "Alias": "alignment",
+          "DataType": "umb://data-type/f239838dcce94ffa892b5702eae5d186",
+          "Description": "Where to place Image",
+          "Name": "Alignment"
+        },
+        {
+          "Key": "f56db7bf-a1ce-402d-87be-8e3a747f3073",
+          "Alias": "darken",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "When enabled this will darken the image behind the Title \u0026 Link so that they are easier to read",
+          "Name": "Darken Image Behind Text",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/7d07f6fbd10f4b1e9a838d0a525d9f3a",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/f239838dcce94ffa892b5702eae5d186",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/660dcee2a58d41928ec40d02eea42d40",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

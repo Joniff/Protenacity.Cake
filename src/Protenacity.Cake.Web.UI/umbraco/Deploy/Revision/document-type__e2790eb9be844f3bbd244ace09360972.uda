@@ -1,0 +1,44 @@
+{
+  "Name": "Hero Banner",
+  "Alias": "editorHeroBannerPrimary",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-birthday-cake color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Large image with optional text and link",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/660dcee2a58d41928ec40d02eea42d40",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "a77848f2-5b90-47f6-bdc4-e234871d2066",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "73e0a80d-a691-471d-bf92-1eb5044d3183",
+          "Alias": "body",
+          "DataType": "umb://data-type/70dbfba945c24cf6a12a027093bd159c",
+          "Name": "_"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/e2790eb9be844f3bbd244ace09360972",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/70dbfba945c24cf6a12a027093bd159c",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/660dcee2a58d41928ec40d02eea42d40",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

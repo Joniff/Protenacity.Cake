@@ -1,0 +1,32 @@
+{
+  "Name": "Link",
+  "Alias": "editorActionAside",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-link color-deep-orange",
+  "Thumbnail": "folder.png",
+  "Description": "Link to either a web page or a media item",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/1b72bb31909c493193acfe114438ef53",
+  "CompositionContentTypes": [
+    "umb://document-type/9d2d4e2645f74ea8b640e734b31a2068"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c73594058ba944c0a505344b9c85cbc6",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/1b72bb31909c493193acfe114438ef53",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/9d2d4e2645f74ea8b640e734b31a2068",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

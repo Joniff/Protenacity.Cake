@@ -1,0 +1,171 @@
+﻿.card-title {
+    color:unset;
+    font-size:large;
+    font-weight:bold;
+}
+.card-subtitle {
+    font-style:italic;
+}
+.card-footer {
+    background-color: unset;
+}
+
+.theme-default {
+    --lcc-theme-1d-bg: #343a40; /* Primary Dark Background */
+    --lcc-theme-1d-fg: #ffffff; /* Primary Dark Foreground */
+    --lcc-theme-2d-bg: #343a40; /* Secondary Dark Background */
+    --lcc-theme-2d-fg: #f8f8f9; /* Secondary Dark Foreground */
+    --lcc-theme-3d-bg: #343a40; /* Tertiary Dark Background */
+    --lcc-theme-3d-fg: #f3f7fa; /* Tertiary Dark Foreground */
+
+    --lcc-theme-1l-bg: #ffffff; /* Primary Light Background */
+    --lcc-theme-1l-fg: #0b0c0c; /* Primary Light Foreground */
+    --lcc-theme-2l-bg: #e8e9ea; /* Secondary Light Background */
+    --lcc-theme-2l-fg: #505a5f; /* Secondary Light Foreground */
+    --lcc-theme-3l-bg: #BDC3E9; /* Tertiary Light Background */
+    --lcc-theme-3l-fg: #0b0c0c; /* Tertiary Light Foreground */
+}
+
+.theme-venice {
+    --lcc-theme-1d-bg: #2c5177; /* Primary Dark Background */
+    --lcc-theme-1d-fg: #ffffff; /* Primary Dark Foreground */
+    --lcc-theme-2d-bg: #2c5177; /* Secondary Dark Background */
+    --lcc-theme-2d-fg: #f8f8f9; /* Secondary Dark Foreground */
+    --lcc-theme-3d-bg: #2c5177; /* Tertiary Dark Background */
+    --lcc-theme-3d-fg: #f3f7fa; /* Tertiary Dark Foreground */
+
+    --lcc-theme-1l-bg: #ffffff; /* Primary Light Background */
+    --lcc-theme-1l-fg: #2c5177; /* Primary Light Foreground */
+    --lcc-theme-2l-bg: #f8f8f9; /* Secondary Light Background */
+    --lcc-theme-2l-fg: #2c5177; /* Secondary Light Foreground */
+    --lcc-theme-3l-bg: #f3f7fa; /* Tertiary Light Background */
+    --lcc-theme-3l-fg: #2c5177; /* Tertiary Light Foreground */
+}
+
+.theme-metallic-seaweed {
+    --lcc-theme-1d-bg: #0d7d88; /* Primary Dark Background */
+    --lcc-theme-1d-fg: #ffffff; /* Primary Dark Foreground */
+    --lcc-theme-2d-bg: #0d7d88; /* Secondary Dark Background */
+    --lcc-theme-2d-fg: #f8f8f9; /* Secondary Dark Foreground */
+    --lcc-theme-3d-bg: #0d7d88; /* Tertiary Dark Background */
+    --lcc-theme-3d-fg: #f3f7fa; /* Tertiary Dark Foreground */
+
+    --lcc-theme-1l-bg: #ffffff; /* Primary Light Background */
+    --lcc-theme-1l-fg: #0d7d88; /* Primary Light Foreground */
+    --lcc-theme-2l-bg: #f8f8f9; /* Secondary Light Background */
+    --lcc-theme-2l-fg: #0d7d88; /* Secondary Light Foreground */
+    --lcc-theme-3l-bg: #f3f7fa; /* Tertiary Light Background */
+    --lcc-theme-3l-fg: #0d7d88; /* Tertiary Light Foreground */
+}
+
+.theme-deep-dairei {
+    --lcc-theme-1d-bg: #802427; /* Primary Dark Background */
+    --lcc-theme-1d-fg: #ffffff; /* Primary Dark Foreground */
+    --lcc-theme-2d-bg: #802427; /* Secondary Dark Background */
+    --lcc-theme-2d-fg: #f8f8f9; /* Secondary Dark Foreground */
+    --lcc-theme-3d-bg: #802427; /* Tertiary Dark Background */
+    --lcc-theme-3d-fg: #f3f7fa; /* Tertiary Dark Foreground */
+
+    --lcc-theme-1l-bg: #ffffff; /* Primary Light Background */
+    --lcc-theme-1l-fg: #802427; /* Primary Light Foreground */
+    --lcc-theme-2l-bg: #f8f8f9; /* Secondary Light Background */
+    --lcc-theme-2l-fg: #802427; /* Secondary Light Foreground */
+    --lcc-theme-3l-bg: #f3f7fa; /* Tertiary Light Background */
+    --lcc-theme-3l-fg: #802427; /* Tertiary Light Foreground */
+}
+
+.theme-cactus-flower {
+    --lcc-theme-1d-bg: #193d6a; /* Primary Dark Background */
+    --lcc-theme-1d-fg: #ffffff; /* Primary Dark Foreground */
+    --lcc-theme-2d-bg: #193d6a; /* Secondary Dark Background */
+    --lcc-theme-2d-fg: #f8f8f9; /* Secondary Dark Foreground */
+    --lcc-theme-3d-bg: #193d6a; /* Tertiary Dark Background */
+    --lcc-theme-3d-fg: #f3f7fa; /* Tertiary Dark Foreground */
+
+    --lcc-theme-1l-bg: #ffffff; /* Primary Light Background */
+    --lcc-theme-1l-fg: #193d6a; /* Primary Light Foreground */
+    --lcc-theme-2l-bg: #f8f8f9; /* Secondary Light Background */
+    --lcc-theme-2l-fg: #193d6a; /* Secondary Light Foreground */
+    --lcc-theme-3l-bg: #f3f7fa; /* Tertiary Light Background */
+    --lcc-theme-3l-fg: #193d6a; /* Tertiary Light Foreground */
+}
+
+.theme-mystic-tulip {
+    --lcc-theme-1d-bg: #a9003d; /* Primary Dark Background */
+    --lcc-theme-1d-fg: #ffffff; /* Primary Dark Foreground */
+    --lcc-theme-2d-bg: #a9003d; /* Secondary Dark Background */
+    --lcc-theme-2d-fg: #f8f8f9; /* Secondary Dark Foreground */
+    --lcc-theme-3d-bg: #a9003d; /* Tertiary Dark Background */
+    --lcc-theme-3d-fg: #f3f7fa; /* Tertiary Dark Foreground */
+
+    --lcc-theme-1l-bg: #ffffff; /* Primary Light Background */
+    --lcc-theme-1l-fg: #a9003d; /* Primary Light Foreground */
+    --lcc-theme-2l-bg: #f8f8f9; /* Secondary Light Background */
+    --lcc-theme-2l-fg: #a9003d; /* Secondary Light Foreground */
+    --lcc-theme-3l-bg: #f3f7fa; /* Tertiary Light Background */
+    --lcc-theme-3l-fg: #a9003d; /* Tertiary Light Foreground */
+}
+
+.theme-poinciana {
+    --lcc-theme-1d-bg: #c83020; /* Primary Dark Background */
+    --lcc-theme-1d-fg: #ffffff; /* Primary Dark Foreground */
+    --lcc-theme-2d-bg: #c83020; /* Secondary Dark Background */
+    --lcc-theme-2d-fg: #f8f8f9; /* Secondary Dark Foreground */
+    --lcc-theme-3d-bg: #c83020; /* Tertiary Dark Background */
+    --lcc-theme-3d-fg: #f3f7fa; /* Tertiary Dark Foreground */
+
+    --lcc-theme-1l-bg: #ffffff; /* Primary Light Background */
+    --lcc-theme-1l-fg: #0b0c0c; /* Primary Light Foreground */
+    --lcc-theme-2l-bg: #fbf2f1; /* Secondary Light Background */
+    --lcc-theme-2l-fg: #0b0c0c; /* Secondary Light Foreground */
+    --lcc-theme-3l-bg: #f8f8f9; /* Tertiary Light Background */
+    --lcc-theme-3l-fg: #0b0c0c; /* Tertiary Light Foreground */
+}
+
+.theme-primary {
+    --lcc-theme-d-bg: var(--lcc-theme-1d-bg, black);
+    --lcc-theme-d-fg: var(--lcc-theme-1d-fg, white);
+    --lcc-theme-l-bg: var(--lcc-theme-1l-bg, black);
+    --lcc-theme-l-fg: var(--lcc-theme-1l-fg, white);
+}
+
+.theme-secondary {
+    --lcc-theme-d-bg: var(--lcc-theme-2d-bg, black);
+    --lcc-theme-d-fg: var(--lcc-theme-2d-fg, white);
+    --lcc-theme-l-bg: var(--lcc-theme-2l-bg, black);
+    --lcc-theme-l-fg: var(--lcc-theme-2l-fg, white);
+}
+
+.theme-tertiary {
+    --lcc-theme-d-bg: var(--lcc-theme-3d-bg, black);
+    --lcc-theme-d-fg: var(--lcc-theme-3d-fg, white);
+    --lcc-theme-l-bg: var(--lcc-theme-3l-bg, black);
+    --lcc-theme-l-fg: var(--lcc-theme-3l-fg, white);
+}
+
+.theme-dark {
+    background-color: var(--lcc-theme-d-bg, black) !important;
+    color: var(--lcc-theme-d-fg, white) !important;
+}
+
+.theme-light {
+    background-color: var(--lcc-theme-l-bg, black) !important;
+    color: var(--lcc-theme-l-fg, white) !important;
+}
+
+/* Template */
+#site_header {
+    background-color: #f8f9fa !important; /* bg-lightish */
+}
+#site_footer {
+    background-color: #16576a !important; /* replace with primary colour once set */
+    color: #fff;
+}
+#site_footer a {
+    color: #fff;
+}
+.img-hero-banner {
+    margin: 1.5rem auto;
+    width: 555px;
+    display: block;
+}

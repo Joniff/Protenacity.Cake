@@ -1,0 +1,32 @@
+{
+  "Name": "Editor Map Icon",
+  "EditorAlias": "Umbraco.DropDown.Flexible",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Dropdown",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "items": [
+      "Blue Pin",
+      "Green Pin",
+      "Grey Pin",
+      "Orange Pin",
+      "Purple Circle",
+      "Purple Pin",
+      "Purple Push 1",
+      "Purple Push 2",
+      "Purple Tab",
+      "Purple X",
+      "Red Pin",
+      "Yellow Pin"
+    ]
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/15e1e8e96b404d56b8968ab0987adc74",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

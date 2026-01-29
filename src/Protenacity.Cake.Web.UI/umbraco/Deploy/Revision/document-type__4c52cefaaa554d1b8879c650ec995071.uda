@@ -1,0 +1,57 @@
+{
+  "Name": "Group",
+  "Alias": "editorGroupAside",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-layout-grid color-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Group items together",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/5c67cf94b11f466f9dc7fcec5b23bdbb",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "df545bbf-4f91-4532-9a14-a082df029731",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "3dd8abb2-c90b-4d7e-8166-b0e47b09ae6d",
+          "Alias": "contents",
+          "DataType": "umb://data-type/f7b9f9f252aa44fe8006684e637bbf39",
+          "Description": "Items within this Group",
+          "Name": "Contents",
+          "SortOrder": 1
+        },
+        {
+          "Key": "5dd69999-f6a6-4ff2-8ee2-d751d895dfc0",
+          "Alias": "header",
+          "DataType": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+          "Description": "Optional \u0026lt;h2\u0026gt; title ",
+          "Name": "Header"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/4c52cefaaa554d1b8879c650ec995071",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/f7b9f9f252aa44fe8006684e637bbf39",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/5c67cf94b11f466f9dc7fcec5b23bdbb",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

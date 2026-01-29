@@ -1,0 +1,45 @@
+{
+  "Name": "Step Icon Text",
+  "Alias": "editorStepperIconText",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-font color-red",
+  "Thumbnail": "folder.png",
+  "Description": "Custom text value",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/71acd75fbd654a8484c574657e6d231a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "592fd1a9-52a2-4eb7-8f11-5bcbe69074f8",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "7a52c893-8fd9-4687-b235-a1fe459ef838",
+          "Alias": "text",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Bespoke Text",
+          "Name": "Text"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/90c6334baa5148a9a3e7032af4cf59e3",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/71acd75fbd654a8484c574657e6d231a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

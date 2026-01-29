@@ -1,0 +1,103 @@
+{
+  "$schema": "../../umbraco-package-schema.json",
+  "name": "Protenacity.Web.OpenStreetMap",
+  "version": "0.0.0",
+  "extensions": [
+    {
+      "type": "propertyEditorUi",
+      "alias": "Protenacity.PropertyEditorUi.OpenStreetMap",
+      "name": "Open Street Map",
+      "js": "/App_Plugins/Protenacity.OpenStreetMap/protenacity.openstreetmap.js",
+      "elementName": "protenacity-openstreetmap",
+      "meta": {
+        "label": "Open Street Map",
+        "icon": "icon-map-marker",
+        "group": "Maps",
+        "propertyEditorSchemaAlias": "Protenacity.Web.OpenStreetMap"
+      }
+    },
+    {
+      "type": "localization",
+      "alias": "Protenacity.Web.OpenStreetMap.Localize.EnUS",
+      "name": "English (United States)",
+      "meta": {
+        "culture": "en-us"
+      },
+      "js": "/App_Plugins/Protenacity.OpenStreetMap/Localization/en-us.js"
+    },
+    {
+      "type": "localization",
+      "alias": "Protenacity.Web.OpenStreetMap.Localize.DaDK",
+      "name": "Danish (Denmark)",
+      "meta": {
+        "culture": "da-dk"
+      },
+      "js": "/App_Plugins/Protenacity.OpenStreetMap/Localization/da-dk.js"
+    },
+    {
+      "type": "propertyEditorSchema",
+      "name": "Open Street Map",
+      "alias": "Protenacity.Web.OpenStreetMap",
+      "meta": {
+        "defaultPropertyEditorUiAlias": "LCC.PropertyEditorUi.OpenStreetMap",
+        "settings": {
+          "properties": [
+            {
+              "alias": "defaultPosition",
+              "label": "Default Position",
+              "propertyEditorUiAlias": "LCC.PropertyEditorUi.OpenStreetMap"
+            },
+            {
+              "alias": "showSearch",
+              "label": "Show Search",
+              "description": "Show search field above map.",
+              "propertyEditorUiAlias": "Umb.PropertyEditorUi.Toggle"
+            },
+            {
+              "alias": "showCoordinates",
+              "label": "Show Coordinates",
+              "description": "Show Coordinates below the map..",
+              "propertyEditorUiAlias": "Umb.PropertyEditorUi.Toggle"
+            },
+            {
+              "alias": "showSetMarkerByCoordinates",
+              "label": "Show Set Marker By Coordinates",
+              "description": "Show search field above map.",
+              "propertyEditorUiAlias": "Umb.PropertyEditorUi.Toggle"
+            },
+            {
+              "alias": "showSetMarkerByCoordinates",
+              "label": "Show Set Marker By Coordinates",
+              "description": "Set Marker By Coordinates field's above map.",
+              "propertyEditorUiAlias": "Umb.PropertyEditorUi.Toggle"
+            },
+            {
+              "alias": "allowClear",
+              "label": "Allow Clear",
+              "description": "Allow clearing previous marker.",
+              "propertyEditorUiAlias": "Umb.PropertyEditorUi.Toggle"
+            },
+            {
+              "alias": "scrollWheelZoom",
+              "label": "Scroll Wheel Zoom",
+              "description": "Enable scroll wheel zoom in property editor?",
+              "propertyEditorUiAlias": "Umb.PropertyEditorUi.Toggle"
+            },
+            {
+              "alias": "tileLayer",
+              "label": "Tile Layer",
+              "description": "URL to tile layer.",
+              "propertyEditorUiAlias": "Umb.PropertyEditorUi.TextBox"
+            },
+            {
+              "alias": "tileLayerAttribution",
+              "label": "Tile Layer Attribution",
+              "description": "Attribution for tile layer.",
+              "propertyEditorUiAlias": "Umb.PropertyEditorUi.TextBox"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

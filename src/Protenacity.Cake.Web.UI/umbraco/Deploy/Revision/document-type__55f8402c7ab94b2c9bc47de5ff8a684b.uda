@@ -1,0 +1,44 @@
+{
+  "Name": "Sub Accordion Settings",
+  "Alias": "editorAccordionEmbeddedSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-pink",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8b26c93a06a04b03b90bfcbc2e5953d3",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "c225e29b-cc0f-46de-854b-9d9de1b68211",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "417e8ffa-a42c-4c04-8d3a-0c09ec11e259",
+          "Alias": "initialState",
+          "DataType": "umb://data-type/aaef3ba0b5cf41c4907523aaeb5dcca4",
+          "Description": "How should the accordion first be viewed before being interacted with by the user",
+          "Name": "Initial State"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/55f8402c7ab94b2c9bc47de5ff8a684b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/aaef3ba0b5cf41c4907523aaeb5dcca4",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/8b26c93a06a04b03b90bfcbc2e5953d3",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

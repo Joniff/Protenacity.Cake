@@ -1,0 +1,45 @@
+{
+  "Name": "Base Settings",
+  "Alias": "editorListBaseSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-blue",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/1ea31dd18f9d4c95b90f72426ad153d5",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "2a0e9e79-0eec-4a7c-896c-d5c39abcd8f7",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "136f7e4a-0eda-4a2c-98c3-2852cec71bf1",
+          "Alias": "maxColumns",
+          "DataType": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+          "Description": "Maximum number of blocks to show per row",
+          "Name": "Blocks Per Row",
+          "SortOrder": 10
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/a57b559b1f68414b80734074c55c876b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/2e6d3631066e44b8aec496f09099b2b5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/1ea31dd18f9d4c95b90f72426ad153d5",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

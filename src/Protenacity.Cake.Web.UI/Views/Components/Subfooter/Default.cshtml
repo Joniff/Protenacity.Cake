@@ -1,0 +1,36 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Subfooter.SubfooterViewModel
+
+<footer class="m-0" role="complementary">
+    <theme shade="@EditorThemeShades.Dark" override="Model.OverrideColor">
+        <div class="container">
+            <div class="row">
+                <div class="col text-end">
+                    <div class="row small">
+                        @if (Model.LastUpdated != null)
+                        {
+                            <time datetime="@Model.LastUpdated?.ToString("s", System.Globalization.DateTimeFormatInfo.InvariantInfo)">
+                                Last Updated : @Model.LastUpdated?.ToString("D", System.Globalization.CultureInfo.CurrentCulture)
+                            </time>
+                        }
+                        @if (Model.NextReviewed != null)
+                        {
+                            <time datetime="@Model.NextReviewed?.ToString("s", System.Globalization.DateTimeFormatInfo.InvariantInfo)">
+                                Next Review Date : @Model.NextReviewed?.ToString("D", System.Globalization.CultureInfo.CurrentCulture)
+                            </time>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </theme>
+    @if (Model.ShowReturnToTop)
+    {
+        <div class="return-to-top d-none" aria-hidden="true">
+            <theme class="position-fixed d-block" border="black" shade="Model.ReturnToTopShade" style="z-index:99997;bottom:100px;right:24px;">
+                <span href="javascript:;" onclick="window.scrollTo({ top: 0, left: 0 });" class="align-items-center justify-content-center" role="button">
+                    <i class="bi bi-arrow-up-short"></i>
+                </span>
+            </theme>
+        </div>
+    }
+</footer>

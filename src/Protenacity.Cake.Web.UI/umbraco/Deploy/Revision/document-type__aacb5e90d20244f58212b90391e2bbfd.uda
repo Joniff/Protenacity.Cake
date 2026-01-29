@@ -1,0 +1,45 @@
+{
+  "Name": "Shared Panel Blocks",
+  "Alias": "editorPanel",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-indent color-deep-orange",
+  "Thumbnail": "folder.png",
+  "Description": "Block container",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "630d0c31-aa41-4315-8cff-0762b4b42dd7",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "20f2f448-bf4e-4591-b7e3-6f7dcafcecbb",
+          "Alias": "panelBlocks",
+          "DataType": "umb://data-type/e24a350371f042e7a6b75a502c837025",
+          "Name": "_",
+          "SortOrder": 10
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/aacb5e90d20244f58212b90391e2bbfd",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/e24a350371f042e7a6b75a502c837025",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

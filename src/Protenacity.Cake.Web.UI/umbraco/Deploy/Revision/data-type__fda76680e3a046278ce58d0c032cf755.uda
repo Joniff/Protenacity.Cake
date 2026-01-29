@@ -1,0 +1,64 @@
+{
+  "Name": "Editor Table Source",
+  "EditorAlias": "Umbraco.BlockList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "fae2dbdd-05d1-4ded-8374-ed54aefc6e6f",
+        "label": "Text",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "a0c08459-b028-46a3-813d-6a34b230e90a",
+        "label": "File",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "f170f3bb-eb8c-45d0-9774-35ee23f25233",
+        "settingsElementTypeKey": "0e84b563-bd71-44e0-8e86-594939c0f7b0",
+        "label": "Blocks",
+        "editorSize": "large",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "54c0e34c-6346-4b1a-9f8b-5e6e306768a2",
+        "label": "Coroners Inquest Api"
+      }
+    ],
+    "validationLimit": {
+      "min": 1,
+      "max": 1
+    },
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/fda76680e3a046278ce58d0c032cf755",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/0e84b563bd7144e08e86594939c0f7b0"
+    },
+    {
+      "Udi": "umb://document-type/54c0e34c63464b1a9f8b5e6e306768a2"
+    },
+    {
+      "Udi": "umb://document-type/a0c08459b02846a3813d6a34b230e90a"
+    },
+    {
+      "Udi": "umb://document-type/f170f3bbeb8c45d0977435ee23f25233"
+    },
+    {
+      "Udi": "umb://document-type/fae2dbdd05d14ded8374ed54aefc6e6f"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

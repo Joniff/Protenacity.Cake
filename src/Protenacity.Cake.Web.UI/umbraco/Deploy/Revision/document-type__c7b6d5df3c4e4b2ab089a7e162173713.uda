@@ -1,0 +1,57 @@
+{
+  "Name": "Expandable Text",
+  "Alias": "editorTextBlockExpandableText",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-play color-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Hidden text that can expand into view",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/d0c9dcd29a834e9d8bd85bb546395781",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "180ca83b-fb88-480d-86b0-a0c80ad66613",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "19881682-cbde-4f7a-9d5a-efb1d643ccae",
+          "Alias": "header",
+          "DataType": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+          "Description": "Text that can be selected to show hidden text",
+          "Name": "Header"
+        },
+        {
+          "Key": "990eed69-24ea-4453-b58a-83b0be2b05a1",
+          "Alias": "text",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Text that is initially hidden but can be viewed when Header text is selected",
+          "Name": "Text",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c7b6d5df3c4e4b2ab089a7e162173713",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/d0c9dcd29a834e9d8bd85bb546395781",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

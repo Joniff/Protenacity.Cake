@@ -1,0 +1,57 @@
+{
+  "Name": "Base Settings",
+  "Alias": "editorMapBaseSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-plugin",
+  "Thumbnail": "folder.png",
+  "Description": "Base settings for maps",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/fc8fe87fc7c442bf960b4d050b75b132",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "9af3c25f-1fc6-477c-bcf0-2d0bb78847f8",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "7e72f011-e462-49d0-933e-a72ecb8083bc",
+          "Alias": "icon",
+          "DataType": "umb://data-type/15e1e8e96b404d56b8968ab0987adc74",
+          "Description": "Icon used to signify where the specific location is on map",
+          "Name": "Icon",
+          "SortOrder": 1
+        },
+        {
+          "Key": "873eb63b-988c-4740-94a9-7a84f122899f",
+          "Alias": "ratio",
+          "DataType": "umb://data-type/3e1a921721af402d869b7d92cbd5f23e",
+          "Description": "The map will resize to fit the width of the block given, this decides to height portion in ration to the width.\n2 : 1 = Twice as wide as high\n1 : 1 = Square\n ",
+          "Name": "Ratio"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/17e2f28dfa2d4924a4d891e0c134193f",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/15e1e8e96b404d56b8968ab0987adc74",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/3e1a921721af402d869b7d92cbd5f23e",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/fc8fe87fc7c442bf960b4d050b75b132",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

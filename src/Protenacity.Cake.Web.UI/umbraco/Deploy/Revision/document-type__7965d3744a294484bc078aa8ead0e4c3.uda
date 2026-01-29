@@ -1,0 +1,36 @@
+{
+  "Name": "Rss Feed Settings",
+  "Alias": "editorRssFeedSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-plugin",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/629c7071902a44adaece52b0a55076f6",
+  "CompositionContentTypes": [
+    "umb://document-type/97e21745dec5451a82f03be21b0a8639",
+    "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/7965d3744a294484bc078aa8ead0e4c3",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/629c7071902a44adaece52b0a55076f6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/97e21745dec5451a82f03be21b0a8639",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,46 @@
+{
+  "Name": "Bus Route Data Api",
+  "Alias": "editorBusRouteDataApi",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-document",
+  "Thumbnail": "folder.png",
+  "Description": "Share Bus Route Api",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/851b55ab5524495eb2afae57b73c5267",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "efc85d3e-c592-476f-a000-a81aad0f4802",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "7d1d7e30-9955-4d5e-ba07-b4dbfeec31e6",
+          "Alias": "busRouteApi",
+          "DataType": "umb://data-type/2e989f56684a4b919f52ba9909ede306",
+          "Description": "Where do we source the Bus Route information",
+          "Name": "Bus Route Data Api",
+          "SortOrder": -5
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/adb33782bb4c47af987ea3dc78939a15",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/2e989f56684a4b919f52ba9909ede306",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/851b55ab5524495eb2afae57b73c5267",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

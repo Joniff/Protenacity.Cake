@@ -1,0 +1,75 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Card.ICardViewModel
+
+@if (Model.ActionClickArea == ActionStyleClickAreas.Card && !string.IsNullOrEmpty(Model.Action?.Url))
+{
+    @:<div onclick="this.querySelector('a').click();" class="cursor-pointer">
+    @*@:<a href="@Model.Action.Url" target="@(Model.Action.Target == ActionTargets.NewTab ? "_blank" : "_self")" @(Model.Action.Download ? "download" : null) class="text-reset text-decoration-none">*@
+}
+
+<theme subtheme="Model.Subtheme" shade="Model.ThemeShade" override="Model.OverrideColor" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" id="@(Model.BackgroundId)" class="card h-100 border-0 overflow-hidden">
+
+    <div class="card-img h-100">
+        @(await Component.InvokeAsync(ResponsiveImageViewComponent.Name, Model))
+    </div>
+
+    <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+
+        <div class="card-body border-0">
+            @if (Model.Header?.HasContent() == true && Model.HeaderStyle == EditorCardStyleHeaders.Show)
+            {
+                @if (Model.Action?.Style == ActionStyles.Header)
+                {
+                    <a href="@Model.Action.Url" target="@(Model.Action.Target == ActionTargets.NewTab ? "_blank" : "_self")" @(Model.Action?.Download == true ? "download" : null)>
+                        @Html.Raw(Model.Header.ToHeader())
+                    </a>
+                }
+                else
+                {
+                    <div class="card-title">
+                        @Html.Raw(Model.Header.ToHeader())
+                    </div>
+                }
+            }
+            @if (Model.Date != null && (Model.DateStyle == EditorCardStyleDates.Show || Model.TimeStyle == EditorCardStyleTimes.Show))
+            {
+                <time class="card-subtitle" datetime="@(Model.Date.Value.ToString("s"))">
+                    @if (Model.DateStyle == EditorCardStyleDates.Show)
+                    {
+                        @Model.Date.Value.ToString(Model.DateFormat)
+                        @if (Model.TimeStyle == EditorCardStyleTimes.Show)
+                        {
+                            <text>
+                                &nbsp;
+                            </text>
+                        }
+                    }
+                    @if (Model.TimeStyle == EditorCardStyleTimes.Show)
+                    {
+                        @Model.Date.Value.ToString(Model.TimeFormat)
+                    }
+                </time>
+            }
+            @if (Model.Text?.HasContent() == true && Model.TextStyle == EditorCardStyleTexts.Show)
+            {
+                <div class="card-text">@Html.Raw(Model.Text)</div>
+            }
+        </div>
+
+        @if (Model.Action != null && Model.Action.Style != ActionStyles.Hide)
+        {
+            <div class="card-footer bottom-0 end-0 border-0">
+                <div class="text-bottom">
+                    @(await Component.InvokeAsync(ActionViewComponent.Name, Model.Action))
+                </div>
+            </div>
+        }
+
+    </div>
+
+</theme>
+
+@if (Model.ActionClickArea == ActionStyleClickAreas.Card && !string.IsNullOrEmpty(Model.Action?.Url))
+{
+    @:</div>
+    @*@:</a>*@
+}

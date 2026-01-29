@@ -1,0 +1,32 @@
+{
+  "Name": "Link Children Web Pages",
+  "Alias": "editorChildNodesAside",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-school color-light-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Displays all children web page as links",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/34cdf0a7eb2b42cf9e9d0484931097e2",
+  "CompositionContentTypes": [
+    "umb://document-type/cb3a1ebe2a6e458a8fcdd60b55b5f5f6"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/0626bea462f34d10a34fdc0e0663ed88",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/34cdf0a7eb2b42cf9e9d0484931097e2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/cb3a1ebe2a6e458a8fcdd60b55b5f5f6",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

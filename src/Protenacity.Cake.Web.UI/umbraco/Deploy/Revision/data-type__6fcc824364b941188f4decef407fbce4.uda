@@ -1,0 +1,22 @@
+{
+  "Name": "Furniture Links",
+  "EditorAlias": "Umbraco.MultiUrlPicker",
+  "EditorUiAlias": "Umb.PropertyEditorUi.MultiUrlPicker",
+  "Configuration": {
+    "minNumber": 0,
+    "maxNumber": 0,
+    "overlaySize": "medium",
+    "hideAnchor": false,
+    "ignoreUserStartNodes": false
+  },
+  "Parent": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+  "Udi": "umb://data-type/6fcc824364b941188f4decef407fbce4",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,112 @@
+﻿.stepper {
+}
+
+.stepper[direction="vertical"] .steps {
+    display:table;
+}
+.stepper[direction="vertical"] .step {
+    display: table-row;
+}
+.stepper[direction="vertical"] .step-icon {
+    display:table-cell;
+    text-align:center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.stepper[direction="vertical"] .step-body {
+    display:table-cell;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.stepper[direction="vertical"] .step-title {
+    margin-bottom: 0.5rem;
+}
+
+.stepper[direction="vertical"] .step:not(:last-child) .step-icon {
+    background: linear-gradient(#fff, #000) no-repeat center/2px 100%;
+}
+
+.stepper[direction="vertical"] .step-circle {
+    display: inline-block;
+    line-height: 0px;
+    border-radius: 50%;
+    border: 2px solid;
+    background-color: white;
+}
+
+.stepper[direction="vertical"] .step-square {
+    display: inline-block;
+    background-color: white;
+}
+
+.stepper[direction="vertical"] .step-circle-inner {
+    display: inline-block;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.stepper[direction="horizontal"] {
+}
+
+.stepper[direction="horizontal"] .steps {
+    display:table;
+}
+
+.stepper[direction="horizontal"] .steps-icons {
+    display: table-row;
+}
+
+.stepper[direction="horizontal"] .steps-bodies {
+    display: table-row;
+}
+
+
+.stepper[direction="horizontal"] .step {
+    display:table-cell;
+}
+
+.stepper[direction="horizontal"] .step-icon {
+    margin-bottom: 0.5rem;
+}
+
+.stepper[direction="horizontal"] .step-body {
+    display:table-cell;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.stepper[direction="horizontal"] .step-title {
+    margin-bottom: 0.5rem;
+}
+
+.stepper[direction="horizontal"] .step:not(:last-child) .step-icon {
+    background: linear-gradient(180deg, #fff calc(50% - 1px), #000 calc(50%), #fff calc(50% + 1px) );
+}
+
+.stepper[direction="horizontal"] .step-circle {
+    display: inline-block;
+    line-height: 0px;
+    border-radius: 50%;
+    border: 2px solid;
+    background-color: white;
+}
+
+.stepper[direction="horizontal"] .step-square {
+    display: inline-block;
+    background-color: white;
+}
+
+.stepper[direction="horizontal"] .step-circle-inner {
+    display: inline-block;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}

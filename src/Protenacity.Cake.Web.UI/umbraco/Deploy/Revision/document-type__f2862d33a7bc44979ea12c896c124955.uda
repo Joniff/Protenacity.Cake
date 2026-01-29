@@ -1,0 +1,37 @@
+{
+  "Name": "Link Media Items Settings",
+  "Alias": "editorSelectMediaAsideSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-indigo",
+  "Thumbnail": "folder.png",
+  "Description": "Settings for media items",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/e25adf4fa7c643e3af75a3ee28ef195f",
+  "CompositionContentTypes": [
+    "umb://document-type/4cd98deae3e342349972b0db6dc793f7",
+    "umb://document-type/a6683e996a6546d0be7f3587cabef22e"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/f2862d33a7bc44979ea12c896c124955",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/e25adf4fa7c643e3af75a3ee28ef195f",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/4cd98deae3e342349972b0db6dc793f7",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/a6683e996a6546d0be7f3587cabef22e",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

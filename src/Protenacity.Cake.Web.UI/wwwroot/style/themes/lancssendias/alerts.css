@@ -1,0 +1,26 @@
+﻿/* Alerts */
+
+.theme-alert-warning {
+    background-color: #feedd6;
+    color: #32210a;
+}
+
+.theme-alert-primary {
+    background-color: #efcfd2;
+    color: #230306
+}
+
+.theme-alert-secondary {
+    background-color: #ccdfed;
+    color: #230306
+}
+
+.theme-alert-success {
+    background-color: #d6e4d1;
+    color: #0a1805
+}
+
+.theme-alert-info {
+    background-color: #cfe9f0;
+    color: #0e7590
+}

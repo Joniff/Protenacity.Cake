@@ -1,0 +1,105 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.ResponsiveImage.IResponsiveImageViewModel
+@{
+    var opacity = string.Empty;
+    var background = "background-color:" + View.CurrentDomainPage.ConfigDefaultImageMissingColor;
+    if (Model.Opacity == -10)
+    {
+        opacity = "linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)),";
+        background = "background-color:white";
+    }
+    if (Model.Opacity == 10)
+    {
+        opacity = "linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)),";
+        background = "background-color:black";
+    }
+    else if (Model.Opacity < 0)
+    {
+        var abs = int.Abs(Model.Opacity);
+        opacity = "linear-gradient(rgba(255, 255, 255, 0." + abs + "), rgba(255, 255, 255, 0." + abs + ")),";
+        background = "background-color:white;opacity:" + (Math.Abs(Model.Opacity) / 10.0) + ";";
+    }
+    else if (Model.Opacity > 0)
+    {
+        opacity = "linear-gradient(rgba(0, 0, 0, 0." + Model.Opacity + "), rgba(0, 0, 0, 0." + Model.Opacity + ")),";
+        background = "background-color:black;opacity:" + (Math.Abs(Model.Opacity) / 10.0) + ";";
+    }
+
+    var width = "w-100";
+    var height = "h-100";
+
+    if (Model.WidthFactorContainer < 50)
+    {
+        height = "h-25";    
+    }
+    else if (Model.WidthFactorContainer < 66)
+    {
+        height = "h-50";
+    }
+    else if (Model.WidthFactorContainer < 100)
+    {
+        height = "h-75";
+    }
+
+    var edges = "";
+
+    switch (Model.RoundedEdges)
+    {
+        case ResponseImageRoundedEdges.Left:
+            edges = "card-img-left";
+            break;
+
+        case ResponseImageRoundedEdges.Right:
+            edges = "card-img-right";
+            break;
+
+        case ResponseImageRoundedEdges.Top:
+            edges = "card-img-top";
+            break;
+
+        case ResponseImageRoundedEdges.Bottom:
+            edges = "card-img-bottom";
+            break;
+    }
+}
+
+@if (string.IsNullOrWhiteSpace(Model.BackgroundId))
+{
+    <text>
+        <picture>
+            @foreach (var url in Model.Urls)
+            {
+                if (url.Item1 != null)
+                {
+                    <source media="(min-width:@(url.Item1)px)" srcset="@url.Item2" />
+                }
+                else
+                {
+                    <img src="@url.Item2" alt="@Model.AlternateTitle" class="@width @height @edges" style="@(background)" aria-hidden="true" />
+                }
+            }
+        </picture>
+    </text>
+}
+else
+{
+    <style>
+        #@(Model.BackgroundId) {
+            background: @(opacity) url('@Html.Raw(Model.Urls.FirstOrDefault(u => u.Item1 == null)?.Item2)');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @foreach (var url in Model.Urls.Where(u => u.Item1 != null))
+        {
+            <text>
+                @@media (min-width:@(url.Item1)px) {
+                    #@(Model.BackgroundId) {
+                        background: @(opacity) url('@Html.Raw(url.Item2)');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+            </text>
+        }
+    </style>
+}

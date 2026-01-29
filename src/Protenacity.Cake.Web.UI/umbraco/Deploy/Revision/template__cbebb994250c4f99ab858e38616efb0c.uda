@@ -1,0 +1,21 @@
+{
+  "Name": "Editor",
+  "Alias": "Editor",
+  "File": "umb://template-file/Editor.cshtml",
+  "Master": "umb://template/5b4c0e9bce834482995a2463786367bf",
+  "Udi": "umb://template/cbebb994250c4f99ab858e38616efb0c",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Editor.cshtml",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/5b4c0e9bce834482995a2463786367bf",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "17.0.1"
+}

@@ -1,0 +1,42 @@
+{
+  "Name": "Card Panel",
+  "Alias": "editorNotePanel",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-credit-card-alt color-orange",
+  "Thumbnail": "folder.png",
+  "Description": "Text with optional image, header and either link or button",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/a9ed09e263e346feb7563da53460a78d",
+  "CompositionContentTypes": [
+    "umb://document-type/5fc29d885bef42e0876e2501ef70ae08",
+    "umb://document-type/9d2d4e2645f74ea8b640e734b31a2068",
+    "umb://document-type/f3cc025e405a4a8a88ea232946b5c97e"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1befbddaa7124847bf379ec7cace49d2",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/a9ed09e263e346feb7563da53460a78d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/5fc29d885bef42e0876e2501ef70ae08",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/9d2d4e2645f74ea8b640e734b31a2068",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/f3cc025e405a4a8a88ea232946b5c97e",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

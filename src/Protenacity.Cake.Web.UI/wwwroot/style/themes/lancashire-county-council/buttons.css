@@ -1,0 +1,140 @@
+﻿.theme-default, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana {
+    --lcc-theme-1l-abtn-fg: #ffffff;
+    --lcc-theme-1l-abtn-bg: #317918;
+    --lcc-theme-1l-abtnhover-fg: #ffffff;
+    --lcc-theme-1l-abtnhover-bg: #245912;
+    --lcc-theme-1l-cbc-bg: #ced4de;
+
+    --lcc-theme-2l-abtn-fg: #ffffff;
+    --lcc-theme-2l-abtn-bg: #317918;
+    --lcc-theme-2l-abtnhover-fg: #ffffff;
+    --lcc-theme-2l-abtnhover-bg: #245912;
+    --lcc-theme-2l-cbc-bg: #ced4de;
+
+    --lcc-theme-3l-abtn-fg: #ffffff;
+    --lcc-theme-3l-abtn-bg: #317918;
+    --lcc-theme-3l-abtnhover-fg: #ffffff;
+    --lcc-theme-3l-abtnhover-bg: #245912;
+    --lcc-theme-3l-cbc-bg: #ced4de;
+
+    --lcc-theme-1d-abtn-bg: #ffffff;
+    --lcc-theme-1d-abtn-fg: #317918;
+    --lcc-theme-1d-abtnhover-bg: #ffffff;
+    --lcc-theme-1d-abtnhover-fg: #245912;
+    --lcc-theme-1d-cbc-bg: #005ea5;
+
+    --lcc-theme-2d-abtn-bg: #ffffff;
+    --lcc-theme-2d-abtn-fg: #317918;
+    --lcc-theme-2d-abtnhover-bg: #ffffff;
+    --lcc-theme-2d-abtnhover-fg: #245912;
+    --lcc-theme-2d-cbc-bg: #005ea5;
+
+    --lcc-theme-3d-abtn-bg: #ffffff;
+    --lcc-theme-3d-abtn-fg: #317918;
+    --lcc-theme-3d-abtnhover-bg: #ffffff;
+    --lcc-theme-3d-abtnhover-fg: #245912;
+    --lcc-theme-3d-cbc-bg: #005ea5;
+}
+
+.theme-primary {
+    --lcc-l-abtn-fg: var(--lcc-theme-1l-abtn-fg, black);
+    --lcc-l-abtn-bg: var(--lcc-theme-1l-abtn-bg, white);
+    --lcc-l-abtnhover-fg: var(--lcc-theme-1l-abtnhover-fg, black);
+    --lcc-l-abtnhover-bg: var(--lcc-theme-1l-abtnhover-bg, white);
+    --lcc-l-cbc-bg: var(--lcc-theme-1l-cbc-bg, black);
+
+    --lcc-d-abtn-bg: var(--lcc-theme-1d-abtn-bg, white);
+    --lcc-d-abtn-fg: var(--lcc-theme-1d-abtn-fg, black);
+    --lcc-d-abtnhover-bg: var(--lcc-theme-1d-abtnhover-bg, white);
+    --lcc-d-abtnhover-fg: var(--lcc-theme-1d-abtnhover-fg, black);
+    --lcc-d-cbc-bg: var(--lcc-theme-1d-cbc-bg, white);
+}
+
+.theme-secondary {
+    --lcc-l-abtn-fg: var(--lcc-theme-2l-abtn-fg, black);
+    --lcc-l-abtn-bg: var(--lcc-theme-2l-abtn-bg, white);
+    --lcc-l-abtnhover-fg: var(--lcc-theme-2l-abtnhover-fg, black);
+    --lcc-l-abtnhover-bg: var(--lcc-theme-2l-abtnhover-bg, white);
+    --lcc-l-cbc-bg: var(--lcc-theme-2l-cbc-bg, black);
+
+    --lcc-d-abtn-bg: var(--lcc-theme-2d-abtn-bg, white);
+    --lcc-d-abtn-fg: var(--lcc-theme-2d-abtn-fg, black);
+    --lcc-d-abtnhover-bg: var(--lcc-theme-2d-abtnhover-bg, white);
+    --lcc-d-abtnhover-fg: var(--lcc-theme-2d-abtnhover-fg, black);
+    --lcc-d-cbc-bg: var(--lcc-theme-2d-cbc-bg, white);
+}
+
+.theme-tertiary {
+    --lcc-l-abtn-fg: var(--lcc-theme-3l-abtn-fg, black);
+    --lcc-l-abtn-bg: var(--lcc-theme-3l-abtn-bg, white);
+    --lcc-l-abtnhover-fg: var(--lcc-theme-3l-abtnhover-fg, black);
+    --lcc-l-abtnhover-bg: var(--lcc-theme-3l-abtnhover-bg, white);
+    --lcc-l-cbc-bg: var(--lcc-theme-3l-cbc-bg, black);
+
+    --lcc-d-abtn-bg: var(--lcc-theme-3d-abtn-bg, white);
+    --lcc-d-abtn-fg: var(--lcc-theme-3d-abtn-fg, black);
+    --lcc-d-abtnhover-bg: var(--lcc-theme-3d-abtnhover-bg, white);
+    --lcc-d-abtnhover-fg: var(--lcc-theme-3d-abtnhover-fg, black);
+    --lcc-d-cbc-bg: var(--lcc-theme-3d-cbc-bg, white);
+}
+
+.theme-light a.btn-theme {
+    color: var(--lcc-l-abtn-fg, white);
+    background-color: var(--lcc-l-abtn-bg, black);
+}
+
+.theme-light a.btn-theme:visited {
+    color: var(--lcc-l-abtn-fg, white);
+    background-color: var(--lcc-l-abtn-bg, black);
+}
+
+.theme-light a.btn-theme:hover {
+    color: var(--lcc-l-abtnhover-fg, white);
+    background-color: var(--lcc-l-abtnhover-bg, black);
+}
+
+.theme-dark a.btn-theme {
+    color: var(--lcc-d-abtn-fg, white);
+    background-color: var(--lcc-d-abtn-bg, black);
+}
+
+.theme-dark a.btn-theme:visited {
+    color: var(--lcc-d-abtn-fg, white);
+    background-color: var(--lcc-d-abtn-bg, black);
+}
+
+.theme-dark a.btn-theme:hover {
+    color: var(--lcc-d-abtnhover-fg, white);
+    background-color: var(--lcc-d-abtnhover-bg, black);
+}
+
+.theme-light .show-click-arrow .carousel-control-next-icon {
+    filter:invert(1) grayscale(100);
+    background-color:unset;
+    opacity:1;
+}
+
+.theme-dark .show-click-arrow {
+    filter:invert(1) grayscale(100);
+}
+
+.theme-dark .show-click-arrow .carousel-control-next-icon {
+    background-color:unset;
+    opacity:1;
+}
+
+.theme-light .category-button-container {
+    background-color: var(--lcc-l-cbc-bg, white);
+}
+
+.theme-light .category-button-container .nav-link:not(.active) {
+    color: var(--lcc-l-cbc-fg, black) !important;
+}
+
+.theme-dark .category-button-container {
+    background-color: var(--lcc-d-cbc-bg, black);
+}
+
+.theme-dark .category-button-container .nav-link:not(.active) {
+    color: var(--lcc-d-cbc-fg, white) !important;
+}

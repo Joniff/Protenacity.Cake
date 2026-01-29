@@ -1,0 +1,82 @@
+{
+  "Name": "Shared Block Primary",
+  "Alias": "editorBlockPrimary",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-squiggly-line color-deep-orange",
+  "Thumbnail": "folder.png",
+  "Description": "Used as a composition for all general purpose blocks",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "620823c6-2c22-4945-9b5d-7af658370fa8",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "785d42ed-cc61-4e6b-aadc-dc5de38b1a65",
+          "Alias": "enable",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "Should this section display?",
+          "Name": "Enable",
+          "SortOrder": -1000
+        },
+        {
+          "Key": "cc8999ec-6b93-4d83-8ae7-74ca48815c01",
+          "Alias": "identifier",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "\u003Cspan title=\u0022Also used as id for block for anchoring (Text convert to all lowercase, spaces are turned into dashes)\u0022\u003EInternal moniker\u003C/span\u003E",
+          "Name": "Identifier",
+          "SortOrder": -100
+        },
+        {
+          "Key": "da4911be-bd50-4d1b-bed7-41152b997c6b",
+          "Alias": "mainLink",
+          "DataType": "umb://data-type/2c457913dddd4ebc9134fc3e4c60cad4",
+          "Description": "Optional link for more information about this section",
+          "Name": "Section Link",
+          "SortOrder": -80
+        },
+        {
+          "Key": "f9006e3c-d374-4fe0-adb0-997a561670ec",
+          "Alias": "mainTitle",
+          "DataType": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+          "Description": "Optional \u0026lt;h2\u0026gt; title placed above block",
+          "Name": "Section Title",
+          "SortOrder": -90
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/c9aa2cd749c64ed18971fee1f171d91d",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2a2abbe88be84a3c94c004f7719734fc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2c457913dddd4ebc9134fc3e4c60cad4",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,307 @@
+{
+  "Name": "Header \u0026 Footer Tab",
+  "Alias": "furnitureTab",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-directions color-purple",
+  "Thumbnail": "folder.png",
+  "Description": "Used to create a microsite",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "42854394-72b6-46c4-97a9-2b5f3b9c9ecb",
+      "Name": "Header/Footer",
+      "SortOrder": 50,
+      "Type": 1,
+      "Alias": "header/Footer",
+      "PropertyTypes": [
+        {
+          "Key": "004c5acf-190a-44a3-9cd9-68367951a5c7",
+          "Alias": "furniturePageTitleSubtheme",
+          "DataType": "umb://data-type/c8ca160f69294ba3b0649f6f406d03a7",
+          "Description": "Set a Subtheme for the page title",
+          "Name": "Page Title Subtheme",
+          "SortOrder": 22
+        },
+        {
+          "Key": "027d7ccd-ef31-40fb-827d-d5a686e0556e",
+          "Alias": "furnitureLogoRatio",
+          "DataType": "umb://data-type/38b322a8981249c1a6e422c96f9b5c63",
+          "Description": "Ratio of logo image in Width x Height",
+          "Name": "Logo Size",
+          "SortOrder": 9
+        },
+        {
+          "Key": "11e8ca27-fd03-4e1f-9213-cd073685e26d",
+          "Alias": "furnitureFooterInformation",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Area to place Copyright, address and other information about website.\n\n{{year}} = Current Year",
+          "Name": "Footer Information",
+          "SortOrder": 28
+        },
+        {
+          "Key": "24e301de-34fa-4ed8-bf2e-56b57073d747",
+          "Alias": "furnitureHeaderSubtheme",
+          "DataType": "umb://data-type/c8ca160f69294ba3b0649f6f406d03a7",
+          "Description": "Set subtheme for header or Inherit Page subtheme",
+          "Name": "Header Subtheme",
+          "SortOrder": 5
+        },
+        {
+          "Key": "2c007724-8a07-431e-82da-838227d3d653",
+          "Alias": "furnitureHeaderSticky",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "Should the header stick to the top of the page and still be visible even when the user scrolls down",
+          "Name": "Header Stick to Top",
+          "SortOrder": 4
+        },
+        {
+          "Key": "3b9fe99a-ba51-4c5e-8aab-22cfec42e916",
+          "Alias": "furnitureHeaderThemeShade",
+          "DataType": "umb://data-type/f417c77686f74153abbb00401e5ffce6",
+          "Description": "Set light or dark shade for header or inherit Page shade value",
+          "Name": "Header Shade",
+          "SortOrder": 6
+        },
+        {
+          "Key": "3dd68ec8-e2b9-4d02-a4e6-45fadfe8ce52",
+          "Alias": "furniturePageTitlePromote",
+          "DataType": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+          "Description": "Give prominence to Page Title",
+          "Name": "Promote Page Title",
+          "SortOrder": 21
+        },
+        {
+          "Key": "416155ec-e4cc-4a54-ad95-8f38c38c6253",
+          "Alias": "furnitureShowAllServices",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "Show All Services button in header",
+          "Name": "Show All Services",
+          "SortOrder": 11
+        },
+        {
+          "Key": "42b0ba3c-4257-4c7a-a340-0e5c37589a94",
+          "Alias": "furnitureHeaderMenuPosition",
+          "DataType": "umb://data-type/bda10daa63f04a1488595db26dec2b46",
+          "Description": "Where to place the Header menu on Larger devices like laptop or desktop",
+          "Name": "Header Menu Position",
+          "SortOrder": 13
+        },
+        {
+          "Key": "51f453cf-88dc-4601-851e-8360950b4e37",
+          "Alias": "furnitureFooterSocialMediaLinks",
+          "DataType": "umb://data-type/323a3aa6e3b54d5a9ba908951bf87625",
+          "Description": "Links to your Social Media Feeds",
+          "Name": "Footer Social Media Links",
+          "SortOrder": 29
+        },
+        {
+          "Key": "6480ba5a-7e86-4968-bce6-37553595e191",
+          "Alias": "furnitureHeaderColor",
+          "DataType": "umb://data-type/d19af56c46484f91b72a1739f08ebf16",
+          "Description": "Set custom colours for Header. Leave empty to use default theme.",
+          "Name": "Override Header Colours",
+          "SortOrder": 7
+        },
+        {
+          "Key": "77226100-8473-4cf0-af37-532e4971d42d",
+          "Alias": "furnitureBreadcrumbSubtheme",
+          "DataType": "umb://data-type/c8ca160f69294ba3b0649f6f406d03a7",
+          "Description": "Set the subtheme for the Breadcrumb.\n\nOnly valid if Breadcrumb is being displayed",
+          "Name": "Breadcrumb Subtheme",
+          "SortOrder": 18
+        },
+        {
+          "Key": "8242c8f9-9abb-48af-ba2a-9249ec506443",
+          "Alias": "furnitureBreadcrumbThemeShade",
+          "DataType": "umb://data-type/f417c77686f74153abbb00401e5ffce6",
+          "Description": "Shade of Breadcrumb.\n\nOnly valid if Breadcrumb is being shown",
+          "Name": "Breadcrumb Shade",
+          "SortOrder": 19
+        },
+        {
+          "Key": "95c531e1-ca86-49a9-9211-8b0d4f290442",
+          "Alias": "furnitureFooterMenu",
+          "DataType": "umb://data-type/66540ff1594745cda3d9bf1c205cc94a",
+          "Description": "Optional Footer menu for microsite",
+          "Name": "Footer Menu",
+          "SortOrder": 27
+        },
+        {
+          "Key": "9991fa7a-8ebe-4c10-8d26-704b568c4f3b",
+          "Alias": "furniturePageTitleThemeShade",
+          "DataType": "umb://data-type/f417c77686f74153abbb00401e5ffce6",
+          "Description": "Set a shade for the page title",
+          "Name": "Page Title Shade",
+          "SortOrder": 23
+        },
+        {
+          "Key": "9a6b6d68-517c-47a9-97ce-e15f383305f5",
+          "Alias": "furnitureShowHeaderMenuOnLargerDevices",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "Show standard menu in header section when being displayed on larger devices like laptop or desktop",
+          "Name": "Show Header Menu on Larger Devices",
+          "SortOrder": 15
+        },
+        {
+          "Key": "b039be0f-fc90-4b3e-8054-6c1f8ed9e5e9",
+          "Alias": "furnitureShowSearchBar",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "Show search bar in header",
+          "Name": "Show Search Bar",
+          "SortOrder": 10
+        },
+        {
+          "Key": "c853d0da-2e09-463d-a19a-75b0d2adb044",
+          "Alias": "furnitureShowHeaderMenuOnSmallerDevices",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "Show hamburger menu in header section when being displayed on smaller devices like a phone or tablet",
+          "Name": "Show Header Menu on Smaller Devices",
+          "SortOrder": 16
+        },
+        {
+          "Key": "d40541e2-04cb-4f33-b1ea-0453b4022318",
+          "Alias": "furnitureFooterThemeShade",
+          "DataType": "umb://data-type/f417c77686f74153abbb00401e5ffce6",
+          "Description": "Set light or dark shade for footer or inherit Page shade value",
+          "Name": "Footer Shade",
+          "SortOrder": 25
+        },
+        {
+          "Key": "d5cd8308-bf65-4ed1-9614-294442dcf7e0",
+          "Alias": "furnitureFooterColor",
+          "DataType": "umb://data-type/d19af56c46484f91b72a1739f08ebf16",
+          "Description": "Set custom colours for Footer. Leave empty to use default theme.",
+          "Name": "Override Footer Colours",
+          "SortOrder": 30
+        },
+        {
+          "Key": "d6684a48-b458-45a7-a06e-cd9a9d2c504a",
+          "Alias": "furnitureBreadcrumbsColor",
+          "DataType": "umb://data-type/d19af56c46484f91b72a1739f08ebf16",
+          "Description": "Set custom colours for Breadcrumbs. Leave empty to use default theme.",
+          "Name": "Override Breadcrumbs Colours",
+          "SortOrder": 20
+        },
+        {
+          "Key": "d91758b0-66f7-4591-a73f-ad3cab28354c",
+          "Alias": "furnitureHeaderMenu",
+          "DataType": "umb://data-type/66540ff1594745cda3d9bf1c205cc94a",
+          "Description": "Optional Menu for micro-site",
+          "Name": "Header Menu",
+          "SortOrder": 12
+        },
+        {
+          "Key": "df300413-6f53-4581-8eef-d95eddd18b2e",
+          "Alias": "furnitureFooterMessage",
+          "DataType": "umb://data-type/7cba2f6b082a4db394dbef4402258aaf",
+          "Description": "Main text for footer",
+          "Name": "Footer Message",
+          "SortOrder": 26
+        },
+        {
+          "Key": "e8c4be38-a816-4f4e-a4be-f87a2e109ea5",
+          "Alias": "furnitureLogoImage",
+          "DataType": "umb://data-type/5a50c29b79294a339055b9f9d9d9c921",
+          "Description": "Logo image for micro-site, placed in header",
+          "Name": "Logo",
+          "SortOrder": 8
+        },
+        {
+          "Key": "e905a509-6174-4c15-9685-b096bcdf3991",
+          "Alias": "furnitureFooterSubtheme",
+          "DataType": "umb://data-type/c8ca160f69294ba3b0649f6f406d03a7",
+          "Description": "Set subtheme for footer or Inherit Page subtheme",
+          "Name": "Footer Subtheme",
+          "SortOrder": 24
+        },
+        {
+          "Key": "ec18d026-3212-4d14-9a06-5c4cbe21de76",
+          "Alias": "furnitureStatus",
+          "DataType": "umb://data-type/b9eb6e73af15494ebafce8379c671b46",
+          "Description": "\u003Cb\u003EInherit\u003C/b\u003E header \u0026 footer information from parent web page or \u003Cb\u003Eshow\u003C/b\u003E header \u0026 footer information below",
+          "Name": "Status"
+        },
+        {
+          "Key": "ed68dddd-9cb1-4e9e-995f-cdb33c2d7627",
+          "Alias": "furnitureBreadcrumbStatus",
+          "DataType": "umb://data-type/c3e97a7a93054a3a81315e417978e9d6",
+          "Description": "Should this Breadcrumb be shown, hidden or inherit it\u0027s status from its parent page.\nAlways hidden on Home Page.",
+          "Name": "Breadcrumb Status",
+          "SortOrder": 17
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/4709c99971214bfe8e36d77b5a29a5f2",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/323a3aa6e3b54d5a9ba908951bf87625",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/38b322a8981249c1a6e422c96f9b5c63",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/5a50c29b79294a339055b9f9d9d9c921",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/66540ff1594745cda3d9bf1c205cc94a",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/7cba2f6b082a4db394dbef4402258aaf",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b9eb6e73af15494ebafce8379c671b46",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/bda10daa63f04a1488595db26dec2b46",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c3e97a7a93054a3a81315e417978e9d6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c8ca160f69294ba3b0649f6f406d03a7",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d19af56c46484f91b72a1739f08ebf16",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/f417c77686f74153abbb00401e5ffce6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

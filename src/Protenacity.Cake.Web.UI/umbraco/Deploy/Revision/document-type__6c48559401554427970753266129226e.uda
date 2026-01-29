@@ -1,0 +1,69 @@
+{
+  "Name": "Icon Text",
+  "Alias": "editorTextBlockIconText",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-picture color-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Add text with an Icon to add emphasis",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/d0c9dcd29a834e9d8bd85bb546395781",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "45cd5697-d135-4466-9989-5e950130c30f",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "031d1824-3e87-4901-b337-5ef3f24051af",
+          "Alias": "text",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Text to display on right hand side",
+          "Name": "Text",
+          "SortOrder": 1
+        },
+        {
+          "Key": "15c7ea33-fe24-48e4-a19b-4b1d1943b68b",
+          "Alias": "icon",
+          "DataType": "umb://data-type/053a651eaa434035b5aeb8569b32756d",
+          "Description": "Icon placed on lefthand side of text",
+          "Name": "Icon"
+        },
+        {
+          "Key": "f8afb8c8-5b39-44d6-9ae0-5070d6a68b37",
+          "Alias": "link",
+          "DataType": "umb://data-type/2c457913dddd4ebc9134fc3e4c60cad4",
+          "Description": "Turn icon and text into an optional link to a webpage or media item",
+          "Name": "Link",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/6c48559401554427970753266129226e",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/053a651eaa434035b5aeb8569b32756d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/2c457913dddd4ebc9134fc3e4c60cad4",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/d0c9dcd29a834e9d8bd85bb546395781",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

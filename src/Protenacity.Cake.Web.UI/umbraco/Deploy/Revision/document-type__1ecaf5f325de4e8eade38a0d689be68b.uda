@@ -1,0 +1,369 @@
+{
+  "Name": "Cookie Consent Tab",
+  "Alias": "cookieConsentTab",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-cupcake color-lime",
+  "Thumbnail": "folder.png",
+  "Description": "Cookie Consent dialog for users to accept or reject cookies",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "2cbb9711-09a7-46fc-b8bc-8e3a7a81053e",
+      "Name": "Cookie Consent",
+      "SortOrder": 80,
+      "Type": 1,
+      "Alias": "cookieConsent",
+      "PropertyTypes": []
+    },
+    {
+      "Key": "74eb55f1-cd90-413b-9751-d39c1aa120df",
+      "Name": "Custom Dialog",
+      "SortOrder": 1,
+      "Alias": "cookieConsent/customDialog",
+      "PropertyTypes": [
+        {
+          "Key": "251d562e-baf1-4559-b596-6cc3e9b62836",
+          "Alias": "cookieConsentCustomClose",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Text on closed button to return to Main Dialog",
+          "Name": "Close",
+          "SortOrder": 2
+        },
+        {
+          "Key": "2d85ec35-20e9-41eb-95bc-ae8eefd0cf7a",
+          "Alias": "cookieConsentCustomTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Title for custom dialog",
+          "Name": "Title"
+        },
+        {
+          "Key": "4aabd9b9-4e25-48bf-a0f2-9ff41afc592c",
+          "Alias": "cookieConsentCustomMoreInfoDescription",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Description of more information. Can contain links to other pages",
+          "Name": "More Information Description",
+          "SortOrder": 6
+        },
+        {
+          "Key": "51c257d7-1ebd-485a-b869-1d5f6fe88c42",
+          "Alias": "cookieConsentCustomSave",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Text on Save button to accept current custom selection",
+          "Name": "Save",
+          "SortOrder": 1
+        },
+        {
+          "Key": "844cbc7b-a81e-40ef-8169-2ab79d192cda",
+          "Alias": "cookieConsentCustomSectionDescription",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Description explaining the custom dialog, which shows information about the different types of cookies and allows the visitor to select which cookies they wish to allow",
+          "Name": "Description",
+          "SortOrder": 4
+        },
+        {
+          "Key": "c2c042b6-b361-4636-a930-e6d042bf3695",
+          "Alias": "cookieConsentCustomMoreInfoTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "More information Title",
+          "Name": "More Information Title",
+          "SortOrder": 5
+        },
+        {
+          "Key": "d3a69276-fab0-44be-844b-ab4ce34920c5",
+          "Alias": "cookieConsentCustomSectionTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Title for sections",
+          "Name": "Section Title",
+          "SortOrder": 3
+        }
+      ]
+    },
+    {
+      "Key": "90ff6c9e-4bdf-414d-bc71-734092b4beb2",
+      "Name": "Analytic Cookies",
+      "SortOrder": 3,
+      "Alias": "cookieConsent/analyticCookies",
+      "PropertyTypes": [
+        {
+          "Key": "1bc94b59-c8fa-4f7d-bd7f-1047a3724185",
+          "Alias": "cookieConsentAnalyticEnable",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "Allow visitors to accept Analytics cookies",
+          "Name": "Enable"
+        },
+        {
+          "Key": "68f72d71-bbb4-4e79-9be1-0df425dc52c8",
+          "Alias": "cookieConsentAnalyticScript",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "Specific code loaded once the user accepts analytics cookies.\n\nWARNING: The code above is injected directly into output, incorrect values will corrupt the whole website",
+          "Name": "Script",
+          "SortOrder": 4
+        },
+        {
+          "Key": "a8e1cd61-d22b-4717-b5b0-90222680c2c1",
+          "Alias": "cookieConsentAnalyticGoogleTagManager",
+          "DataType": "umb://data-type/dc237a2a0d1e4e468f37d2e35aaa907e",
+          "Description": "Only valid if Integrate with Google Tag Manager is enabled.\n\nSelect the services that will be enabled in Google Tag Manager when the user selects Analytic cookies. ",
+          "Name": "Google Tag Manager",
+          "SortOrder": 5
+        },
+        {
+          "Key": "bcb229f5-918b-4b0a-b186-4db9f490203d",
+          "Alias": "cookieConsentAnalyticCookieList",
+          "DataType": "umb://data-type/3502066a48fb4ea3a56450a5ad887b63",
+          "Description": "List of cookies that setup website Analytic",
+          "Name": "Cookies",
+          "SortOrder": 3
+        },
+        {
+          "Key": "e1b254f2-f96a-4ece-9ff5-d56c1386b784",
+          "Alias": "cookieConsentAnalyticTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Title for list of cookies used to setup Analytics for website",
+          "Name": "Title",
+          "SortOrder": 1
+        },
+        {
+          "Key": "e7334ab1-6912-4c12-86b5-2630bcf75171",
+          "Alias": "cookieConsentAnalyticDescription",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Description of cookies used to setup Analytics",
+          "Name": "Description",
+          "SortOrder": 2
+        }
+      ]
+    },
+    {
+      "Key": "94e83f8c-ae93-4444-9ad9-b164de3ae3ca",
+      "Name": "Main Dialog",
+      "Alias": "cookieConsent/mainDialog",
+      "PropertyTypes": [
+        {
+          "Key": "5f90e190-2ca0-4e20-8e92-2225ce470dd6",
+          "Alias": "cookieConsentBackgroundColor",
+          "DataType": "umb://data-type/3aefdf7741a542668b49e4022f610faa",
+          "Description": "Select which background color you prefer",
+          "Name": "Background Color",
+          "SortOrder": 2
+        },
+        {
+          "Key": "659d7b20-3e80-427f-bab8-16813517cf72",
+          "Alias": "cookieConsentModalPosition",
+          "DataType": "umb://data-type/99f769a44a02469bb9abafebe61d6b4e",
+          "Description": "Where is the modal popup located within the window",
+          "Name": "Position",
+          "SortOrder": 1
+        },
+        {
+          "Key": "7147a16c-e821-4b99-b709-c7e7f0d389c2",
+          "Alias": "cookieConsentModalTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Title of modal dialog that first displays",
+          "Name": "Title",
+          "SortOrder": 3
+        },
+        {
+          "Key": "a5ed74f4-b669-4c9f-97f0-cfda64c91db7",
+          "Alias": "cookieConsentEnable",
+          "DataType": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+          "Description": "Should we display a cookie consent dialog to first time visitors",
+          "Name": "Enable"
+        },
+        {
+          "Key": "b1ce903f-7dfd-4ba0-a3b9-b7902a9aea7b",
+          "Alias": "cookieConsentModalDescription",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Description of what you wish the user to choose and why this dialog is displaying",
+          "Name": "Description",
+          "SortOrder": 4
+        },
+        {
+          "Key": "d009e3fc-932f-4f0d-8b2e-6bc4901ede82",
+          "Alias": "cookieConsentModalRejectAll",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Text on button that rejects all cookies except those that are deemed necessary for website function",
+          "Name": "Reject All",
+          "SortOrder": 7
+        },
+        {
+          "Key": "ead19fa1-cad3-4dd3-a2fd-ffb97595236a",
+          "Alias": "cookieConsentIntegrateWithGoogleTagManager",
+          "DataType": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+          "Description": "Do we wish to Integrate with Google Tag Manager.\n\nOn first loading will deny all Google Tag Manager consent until user has selected which Cookie options they accept.   ",
+          "Name": "Integrate with Google Tag Manager",
+          "SortOrder": 8
+        },
+        {
+          "Key": "f5f4a740-d5b6-4b69-99d7-1bfecdd6fa42",
+          "Alias": "cookieConsentModalAcceptAll",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Text displayed on button that allows the visitor to accept all cookies and closes cookie consent dialog and continues with normal website experience",
+          "Name": "Accept All",
+          "SortOrder": 6
+        },
+        {
+          "Key": "f7246117-c44b-4b8b-a3f4-e35f420c4333",
+          "Alias": "cookieConsentModalCustom",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Allow visitor to customise their cookie choices",
+          "Name": "Custom",
+          "SortOrder": 5
+        }
+      ]
+    },
+    {
+      "Key": "9ff9729e-3426-42f9-8db5-1be5dbfe8f80",
+      "Name": "Bespoke Cookie Section",
+      "SortOrder": 4,
+      "Alias": "cookieConsent/bespokeCookieSection",
+      "PropertyTypes": [
+        {
+          "Key": "434906b2-b581-47f6-bcf4-9cc98814ae98",
+          "Alias": "cookieConsentBespokeCookieList",
+          "DataType": "umb://data-type/3502066a48fb4ea3a56450a5ad887b63",
+          "Description": "List of cookies that are required for custom feature to operate",
+          "Name": "List",
+          "SortOrder": 3
+        },
+        {
+          "Key": "a8522762-1594-40aa-99b7-3097c670792e",
+          "Alias": "cookieConsentBespokeEnable",
+          "DataType": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+          "Description": "Enable the custom cookie section",
+          "Name": "Enable"
+        },
+        {
+          "Key": "afd619c4-e37d-465d-bc50-70202904a52b",
+          "Alias": "cookieConsentBespokeGoogleTagManager",
+          "DataType": "umb://data-type/dc237a2a0d1e4e468f37d2e35aaa907e",
+          "Description": "Only valid if Integrate with Google Tag Manager is enabled.\n\nSelect the services that will be enabled in Google Tag Manager when the user selects Bespoke cookies. ",
+          "Name": "Google Tag Manager",
+          "SortOrder": 5
+        },
+        {
+          "Key": "d83f71de-9995-4bdc-a8f8-0ca5423cc2b6",
+          "Alias": "cookieConsentBespokeTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Title of a custom section. eg. Accept code and cookies that control an Interactive Chatbot",
+          "Name": "Title",
+          "SortOrder": 1
+        },
+        {
+          "Key": "e261d8e1-a2e3-4b75-8edf-9eea9415beb0",
+          "Alias": "cookieConsentBespokeDescription",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Description of custom cookies and code",
+          "Name": "Description",
+          "SortOrder": 2
+        },
+        {
+          "Key": "f3e4b495-d8db-472a-a1d5-eca0038e31e1",
+          "Alias": "cookieConsentBespokeScript",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "Specific code loaded once the user accepts custom cookies.\n\nWARNING: The code above is injected directly into output, incorrect values will corrupt the whole website",
+          "Name": "Script",
+          "SortOrder": 4
+        }
+      ]
+    },
+    {
+      "Key": "e3bad63d-74ad-47a3-b586-c9781ea846f0",
+      "Name": "Necessary Cookies",
+      "SortOrder": 2,
+      "Alias": "cookieConsent/necessaryCookies",
+      "PropertyTypes": [
+        {
+          "Key": "198d031b-112f-486b-8fb6-1f3fe1caaf25",
+          "Alias": "cookieConsentNecessaryTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Title for list of Necessary cookies",
+          "Name": "Title"
+        },
+        {
+          "Key": "311fe3fe-904a-42ee-bee7-901cb2577ea7",
+          "Alias": "cookieConsentNecessaryDescription",
+          "DataType": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+          "Description": "Description of Necessary cookies",
+          "Name": "Description",
+          "SortOrder": 1
+        },
+        {
+          "Key": "d8d6c114-3b38-46b1-b7cb-e16680c6cf68",
+          "Alias": "cookieConsentNecessaryScript",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "Specific code loaded once the user accepts necessary cookies.\n\nWARNING: The code above is injected directly into output, incorrect values will corrupt the whole website",
+          "Name": "Script",
+          "SortOrder": 3
+        },
+        {
+          "Key": "d8e0d7d4-ea47-4839-9247-1ebb307d9a39",
+          "Alias": "cookieConsentNecessaryCookieList",
+          "DataType": "umb://data-type/3502066a48fb4ea3a56450a5ad887b63",
+          "Description": "List of the Necessary cookies required",
+          "Name": "Cookies",
+          "SortOrder": 2
+        },
+        {
+          "Key": "f8e8e46d-2e7d-4f16-bfa1-5eea4768d600",
+          "Alias": "cookieConsentNecessaryGoogleTagManager",
+          "DataType": "umb://data-type/dc237a2a0d1e4e468f37d2e35aaa907e",
+          "Description": "Only valid if Integrate with Google Tag Manager is enabled.\n\nSelect the services that will be enabled in Google Tag Manager when the user selects Necessary cookies. Necessary cookies can\u0027t be disabled, so this will always enable these services in Google Tag Manager. \n",
+          "Name": "Google Tag Manager",
+          "SortOrder": 4
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1ecaf5f325de4e8eade38a0d689be68b",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/3502066a48fb4ea3a56450a5ad887b63",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/3aefdf7741a542668b49e4022f610faa",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/48937cd9d4904fa79c6d634d3a816946",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/81579286c0674d2092cdb8a244fa0357",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/99f769a44a02469bb9abafebe61d6b4e",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/9fe054e5cb814027a076763c174d9ddb",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/dc237a2a0d1e4e468f37d2e35aaa907e",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/35b992cadaf94523925ad8f715c3fdb2",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

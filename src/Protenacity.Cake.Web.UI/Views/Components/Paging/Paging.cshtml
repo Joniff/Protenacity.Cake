@@ -1,0 +1,42 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Paging.IPagingViewModel
+
+@if (Model.TotalResults != null && Model.TotalResults > Model.PageSize)
+{
+    var q = string.IsNullOrWhiteSpace(Model.Criteria) ? null : Model.QueryString + "=" + Model.Criteria + "&";
+
+    <nav aria-label="Page search results">
+        <ul class="pagination">
+            <li class="page-item @(Model.Page == 0)? "disabled" : null)">
+                @if (Model.Page == 0)
+                {
+                    <span class="page-link">Previous</span>
+                }
+                else
+                {
+                    <a href="?@(q)p=@(Model.Page - 1)#@Model.Id" class="page-link">Previous</a>
+                }
+            </li>
+            @for (var page = Model.Page - 4; page != Model.Page + 4; page++)
+            {
+                if (page >= 0 && page < Model.TotalPages)
+                {
+                    <li class="page-item @(page == Model.Page ? "active" : null)">
+                        <a class="page-link" href="?@(q)p=@(page)#@Model.Id">
+                            @(page + 1)
+                        </a>
+                    </li>
+                }
+            }
+            <li class="page-item @(Model.Page == Model.TotalPages) ? " disabled" : null)">
+                @if (Model.Page >= Model.TotalPages - 1)
+                {
+                    <span class="page-link">Next</span>
+                }
+                else
+                {
+                    <a href="?@(q)p=@(Model.Page + 1)#@Model.Id" class="page-link">Next</a>
+                }
+            </li>
+        </ul>
+    </nav>
+}

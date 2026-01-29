@@ -1,0 +1,45 @@
+{
+  "Name": "Background Text Color",
+  "Alias": "editorBlockPrimarySettingsTextColor",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-plugin",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "651baf69-39cd-46ad-b77e-2b76f511bea1",
+      "Name": "Contents",
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "b6ec0bdf-5c25-4ec8-85f0-8c6f5c53d7f3",
+          "Alias": "foregroundColor",
+          "DataType": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+          "Description": "Colour of the text",
+          "Name": "Text Colour",
+          "SortOrder": -100
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/f52a4108be55494f860a80d1dc150e73",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/d6cd339ad4a4473dabcc2af7802b3c59",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/8d8d5bdbfdbf4da794bc3583f3355261",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

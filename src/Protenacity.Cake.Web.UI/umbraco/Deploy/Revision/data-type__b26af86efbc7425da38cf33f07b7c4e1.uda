@@ -1,0 +1,20 @@
+{
+  "Name": "Editor Gradient Color Picker",
+  "EditorAlias": "Umbraco.ColorPicker.EyeDropper",
+  "EditorUiAlias": "Umb.PropertyEditorUi.EyeDropper",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "showPalette": true,
+    "showAlpha": false
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/b26af86efbc7425da38cf33f07b7c4e1",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

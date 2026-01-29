@@ -1,0 +1,91 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Action.IActionViewModel
+
+@if (!string.IsNullOrWhiteSpace(Model.Url) && Model.Style != ActionStyles.Hide)
+{
+    var alignment = "text-end";
+    switch (Model.Alignment)
+    {
+        case ActionStyleAlignments.LeftAbsolute:
+        case ActionStyleAlignments.LeftRelative:
+            alignment = "text-start";
+            break;
+
+        case ActionStyleAlignments.CentreAbsolute:
+        case ActionStyleAlignments.CentreRelative:
+            alignment = "text-center";
+            break;
+
+        case ActionStyleAlignments.RightAbsolute:
+        case ActionStyleAlignments.RightRelative:
+            alignment = "text-end";
+            break;
+    }
+
+    var cls = "";
+    switch (Model.Style)
+    {
+        case ActionStyles.Button:
+            cls = "btn btn-theme";
+            break;
+
+        case ActionStyles.ButtonPrimary:
+            cls = "btn btn-primary";
+            break;
+
+        case ActionStyles.ButtonSecondary:
+            cls = "btn btn-secondary";
+            break;
+
+        case ActionStyles.ButtonSuccess:
+            cls = "btn btn-success";
+            break;
+
+        case ActionStyles.ButtonDanger:
+            cls = "btn btn-danger";
+            break;
+
+        case ActionStyles.ButtonWarning:
+            cls = "btn btn-warning";
+            break;
+
+        case ActionStyles.ButtonInfo:
+            cls = "btn btn-info";
+            break;
+
+        case ActionStyles.ButtonLight:
+            cls = "btn btn-light";
+            break;
+
+        case ActionStyles.ButtonDark:
+            cls = "btn btn-dark";
+            break;
+
+        default:
+            cls = Model.TextRestrict == EditorTextRestricts.Truncate ? "text-truncate d-block" : "text-wordwrap-indent d-block";
+            break;
+    }
+
+    @if (Model.Style != ActionStyles.Header)
+    {
+        <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" class="@alignment">
+            <a href="@Model.Url" target="@(Model.Target == ActionTargets.NewTab ? "_blank" : "_self")" @(Model.Download ? "download" : null) class="@cls">
+
+                @* Don't reformat *@
+                @if (Model.Style == ActionStyles.IconLink)
+                {
+                    <i class="bi bi-arrow-right-circle-fill me-1"></i>
+                }@Html.Raw(Model.Name?.ToHeader())
+
+            </a>
+        </theme>
+    }
+    else if (Model.ShowClickArrow)
+    {
+        <div class="@alignment">
+            <a class="carousel-control-next show-click-arrow" href="@Model.Url" target="@(Model.Target == ActionTargets.NewTab ? "_blank" : "_self")" @(Model.Download ? "download" : null)>
+                <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                <span class="visually-hidden">@Html.Raw(Model.Name?.ToHeader())</span>
+            </a>
+        </div>
+    }
+}

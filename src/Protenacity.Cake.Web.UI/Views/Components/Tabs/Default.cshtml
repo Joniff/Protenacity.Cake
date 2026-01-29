@@ -1,0 +1,128 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Tabs.TabsViewModel
+@{
+    var navStyle = Model.Tabs.Settings?.StylesTyped == EditorTabStripStyles.Tabs ? "nav-tabs" : "nav-pills";
+}
+
+<theme subtheme="Model?.Tabs?.Settings?.SubthemeTyped" shade="Model?.Tabs?.Settings?.ThemeShadeTyped" override="Model?.Tabs?.Settings?.OverrideColor" class="p-2">
+    @switch (Model.Tabs.Settings?.PlacementTyped ?? EditorTabStripPlacements.Top)
+    {
+        case EditorTabStripPlacements.Left:
+            <text>
+                <div class="d-flex align-items-start">
+                    @(await Tabstrip(Model.Id, "flex-column me-3 tabs-left", navStyle, Model.Panels))
+                    @(await Panels(Model.Id, Model.Panels))
+                </div>
+            </text>
+            break;
+
+        case EditorTabStripPlacements.Top:
+            <text>
+                <div>
+                    @(await Tabstrip(Model.Id, "mb-3 tabs-top", navStyle, Model.Panels))
+                    @(await Panels(Model.Id, Model.Panels))
+                </div>
+            </text>
+            break;
+
+        case EditorTabStripPlacements.Bottom:
+            <text>
+                <div>
+                    @(await Panels(Model.Id, Model.Panels))
+                    @(await Tabstrip(Model.Id, "mt-3 tabs-bottom", navStyle, Model.Panels))
+                </div>
+            </text>
+            break;
+
+        case EditorTabStripPlacements.Right:
+            <text>
+                <div class="d-flex">
+                    @(await Panels(Model.Id, Model.Panels))
+                    @(await Tabstrip(Model.Id, "flex-column ms-3 tabs-right", navStyle, Model.Panels))
+                </div>
+            </text>
+            break;
+    }
+
+</theme>
+
+@* 
+    Trying to get all panels same height
+
+<script>
+    function ready(fn) {
+      if (document.readyState !== 'loading') {
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    ready(() => {
+        var maxHeight = 0;
+        document.querySelectorAll('.panel-@(Model.Id)').forEach(item => {
+            var height = item.style.height;
+            console.log(item.style);
+            if (height > maxHeight) {
+                maxHeight = height;
+            }
+        });
+        document.querySelectorAll('.panel-@(Model.Id)').forEach(item => {
+            item.style.height = maxHeight;
+        });
+    })
+</script>
+*@
+
+@functions 
+{
+    private async Task<object?> Tabstrip(string id, string css, string navStyle, IEnumerable<IEditorContent> panels)
+    {
+        <text>
+            <nav>
+                <div class="nav @navStyle @css" id="@(id)-tabs">
+                    @foreach (var panel in panels)
+                    {
+                       
+                        <button class="p-nomargin nav-link @(panel.Index == 0 ? "active" : null)"
+                            id="@(id)-@(panel.Index)-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#@(id)-@(panel.Index)"
+                            type="button"
+                            role="tab"
+                            aria-controls="@(id)-@(panel.Index)"
+                            aria-selected="@(panel.Index == 0 ? "true" : "false")">
+
+                            <span>
+                                @if (!string.IsNullOrWhiteSpace((panel.Block?.Content as IEditorPanelName)?.PanelIcon))
+                                {
+                                    @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.NamedIcon.NamedIconViewComponent.Name, (panel.Block.Content as IEditorPanelName)?.PanelIconTyped))
+                                }
+                                @Html.Raw(panel.Header?.ToHeader())
+                            </span>
+                        </button>
+                    }
+                </div>
+            </nav>
+        </text>
+        return null;
+    }
+
+    private async Task<object?> Panels(string id, IEnumerable<IEditorContent> panels)
+    {
+        <text>
+            <div class="tab-content h-100 w-100" id="@(id)-panels">
+                @foreach (var panel in panels)
+                {
+                    <div class="tab-pane h-100 w-100 fade @(panel.Index == 0 ? "show active" : null) panel-@id"
+                        id="@(id)-@(panel.Index)"
+                        role="tabpanel"
+                        aria-labelledby="@(id)-@(panel.Index)-tab">
+
+                        @(await Component.InvokeAsync(panel.EditorComponent, panel))
+                    </div>
+                }
+            </div>
+        </text>
+        return null;
+    }
+}

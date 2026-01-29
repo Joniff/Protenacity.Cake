@@ -1,0 +1,15 @@
+{
+  "Name": "Virtual Agents",
+  "Alias": "VirtualAgents",
+  "File": "umb://template-file/VirtualAgents.cshtml",
+  "Udi": "umb://template/ff56d5fb90e04b90bd228b5af313c58d",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/VirtualAgents.cshtml",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "16.0.4"
+}

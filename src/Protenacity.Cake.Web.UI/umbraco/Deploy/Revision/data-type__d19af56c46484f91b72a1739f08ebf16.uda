@@ -1,0 +1,52 @@
+{
+  "Name": "Editor Background Picker",
+  "EditorAlias": "Umbraco.BlockList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "72f67d58-f26f-4b19-a319-ba88effde3ba",
+        "label": "Colour"
+      },
+      {
+        "contentElementTypeKey": "46f29692-9570-4a76-9634-d028eb4914f4",
+        "label": "Image"
+      },
+      {
+        "contentElementTypeKey": "8ecc7010-ff02-474f-8b4f-03a5e6c26f90",
+        "label": "Two Colour Gradient"
+      },
+      {
+        "contentElementTypeKey": "4b0a9eca-f542-4b42-82f8-8582a25fb867",
+        "label": "Three Colour Gradient"
+      }
+    ],
+    "validationLimit": {
+      "max": 1
+    },
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Parent": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+  "Udi": "umb://data-type/d19af56c46484f91b72a1739f08ebf16",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type-container/098a5d5b567640d4b9349f3fb1359799",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/46f2969295704a769634d028eb4914f4"
+    },
+    {
+      "Udi": "umb://document-type/4b0a9ecaf5424b4282f88582a25fb867"
+    },
+    {
+      "Udi": "umb://document-type/72f67d58f26f4b19a319ba88effde3ba"
+    },
+    {
+      "Udi": "umb://document-type/8ecc7010ff02474f8b4f03a5e6c26f90"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,26 @@
+{
+  "Name": "Social Media Feed Settings",
+  "Alias": "editorSocialMediaSettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-indigo",
+  "Thumbnail": "folder.png",
+  "Description": "Settings for social media",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/e68d54e4b7e14adf8cf022db93cf4301",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/296671c3a31d4c18a1353fcd3129becf",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/e68d54e4b7e14adf8cf022db93cf4301",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

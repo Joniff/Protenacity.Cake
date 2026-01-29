@@ -1,0 +1,87 @@
+{
+  "Name": "Bus Route Data",
+  "Alias": "busRouteData",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-bus color-green",
+  "Thumbnail": "folder.png",
+  "Description": "Connection to Bus Route Data",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "357e983c-903c-4661-90a1-8eec1846003a",
+      "Name": "Contents",
+      "Type": 1,
+      "Alias": "contents",
+      "PropertyTypes": [
+        {
+          "Key": "0f0a0047-a699-4c3d-b0ff-2ab47c2b90f6",
+          "Alias": "endpointLocality",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Url for where we source Locality data from. Include https://",
+          "Mandatory": true,
+          "Name": "Locality Endpoint",
+          "SortOrder": 1,
+          "Validation": "https?://[a-zA-Z0-9-.]\u002B\\.[a-zA-Z]{2,}"
+        },
+        {
+          "Key": "118973c7-a5cc-400f-8934-1ef2e9e39ab4",
+          "Alias": "endpointBusStop",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Url for where we source Bus Stop information from. Include https://",
+          "Mandatory": true,
+          "Name": "Bus Stop Endpoint",
+          "SortOrder": 4,
+          "Validation": "https?://[a-zA-Z0-9-.]\u002B\\.[a-zA-Z]{2,}"
+        },
+        {
+          "Key": "51d64940-9c8f-4eaa-afbd-216009ce7f8f",
+          "Alias": "endpointAddress",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Url for where we source Address data from. Include https://",
+          "Mandatory": true,
+          "Name": "Address Endpoint",
+          "SortOrder": 3,
+          "Validation": "https?://[a-zA-Z0-9-.]\u002B\\.[a-zA-Z]{2,}"
+        },
+        {
+          "Key": "5953c67b-b813-4dd8-9563-bf8063d541d5",
+          "Alias": "endpointPostcode",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Url for where we source Postcode data from. Include https://",
+          "Mandatory": true,
+          "Name": "Postcode Endpoint",
+          "SortOrder": 2,
+          "Validation": "https?://[a-zA-Z0-9-.]\u002B\\.[a-zA-Z]{2,}"
+        },
+        {
+          "Key": "7b396fa5-b9e4-4f30-9286-5a28aa413c4a",
+          "Alias": "endpointBusRoute",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Url for where we source the Bus timetable data from. Include https://",
+          "Mandatory": true,
+          "Name": "Bus Route Endpoint",
+          "Validation": "https?://[a-zA-Z0-9-.]\u002B\\.[a-zA-Z]{2,}"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/492cd49f2c114c869233b544841d71b3",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/4e93365934334b5fbecafebfb4637e91",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

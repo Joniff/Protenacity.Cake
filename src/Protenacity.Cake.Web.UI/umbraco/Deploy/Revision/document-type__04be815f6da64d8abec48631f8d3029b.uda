@@ -1,0 +1,26 @@
+{
+  "Name": "Bus Time Table",
+  "Alias": "editorBusTimeTablePrimary",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-bus color-light-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Show interact Bus Time Table",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/881c7a560fd54302b0b700281288f58a",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/04be815f6da64d8abec48631f8d3029b",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/881c7a560fd54302b0b700281288f58a",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "17.0.1"
+}

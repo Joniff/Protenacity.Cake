@@ -1,0 +1,71 @@
+{
+  "Name": "List Settings",
+  "Alias": "editorListPrimarySettings",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-settings color-pink",
+  "Thumbnail": "folder.png",
+  "Description": "Settings for list when not embedded within another container",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/1ea31dd18f9d4c95b90f72426ad153d5",
+  "CompositionContentTypes": [
+    "umb://document-type/53d466e9ec7a44f2918d0575d2101be6",
+    "umb://document-type/7d5903fe301049929c341e3ac30b2e05",
+    "umb://document-type/a57b559b1f68414b80734074c55c876b",
+    "umb://document-type/b48afb4ceb1447819cf2365c2e90fe48",
+    "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "e9b86485-76b5-4225-98ee-5da60f8a416b",
+      "Name": "Settings",
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "218da9e0-b904-49d2-9d6e-79a636ff629f",
+          "Alias": "listType",
+          "DataType": "umb://data-type/8cb8cece0bad4c86a9d97fc62d726028",
+          "Description": "\u003Cb\u003EFlexible Grid\u003C/b\u003E = Show blocks in columns and rows depending on device size \n\n\u003Cb\u003ECarousel\u003C/b\u003E = Show blocks in a single scrollable row",
+          "Name": "List Type"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/81e44a54ba004100b7a114d73a691ab9",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/8cb8cece0bad4c86a9d97fc62d726028",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/1ea31dd18f9d4c95b90f72426ad153d5",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/53d466e9ec7a44f2918d0575d2101be6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/7d5903fe301049929c341e3ac30b2e05",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/a57b559b1f68414b80734074c55c876b",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/b48afb4ceb1447819cf2365c2e90fe48",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/e616ce9b9b6844e0b0f568be27b21e8c",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

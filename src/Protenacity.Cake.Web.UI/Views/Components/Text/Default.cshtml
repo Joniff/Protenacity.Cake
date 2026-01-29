@@ -1,0 +1,6 @@
+﻿@model BlockListItem<IEditorTextEmbedded, IEditorTextEmbeddedSettings>
+
+<div class="text">
+    @Html.Raw(View.Parse(Model.Content.Text))
+</div>
+

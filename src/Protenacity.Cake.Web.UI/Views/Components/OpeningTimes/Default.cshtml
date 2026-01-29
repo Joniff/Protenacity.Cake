@@ -1,0 +1,64 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.OpeningTimes.OpeningTimesViewModel
+
+<theme subtheme="Model.Subtheme" shade="Model.ThemeShade" override="Model.OverrideColor" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="card border-0">
+    <div class="card-body">
+        @if (Model.Header?.HasContent() == true)
+        {
+            <h3 class="card-title">@Html.Raw(@Model.Header?.ToHeader())</h3>
+        }
+        <div class="card-text">
+            @if (Model.Text?.HasContent() == true)
+            {
+                <p>@Html.Raw(Model.Text)</p>
+            }
+            <table class="table table-striped">
+                <tbody>
+                    @foreach (var day in Model.DayOrder)
+                    {
+                        var timeslots = Model.GetTimeslotsForDay(day);
+                        <tr class="@(Model.Today == day ? "fw-bold" : null)">
+                            <td>@day.ToString()</td>
+                            <td>
+                                @if (timeslots.Any() == true)
+                                {
+                                    <div class="d-flex flex-row">
+                                        @foreach (var timeslot in timeslots.Select((Slot,Index) => (Slot,Index)))
+                                        {
+                                            @Html.Raw("<div><div>")
+                                            @Html.Raw(timeslot.Slot.Start.ToString(Model.CustomTimeFormat))
+                                            @Html.Raw("&nbsp;to&nbsp;")
+                                            @Html.Raw(timeslot.Slot.End.ToString(Model.CustomTimeFormat))
+                                            @if (timeslot.Index < timeslots.Count() - 1)
+                                            {
+                                                @Html.Raw(", &nbsp;")
+                                            }
+                                            @Html.Raw("</div>")
+                                            @if (timeslot.Slot.Text?.HasContent() == true)
+                                            {
+                                                @Html.Raw("<div><small>")
+                                                @Html.Raw(timeslot.Slot.Text)
+                                                @Html.Raw("</small></div>")
+                                            }
+                                            @Html.Raw("</div>")
+                                        }
+                                    </div>
+                                }
+                                else
+                                {
+                                    <text>Closed</text>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+        @if (Model.Footer?.HasContent() == true)
+        {
+            <div class="card-footer">
+                <p>@Html.Raw(Model.Footer)</p>
+            </div>
+        }
+    </div>
+</theme>
