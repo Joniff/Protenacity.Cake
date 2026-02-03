@@ -1,6 +1,5 @@
 ﻿using Protenacity.Cake.Web.Core.Constitution;
 using Protenacity.Cake.Web.Core.Property;
-using Protenacity.Cake.Web.Presentation.Coroner;
 using Protenacity.Cake.Web.Presentation.View;
 using Protenacity.Spreadsheet;
 using Microsoft.AspNetCore.Mvc;
@@ -25,9 +24,6 @@ public class TableViewComponent(IEditorService editorService,
     public const string Name = nameof(Table);
     public const string TemplateBlocks = "~/Views/Components/" + Name + "/Blocks.cshtml";
     public const string TemplateSimple = "~/Views/Components/" + Name + "/Simple.cshtml";
-    public const string TemplateInquestHearing = "~/Views/Components/" + Name + "/InquestHearing.cshtml";
-    public const string TemplateInquestOpening = "~/Views/Components/" + Name + "/InquestOpening.cshtml";
-    public const string TemplateInquestConclusion = "~/Views/Components/" + Name + "/InquestConclusion.cshtml";
     public const string QueryString = "cq";
 
     private char Separator(EditorTableSourceFileSeparators? editorTableSourceFileSeparator)
@@ -101,162 +97,6 @@ public class TableViewComponent(IEditorService editorService,
     public IEnumerable<T> Page<T>(IEnumerable<T>? list, int? page, int? pageSize) 
         => list == null ? Enumerable.Empty<T>() : ((page == null || pageSize == null) ? list : list.Skip(page.Value * pageSize.Value).Take(pageSize.Value));
 
-    private IEnumerable<ICoronerInquestHearing> ReadCoronerHearing(IPublishedContent api)
-    {
-        switch (api.ContentType.Alias)
-        {
-            case CoronerDataVersion1.ModelTypeAlias:
-                var apiV1 = api as CoronerDataVersion1 ?? throw new ArgumentException();
-                return serviceProvider.GetKeyedService<Coroner.Version1.ICoronerService>(nameof(Coroner.Version1))?.GetInquestHearing(apiV1.Endpoint ?? "", apiV1.Authentication ?? "")
-                    ?? Enumerable.Empty<ICoronerInquestHearing>();
-
-            case CoronerDataVersion2.ModelTypeAlias:
-                var apiV2 = api as CoronerDataVersion2 ?? throw new ArgumentException();
-                return serviceProvider.GetKeyedService<Coroner.Version2.ICoronerService>(nameof(Coroner.Version2))?.GetInquestHearing(apiV2.Endpoint ?? "")
-                    ?? Enumerable.Empty<ICoronerInquestHearing>();
-
-            default:
-                throw new ArgumentException("Unvalid type " + api.ContentType.Alias);
-        }
-    }
-
-    private IEnumerable<ICoronerInquestOpening> ReadCoronerOpening(IPublishedContent api)
-    {
-        switch (api.ContentType.Alias)
-        {
-            case CoronerDataVersion1.ModelTypeAlias:
-                var apiV1 = api as CoronerDataVersion1 ?? throw new ArgumentException();
-                return serviceProvider.GetKeyedService<Coroner.Version1.ICoronerService>(nameof(Coroner.Version1))?.GetInquestOpening(apiV1.Endpoint ?? "", apiV1.Authentication ?? "")
-                    ?? Enumerable.Empty<ICoronerInquestOpening>();
-
-            case CoronerDataVersion2.ModelTypeAlias:
-                var apiV2 = api as CoronerDataVersion2 ?? throw new ArgumentException();
-                return serviceProvider.GetKeyedService<Coroner.Version2.ICoronerService>(nameof(Coroner.Version2))?.GetInquestOpening(apiV2.Endpoint ?? "")
-                    ?? Enumerable.Empty<ICoronerInquestOpening>();
-
-            default:
-                throw new ArgumentException("Unvalid type " + api.ContentType.Alias);
-        }
-    }
-
-    private IEnumerable<ICoronerInquestConclusion> ReadCoronerConclusion(IPublishedContent api)
-    {
-        switch (api.ContentType.Alias)
-        {
-            case CoronerDataVersion1.ModelTypeAlias:
-                var apiV1 = api as CoronerDataVersion1 ?? throw new ArgumentException();
-                return serviceProvider.GetKeyedService<Coroner.Version1.ICoronerService>(nameof(Coroner.Version1))?.GetInquestConclusion(apiV1.Endpoint ?? "", apiV1.Authentication ?? "")
-                    ?? Enumerable.Empty<ICoronerInquestConclusion>();
-
-            case CoronerDataVersion2.ModelTypeAlias:
-                var apiV2 = api as CoronerDataVersion2 ?? throw new ArgumentException();
-                return serviceProvider.GetKeyedService<Coroner.Version2.ICoronerService>(nameof(Coroner.Version2))?.GetInquestConclusion(apiV2.Endpoint ?? "")
-                    ?? Enumerable.Empty<ICoronerInquestConclusion>();
-
-            default:
-                throw new ArgumentException("Unvalid type " + api.ContentType.Alias);
-        }
-    }
-
-    IViewComponentResult ReadCoroner(EditorTableSourceCoronerInquestApi content, IEditorTableEmbeddedSettings? settings)
-    {
-        var id = "coroner-" + content.StageTyped.ToString().ToLowerInvariant();
-        var alternateBackgroundRows = settings?.AlternateBackgroundRows;
-        var alternateBackgroundColumns = settings?.AlternateBackgroundColumns;
-        var firstRowIsHeader = settings?.FirstRowIsHeader ?? false;
-        var firstColumnIsHeader = settings?.FirstColumnIsHeader ?? false;
-        var customDateFormat = viewService.CurrentDomainPage.ConfigCoronerDateFormat ?? "d";
-        var customTimeFormat = viewService.CurrentDomainPage.ConfigCoronerTimeFormat ?? "t";
-        var page = viewService.CurrentSearchPage ?? 0;
-        var pageSize = settings?.PageSize > 0 ? settings?.PageSize : null;
-        var criteria = viewService.CurrentSearchCriteria(QueryString);
-
-        if (content.Api == null || !content.Api.IsVisible())
-        {
-            logger.LogWarning("Coroner's API invalid on page " + viewService.CurrentPage.Id);
-            return Content("Invalid Api");
-        }
-
-        switch (content.StageTyped)
-        {
-            case EditorCoronerInquestApiStages.Hearing:
-                var hearings = ReadCoronerHearing(content.Api);
-                if (!string.IsNullOrEmpty(criteria))
-                {
-                    hearings = hearings?.Where(h => h.Fullname?.InvariantContains(criteria) == true);
-                }
-
-                return View(TemplateInquestHearing, new TableCoronerViewModel<ICoronerInquestHearing>
-                {
-                    Id = id,
-                    Title = "Search Names",
-                    Criteria = criteria,
-                    QueryString = QueryString,
-                    Rows = Page(hearings, page, pageSize),
-                    AlternateBackgroundRows = alternateBackgroundRows?.Color,
-                    AlternateBackgroundColumns = alternateBackgroundColumns?.Color,
-                    FirstRowIsHeader = firstRowIsHeader,
-                    FirstColumnIsHeader = firstColumnIsHeader,
-                    CustomDateFormat = customDateFormat,
-                    CustomTimeFormat = customTimeFormat,
-                    TotalResults = hearings?.Count() ?? 0,
-                    Page = page,
-                    PageSize = pageSize
-                });
-
-            case EditorCoronerInquestApiStages.Opening:
-                var openings = ReadCoronerOpening(content.Api);
-                if (!string.IsNullOrEmpty(criteria))
-                {
-                    openings = openings?.Where(h => h.Fullname?.InvariantContains(criteria) == true);
-                }
-                return View(TemplateInquestOpening, new TableCoronerViewModel<ICoronerInquestOpening>
-                {
-                    Id = id,
-                    Title = "Search Names",
-                    Criteria = criteria,
-                    QueryString = QueryString,
-                    Rows = Page(openings, page, pageSize),
-                    AlternateBackgroundRows = alternateBackgroundRows?.Color,
-                    AlternateBackgroundColumns = alternateBackgroundColumns?.Color,
-                    FirstRowIsHeader = firstRowIsHeader,
-                    FirstColumnIsHeader = firstColumnIsHeader,
-                    CustomDateFormat = customDateFormat,
-                    CustomTimeFormat = customTimeFormat,
-                    TotalResults = openings?.Count() ?? 0,
-                    Page = page,
-                    PageSize = pageSize
-                });
-
-            case EditorCoronerInquestApiStages.Conclusion:
-                var conclusions = ReadCoronerConclusion(content.Api);
-                if (!string.IsNullOrEmpty(criteria))
-                {
-                    conclusions = conclusions?.Where(h => h.Fullname?.InvariantContains(criteria) == true);
-                }
-                return View(TemplateInquestConclusion, new TableCoronerViewModel<ICoronerInquestConclusion>
-                {
-                    Id = id,
-                    Title = "Search Names",
-                    Criteria = criteria,
-                    QueryString = QueryString,
-                    Rows = Page(conclusions, page, pageSize),
-                    AlternateBackgroundRows = alternateBackgroundRows?.Color,
-                    AlternateBackgroundColumns = alternateBackgroundColumns?.Color,
-                    FirstRowIsHeader = firstRowIsHeader,
-                    FirstColumnIsHeader = firstColumnIsHeader,
-                    CustomDateFormat = customDateFormat,
-                    CustomTimeFormat = customTimeFormat,
-                    TotalResults = conclusions?.Count() ?? 0,
-                    Page = page,
-                    PageSize = pageSize
-                });
-
-            default:
-                throw new ArgumentException("Unknown Stage called " + content.Stage);
-        }
-    }
-
     public IViewComponentResult Invoke(IEditorContent content)
     {
         var source = (content.Block?.Content as IEditorTableEmbedded)?.Source?.FirstOrDefault();
@@ -298,9 +138,6 @@ public class TableViewComponent(IEditorService editorService,
 
             case EditorTableSourceFile.ModelTypeAlias:
                 return ReadFile((EditorTableSourceFile)source.Content, settings);
-
-            case EditorTableSourceCoronerInquestApi.ModelTypeAlias:
-                return ReadCoroner((EditorTableSourceCoronerInquestApi)source.Content, settings);
 
             default:
                 return Content(string.Empty);

@@ -29,7 +29,7 @@ public class TextBlockExpandableTextViewComponent : ThemeViewComponent
             Subtheme = settings.SubthemeTyped == Core.Property.EditorSubthemes.Inherit ? Subtheme(): settings.SubthemeTyped,
             Shade = settings.ThemeShadeTyped == Core.Property.EditorThemeShades.Inherit ? ThemeShade() : settings.ThemeShadeTyped,
             OverrideColor = settings.OverrideColor,
-            IconColor = settings.IconColor?.Color,
+            //IconColor = settings.IconColor?.Color,
             InitialState = settings.InitialStateTyped
         });
     }

@@ -10,7 +10,7 @@ public class ListViewComponent(IEditorService editorService) : ViewComponent
 
     public IViewComponentResult Invoke(IEditorContent content)
     {
-        var cardSettings = content.Block?.Settings as IEditorNoteDefaultSettings;
+        var cardSettings = content.Block?.Settings as IEditorCardDefaultSettings;
 
         if (cardSettings != null)
         {

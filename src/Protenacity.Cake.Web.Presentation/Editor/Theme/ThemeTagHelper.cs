@@ -213,6 +213,7 @@ public class ThemeTagHelper(IViewService viewService, IResponsiveImageService re
         var overrideColors = Override?.FirstOrDefault();
         if (overrideColors != null)
         {
+
             var text = (overrideColors?.Content as IEditorBlockPrimarySettingsTextColor)?.ForegroundColor?.Color;
             if (!string.IsNullOrWhiteSpace(text) && !DisableOverrideText)
             {
@@ -227,9 +228,6 @@ public class ThemeTagHelper(IViewService viewService, IResponsiveImageService re
                         {
                             var source = overrideColors.Content as EditorBlockPrimarySettingsBackgroundColor
                                 ?? throw new ApplicationException(nameof(overrideColors.Content) + " should be of type " + nameof(EditorBlockPrimarySettingsBackgroundColor));
-
-                            //< div class="@(Model.Expand ? "expand-background" : null) @(Model.Border != null ? "border border-5 rounded" : null)" style="background-color:@Model.Color;@(Model.Border != null ? "border-color:" + Model.Border + "!important;" : null)>
-
                             attributeStyle.Add("background-color:" + source.BackgroundColor + ";");
                         }
                         break;

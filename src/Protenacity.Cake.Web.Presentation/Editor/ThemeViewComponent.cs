@@ -10,29 +10,29 @@ namespace Protenacity.Cake.Web.Presentation.Editor;
 public abstract class ThemeViewComponent
     : ViewComponent
 {
-    public EditorCardStyleImageLocations StyleImageLocation([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorNoteBaseSettings)?.StyleImage)
+    public EditorCardStyleImageLocations StyleImageLocation([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleImage)
         ? content.Defaults.CardStyleImageLocation
-        : ((IEditorNoteBaseSettings)content.Block.Settings).StyleImageLocationTyped;
+        : ((IEditorCardBaseSettings)content.Block.Settings).StyleImageLocationTyped;
 
-    public EditorCardStyleImageSizes StyleImageSize([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorNoteBaseSettings)?.StyleImageSize)
+    public EditorCardStyleImageSizes StyleImageSize([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleImageSize)
         ? content.Defaults.CardStyleImageSize
-        : ((IEditorNoteBaseSettings)content.Block.Settings).StyleImageSizeTyped;
+        : ((IEditorCardBaseSettings)content.Block.Settings).StyleImageSizeTyped;
 
-    public EditorCardStyleHeaders StyleHeader([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorNoteBaseSettings)?.StyleHeader)
+    public EditorCardStyleHeaders StyleHeader([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleHeader)
         ? content.Defaults.CardStyleHeader
-        : ((IEditorNoteBaseSettings)content.Block.Settings).StyleHeaderTyped;
+        : ((IEditorCardBaseSettings)content.Block.Settings).StyleHeaderTyped;
 
-    public EditorCardStyleDates StyleDate([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorNoteBaseSettings)?.StyleDate)
+    public EditorCardStyleDates StyleDate([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleDate)
         ? content.Defaults.CardStyleDate
-        : ((IEditorNoteBaseSettings)content.Block.Settings).StyleDateTyped;
+        : ((IEditorCardBaseSettings)content.Block.Settings).StyleDateTyped;
 
-    public EditorCardStyleTimes StyleTime([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorNoteBaseSettings)?.StyleTime)
+    public EditorCardStyleTimes StyleTime([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleTime)
         ? content.Defaults.CardStyleTime
-        : ((IEditorNoteBaseSettings)content.Block.Settings).StyleTimeTyped;
+        : ((IEditorCardBaseSettings)content.Block.Settings).StyleTimeTyped;
 
-    public EditorCardStyleTexts StyleText([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorNoteBaseSettings)?.StyleText)
+    public EditorCardStyleTexts StyleText([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleText)
         ? content.Defaults.CardStyleText
-        : ((IEditorNoteBaseSettings)content.Block.Settings).StyleTextTyped;
+        : ((IEditorCardBaseSettings)content.Block.Settings).StyleTextTyped;
 
     public ActionStyles StyleAction([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleAction)
         ? content.Defaults.CardStyleAction
@@ -46,7 +46,7 @@ public abstract class ThemeViewComponent
         ? content.Defaults.CardStyleActionAlignment
         : ((IEditorActionEmbeddedSettings)content.Block.Settings).StyleActionAlignmentTyped;
 
-    public bool StyleShowClickArrow([DisallowNull] IEditorContent content) => (content.Block?.Settings as IEditorNoteBaseSettings)?.ShowClickArrow == true;
+    public bool StyleShowClickArrow([DisallowNull] IEditorContent content) => (content.Block?.Settings as IEditorCardBaseSettings)?.ShowClickArrow == true;
 
     private string SubthemeKey => nameof(ThemeViewComponent) + nameof(EditorSubthemes);
 

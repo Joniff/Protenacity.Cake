@@ -1,8 +1,0 @@
-{
-  "Name": "Standard",
-  "ContainedObjectType": "4ea4382b-2f5a-4c2b-9587-ae9b3cf3602e",
-  "Udi": "umb://media-type-container/1df1a89ed0aa4d21bb6aab15db4c8ba5",
-  "Dependencies": [],
-  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContainerArtifact",
-  "__version": "16.0.4"
-}

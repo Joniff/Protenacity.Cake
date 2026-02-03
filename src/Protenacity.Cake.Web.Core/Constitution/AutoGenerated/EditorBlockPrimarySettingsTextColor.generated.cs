@@ -22,7 +22,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	/// <summary>Background Text Color</summary>
 	public partial interface IEditorBlockPrimarySettingsTextColor : IPublishedElement
 	{
-		/// <summary>Text Colour</summary>
+		/// <summary>Text Color</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ForegroundColor { get; }
@@ -60,14 +60,14 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		// properties
 
 		///<summary>
-		/// Text Colour: Colour of the text
+		/// Text Color: Color of text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("foregroundColor")]
 		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ForegroundColor => GetForegroundColor(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Text Colour</summary>
+		/// <summary>Static getter for Text Color</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor GetForegroundColor(IEditorBlockPrimarySettingsTextColor that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor>(publishedValueFallback, "foregroundColor");

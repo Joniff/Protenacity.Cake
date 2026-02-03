@@ -20,7 +20,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 {
 	/// <summary>Media Items Settings</summary>
 	[PublishedModel("editorSelectMediaSettings")]
-	public partial class EditorSelectMediaSettings : PublishedElementModel, IEditorActionEmbeddedSettings, IEditorBackgroundSettings, IEditorBorderSettings, IEditorNoteBaseSettings, IEditorOrderSettings, IEditorSelectMediaDownloadSettings
+	public partial class EditorSelectMediaSettings : PublishedElementModel, IEditorActionEmbeddedSettings, IEditorBackgroundSettings, IEditorBorderSettings, IEditorCardBaseSettings, IEditorOrderSettings, IEditorSelectMediaDownloadSettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -98,7 +98,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual string ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
 
 		///<summary>
-		/// Border Colour: Colour of border around item
+		/// Border Color: Select color for border
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -118,7 +118,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[ImplementPropertyType("showClickArrow")]
-		public virtual bool ShowClickArrow => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteBaseSettings.GetShowClickArrow(this, _publishedValueFallback);
+		public virtual bool ShowClickArrow => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetShowClickArrow(this, _publishedValueFallback);
 
 		///<summary>
 		/// Date: Do we show the Date
@@ -126,7 +126,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleDate")]
-		public virtual string StyleDate => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteBaseSettings.GetStyleDate(this, _publishedValueFallback);
+		public virtual string StyleDate => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleDate(this, _publishedValueFallback);
 
 		///<summary>
 		/// Header: Do we show the Header
@@ -134,7 +134,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleHeader")]
-		public virtual string StyleHeader => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteBaseSettings.GetStyleHeader(this, _publishedValueFallback);
+		public virtual string StyleHeader => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleHeader(this, _publishedValueFallback);
 
 		///<summary>
 		/// Image Location: Where to place the image in relations to the other elements
@@ -142,7 +142,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleImage")]
-		public virtual string StyleImage => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteBaseSettings.GetStyleImage(this, _publishedValueFallback);
+		public virtual string StyleImage => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleImage(this, _publishedValueFallback);
 
 		///<summary>
 		/// Image Size: How to size image compared to rest of the card information
@@ -150,7 +150,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleImageSize")]
-		public virtual string StyleImageSize => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteBaseSettings.GetStyleImageSize(this, _publishedValueFallback);
+		public virtual string StyleImageSize => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleImageSize(this, _publishedValueFallback);
 
 		///<summary>
 		/// Text: Do we show the Text
@@ -158,7 +158,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleText")]
-		public virtual string StyleText => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteBaseSettings.GetStyleText(this, _publishedValueFallback);
+		public virtual string StyleText => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleText(this, _publishedValueFallback);
 
 		///<summary>
 		/// Time: Do we show the Time
@@ -166,7 +166,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleTime")]
-		public virtual string StyleTime => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteBaseSettings.GetStyleTime(this, _publishedValueFallback);
+		public virtual string StyleTime => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleTime(this, _publishedValueFallback);
 
 		///<summary>
 		/// Order: Order of items

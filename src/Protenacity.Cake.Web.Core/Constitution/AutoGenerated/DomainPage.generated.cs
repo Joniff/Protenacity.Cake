@@ -480,14 +480,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ConfigDefaultAsideBackground => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigDefaultAsideBackground(this, _publishedValueFallback);
 
 		///<summary>
-		/// Default Aside Border Colour: Default border colour around side panels
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configDefaultAsideBorderColor")]
-		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ConfigDefaultAsideBorderColor => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigDefaultAsideBorderColor(this, _publishedValueFallback);
-
-		///<summary>
 		/// Default Aside Border Edges: Default edges that are shown around the side panel
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -496,7 +488,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual global::System.Collections.Generic.IEnumerable<string> ConfigDefaultAsideBorderEdges => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigDefaultAsideBorderEdges(this, _publishedValueFallback);
 
 		///<summary>
-		/// Default Image Missing Colour: Colour used when an image is missing
+		/// Missing Image Background Color: What col,our to use when an image is missing
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]

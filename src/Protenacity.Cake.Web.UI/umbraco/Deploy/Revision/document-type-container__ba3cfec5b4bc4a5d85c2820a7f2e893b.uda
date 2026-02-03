@@ -1,8 +1,0 @@
-{
-  "Name": "Structure",
-  "ContainedObjectType": "a2cb7800-f571-4787-9638-bc48539a0efb",
-  "Udi": "umb://document-type-container/ba3cfec5b4bc4a5d85c2820a7f2e893b",
-  "Dependencies": [],
-  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContainerArtifact",
-  "__version": "16.0.4"
-}

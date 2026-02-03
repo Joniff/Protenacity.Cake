@@ -1,13 +1,13 @@
 {
   "$schema": "../../umbraco-package-schema.json",
-  "name": "LCC.Internet.Web.Review",
+  "name": "Protenacity.Web.Review",
   "version": "0.1.0",
   "extensions": [
     {
       "name": "Review Bundle",
-      "alias": "lcc-review.bundle",
+      "alias": "protenacity-review.bundle",
       "type": "bundle",
-      "js": "/App_Plugins/LCCReview/review.js"
+      "js": "/App_Plugins/Protenacity.Review/protenacity.js"
     }
   ]
 }

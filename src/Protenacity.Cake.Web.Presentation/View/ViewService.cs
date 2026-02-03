@@ -726,6 +726,4 @@ public class ViewService(
             }
         }
     }
-
-    public BusRouteData? CurrentBusRouteData { get; set; }
 }

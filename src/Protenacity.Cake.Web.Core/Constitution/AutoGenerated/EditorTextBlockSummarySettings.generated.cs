@@ -74,7 +74,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual string ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
 
 		///<summary>
-		/// Border Colour: Colour of border around item
+		/// Border Color: Select color for border
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -88,13 +88,5 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("borderEdges")]
 		public virtual global::System.Collections.Generic.IEnumerable<string> BorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorBorderSettings.GetBorderEdges(this, _publishedValueFallback);
-
-		///<summary>
-		/// Icon Colour: Set colour of the Icon
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("iconColor")]
-		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor IconColor => global::Protenacity.Cake.Web.Core.Constitution.EditorTextIconColorSettings.GetIconColor(this, _publishedValueFallback);
 	}
 }

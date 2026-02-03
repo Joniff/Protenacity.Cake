@@ -20,7 +20,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 {
 	/// <summary>List Settings</summary>
 	[PublishedModel("editorListPrimarySettings")]
-	public partial class EditorListPrimarySettings : PublishedElementModel, IEditorActionDefaultSettings, IEditorBackgroundSettings, IEditorBlockPrimarySettings, IEditorListBaseSettings, IEditorNoteDefaultSettings
+	public partial class EditorListPrimarySettings : PublishedElementModel, IEditorActionDefaultSettings, IEditorBackgroundSettings, IEditorBlockPrimarySettings, IEditorCardDefaultSettings, IEditorListBaseSettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -106,19 +106,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual string ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
 
 		///<summary>
-		/// Blocks Per Row: Maximum number of blocks to show per row
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("maxColumns")]
-		public virtual int MaxColumns => global::Protenacity.Cake.Web.Core.Constitution.EditorListBaseSettings.GetMaxColumns(this, _publishedValueFallback);
-
-		///<summary>
 		/// Default Card Border Colour: Border colour for Cards
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardBorderColor")]
-		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor StyleCardBorderColor => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteDefaultSettings.GetStyleCardBorderColor(this, _publishedValueFallback);
+		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor StyleCardBorderColor => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardBorderColor(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Border Edges : Which border edges are displayed 
@@ -126,7 +119,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardBorderEdges")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> StyleCardBorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteDefaultSettings.GetStyleCardBorderEdges(this, _publishedValueFallback);
+		public virtual global::System.Collections.Generic.IEnumerable<string> StyleCardBorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardBorderEdges(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Date: Do we show the date on cards
@@ -134,7 +127,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardDate")]
-		public virtual string StyleCardDate => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteDefaultSettings.GetStyleCardDate(this, _publishedValueFallback);
+		public virtual string StyleCardDate => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardDate(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Header: Do we show the Header on cards
@@ -142,7 +135,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardHeader")]
-		public virtual string StyleCardHeader => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteDefaultSettings.GetStyleCardHeader(this, _publishedValueFallback);
+		public virtual string StyleCardHeader => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardHeader(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Image Location: Only valid for Cards. Where to place the image in relations to the other elements
@@ -150,7 +143,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardImage")]
-		public virtual string StyleCardImage => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteDefaultSettings.GetStyleCardImage(this, _publishedValueFallback);
+		public virtual string StyleCardImage => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardImage(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Image Size
@@ -158,7 +151,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardImageSize")]
-		public virtual string StyleCardImageSize => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteDefaultSettings.GetStyleCardImageSize(this, _publishedValueFallback);
+		public virtual string StyleCardImageSize => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardImageSize(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Colour Override: OR ignore themes and override cards with these colours, images or gradients
@@ -166,7 +159,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardOverrideColor")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel StyleCardOverrideColor => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteDefaultSettings.GetStyleCardOverrideColor(this, _publishedValueFallback);
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel StyleCardOverrideColor => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardOverrideColor(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Subtheme: Standard Subtheme for cards
@@ -174,7 +167,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardSubtheme")]
-		public virtual string StyleCardSubtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteDefaultSettings.GetStyleCardSubtheme(this, _publishedValueFallback);
+		public virtual string StyleCardSubtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Text: Do we show the Text on cards
@@ -182,7 +175,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardText")]
-		public virtual string StyleCardText => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteDefaultSettings.GetStyleCardText(this, _publishedValueFallback);
+		public virtual string StyleCardText => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardText(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Time: Do we show the time on cards
@@ -190,7 +183,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardTime")]
-		public virtual string StyleCardTime => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteDefaultSettings.GetStyleCardTime(this, _publishedValueFallback);
+		public virtual string StyleCardTime => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardTime(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Shade: Whether any cards are displayed in light mode with dark text or dark mode with light text.
@@ -198,6 +191,13 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleDefaultCardThemeShade")]
-		public virtual string StyleDefaultCardThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorNoteDefaultSettings.GetStyleDefaultCardThemeShade(this, _publishedValueFallback);
+		public virtual string StyleDefaultCardThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleDefaultCardThemeShade(this, _publishedValueFallback);
+
+		///<summary>
+		/// Blocks Per Row: Maximum number of blocks to show per row
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[ImplementPropertyType("maxColumns")]
+		public virtual int MaxColumns => global::Protenacity.Cake.Web.Core.Constitution.EditorListBaseSettings.GetMaxColumns(this, _publishedValueFallback);
 	}
 }

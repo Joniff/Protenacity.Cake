@@ -1,3 +1,3 @@
-﻿export * from './LccEditorUfmPercent'
-export * from './LccUfmPercentElement'
+﻿export * from './EditorUfmPercent'
+export * from './UfmPercentElement'
 

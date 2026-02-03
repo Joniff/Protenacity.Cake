@@ -1,0 +1,19 @@
+{
+  "id": "LCC.Internet.Web.TipTapHeaders",
+  "name": "LCC.Internet.Web.TipTapHeaders",
+  "version": "0.0.0",
+  "allowPackageTelemetry": true,
+  "extensions": [
+    {
+      "type": "icons",
+      "alias": "lcc-icons",
+      "name": "lcc-icons",
+      "js": "/App_Plugins/LCCTipTapHeaders/lcc-icons.js"
+    },
+    {
+      "type": "backofficeEntryPoint",
+      "alias": "lcc-entrypoints",
+      "js": "/App_Plugins/LCCTipTapHeaders/lcc-entrypoints.js"
+    }
+  ]
+}

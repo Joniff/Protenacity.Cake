@@ -7,9 +7,9 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<PackageId>LCC.Internet.Web.Review</PackageId>
-		<Product>LCC.Internet.Web.Review</Product>
-		<Title>LCC.Internet.Web.Review</Title>
+		<PackageId>Protenacity.Web.Review</PackageId>
+		<Product>Protenacity.Web.Review</Product>
+		<Title>Protenacity.Web.Review</Title>
 	</PropertyGroup>
 
 	<!-- Umbraco 17 -->

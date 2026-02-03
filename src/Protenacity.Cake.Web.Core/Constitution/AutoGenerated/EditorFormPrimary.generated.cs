@@ -79,12 +79,5 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("mainTitle")]
 		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString MainTitle => global::Protenacity.Cake.Web.Core.Constitution.EditorBlockPrimary.GetMainTitle(this, _publishedValueFallback);
-
-		///<summary>
-		/// Form: Select which Umbraco Form to use
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("form")]
-		public virtual global::System.Nullable<global::System.Guid> Form => global::Protenacity.Cake.Web.Core.Constitution.EditorFormEmbedded.GetForm(this, _publishedValueFallback);
 	}
 }

@@ -16,7 +16,7 @@ using Umbraco.Cms.Core.Services;
 using Umbraco.Cms.Core.Services.OperationStatus;
 using Umbraco.Extensions;
 
-namespace LCC.RollbackPreview.Server;
+namespace Protenacity.Web.RollbackPreview.Server;
 
 public class RollBackPreviewContentFinder : IContentFinder
 {

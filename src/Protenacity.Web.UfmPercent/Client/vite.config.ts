@@ -5,9 +5,9 @@ export default defineConfig({
         lib: {
             entry: 'src/index.ts',
             formats: ['es'],
-            fileName: 'lcc-ufm-percent',
+            fileName: 'protenacity-ufm-percent',
         },
-        outDir: '../wwwroot/App_Plugins/LCCUfmPercent', 
+        outDir: '../wwwroot/App_Plugins/Protenacity.UfmPercent', 
         emptyOutDir: true,
         sourcemap: true,
         rollupOptions: {

@@ -1,8 +1,0 @@
-{
-  "Name": "Furniture",
-  "ContainedObjectType": "30a2a501-1978-4ddb-a57b-f7efed43ba3c",
-  "Udi": "umb://data-type-container/baa5e3240ff943e096a6b67240edb73b",
-  "Dependencies": [],
-  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContainerArtifact",
-  "__version": "16.0.4"
-}

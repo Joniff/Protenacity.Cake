@@ -55,12 +55,5 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[ImplementPropertyType("maximum")]
 		public virtual int Maximum => this.Value<int>(_publishedValueFallback, "maximum");
-
-		///<summary>
-		/// Source: Which Form do you wish to list the approved entries from. Form must have two fields; {b}Name{/b} and {b}Message{/b} 
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("source")]
-		public virtual global::System.Nullable<global::System.Guid> Source => this.Value<global::System.Nullable<global::System.Guid>>(_publishedValueFallback, "source");
 	}
 }

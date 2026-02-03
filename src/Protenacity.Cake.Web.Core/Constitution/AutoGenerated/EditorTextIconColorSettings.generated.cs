@@ -22,10 +22,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	/// <summary>Share Icon Color Settings</summary>
 	public partial interface IEditorTextIconColorSettings : IPublishedElement
 	{
-		/// <summary>Icon Colour</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor IconColor { get; }
 	}
 
 	/// <summary>Share Icon Color Settings</summary>
@@ -58,18 +54,5 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		}
 
 		// properties
-
-		///<summary>
-		/// Icon Colour: Set colour of the Icon
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("iconColor")]
-		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor IconColor => GetIconColor(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Icon Colour</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor GetIconColor(IEditorTextIconColorSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor>(publishedValueFallback, "iconColor");
 	}
 }

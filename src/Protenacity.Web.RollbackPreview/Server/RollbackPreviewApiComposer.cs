@@ -3,7 +3,7 @@ using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Core.Routing;
 
-namespace LCC.RollbackPreview.Server;
+namespace Protenacity.Web.RollbackPreview.Server;
 
 public class UmbracoCommunityRollbackPreviewerApiComposer : IComposer
 {

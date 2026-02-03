@@ -50,13 +50,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		// properties
 
 		///<summary>
-		/// Form: Select which Umbraco Form to use
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("form")]
-		public virtual global::System.Nullable<global::System.Guid> Form => global::Protenacity.Cake.Web.Core.Constitution.EditorFormEmbedded.GetForm(this, _publishedValueFallback);
-
-		///<summary>
 		/// Icon: Optional Icon placed on the left hand side of the Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]

@@ -72,13 +72,5 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("themeShade")]
 		public virtual string ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
-
-		///<summary>
-		/// Theme: Pick a Theme for Umbraco Form
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("theme")]
-		public virtual string Theme => global::Protenacity.Cake.Web.Core.Constitution.EditorFormEmbeddedSettings.GetTheme(this, _publishedValueFallback);
 	}
 }

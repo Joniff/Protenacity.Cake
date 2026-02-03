@@ -22,10 +22,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	/// <summary>Embedded Form Settings</summary>
 	public partial interface IEditorFormEmbeddedSettings : IPublishedElement
 	{
-		/// <summary>Theme</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Theme { get; }
 	}
 
 	/// <summary>Embedded Form Settings</summary>
@@ -58,18 +54,5 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		}
 
 		// properties
-
-		///<summary>
-		/// Theme: Pick a Theme for Umbraco Form
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("theme")]
-		public virtual string Theme => GetTheme(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Theme</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetTheme(IEditorFormEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "theme");
 	}
 }

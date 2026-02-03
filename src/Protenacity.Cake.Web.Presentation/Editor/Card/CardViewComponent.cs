@@ -16,7 +16,7 @@ public class CardViewComponent(IViewService viewService,
 
     public IViewComponentResult Invoke(IEditorContent content)
     {
-        var cardContent = content.Block?.Content as IEditorNoteBase;
+        var cardContent = content.Block?.Content as IEditorCardBase;
         var actionContent = content.Block?.Content as IEditorActionEmbedded;
         var downloadSettings = content.Block?.Settings as IEditorSelectMediaDownloadSettings;
 

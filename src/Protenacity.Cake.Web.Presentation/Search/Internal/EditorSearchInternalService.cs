@@ -47,8 +47,8 @@ public class EditorSearchInternalService(
     private static string EditorListEmbedded_ListBlocks => typeof(EditorListEmbedded).ModelsBuilderAlias(nameof(EditorListEmbedded.ListBlocks));
     private static string EditorPanel_PanelBlocks => typeof(EditorPanel).ModelsBuilderAlias(nameof(EditorPanel.PanelBlocks));
     private static string EditorTextEmbedded_Text => typeof(EditorTextEmbedded).ModelsBuilderAlias(nameof(EditorTextEmbedded.Text));
-    private static string EditorNoteBase_Header => typeof(EditorNoteBase).ModelsBuilderAlias(nameof(EditorNoteBase.Header));
-    private static string EditorNoteBase_Text => typeof(EditorNoteBase).ModelsBuilderAlias(nameof(EditorNoteBase.Text));
+    private static string EditorNoteBase_Header => typeof(EditorCardBase).ModelsBuilderAlias(nameof(EditorCardBase.Header));
+    private static string EditorNoteBase_Text => typeof(EditorCardBase).ModelsBuilderAlias(nameof(EditorCardBase.Text));
     private static string EditorStepperEmbedded_Steps => typeof(EditorStepperEmbedded).ModelsBuilderAlias(nameof(EditorStepperEmbedded.Steps));
     private static string EditorStep_Header => typeof(EditorStep).ModelsBuilderAlias(nameof(EditorStep.Header));
     private static string EditorStep_Text => typeof(EditorStep).ModelsBuilderAlias(nameof(EditorStep.Text));
@@ -66,9 +66,9 @@ public class EditorSearchInternalService(
     private Lazy<Guid> EditorTextPrimaryKey => new(() => EditorTextPrimary.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorTextPrimary) + " missing"));
     private Lazy<Guid> EditorTextEmbeddedKey => new(() => EditorTextEmbedded.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorTextEmbedded) + " missing"));
     private Lazy<Guid> EditorTextPanelKey => new(() => EditorTextPanel.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorTextPanel) + " missing"));
-    private Lazy<Guid> EditorNotePrimaryKey => new(() => EditorNotePrimary.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorNotePrimary) + " missing"));
-    private Lazy<Guid> EditorNoteEmbeddedKey => new(() => EditorNoteEmbedded.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorNoteEmbedded) + " missing"));
-    private Lazy<Guid> EditorNotePanelKey => new(() => EditorNotePanel.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorNotePanel) + " missing"));
+    private Lazy<Guid> EditorNotePrimaryKey => new(() => EditorCardPrimary.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorCardPrimary) + " missing"));
+    private Lazy<Guid> EditorNoteEmbeddedKey => new(() => EditorCardEmbedded.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorCardEmbedded) + " missing"));
+    private Lazy<Guid> EditorNotePanelKey => new(() => EditorCardPanel.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorCardPanel) + " missing"));
     private Lazy<Guid> EditorStepperEmbeddedKey => new(() => EditorStepperEmbedded.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorStepperEmbedded) + " missing"));
     private Lazy<Guid> EditorStepperPanelKey => new(() => EditorStepperPanel.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorStepperPanel) + " missing"));
     private Lazy<Guid> EditorStepperPrimaryKey => new(() => EditorStepperPrimary.GetModelContentType(publishedContentTypeCache)?.Key ?? throw new ApplicationException(nameof(EditorStepperPrimary) + " missing"));

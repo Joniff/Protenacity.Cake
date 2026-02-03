@@ -1,10 +1,9 @@
-﻿using Protenacity.Cake.Web.Core.Constitution;
+﻿using Microsoft.Extensions.Logging;
+using Protenacity.Cake.Web.Core.Constitution;
 using Protenacity.Cake.Web.Core.Extensions;
 using Protenacity.Cake.Web.Core.Property;
 using Protenacity.Cake.Web.Presentation.Editor.Accordion;
 using Protenacity.Cake.Web.Presentation.Editor.Action;
-using Protenacity.Cake.Web.Presentation.Editor.BusRoute;
-using Protenacity.Cake.Web.Presentation.Editor.BusTimeTable;
 using Protenacity.Cake.Web.Presentation.Editor.Card;
 using Protenacity.Cake.Web.Presentation.Editor.Category;
 using Protenacity.Cake.Web.Presentation.Editor.ExpandableSection;
@@ -26,7 +25,6 @@ using Protenacity.Cake.Web.Presentation.Editor.Text;
 using Protenacity.Cake.Web.Presentation.Editor.Video;
 using Protenacity.Cake.Web.Presentation.Form;
 using Protenacity.Cake.Web.Presentation.View;
-using Microsoft.Extensions.Logging;
 using Sagara.FeedReader;
 using Sagara.FeedReader.Feeds;
 using System.Collections.ObjectModel;
@@ -124,14 +122,14 @@ internal class EditorService(
                     blocks.AddRange(LoadMedia(index, MediaViewComponent.Name, content.Defaults, source));
                     continue;   // Next foreach
 
-                case EditorFormEntriesEmbedded.ModelTypeAlias:
-                    var contentPaging = LoadFormEntries(index, content.Defaults, source);
-                    if (contentPaging?.Item2.Any() == true)
-                    {
-                        paging = contentPaging.Item1;
-                        blocks.AddRange(contentPaging.Item2);
-                    }
-                    continue;
+                //case EditorFormEntriesEmbedded.ModelTypeAlias:
+                //    var contentPaging = LoadFormEntries(index, content.Defaults, source);
+                //    if (contentPaging?.Item2.Any() == true)
+                //    {
+                //        paging = contentPaging.Item1;
+                //        blocks.AddRange(contentPaging.Item2);
+                //    }
+                //    continue;
 
                 case EditorRssFeed.ModelTypeAlias:
                     blocks.AddRange(LoadRssFeed(index, content.Defaults, source));
@@ -150,9 +148,9 @@ internal class EditorService(
                     content.EditorComponent = AccordionViewComponent.Name;
                     break;
 
-                case EditorNotePrimary.ModelTypeAlias:
-                case EditorNoteEmbedded.ModelTypeAlias:
-                case EditorNotePanel.ModelTypeAlias:
+                case EditorCardPrimary.ModelTypeAlias:
+                case EditorCardEmbedded.ModelTypeAlias:
+                case EditorCardPanel.ModelTypeAlias:
                     content.EditorComponent = CardViewComponent.Name;
                     break;
 
@@ -234,11 +232,6 @@ internal class EditorService(
                     content.EditorComponent = SearchViewComponent.Name;
                     break;
 
-                case EditorBusRoutePrimary.ModelTypeAlias:
-                    content.EditorComponent = BusRouteViewComponent.Name;
-                    viewService.CurrentBusRouteData = (source.Content as IEditorBusRouteDataApi)?.BusRouteApi as BusRouteData;
-                    break;
-
                 case EditorExpandableSectionPrimary.ModelTypeAlias:
                     content.EditorComponent = ExpandableSectionViewComponent.Name;
                     break;
@@ -246,11 +239,6 @@ internal class EditorService(
                 case EditorSelectMediaPrimary.ModelTypeAlias:
                     blocks.AddRange(LoadMedia(index, DownloadMediaViewComponent.Name, content.Defaults, source));
                     continue;   // Next foreach
-
-                case EditorBusTimeTablePrimary.ModelTypeAlias:
-                    content.EditorComponent = BusTimeTableViewComponent.Name;
-                    viewService.CurrentBusRouteData = (source.Content as IEditorBusRouteDataApi)?.BusRouteApi as BusRouteData;
-                    break;
 
                 default:
                     throw new ApplicationException(source.Content.ContentType.Alias + " is unknown Editor Component");
@@ -318,7 +306,7 @@ internal class EditorService(
 
         if (settings != null)
         {
-            var cardSettings = settings as IEditorNoteBaseSettings;
+            var cardSettings = settings as IEditorCardBaseSettings;
             var actionSettings = settings as IEditorActionEmbeddedSettings;
             var backgroundSettings = settings as IEditorBackgroundSettings;
             var borderSettings = settings as IEditorBorderSettings;
@@ -512,56 +500,56 @@ internal class EditorService(
         return blocks;
     }
 
-    private Tuple<IPagingViewModel?, IEnumerable<IEditorContent>>? LoadFormEntries(int index, EditorDefaults? defaults, BlockListItem source)
-    {
-        var blocks = new List<IEditorContent>();
-        var content = source.Content as EditorFormEntriesEmbedded;
-        defaults = SetDefault(defaults, source.Settings);
+    //private Tuple<IPagingViewModel?, IEnumerable<IEditorContent>>? LoadFormEntries(int index, EditorDefaults? defaults, BlockListItem source)
+    //{
+    //    var blocks = new List<IEditorContent>();
+    //    var content = source.Content as EditorFormEntriesEmbedded;
+    //    defaults = SetDefault(defaults, source.Settings);
 
-        if (content?.Source == null)
-        {
-            return null;
-        }
+    //    if (content?.Source == null)
+    //    {
+    //        return null;
+    //    }
 
-        int page = viewService.CurrentSearchPage ?? 0;
-        int pagesize = viewService.CurrentSearchPageSize ?? content.Maximum;
+    //    int page = viewService.CurrentSearchPage ?? 0;
+    //    int pagesize = viewService.CurrentSearchPageSize ?? content.Maximum;
 
-        var entries = formReaderService.ApprovedEntriesByDate((Guid)content.Source,
-            viewService.CurrentDomainPage?.ConfigUmbracoFormFieldName ?? "name",
-            viewService.CurrentDomainPage?.ConfigUmbracoFormFieldNameDefault ?? "message",
-            viewService.CurrentDomainPage?.ConfigUmbracoFormFieldMessage ?? "Anonymous",
-            page,
-            pagesize,
-            viewService.CurrentDomainPage?.ConfigUmbracoFormCacheLength != null ? new TimeSpan((TimeSpan.TicksPerMinute * ((long)viewService.CurrentDomainPage.ConfigUmbracoFormCacheLength)) + 1L) : null);
-        ;
-        if (entries?.Entries.Any() != true)
-        {
-            return null;
-        }
+    //    var entries = formReaderService.ApprovedEntriesByDate((Guid)content.Source,
+    //        viewService.CurrentDomainPage?.ConfigUmbracoFormFieldName ?? "name",
+    //        viewService.CurrentDomainPage?.ConfigUmbracoFormFieldNameDefault ?? "message",
+    //        viewService.CurrentDomainPage?.ConfigUmbracoFormFieldMessage ?? "Anonymous",
+    //        page,
+    //        pagesize,
+    //        viewService.CurrentDomainPage?.ConfigUmbracoFormCacheLength != null ? new TimeSpan((TimeSpan.TicksPerMinute * ((long)viewService.CurrentDomainPage.ConfigUmbracoFormCacheLength)) + 1L) : null);
+    //    ;
+    //    if (entries?.Entries.Any() != true)
+    //    {
+    //        return null;
+    //    }
 
-        foreach (var entry in entries.Entries)
-        {
-            blocks.Add(new EditorContent<FormReaderEntry>
-            {
-                Index = index++,
-                Id = EncodeId("formentry-" + entry.Name),
-                Header = new HtmlEncodedString(entry.Name),
-                EditorComponent = FormEntryViewComponent.Name,
-                Block = source,
-                Defaults = defaults,
-                ExtraData = entry
-            });
-        }
+    //    foreach (var entry in entries.Entries)
+    //    {
+    //        blocks.Add(new EditorContent<FormReaderEntry>
+    //        {
+    //            Index = index++,
+    //            Id = EncodeId("formentry-" + entry.Name),
+    //            Header = new HtmlEncodedString(entry.Name),
+    //            EditorComponent = FormEntryViewComponent.Name,
+    //            Block = source,
+    //            Defaults = defaults,
+    //            ExtraData = entry
+    //        });
+    //    }
 
-        return new Tuple<IPagingViewModel?, IEnumerable<IEditorContent>>(entries.TotalEntries > entries.Entries.Count() ? new PagingViewModel
-        {
-            Page = page,
-            PageSize = pagesize,
-            QueryString = source.ContentKey.ToString("N"),
-            TotalResults = entries.TotalEntries,
-            Id = source.ContentKey.ToString("N")
-        } : null, blocks);
-    }
+    //    return new Tuple<IPagingViewModel?, IEnumerable<IEditorContent>>(entries.TotalEntries > entries.Entries.Count() ? new PagingViewModel
+    //    {
+    //        Page = page,
+    //        PageSize = pagesize,
+    //        QueryString = source.ContentKey.ToString("N"),
+    //        TotalResults = entries.TotalEntries,
+    //        Id = source.ContentKey.ToString("N")
+    //    } : null, blocks);
+    //}
 
     private IEnumerable<IEditorContent> LoadRssFeed(int index, EditorDefaults? defaults, BlockListItem source)
     {

@@ -59,17 +59,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ConfigDefaultAsideBackground { get; }
 
-		/// <summary>Default Aside Border Colour</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ConfigDefaultAsideBorderColor { get; }
-
 		/// <summary>Default Aside Border Edges</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::System.Collections.Generic.IEnumerable<string> ConfigDefaultAsideBorderEdges { get; }
 
-		/// <summary>Default Image Missing Colour</summary>
+		/// <summary>Missing Image Background Color</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ConfigDefaultImageMissingColor { get; }
@@ -324,19 +319,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public static global::Umbraco.Cms.Core.Models.Blocks.BlockListModel GetConfigDefaultAsideBackground(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(publishedValueFallback, "configDefaultAsideBackground");
 
 		///<summary>
-		/// Default Aside Border Colour: Default border colour around side panels
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configDefaultAsideBorderColor")]
-		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ConfigDefaultAsideBorderColor => GetConfigDefaultAsideBorderColor(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Default Aside Border Colour</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor GetConfigDefaultAsideBorderColor(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor>(publishedValueFallback, "configDefaultAsideBorderColor");
-
-		///<summary>
 		/// Default Aside Border Edges: Default edges that are shown around the side panel
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -350,14 +332,14 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public static global::System.Collections.Generic.IEnumerable<string> GetConfigDefaultAsideBorderEdges(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<string>>(publishedValueFallback, "configDefaultAsideBorderEdges");
 
 		///<summary>
-		/// Default Image Missing Colour: Colour used when an image is missing
+		/// Missing Image Background Color: What col,our to use when an image is missing
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("configDefaultImageMissingColor")]
 		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ConfigDefaultImageMissingColor => GetConfigDefaultImageMissingColor(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Default Image Missing Colour</summary>
+		/// <summary>Static getter for Missing Image Background Color</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor GetConfigDefaultImageMissingColor(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor>(publishedValueFallback, "configDefaultImageMissingColor");

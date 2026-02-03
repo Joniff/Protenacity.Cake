@@ -5,7 +5,7 @@ import type { PingError, PingResponse } from './types.gen';
 
 export const client = createClient(createConfig());
 
-export class LCCInternetWebReviewService {
+export class ProtenacityWebReviewService {
     public static ping<ThrowOnError extends boolean = false>(options?: Options<unknown, ThrowOnError>) {
         return (options?.client ?? client).get<PingResponse, PingError, ThrowOnError>({
             ...options,

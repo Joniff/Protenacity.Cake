@@ -31,5 +31,4 @@ public interface IViewService
     EditorThemeShades CurrentThemeShade { get; }
     string CurrentCookies { get; }
     IPublishedContent? OriginalContent { get; set; }
-    BusRouteData? CurrentBusRouteData { get; set; }
 }

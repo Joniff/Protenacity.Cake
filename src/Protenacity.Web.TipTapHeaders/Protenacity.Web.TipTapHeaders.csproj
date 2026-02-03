@@ -7,9 +7,9 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<PackageId>LCC.Internet.Web.TipTapHeaders</PackageId>
-		<Product>LCC.Internet.Web.TipTapHeaders</Product>
-		<Title>LCC.Internet.Web.TipTapHeaders</Title>
+		<PackageId>Protenacity.Web.TipTapHeaders</PackageId>
+		<Product>Protenacity.Web.TipTapHeaders</Product>
+		<Title>Protenacity.Web.TipTapHeaders</Title>
 	</PropertyGroup>
 
 	<!-- Umbraco 17 -->
@@ -29,7 +29,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="wwwroot\App_Plugins\LCCTipTapHeaders\" />
+	  <Folder Include="wwwroot\App_Plugins\Protenacity.TipTapHeaders\" />
 	</ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Debug' ">

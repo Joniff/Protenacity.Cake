@@ -7,9 +7,9 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<PackageId>LCC.Rollback</PackageId>
-		<Product>LCC.Rollback</Product>
-		<Title>LCC.Rollback</Title>
+		<PackageId>Protenacity.Web.Rollback</PackageId>
+		<Product>Protenacity.Web.Rollback</Product>
+		<Title>Protenacity.Web.Rollback</Title>
 	</PropertyGroup>
 
 

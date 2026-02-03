@@ -39,13 +39,13 @@
       "name": "Open Street Map",
       "alias": "Protenacity.Web.OpenStreetMap",
       "meta": {
-        "defaultPropertyEditorUiAlias": "LCC.PropertyEditorUi.OpenStreetMap",
+        "defaultPropertyEditorUiAlias": "Protenacity.PropertyEditorUi.OpenStreetMap",
         "settings": {
           "properties": [
             {
               "alias": "defaultPosition",
               "label": "Default Position",
-              "propertyEditorUiAlias": "LCC.PropertyEditorUi.OpenStreetMap"
+              "propertyEditorUiAlias": "Protenacity.PropertyEditorUi.OpenStreetMap"
             },
             {
               "alias": "showSearch",

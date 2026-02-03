@@ -1,14 +1,14 @@
 {
-  "id": "LCC.RollbackPreview",
-  "name": "LCC.RollbackPreview",
+  "id": "Protenacity.RollbackPreview",
+  "name": "Protenacity.RollbackPreview",
   "version": "0.0.0",
   "allowPackageTelemetry": true,
   "extensions": [
     {
-      "name": "LCCRollbackPreview Bundle",
-      "alias": "LCC.RollbackPreview.Bundle",
+      "name": "Protenacity Rollback Preview Bundle",
+      "alias": "Protenacity.RollbackPreview.Bundle",
       "type": "bundle",
-      "js": "/App_Plugins/LCCRollbackPreview/lcc-rollbackpreview.js"
+      "js": "/App_Plugins/Protenacity.RollbackPreview/protenacity-rollbackpreview.js"
     }
   ]
 }

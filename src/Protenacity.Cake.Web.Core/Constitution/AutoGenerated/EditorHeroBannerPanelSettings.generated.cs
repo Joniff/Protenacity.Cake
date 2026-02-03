@@ -58,14 +58,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual string Alignment => this.Value<string>(_publishedValueFallback, "alignment");
 
 		///<summary>
-		/// Background Colour: Background colour when no image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("color")]
-		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor Color => this.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor>(_publishedValueFallback, "color");
-
-		///<summary>
 		/// Darken Image Behind Text: When enabled this will darken the image behind the Title & Link so that they are easier to read
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]

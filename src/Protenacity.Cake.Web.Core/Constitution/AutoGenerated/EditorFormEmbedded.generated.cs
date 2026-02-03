@@ -22,9 +22,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	/// <summary>Embedded Form</summary>
 	public partial interface IEditorFormEmbedded : IPublishedElement
 	{
-		/// <summary>Form</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		global::System.Nullable<global::System.Guid> Form { get; }
 	}
 
 	/// <summary>Embedded Form</summary>
@@ -57,16 +54,5 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		}
 
 		// properties
-
-		///<summary>
-		/// Form: Select which Umbraco Form to use
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("form")]
-		public virtual global::System.Nullable<global::System.Guid> Form => GetForm(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Form</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		public static global::System.Nullable<global::System.Guid> GetForm(IEditorFormEmbedded that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::System.Guid>>(publishedValueFallback, "form");
 	}
 }

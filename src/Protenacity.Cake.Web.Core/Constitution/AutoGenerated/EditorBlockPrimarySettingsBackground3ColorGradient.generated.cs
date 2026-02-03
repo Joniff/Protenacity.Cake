@@ -82,7 +82,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual string StartingColor => this.Value<string>(_publishedValueFallback, "startingColor");
 
 		///<summary>
-		/// Text Colour: Colour of the text
+		/// Text Color: Color of text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]

@@ -4,7 +4,7 @@ using Umbraco.Cms.Core.PropertyEditors;
 using Umbraco.Cms.Core.Services;
 using Umbraco.Extensions;
 
-namespace LCC.RollbackPreview.Server;
+namespace Protenacity.Web.RollbackPreview.Server;
 
 public class PublishedContentConverter(IContentTypeService ctBaseService, IPublishedContentTypeFactory pcTypeFactory,
     IContentService contentService, IPublishedModelFactory publishedModelFactory)

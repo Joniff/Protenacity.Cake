@@ -24,7 +24,7 @@
 * Open a terminal inside the `\Client` folder
 * Run `npm install` to install all the dependencies
 * Run `npm run build` to build the project
-* The build output is copied to `wwwroot\App_Plugins\LCCOpenStreetMap\lcc-open-street-map.js`
+* The build output is copied to `wwwroot\App_Plugins\Protenacity.OpenStreetMap\protenacity-openstreetmap.js`
 
 == File Watching ==
 * Add this Razor Class Library Project as a project reference to an Umbraco Website project
@@ -41,5 +41,5 @@
 ************************************************************************************************************
 
 This is a tidied up version of https://github.com/bergmania/Bergmania.OpenStreetMap
-The code has all been placed within one project and renamed to LCC from Bergmania
+The code has all been placed within one project and renamed to Protenacity from Bergmania
 
