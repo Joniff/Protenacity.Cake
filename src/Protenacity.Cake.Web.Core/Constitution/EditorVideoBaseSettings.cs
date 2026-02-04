@@ -10,5 +10,5 @@ public partial interface IEditorVideoBaseSettings
 
 public partial class EditorVideoBaseSettings
 {
-    public EditorVideoRatios RatioTyped => Enum<EditorVideoRatios>.GetValueByDescription(this.Ratio);
+    public EditorVideoRatios RatioTyped => EditorVideoRatios.ParseByDescription(this.Ratio);
 }

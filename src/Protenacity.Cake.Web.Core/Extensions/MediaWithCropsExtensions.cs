@@ -10,7 +10,7 @@ public static class MediaWithCropsExtensions
 {
     public static string? GetCropUrl(this MediaWithCrops mediaWithCrops, EditorImageCrops crop, UrlMode urlMode = UrlMode.Default)
     {
-        return mediaWithCrops.GetCropUrl(Enum<EditorImageCrops>.GetDescriptionByValue(crop), urlMode);
+        return mediaWithCrops.GetCropUrl(crop.Description, urlMode);
     }
 
     public static string? AlternateText(this MediaWithCrops mediaWithCrops, string? defaultValue = null)

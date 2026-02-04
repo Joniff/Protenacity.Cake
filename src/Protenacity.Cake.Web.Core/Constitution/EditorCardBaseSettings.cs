@@ -15,10 +15,10 @@ public partial interface IEditorCardBaseSettings
 
 public partial class EditorCardBaseSettings
 {
-    public EditorCardStyleImageLocations StyleImageLocationTyped => Enum<EditorCardStyleImageLocations>.GetValueByDescription(this.StyleImage);
-    public EditorCardStyleImageSizes StyleImageSizeTyped => Enum<EditorCardStyleImageSizes>.GetValueByDescription(this.StyleImageSize);
-    public EditorCardStyleHeaders StyleHeaderTyped => Enum<EditorCardStyleHeaders>.GetValueByDescription(this.StyleHeader);
-    public EditorCardStyleDates StyleDateTyped => Enum<EditorCardStyleDates>.GetValueByDescription(this.StyleDate);
-    public EditorCardStyleTimes StyleTimeTyped => Enum<EditorCardStyleTimes>.GetValueByDescription(this.StyleTime);
-    public EditorCardStyleTexts StyleTextTyped => Enum<EditorCardStyleTexts>.GetValueByDescription(this.StyleText);
+    public EditorCardStyleImageLocations StyleImageLocationTyped => EditorCardStyleImageLocations.ParseByDescription(this.StyleImage);
+    public EditorCardStyleImageSizes StyleImageSizeTyped => EditorCardStyleImageSizes.ParseByDescription(this.StyleImageSize);
+    public EditorCardStyleHeaders StyleHeaderTyped => EditorCardStyleHeaders.ParseByDescription(this.StyleHeader);
+    public EditorCardStyleDates StyleDateTyped => EditorCardStyleDates.ParseByDescription(this.StyleDate);
+    public EditorCardStyleTimes StyleTimeTyped => EditorCardStyleTimes.ParseByDescription(this.StyleTime);
+    public EditorCardStyleTexts StyleTextTyped => EditorCardStyleTexts.ParseByDescription(this.StyleText);
 }

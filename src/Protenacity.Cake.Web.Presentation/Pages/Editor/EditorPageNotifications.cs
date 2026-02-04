@@ -33,43 +33,43 @@ internal class EditorPageNotifications(IContentService contentService) : Notific
             if (IsHomePage(entity))
             {
                 // Likely to be Home Page - stop any statuses being Inherit
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTheme), Enum<EditorThemes>.GetDescriptionByValue(EditorThemes.Default), Enum<EditorThemes>.GetDescriptionByValue(EditorThemes.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageSubtheme), Enum<EditorSubthemes>.GetDescriptionByValue(EditorSubthemes.Primary), Enum<EditorSubthemes>.GetDescriptionByValue(EditorSubthemes.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageThemeShade), Enum<EditorThemeShades>.GetDescriptionByValue(EditorThemeShades.Light), Enum<EditorThemeShades>.GetDescriptionByValue(EditorThemeShades.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AlertStatus), Enum<AlertStatuses>.GetDescriptionByValue(AlertStatuses.Hide), Enum<AlertStatuses>.GetDescriptionByValue(AlertStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AsideStatus), Enum<AsideStatuses>.GetDescriptionByValue(AsideStatuses.Hide), Enum<AsideStatuses>.GetDescriptionByValue(AsideStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.BannerStatus), Enum<BannerStatuses>.GetDescriptionByValue(BannerStatuses.Hide), Enum<BannerStatuses>.GetDescriptionByValue(BannerStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureStatus), Enum<FurntitureStatuses>.GetDescriptionByValue(FurntitureStatuses.Show), Enum<FurntitureStatuses>.GetDescriptionByValue(FurntitureStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbStatus), Enum<BreadcrumbStatuses>.GetDescriptionByValue(BreadcrumbStatuses.Hide), Enum<BreadcrumbStatuses>.GetDescriptionByValue(BreadcrumbStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SeoStatus), Enum<SeoStatuses>.GetDescriptionByValue(SeoStatuses.Disable), Enum<SeoStatuses>.GetDescriptionByValue(SeoStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.ReviewStatus), Enum<SeoStatuses>.GetDescriptionByValue(SeoStatuses.Disable), Enum<SeoStatuses>.GetDescriptionByValue(SeoStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SubfooterStatus), Enum<SubfooterStatuses>.GetDescriptionByValue(SubfooterStatuses.Hide), Enum<SubfooterStatuses>.GetDescriptionByValue(SubfooterStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.VirtualAgentStatus), Enum<VirtualAgentStatuses>.GetDescriptionByValue(VirtualAgentStatuses.Disable), Enum<VirtualAgentStatuses>.GetDescriptionByValue(VirtualAgentStatuses.Inherit));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTheme), EditorThemes.Default.Description, EditorThemes.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageSubtheme), EditorSubthemes.Primary.Description, EditorSubthemes.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageThemeShade), EditorThemeShades.Light.Description, EditorThemeShades.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AlertStatus), AlertStatuses.Hide.Description, AlertStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AsideStatus), AsideStatuses.Hide.Description, AsideStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.BannerStatus), BannerStatuses.Hide.Description, BannerStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureStatus), FurntitureStatuses.Show.Description, FurntitureStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbStatus), BreadcrumbStatuses.Hide.Description, BreadcrumbStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SeoStatus), SeoStatuses.Disable.Description, SeoStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.ReviewStatus), SeoStatuses.Disable.Description, SeoStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SubfooterStatus), SubfooterStatuses.Hide.Description, SubfooterStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.VirtualAgentStatus), VirtualAgentStatuses.Disable.Description, VirtualAgentStatuses.Inherit.Description);
             }
             else
             {
                 // Set all statuses to Inherit if they blank
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTheme), Enum<EditorThemes>.GetDescriptionByValue(EditorThemes.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageSubtheme), Enum<EditorSubthemes>.GetDescriptionByValue(EditorSubthemes.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageThemeShade), Enum<EditorThemeShades>.GetDescriptionByValue(EditorThemeShades.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AlertStatus), Enum<AlertStatuses>.GetDescriptionByValue(AlertStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AsideStatus), Enum<AsideStatuses>.GetDescriptionByValue(AsideStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.BannerStatus), Enum<BannerStatuses>.GetDescriptionByValue(BannerStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureStatus), Enum<FurntitureStatuses>.GetDescriptionByValue(FurntitureStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbStatus), Enum<BreadcrumbStatuses>.GetDescriptionByValue(BreadcrumbStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SeoStatus), Enum<SeoStatuses>.GetDescriptionByValue(SeoStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.ReviewStatus), Enum<ReviewStatuses>.GetDescriptionByValue(ReviewStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SubfooterStatus), Enum<SubfooterStatuses>.GetDescriptionByValue(SubfooterStatuses.Inherit));
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.VirtualAgentStatus), Enum<VirtualAgentStatuses>.GetDescriptionByValue(VirtualAgentStatuses.Inherit));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTheme), EditorThemes.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageSubtheme), EditorSubthemes.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageThemeShade), EditorThemeShades.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AlertStatus), AlertStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AsideStatus), AsideStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.BannerStatus), BannerStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureStatus), FurntitureStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbStatus), BreadcrumbStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SeoStatus), SeoStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.ReviewStatus), ReviewStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SubfooterStatus), SubfooterStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.VirtualAgentStatus), VirtualAgentStatuses.Inherit.Description);
             }
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureHeaderSubtheme), Enum<EditorSubthemes>.GetDescriptionByValue(EditorSubthemes.Inherit));
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureFooterSubtheme), Enum<EditorSubthemes>.GetDescriptionByValue(EditorSubthemes.Inherit));
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureHeaderThemeShade), Enum<EditorThemeShades>.GetDescriptionByValue(EditorThemeShades.Inherit));
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureFooterThemeShade), Enum<EditorThemeShades>.GetDescriptionByValue(EditorThemeShades.Inherit));
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbSubtheme), Enum<EditorThemeShades>.GetDescriptionByValue(EditorThemeShades.Inherit));
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbThemeShade), Enum<EditorThemeShades>.GetDescriptionByValue(EditorThemeShades.Inherit));
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurniturePageTitleSubtheme), Enum<EditorThemeShades>.GetDescriptionByValue(EditorThemeShades.Inherit));
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurniturePageTitleThemeShade), Enum<EditorThemeShades>.GetDescriptionByValue(EditorThemeShades.Inherit));
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureHeaderSubtheme), EditorSubthemes.Inherit.Description);
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureFooterSubtheme), EditorSubthemes.Inherit.Description);
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureHeaderThemeShade), EditorThemeShades.Inherit.Description);
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureFooterThemeShade), EditorThemeShades.Inherit.Description);
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbSubtheme), EditorThemeShades.Inherit.Description);
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbThemeShade), EditorThemeShades.Inherit.Description);
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurniturePageTitleSubtheme), EditorThemeShades.Inherit.Description);
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurniturePageTitleThemeShade), EditorThemeShades.Inherit.Description);
         }
     }
 }

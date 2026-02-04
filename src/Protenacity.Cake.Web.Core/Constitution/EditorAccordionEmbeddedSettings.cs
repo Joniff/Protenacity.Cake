@@ -10,5 +10,5 @@ public partial interface IEditorAccordionEmbeddedSettings
 
 public partial class EditorAccordionEmbeddedSettings
 {
-    public EditorAccordionInitialStates InitialStateTyped => Enum<EditorAccordionInitialStates>.GetValueByDescription(this.InitialState);
+    public EditorAccordionInitialStates InitialStateTyped => EditorAccordionInitialStates.ParseByDescription(this.InitialState);
 }

@@ -5,6 +5,6 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class DomainPage
 {
-    public StructureCookieConsentPositions CookieConsentModalPositionTyped => Enum<StructureCookieConsentPositions>.GetValueByDescription(this.CookieConsentModalPosition);
-    public EditorBorderEdges ConfigDefaultAsideBorderEdgesTyped => Enum<EditorBorderEdges>.GetValueByDescription(this.ConfigDefaultAsideBorderEdges, EditorBorderEdges.All);
+    public StructureCookieConsentPositions CookieConsentModalPositionTyped => StructureCookieConsentPositions.ParseByDescription(this.CookieConsentModalPosition);
+    public EditorBorderEdges ConfigDefaultAsideBorderEdgesTyped => EditorBorderEdges.ParseByDescription(this.ConfigDefaultAsideBorderEdges, EditorBorderEdges.All);
 }

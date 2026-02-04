@@ -5,6 +5,6 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorMapPanel
 {
-    public EditorMapTypes MapTypeTyped => Enum<EditorMapTypes>.GetValueByDescription(this.MapType);
-    public EditorNamedIcons PanelIconTyped => Enum<EditorNamedIcons>.GetValueByDescription(this.PanelIcon);
+    public EditorMapTypes MapTypeTyped => EditorMapTypes.ParseByDescription(this.MapType);
+    public EditorNamedIcons PanelIconTyped => EditorNamedIcons.ParseByDescription(this.PanelIcon);
 }

@@ -10,5 +10,5 @@ public partial interface IEditorTableSourceFieldSeparator
 
 public partial class EditorTableSourceFieldSeparator
 {
-    public EditorTableSourceFileSeparators SeparatorTyped => Enum<EditorTableSourceFileSeparators>.GetValueByDescription(this.Separator);
+    public EditorTableSourceFileSeparators SeparatorTyped => EditorTableSourceFileSeparators.ParseByDescription(this.Separator);
 }

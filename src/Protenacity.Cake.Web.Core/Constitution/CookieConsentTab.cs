@@ -10,5 +10,5 @@ public partial interface ICookieConsentTab
 
 public partial class CookieConsentTab
 {
-    public StructureCookieConsentPositions CookieConsentModalPositionTyped => Enum<StructureCookieConsentPositions>.GetValueByDescription(this.CookieConsentModalPosition);
+    public StructureCookieConsentPositions CookieConsentModalPositionTyped => StructureCookieConsentPositions.ParseByDescription(this.CookieConsentModalPosition);
 }

@@ -5,16 +5,16 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorCardEmbeddedSettings
 {
-    public EditorCardStyleImageLocations StyleImageLocationTyped => Enum<EditorCardStyleImageLocations>.GetValueByDescription(this.StyleImage);
-    public EditorCardStyleImageSizes StyleImageSizeTyped => Enum<EditorCardStyleImageSizes>.GetValueByDescription(this.StyleImageSize);
-    public EditorCardStyleHeaders StyleHeaderTyped => Enum<EditorCardStyleHeaders>.GetValueByDescription(this.StyleHeader);
-    public EditorCardStyleDates StyleDateTyped => Enum<EditorCardStyleDates>.GetValueByDescription(this.StyleDate);
-    public EditorCardStyleTimes StyleTimeTyped => Enum<EditorCardStyleTimes>.GetValueByDescription(this.StyleTime);
-    public EditorCardStyleTexts StyleTextTyped => Enum<EditorCardStyleTexts>.GetValueByDescription(this.StyleText);
-    public ActionStyles StyleActionTyped => Enum<ActionStyles>.GetValueByDescription(this.StyleAction);
-    public ActionStyleClickAreas StyleActionClickAreaTyped => Enum<ActionStyleClickAreas>.GetValueByDescription(this.StyleActionClickArea);
-    public ActionStyleAlignments StyleActionAlignmentTyped => Enum<ActionStyleAlignments>.GetValueByDescription(this.StyleActionAlignment);
-    public EditorSubthemes SubthemeTyped => Enum<EditorSubthemes>.GetValueByDescription(this.Subtheme);
-    public EditorThemeShades ThemeShadeTyped => Enum<EditorThemeShades>.GetValueByDescription(this.ThemeShade);
-    public EditorBorderEdges BorderEdgesTyped => Enum<EditorBorderEdges>.GetValueByDescription(this.BorderEdges, EditorBorderEdges.All);
+    public EditorCardStyleImageLocations StyleImageLocationTyped => EditorCardStyleImageLocations.ParseByDescription(this.StyleImage);
+    public EditorCardStyleImageSizes StyleImageSizeTyped => EditorCardStyleImageSizes.ParseByDescription(this.StyleImageSize);
+    public EditorCardStyleHeaders StyleHeaderTyped => EditorCardStyleHeaders.ParseByDescription(this.StyleHeader);
+    public EditorCardStyleDates StyleDateTyped => EditorCardStyleDates.ParseByDescription(this.StyleDate);
+    public EditorCardStyleTimes StyleTimeTyped => EditorCardStyleTimes.ParseByDescription(this.StyleTime);
+    public EditorCardStyleTexts StyleTextTyped => EditorCardStyleTexts.ParseByDescription(this.StyleText);
+    public ActionStyles StyleActionTyped => ActionStyles.ParseByDescription(this.StyleAction);
+    public ActionStyleClickAreas StyleActionClickAreaTyped => ActionStyleClickAreas.ParseByDescription(this.StyleActionClickArea);
+    public ActionStyleAlignments StyleActionAlignmentTyped => ActionStyleAlignments.ParseByDescription(this.StyleActionAlignment);
+    public EditorSubthemes SubthemeTyped => EditorSubthemes.ParseByDescription(this.Subtheme);
+    public EditorThemeShades ThemeShadeTyped => EditorThemeShades.ParseByDescription(this.ThemeShade);
+    public EditorBorderEdges BorderEdgesTyped => EditorBorderEdges.ParseByDescription(this.BorderEdges, EditorBorderEdges.All);
 }

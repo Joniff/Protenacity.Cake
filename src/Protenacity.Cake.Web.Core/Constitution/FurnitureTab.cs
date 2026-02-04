@@ -22,17 +22,17 @@ public partial interface IFurnitureTab
 
 public partial class FurnitureTab
 {
-    public FurntitureStatuses FurnitureStatusTyped => Enum<FurntitureStatuses>.GetValueByDescription(this.FurnitureStatus);
-    public BreadcrumbStatuses BreadcrumbStatusTyped => Enum<BreadcrumbStatuses>.GetValueByDescription(this.FurnitureBreadcrumbStatus);
-    public EditorSubthemes HeaderSubthemeTyped => Enum<EditorSubthemes>.GetValueByDescription(this.FurnitureHeaderSubtheme);
-    public EditorThemeShades HeaderThemeShadeTyped => Enum<EditorThemeShades>.GetValueByDescription(this.FurnitureHeaderThemeShade);
-    public EditorSubthemes FooterSubthemeTyped => Enum<EditorSubthemes>.GetValueByDescription(this.FurnitureFooterSubtheme);
-    public EditorThemeShades FooterThemeShadeTyped => Enum<EditorThemeShades>.GetValueByDescription(this.FurnitureFooterThemeShade);
-    public EditorSubthemes BreadcrumbSubthemeTyped => Enum<EditorSubthemes>.GetValueByDescription(this.FurnitureBreadcrumbSubtheme);
-    public EditorThemeShades BreadcrumbThemeShadeTyped => Enum<EditorThemeShades>.GetValueByDescription(this.FurnitureBreadcrumbThemeShade);
-    public EditorSubthemes PageTitleSubthemeTyped => Enum<EditorSubthemes>.GetValueByDescription(this.FurniturePageTitleSubtheme);
-    public EditorThemeShades PageTitleThemeShadeTyped => Enum<EditorThemeShades>.GetValueByDescription(this.FurniturePageTitleThemeShade);
-    public LogoRatios FurnitureLogoRatioTyped => Enum<LogoRatios>.GetValueByDescription(this.FurnitureLogoRatio);
+    public FurntitureStatuses FurnitureStatusTyped => FurntitureStatuses.ParseByDescription(this.FurnitureStatus);
+    public BreadcrumbStatuses BreadcrumbStatusTyped => BreadcrumbStatuses.ParseByDescription(this.FurnitureBreadcrumbStatus);
+    public EditorSubthemes HeaderSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurnitureHeaderSubtheme);
+    public EditorThemeShades HeaderThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurnitureHeaderThemeShade);
+    public EditorSubthemes FooterSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurnitureFooterSubtheme);
+    public EditorThemeShades FooterThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurnitureFooterThemeShade);
+    public EditorSubthemes BreadcrumbSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurnitureBreadcrumbSubtheme);
+    public EditorThemeShades BreadcrumbThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurnitureBreadcrumbThemeShade);
+    public EditorSubthemes PageTitleSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurniturePageTitleSubtheme);
+    public EditorThemeShades PageTitleThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurniturePageTitleThemeShade);
+    public LogoRatios FurnitureLogoRatioTyped => LogoRatios.ParseByDescription(this.FurnitureLogoRatio);
     public double FurnitureLogoRatioCalculated => ((double)FurnitureLogoRatioTyped) / 360.0;
-    public HeaderMenuPositions FurnitureHeaderMenuPositionTyped => Enum<HeaderMenuPositions>.GetValueByDescription(this.FurnitureHeaderMenuPosition);
+    public HeaderMenuPositions FurnitureHeaderMenuPositionTyped => HeaderMenuPositions.ParseByDescription(this.FurnitureHeaderMenuPosition);
 }

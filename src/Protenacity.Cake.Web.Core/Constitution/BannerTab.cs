@@ -10,5 +10,5 @@ public partial interface IBannerTab
 
 public partial class BannerTab
 {
-    public BannerStatuses BannerStatusTyped => Enum<BannerStatuses>.GetValueByDescription(this.BannerStatus);
+    public BannerStatuses BannerStatusTyped => BannerStatuses.ParseByDescription(this.BannerStatus);
 }

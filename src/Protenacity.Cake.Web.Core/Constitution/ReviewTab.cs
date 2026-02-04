@@ -11,5 +11,5 @@ public partial interface IReviewTab
 
 public partial class ReviewTab
 {
-    public ReviewStatuses ReviewStatusTyped => Enum<ReviewStatuses>.GetValueByDescription(this.ReviewStatus);
+    public ReviewStatuses ReviewStatusTyped => ReviewStatuses.ParseByDescription(this.ReviewStatus);
 }

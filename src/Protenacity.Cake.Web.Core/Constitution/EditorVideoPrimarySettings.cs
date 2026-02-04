@@ -5,8 +5,8 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorVideoPrimarySettings
 {
-    public EditorVideoRatios RatioTyped => Enum<EditorVideoRatios>.GetValueByDescription(this.Ratio);
-    //public EditorTextColors TextColorTyped => Enum<EditorTextColors>.GetValueByDescription(this.TextColor);
-    public EditorSubthemes SubthemeTyped => Enum<EditorSubthemes>.GetValueByDescription(this.Subtheme);
-    public EditorThemeShades ThemeShadeTyped => Enum<EditorThemeShades>.GetValueByDescription(this.ThemeShade);
+    public EditorVideoRatios RatioTyped => EditorVideoRatios.ParseByDescription(this.Ratio);
+    //public EditorTextColors TextColorTyped => EditorTextColors.ParseByDescription(this.TextColor);
+    public EditorSubthemes SubthemeTyped => EditorSubthemes.ParseByDescription(this.Subtheme);
+    public EditorThemeShades ThemeShadeTyped => EditorThemeShades.ParseByDescription(this.ThemeShade);
 }

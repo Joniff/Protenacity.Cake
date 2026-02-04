@@ -14,8 +14,8 @@ internal class CategoryHeaderDataNotifications : NotificationBase<ContentSavingN
         foreach (var entity in notification.SavedEntities.Where(n => n.ContentType.Alias == CategoryHeaderData.ModelTypeAlias))
         {
             SetAlias(entity, typeof(CategoryHeaderData), nameof(CategoryHeaderData.HeadingDescriptionStatus), 
-                Enum<CategoryHeadingDescriptionStatuses>.GetDescriptionByValue(CategoryHeadingDescriptionStatuses.Inherit), 
-                Enum<CategoryHeadingDescriptionStatuses>.GetDescriptionByValue(CategoryHeadingDescriptionStatuses.Inherit));
+                CategoryHeadingDescriptionStatuses.Inherit.Description, 
+                CategoryHeadingDescriptionStatuses.Inherit.Description);
         }
     }
 }

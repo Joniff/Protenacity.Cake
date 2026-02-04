@@ -11,5 +11,5 @@ public partial interface ISeoTab
 
 public partial class SeoTab
 {
-    public SeoStatuses SeoStatusTyped => Enum<SeoStatuses>.GetValueByDescription(this.SeoStatus);
+    public SeoStatuses SeoStatusTyped => SeoStatuses.ParseByDescription(this.SeoStatus);
 }

@@ -16,7 +16,7 @@ public partial interface IEditorListBaseSettings
 
 public partial class EditorListBaseSettings
 {
-    //public EditorCardStyleImages DefaultStyleImageTyped => Enum<EditorCardStyleImages>.GetValueByDescription(this..StyleImage);
+    //public EditorCardStyleImages DefaultStyleImageTyped => EditorCardStyleImages.ParseByDescription(this..StyleImage);
 
     //public EditorCardStyleHeaders DefaultStyleHeaderTyped { get; }
 

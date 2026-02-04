@@ -10,5 +10,5 @@ public partial interface IEditorOrderSettings
 
 public partial class EditorOrderSettings
 {
-    public EditorOrders OrderTyped => Enum<EditorOrders>.GetValueByDescription(this.Order);
+    public EditorOrders OrderTyped => EditorOrders.ParseByDescription(this.Order);
 }

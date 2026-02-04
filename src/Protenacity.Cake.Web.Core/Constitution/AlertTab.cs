@@ -12,6 +12,6 @@ public partial interface IAlertTab
 
 public partial class AlertTab
 {
-    public AlertStatuses AlertStatusTyped => Enum<AlertStatuses>.GetValueByDescription(this.AlertStatus);
-    public AlertTypes AlertTypeTyped => Enum<AlertTypes>.GetValueByDescription(this.AlertType);
+    public AlertStatuses AlertStatusTyped => AlertStatuses.ParseByDescription(this.AlertStatus);
+    public AlertTypes AlertTypeTyped => AlertTypes.ParseByDescription(this.AlertType);
 }

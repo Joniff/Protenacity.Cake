@@ -131,7 +131,7 @@ public class ReviewSearchBackgroundTask(
 
         while (Valid(current))
         {
-            var status = Cake.Web.Core.Extensions.Enum<ReviewStatuses>.GetValueByDescription(current.GetValue<string>(typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.ReviewStatus))));
+            var status = ReviewStatuses.ParseByDescription(current.GetValue<string>(typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.ReviewStatus))));
             switch (status)
             {
                 case ReviewStatuses.Enable:
@@ -173,7 +173,7 @@ public class ReviewSearchBackgroundTask(
             return new Tuple<DateTime, string>(DateTime.MinValue, name);
         }
 
-        var status = Cake.Web.Core.Extensions.Enum<ReviewStatuses>.GetValueByDescription(current.GetValue<string>(typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.ReviewStatus))));
+        var status = ReviewStatuses.ParseByDescription(current.GetValue<string>(typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.ReviewStatus))));
         var reviewDate = parentReviewDate;
         if (status == ReviewStatuses.Inherit)
         {

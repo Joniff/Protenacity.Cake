@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class RedirectPage
 {
-    public SeoStatuses SeoStatusTyped => Enum<SeoStatuses>.GetValueByDescription(this.SeoStatus);
+    public SeoStatuses SeoStatusTyped => SeoStatuses.ParseByDescription(this.SeoStatus);
 }

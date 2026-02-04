@@ -42,7 +42,7 @@ public class TextBlockIconTextViewComponent : ThemeViewComponent
             LinkUrl = url,
             LinkTarget = string.IsNullOrWhiteSpace(content.Link?.Target)
                 ? ActionTargets.CurrentTab
-                : Enum<ActionTargets>.GetValueByDescription(content.Link?.Target)
+                : ActionTargets.ParseByDescription(content.Link?.Target)
         });
     }
 }

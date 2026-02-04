@@ -5,6 +5,6 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorTimeslot
 {
-    public EditorDayOfWeek DayTyped => Enum<EditorDayOfWeek>.GetValueByDescription(this.Day);
+    public EditorDayOfWeek DayTyped => EditorDayOfWeek.ParseByDescription(this.Day);
 
 }

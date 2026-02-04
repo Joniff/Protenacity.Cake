@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorTextBlockField
 {
-    public EditorTextFieldTypes FieldTyped => Enum<EditorTextFieldTypes>.GetValueByDescription(this.Field);
+    public EditorTextFieldTypes FieldTyped => EditorTextFieldTypes.ParseByDescription(this.Field);
 }

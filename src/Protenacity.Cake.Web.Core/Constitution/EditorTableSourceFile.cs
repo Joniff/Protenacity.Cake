@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorTableSourceFile
 {
-    public EditorTableSourceFileSeparators SeparatorTyped => Enum<EditorTableSourceFileSeparators>.GetValueByDescription(this.Separator);
+    public EditorTableSourceFileSeparators SeparatorTyped => EditorTableSourceFileSeparators.ParseByDescription(this.Separator);
 }

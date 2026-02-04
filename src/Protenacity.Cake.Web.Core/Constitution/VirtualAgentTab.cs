@@ -10,5 +10,5 @@ public partial interface IVirtualAgentTab
 
 public partial class VirtualAgentTab
 {
-    public VirtualAgentStatuses VirtualAgentStatusTyped => Enum<VirtualAgentStatuses>.GetValueByDescription(this.VirtualAgentStatus);
+    public VirtualAgentStatuses VirtualAgentStatusTyped => VirtualAgentStatuses.ParseByDescription(this.VirtualAgentStatus);
 }

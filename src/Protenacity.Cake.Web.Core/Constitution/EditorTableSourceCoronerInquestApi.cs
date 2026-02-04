@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorTableSourceCoronerInquestApi
 {
-    public EditorCoronerInquestApiStages StageTyped => Enum<EditorCoronerInquestApiStages>.GetValueByDescription(this.Stage);
+    public EditorCoronerInquestApiStages StageTyped => EditorCoronerInquestApiStages.ParseByDescription(this.Stage);
 }

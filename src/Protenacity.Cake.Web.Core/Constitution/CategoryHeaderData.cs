@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class CategoryHeaderData
 {
-    public CategoryHeadingDescriptionStatuses HeadingDescriptionStatusTyped => Enum<CategoryHeadingDescriptionStatuses>.GetValueByDescription(this.HeadingDescriptionStatus);
+    public CategoryHeadingDescriptionStatuses HeadingDescriptionStatusTyped => CategoryHeadingDescriptionStatuses.ParseByDescription(this.HeadingDescriptionStatus);
 }

@@ -10,5 +10,5 @@ public partial interface ISubfooterTab
 
 public partial class SubfooterTab
 {
-    public SubfooterStatuses SubfooterStatusTyped => Enum<SubfooterStatuses>.GetValueByDescription(this.SubfooterStatus);
+    public SubfooterStatuses SubfooterStatusTyped => SubfooterStatuses.ParseByDescription(this.SubfooterStatus);
 }

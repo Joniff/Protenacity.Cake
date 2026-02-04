@@ -11,6 +11,6 @@ public partial interface IEditorTabsEmbeddedSettings
 
 public partial class EditorTabsEmbeddedSettings
 {
-    public EditorTabStripPlacements PlacementTyped => Enum<EditorTabStripPlacements>.GetValueByDescription(this.Placement);
-    public EditorTabStripStyles StylesTyped => Enum<EditorTabStripStyles>.GetValueByDescription(this.Style);
+    public EditorTabStripPlacements PlacementTyped => EditorTabStripPlacements.ParseByDescription(this.Placement);
+    public EditorTabStripStyles StylesTyped => EditorTabStripStyles.ParseByDescription(this.Style);
 }

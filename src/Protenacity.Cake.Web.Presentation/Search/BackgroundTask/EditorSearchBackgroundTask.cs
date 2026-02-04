@@ -129,7 +129,7 @@ public class EditorSearchBackgroundTask(
 
         while (Valid(current))
         {
-            var status = Web.Core.Extensions.Enum<SeoStatuses>.GetValueByDescription(current.GetValue<string>(typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.SeoStatus))));
+            var status = SeoStatuses.ParseByDescription(current.GetValue<string>(typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.SeoStatus))));
             if (status != SeoStatuses.Inherit)
             {
                 return status;
@@ -149,7 +149,7 @@ public class EditorSearchBackgroundTask(
             return parentStatus;
         }
 
-        var status = Web.Core.Extensions.Enum<SeoStatuses>.GetValueByDescription(current.GetValue<string>(typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.SeoStatus))));
+        var status = SeoStatuses.ParseByDescription(current.GetValue<string>(typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.SeoStatus))));
         if (status == SeoStatuses.Inherit)
         {
             status = parentStatus;

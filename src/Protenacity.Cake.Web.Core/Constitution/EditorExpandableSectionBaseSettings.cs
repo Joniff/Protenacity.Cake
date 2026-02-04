@@ -12,7 +12,7 @@ public partial interface IEditorExpandableSectionBaseSettings
 
 public partial class EditorExpandableSectionBaseSettings
 {
-    public EditorExpandableSectionCollapseSizeUnits CollapsedSizeUnitTyped => Enum<EditorExpandableSectionCollapseSizeUnits>.GetValueByDescription(this.CollapsedSizeUnit);
-    public EditorExpandableSectionInitialStates InitialStateTyped => Enum<EditorExpandableSectionInitialStates>.GetValueByDescription(this.InitialState);
-    public EditorExpandableSectionExpandCollapseMethods ExpandCollapseMethodTyped => Enum<EditorExpandableSectionExpandCollapseMethods>.GetValueByDescription(this.ExpandCollapseMethod);
+    public EditorExpandableSectionCollapseSizeUnits CollapsedSizeUnitTyped => EditorExpandableSectionCollapseSizeUnits.ParseByDescription(this.CollapsedSizeUnit);
+    public EditorExpandableSectionInitialStates InitialStateTyped => EditorExpandableSectionInitialStates.ParseByDescription(this.InitialState);
+    public EditorExpandableSectionExpandCollapseMethods ExpandCollapseMethodTyped => EditorExpandableSectionExpandCollapseMethods.ParseByDescription(this.ExpandCollapseMethod);
 }

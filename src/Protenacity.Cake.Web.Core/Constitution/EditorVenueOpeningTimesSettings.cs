@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorOpeningTimesSettings
 {
-    //public EditorTextColors TextColorTyped => Enum<EditorTextColors>.GetValueByDescription(this.TextColor);
+    //public EditorTextColors TextColorTyped => EditorTextColors.ParseByDescription(this.TextColor);
 }

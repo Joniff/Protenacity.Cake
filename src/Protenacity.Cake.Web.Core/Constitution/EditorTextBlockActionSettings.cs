@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorTextBlockActionSettings
 {
-    public ActionStyles StyleActionTyped => Enum<ActionStyles>.GetValueByDescription(this.StyleAction);
+    public ActionStyles StyleActionTyped => ActionStyles.ParseByDescription(this.StyleAction);
 }

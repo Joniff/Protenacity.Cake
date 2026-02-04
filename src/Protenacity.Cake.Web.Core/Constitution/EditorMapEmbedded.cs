@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorMapEmbedded
 {
-    public EditorMapTypes MapTypeTyped => Enum<EditorMapTypes>.GetValueByDescription(this.MapType);
+    public EditorMapTypes MapTypeTyped => EditorMapTypes.ParseByDescription(this.MapType);
 }

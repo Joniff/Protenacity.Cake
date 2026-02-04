@@ -10,5 +10,5 @@ public partial interface IEditorMapBase
 
 public partial class EditorMapBase
 {
-    public EditorMapTypes MapTypeTyped => Enum<EditorMapTypes>.GetValueByDescription(this.MapType);
+    public EditorMapTypes MapTypeTyped => EditorMapTypes.ParseByDescription(this.MapType);
 }

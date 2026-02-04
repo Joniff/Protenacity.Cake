@@ -10,5 +10,5 @@ public partial interface IEditorPanelName
 
 public partial class EditorPanelName
 {
-    public EditorNamedIcons PanelIconTyped => Enum<EditorNamedIcons>.GetValueByDescription(this.PanelIcon);
+    public EditorNamedIcons PanelIconTyped => EditorNamedIcons.ParseByDescription(this.PanelIcon);
 }

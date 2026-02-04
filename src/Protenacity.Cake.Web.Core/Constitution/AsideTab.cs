@@ -10,5 +10,5 @@ public partial interface IAsideTab
 
 public partial class AsideTab
 {
-    public AsideStatuses AsideStatusTyped => Enum<AsideStatuses>.GetValueByDescription(this.AsideStatus);
+    public AsideStatuses AsideStatusTyped => AsideStatuses.ParseByDescription(this.AsideStatus);
 }
