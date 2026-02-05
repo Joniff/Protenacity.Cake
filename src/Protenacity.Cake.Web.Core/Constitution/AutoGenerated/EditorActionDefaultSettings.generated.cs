@@ -29,8 +29,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Default Action Alignment</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string StyleActionAlignment { get; }
+		global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments StyleActionAlignment { get; }
 
 		/// <summary>Default Action Click Area</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -86,14 +85,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Default Action Alignment: Location of Button or Link. Absolute = Will position over the top of other items (if applicable). Relative = Will try and make other items flow around it (if applicable).
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleActionAlignment")]
-		public virtual string StyleActionAlignment => GetStyleActionAlignment(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments StyleActionAlignment => GetStyleActionAlignment(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Action Alignment</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetStyleActionAlignment(IEditorActionDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "styleActionAlignment");
+		public static global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments GetStyleActionAlignment(IEditorActionDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments>(publishedValueFallback, "styleActionAlignment");
 
 		///<summary>
 		/// Default Action Click Area: Which area can be clicked

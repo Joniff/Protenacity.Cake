@@ -26,7 +26,7 @@ public class ActionViewComponent : ViewComponent
             action = new ActionViewModel
             {
                 Style = settings?.StyleActionTyped ?? ActionStyles.Link,
-                Alignment = settings?.StyleActionAlignmentTyped ?? ActionStyleAlignments.RightAbsolute,
+                Alignment = (settings?.StyleActionAlignment ?? ActionStyleAlignments.Unset) == ActionStyleAlignments.Unset ? ActionStyleAlignments.RightAbsolute : settings!.StyleActionAlignment,
                 Name = new HtmlEncodedString(block?.Link?.Name ?? block?.Link?.Url ?? ""),
                 Target = string.IsNullOrWhiteSpace(block?.Link?.Target) 
                     ? ActionTargets.CurrentTab 

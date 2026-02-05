@@ -61,9 +61,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Default Action Alignment: Location of Button or Link. Absolute = Will position over the top of other items (if applicable). Relative = Will try and make other items flow around it (if applicable).
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleActionAlignment")]
-		public virtual string StyleActionAlignment => global::Protenacity.Cake.Web.Core.Constitution.EditorActionDefaultSettings.GetStyleActionAlignment(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments StyleActionAlignment => global::Protenacity.Cake.Web.Core.Constitution.EditorActionDefaultSettings.GetStyleActionAlignment(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Action Click Area: Which area can be clicked

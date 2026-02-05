@@ -42,9 +42,11 @@ public abstract class ThemeViewComponent
         ? content.Defaults.CardStyleActionClickArea
         : ((IEditorActionEmbeddedSettings)content.Block.Settings).StyleActionClickAreaTyped;
 
-    public ActionStyleAlignments StyleActionAlignment([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleActionAlignment)
-        ? content.Defaults.CardStyleActionAlignment
-        : ((IEditorActionEmbeddedSettings)content.Block.Settings).StyleActionAlignmentTyped;
+    public ActionStyleAlignments StyleActionAlignment([DisallowNull] IEditorContent content)
+    {
+        var typed = (content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleActionAlignment ?? ActionStyleAlignments.Unset;
+        return typed != ActionStyleAlignments.Unset ? typed : content.Defaults.CardStyleActionAlignment;
+    }
 
     public bool StyleShowClickArrow([DisallowNull] IEditorContent content) => (content.Block?.Settings as IEditorCardBaseSettings)?.ShowClickArrow == true;
 

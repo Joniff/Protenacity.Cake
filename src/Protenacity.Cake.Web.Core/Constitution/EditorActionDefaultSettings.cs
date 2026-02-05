@@ -7,12 +7,10 @@ public partial interface IEditorActionDefaultSettings
 {
     ActionStyles StyleActionTyped { get; }
     ActionStyleClickAreas StyleActionClickAreaTyped { get; }
-    ActionStyleAlignments StyleActionAlignmentTyped { get; }
 }
 
 public partial class EditorActionDefaultSettings
 {
-    public ActionStyles StyleActionTyped => ActionStyles.ParseByDescription(this.StyleAction);
-    public ActionStyleClickAreas StyleActionClickAreaTyped => ActionStyleClickAreas.ParseByDescription(this.StyleActionClickArea);
-    public ActionStyleAlignments StyleActionAlignmentTyped => ActionStyleAlignments.ParseByDescription(this.StyleActionAlignment);
+    public ActionStyles StyleActionTyped => ActionStyles.Button; // QWERTY
+    public ActionStyleClickAreas StyleActionClickAreaTyped => ActionStyleClickAreas.Action;
 }

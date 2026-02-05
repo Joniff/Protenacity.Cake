@@ -56,13 +56,5 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("api")]
 		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent Api => this.Value<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent>(_publishedValueFallback, "api");
-
-		///<summary>
-		/// Stage: Which stage is this request 
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("stage")]
-		public virtual string Stage => this.Value<string>(_publishedValueFallback, "stage");
 	}
 }

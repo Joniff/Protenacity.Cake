@@ -13,7 +13,6 @@ public partial class EditorChildNodesSettings
     public EditorCardStyleTexts StyleTextTyped => EditorCardStyleTexts.ParseByDescription(this.StyleText);
     public ActionStyles StyleActionTyped => ActionStyles.ParseByDescription(this.StyleAction);
     public ActionStyleClickAreas StyleActionClickAreaTyped => ActionStyleClickAreas.ParseByDescription(this.StyleActionClickArea);
-    public ActionStyleAlignments StyleActionAlignmentTyped => ActionStyleAlignments.ParseByDescription(this.StyleActionAlignment);
     public EditorOrders OrderTyped => EditorOrders.ParseByDescription(this.Order);
     public EditorSubthemes SubthemeTyped => EditorSubthemes.ParseByDescription(this.Subtheme);
     public EditorThemeShades ThemeShadeTyped => EditorThemeShades.ParseByDescription(this.ThemeShade);

@@ -63,7 +63,6 @@ public class ListViewComponent(IEditorService editorService) : ViewComponent
             {
                 content.Defaults.CardStyleBorderColor = cardSettings.StyleCardBorderColor.Color;
             }
-
         }
 
         var actionSettings = content.Block?.Settings as IEditorActionDefaultSettings;
@@ -80,9 +79,9 @@ public class ListViewComponent(IEditorService editorService) : ViewComponent
                 content.Defaults.CardStyleActionClickArea = actionSettings.StyleActionClickAreaTyped;
             }
 
-            if (!string.IsNullOrWhiteSpace(actionSettings.StyleActionAlignment))
+            if (actionSettings.StyleActionAlignment != Core.Property.ActionStyleAlignments.Unset)
             {
-                content.Defaults.CardStyleActionAlignment = actionSettings.StyleActionAlignmentTyped;
+                content.Defaults.CardStyleActionAlignment = actionSettings.StyleActionAlignment;
             }
         }
 

@@ -1,13 +1,13 @@
-﻿using Protenacity.Cake.Web.Core.Extensions;
-using System.ComponentModel;
-using Umbraco.Cms.Core.Models.PublishedContent;
-using Umbraco.Cms.Core.PropertyEditors;
+﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
 public enum ActionStyleAlignments
 {
-    //   Put Right at top so that it is default
+    Unset = 0,
+
     [Description("Right Absolute")]
     RightAbsolute = 17,
 
@@ -34,22 +34,10 @@ public enum ActionStyleAlignments
     Centre = 4
 }
 
-public class ActionStyleAlignmentsValueConverter : IPropertyValueConverter
+public class ActionStyleAlignmentsValueConverter(IDataTypeService dataTypeService) 
+    : PropertyValueConverterBase<ActionStyleAlignments>(dataTypeService)
 {
-    public bool IsConverter(IPublishedPropertyType propertyType) => propertyType.EditorUiAlias == "UmbracoDayOfWeek";
-    public object? ConvertIntermediateToObject(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object? inter, bool preview) 
-        => ActionStyleAlignments.ParseByDescription(inter?.ToString());
-
-    public object ConvertIntermediateToXPath(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object inter, bool preview)
-    {
-        throw new NotImplementedException();
-    }
-
-    public object? ConvertSourceToIntermediate(IPublishedElement owner, IPublishedPropertyType propertyType, object? source, bool preview) => Enum.TryParse<DayOfWeek>(source?.ToString(), out DayOfWeek d) ? d : null;
-
-    public PropertyCacheLevel GetPropertyCacheLevel(IPublishedPropertyType propertyType) => PropertyCacheLevel.Element;
-    public bool? IsValue(object? value, PropertyValueLevel level) => Enum.TryParse<DayOfWeek>(value?.ToString(), out _);
-
-    Type IPropertyValueConverter.GetPropertyValueType(IPublishedPropertyType propertyType) => typeof(DayOfWeek);
-
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Editor Card Action Alignment";
+    public override ActionStyleAlignments DefaultValue => ActionStyleAlignments.Unset;
 }
