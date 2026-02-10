@@ -35,7 +35,7 @@ public class CardViewComponent(IViewService viewService,
             Name = new HtmlEncodedString(actionContent?.Link?.Name ?? actionContent?.Link?.Url ?? ""),
             Target = string.IsNullOrWhiteSpace(actionContent?.Link?.Target)
                 ? ActionTargets.CurrentTab
-                : ActionTargets.ParseByDescription(actionContent?.Link?.Target),
+                : ActionTargets.ParseByDescription(actionContent?.Link?.Target) ?? ActionTargets.CurrentTab,
             Url = actionContent?.Link?.Url,
             Subtheme = Subtheme(content),
             ThemeShade = ThemeShade(content),

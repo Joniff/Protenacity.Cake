@@ -4,5 +4,5 @@ using Protenacity.Cake.Web.Core.Property;
 namespace Protenacity.Cake.Web.Core.Constitution;
 public partial class EditorSelectMediaAsideSettings
 {
-    public EditorOrders OrderTyped => EditorOrders.ParseByDescription(this.Order);
+    public EditorOrders OrderTyped => EditorOrders.ParseByDescription(this.Order) ?? EditorOrders.Default ;
 }

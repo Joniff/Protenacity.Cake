@@ -10,5 +10,5 @@ public partial interface ISubfooterTab
 
 public partial class SubfooterTab
 {
-    public SubfooterStatuses SubfooterStatusTyped => SubfooterStatuses.ParseByDescription(this.SubfooterStatus);
+    public SubfooterStatuses SubfooterStatusTyped => SubfooterStatuses.ParseByDescription(this.SubfooterStatus) ?? SubfooterStatuses.Inherit;
 }

@@ -10,5 +10,5 @@ public partial interface IEditorOrderSettings
 
 public partial class EditorOrderSettings
 {
-    public EditorOrders OrderTyped => EditorOrders.ParseByDescription(this.Order);
+    public EditorOrders OrderTyped => EditorOrders.ParseByDescription(this.Order) ?? EditorOrders.Default;
 }

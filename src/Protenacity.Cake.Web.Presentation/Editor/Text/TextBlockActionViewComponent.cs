@@ -28,7 +28,7 @@ public class TextBlockActionViewComponent : ThemeViewComponent
             Name = new HtmlEncodedString(actionContent?.Name ?? actionContent?.Url ?? ""),
             Target = string.IsNullOrWhiteSpace(actionContent?.Target)
             ? ActionTargets.CurrentTab
-            : ActionTargets.ParseByDescription(actionContent?.Target),
+            : ActionTargets.ParseByDescription(actionContent?.Target) ?? ActionTargets.CurrentTab,
             Url = actionContent?.Url,
             Alignment = ActionStyleAlignments.LeftRelative,
             Style = settings?.StyleActionTyped ?? ActionStyles.Button

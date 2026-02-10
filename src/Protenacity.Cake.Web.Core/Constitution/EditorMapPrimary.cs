@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorMapPrimary
 {
-    public EditorMapTypes MapTypeTyped => EditorMapTypes.ParseByDescription(this.MapType);
+    public EditorMapTypes MapTypeTyped => EditorMapTypes.ParseByDescription(this.MapType) ?? EditorMapTypes.Standard;
 }

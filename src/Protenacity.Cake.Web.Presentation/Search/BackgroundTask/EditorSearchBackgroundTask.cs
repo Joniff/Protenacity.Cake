@@ -132,7 +132,7 @@ public class EditorSearchBackgroundTask(
             var status = SeoStatuses.ParseByDescription(current.GetValue<string>(typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.SeoStatus))));
             if (status != SeoStatuses.Inherit)
             {
-                return status;
+                return status ?? SeoStatuses.Enable;
             }
             current = contentService.GetById(current.ParentId);
         }
@@ -162,7 +162,7 @@ public class EditorSearchBackgroundTask(
         {
             index.IndexItems(editorIndexValueSetBuilder.GetValueSets(current));
         }
-        return status;
+        return status ?? SeoStatuses.Enable;
     }
 
     public bool ExectionOfAllContentNow() => ExecuteNow(AllContent);

@@ -30,7 +30,7 @@ public class ActionViewComponent : ViewComponent
                 Name = new HtmlEncodedString(block?.Link?.Name ?? block?.Link?.Url ?? ""),
                 Target = string.IsNullOrWhiteSpace(block?.Link?.Target) 
                     ? ActionTargets.CurrentTab 
-                    : ActionTargets.ParseByDescription(block?.Link?.Target),
+                    : ActionTargets.ParseByDescription(block?.Link?.Target) ?? ActionTargets.CurrentTab,
                 Url = block?.Link?.Url,
                 Subtheme = backgroundSettings?.SubthemeTyped ?? EditorSubthemes.Inherit,
                 ThemeShade = backgroundSettings?.ThemeShadeTyped ?? EditorThemeShades.Inherit,

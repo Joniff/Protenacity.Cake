@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorTextBlockIconText
 {
-    public EditorNamedIcons IconTyped => EditorNamedIcons.ParseByDescription(this.Icon);
+    public EditorNamedIcons IconTyped => EditorNamedIcons.ParseByDescription(this.Icon) ?? EditorNamedIcons.Asterisk;
 }

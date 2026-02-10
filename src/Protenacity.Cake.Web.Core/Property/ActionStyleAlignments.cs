@@ -39,5 +39,4 @@ public class ActionStyleAlignmentsValueConverter(IDataTypeService dataTypeServic
 {
     public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
     public override string DataTypeName => "Editor Card Action Alignment";
-    public override ActionStyleAlignments DefaultValue => ActionStyleAlignments.Unset;
 }

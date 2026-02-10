@@ -22,17 +22,17 @@ public partial interface IFurnitureTab
 
 public partial class FurnitureTab
 {
-    public FurntitureStatuses FurnitureStatusTyped => FurntitureStatuses.ParseByDescription(this.FurnitureStatus);
-    public BreadcrumbStatuses BreadcrumbStatusTyped => BreadcrumbStatuses.ParseByDescription(this.FurnitureBreadcrumbStatus);
-    public EditorSubthemes HeaderSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurnitureHeaderSubtheme);
-    public EditorThemeShades HeaderThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurnitureHeaderThemeShade);
-    public EditorSubthemes FooterSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurnitureFooterSubtheme);
-    public EditorThemeShades FooterThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurnitureFooterThemeShade);
-    public EditorSubthemes BreadcrumbSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurnitureBreadcrumbSubtheme);
-    public EditorThemeShades BreadcrumbThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurnitureBreadcrumbThemeShade);
-    public EditorSubthemes PageTitleSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurniturePageTitleSubtheme);
-    public EditorThemeShades PageTitleThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurniturePageTitleThemeShade);
-    public LogoRatios FurnitureLogoRatioTyped => LogoRatios.ParseByDescription(this.FurnitureLogoRatio);
+    public FurntitureStatuses FurnitureStatusTyped => FurntitureStatuses.ParseByDescription(this.FurnitureStatus) ?? FurntitureStatuses.Inherit;
+    public BreadcrumbStatuses BreadcrumbStatusTyped => BreadcrumbStatuses.ParseByDescription(this.FurnitureBreadcrumbStatus) ?? BreadcrumbStatuses.Inherit;
+    public EditorSubthemes HeaderSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurnitureHeaderSubtheme) ?? EditorSubthemes.Inherit;
+    public EditorThemeShades HeaderThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurnitureHeaderThemeShade) ?? EditorThemeShades.Inherit;
+    public EditorSubthemes FooterSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurnitureFooterSubtheme) ?? EditorSubthemes.Inherit;
+    public EditorThemeShades FooterThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurnitureFooterThemeShade) ?? EditorThemeShades.Inherit;
+    public EditorSubthemes BreadcrumbSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurnitureBreadcrumbSubtheme) ?? EditorSubthemes.Inherit;
+    public EditorThemeShades BreadcrumbThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurnitureBreadcrumbThemeShade) ?? EditorThemeShades.Inherit;
+    public EditorSubthemes PageTitleSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurniturePageTitleSubtheme) ?? EditorSubthemes.Inherit;
+    public EditorThemeShades PageTitleThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurniturePageTitleThemeShade) ?? EditorThemeShades.Inherit;
+    public LogoRatios FurnitureLogoRatioTyped => LogoRatios.ParseByDescription(this.FurnitureLogoRatio) ?? LogoRatios.Ratio1x2;
     public double FurnitureLogoRatioCalculated => ((double)FurnitureLogoRatioTyped) / 360.0;
-    public HeaderMenuPositions FurnitureHeaderMenuPositionTyped => HeaderMenuPositions.ParseByDescription(this.FurnitureHeaderMenuPosition);
+    public HeaderMenuPositions FurnitureHeaderMenuPositionTyped => HeaderMenuPositions.ParseByDescription(this.FurnitureHeaderMenuPosition) ?? HeaderMenuPositions.InsideRight;
 }

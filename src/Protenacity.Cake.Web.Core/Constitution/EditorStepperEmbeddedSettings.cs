@@ -10,5 +10,5 @@ public partial interface IEditorStepperEmbeddedSettings
 
 public partial class EditorStepperEmbeddedSettings
 {
-    public EditorStepperOrientation OrientationTyped => EditorStepperOrientation.ParseByDescription(this.Orientation);
+    public EditorStepperOrientation OrientationTyped => EditorStepperOrientation.ParseByDescription(this.Orientation) ?? EditorStepperOrientation.Vertical;
 }

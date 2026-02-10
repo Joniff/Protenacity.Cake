@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorHeroBannerPanelSettings
 {
-    public EditorHeroBannerTextAlignments AlignmentTyped => EditorHeroBannerTextAlignments.ParseByDescription(this.Alignment);
+    public EditorHeroBannerTextAlignments AlignmentTyped => EditorHeroBannerTextAlignments.ParseByDescription(this.Alignment) ?? EditorHeroBannerTextAlignments.Left;
 }

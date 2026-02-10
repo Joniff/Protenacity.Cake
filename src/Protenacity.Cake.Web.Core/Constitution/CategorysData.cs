@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class CategorysData
 {
-    public CategoryHeadingDescriptionStatuses HeadingDescriptionStatusTyped => CategoryHeadingDescriptionStatuses.ParseByDescription(this.HeadingDescriptionStatus);
+    public CategoryHeadingDescriptionStatuses HeadingDescriptionStatusTyped => CategoryHeadingDescriptionStatuses.ParseByDescription(this.HeadingDescriptionStatus) ?? CategoryHeadingDescriptionStatuses.Hide;
 }

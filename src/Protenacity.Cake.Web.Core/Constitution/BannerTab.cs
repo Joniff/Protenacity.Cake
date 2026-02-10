@@ -10,5 +10,5 @@ public partial interface IBannerTab
 
 public partial class BannerTab
 {
-    public BannerStatuses BannerStatusTyped => BannerStatuses.ParseByDescription(this.BannerStatus);
+    public BannerStatuses BannerStatusTyped => BannerStatuses.ParseByDescription(this.BannerStatus) ?? BannerStatuses.Hide;
 }

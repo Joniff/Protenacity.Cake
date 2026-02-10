@@ -10,5 +10,5 @@ public partial interface IEditorAccordionEmbeddedSettings
 
 public partial class EditorAccordionEmbeddedSettings
 {
-    public EditorAccordionInitialStates InitialStateTyped => EditorAccordionInitialStates.ParseByDescription(this.InitialState);
+    public EditorAccordionInitialStates InitialStateTyped => EditorAccordionInitialStates.ParseByDescription(this.InitialState) ?? EditorAccordionInitialStates.AllCollapsed;
 }

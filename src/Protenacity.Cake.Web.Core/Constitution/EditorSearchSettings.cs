@@ -5,8 +5,8 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorSearchPrimarySettings
 {
-    public EditorSubthemes SubthemeTyped => EditorSubthemes.ParseByDescription(this.Subtheme);
-    public EditorThemeShades ThemeShadeTyped => EditorThemeShades.ParseByDescription(this.ThemeShade);
-    public EditorSearchResultOutputs ResultOutputTyped => EditorSearchResultOutputs.ParseByDescription(this.ResultOutput);
-    public EditorBorderEdges BorderEdgesTyped => EditorBorderEdges.ParseByDescription(this.BorderEdges, EditorBorderEdges.All);
+    public EditorSubthemes SubthemeTyped => EditorSubthemes.ParseByDescription(this.Subtheme) ?? EditorSubthemes.Inherit;
+    public EditorThemeShades ThemeShadeTyped => EditorThemeShades.ParseByDescription(this.ThemeShade) ?? EditorThemeShades.Inherit;
+    public EditorSearchResultOutputs ResultOutputTyped => EditorSearchResultOutputs.ParseByDescription(this.ResultOutput) ?? EditorSearchResultOutputs.Abstract;
+    public EditorBorderEdges BorderEdgesTyped => EditorBorderEdges.ParseByDescription(this.BorderEdges, EditorBorderEdges.All) ?? EditorBorderEdges.Top;
 }

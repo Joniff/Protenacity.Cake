@@ -11,6 +11,6 @@ public partial interface IEditorTabsEmbeddedSettings
 
 public partial class EditorTabsEmbeddedSettings
 {
-    public EditorTabStripPlacements PlacementTyped => EditorTabStripPlacements.ParseByDescription(this.Placement);
-    public EditorTabStripStyles StylesTyped => EditorTabStripStyles.ParseByDescription(this.Style);
+    public EditorTabStripPlacements PlacementTyped => EditorTabStripPlacements.ParseByDescription(this.Placement) ?? EditorTabStripPlacements.Top;
+    public EditorTabStripStyles StylesTyped => EditorTabStripStyles.ParseByDescription(this.Style) ?? EditorTabStripStyles.Tabs;
 }

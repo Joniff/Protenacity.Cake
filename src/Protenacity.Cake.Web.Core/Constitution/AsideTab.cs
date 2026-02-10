@@ -10,5 +10,5 @@ public partial interface IAsideTab
 
 public partial class AsideTab
 {
-    public AsideStatuses AsideStatusTyped => AsideStatuses.ParseByDescription(this.AsideStatus);
+    public AsideStatuses AsideStatusTyped => AsideStatuses.ParseByDescription(this.AsideStatus) ?? AsideStatuses.Hide;
 }

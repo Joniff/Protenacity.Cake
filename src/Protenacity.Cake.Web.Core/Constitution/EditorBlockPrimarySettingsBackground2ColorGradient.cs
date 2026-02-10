@@ -10,5 +10,5 @@ public partial interface IEditorBlockPrimarySettingsBackground2ColorGradient
 
 public partial class EditorBlockPrimarySettingsBackground2ColorGradient
 {
-    public EditorGradientTypes GradientTypeTyped => EditorGradientTypes.ParseByDescription(this.GradientType);
+    public EditorGradientTypes GradientTypeTyped => EditorGradientTypes.ParseByDescription(this.GradientType) ?? EditorGradientTypes.Top;
 }

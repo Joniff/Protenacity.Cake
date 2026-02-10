@@ -10,5 +10,5 @@ public partial interface IEditorMapBase
 
 public partial class EditorMapBase
 {
-    public EditorMapTypes MapTypeTyped => EditorMapTypes.ParseByDescription(this.MapType);
+    public EditorMapTypes MapTypeTyped => EditorMapTypes.ParseByDescription(this.MapType) ?? EditorMapTypes.Standard;
 }

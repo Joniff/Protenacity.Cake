@@ -10,5 +10,5 @@ public partial interface IEditorBorderSettings
 
 public partial class EditorBorderSettings
 {
-    public EditorBorderEdges BorderEdgesTyped => EditorBorderEdges.ParseByDescription(this.BorderEdges, EditorBorderEdges.All);
+    public EditorBorderEdges BorderEdgesTyped => EditorBorderEdges.ParseByDescription(this.BorderEdges, EditorBorderEdges.All) ?? EditorBorderEdges.None;
 }
