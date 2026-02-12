@@ -358,9 +358,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Position: Where is the modal popup located within the window
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("cookieConsentModalPosition")]
-		public virtual string CookieConsentModalPosition => global::Protenacity.Cake.Web.Core.Constitution.CookieConsentTab.GetCookieConsentModalPosition(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.CookieConsentPositions CookieConsentModalPosition => global::Protenacity.Cake.Web.Core.Constitution.CookieConsentTab.GetCookieConsentModalPosition(this, _publishedValueFallback);
 
 		///<summary>
 		/// Reject All: Text on button that rejects all cookies except those that are deemed necessary for website function

@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -18,4 +20,11 @@ public enum EditorOrders
 
     [Description("Z to A")]
     ZtoA
+}
+
+public class EditorOrdersValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<EditorOrders>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Editor Order";
 }

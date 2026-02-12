@@ -33,43 +33,39 @@ internal class EditorPageNotifications(IContentService contentService) : Notific
             if (IsHomePage(entity))
             {
                 // Likely to be Home Page - stop any statuses being Inherit
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTheme), EditorThemes.Default.Description, EditorThemes.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageSubtheme), EditorSubthemes.Primary.Description, EditorSubthemes.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageThemeShade), EditorThemeShades.Light.Description, EditorThemeShades.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AlertStatus), AlertStatuses.Hide.Description, AlertStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AsideStatus), AsideStatuses.Hide.Description, AsideStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.BannerStatus), BannerStatuses.Hide.Description, BannerStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureStatus), FurntitureStatuses.Show.Description, FurntitureStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbStatus), BreadcrumbStatuses.Hide.Description, BreadcrumbStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SeoStatus), SeoStatuses.Disable.Description, SeoStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.ReviewStatus), SeoStatuses.Disable.Description, SeoStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SubfooterStatus), SubfooterStatuses.Hide.Description, SubfooterStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.VirtualAgentStatus), VirtualAgentStatuses.Disable.Description, VirtualAgentStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTheme), EditorThemes.Default.Description ?? throw new ArgumentNullException("Missing Description attribute"), EditorThemes.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageSubtheme), EditorSubthemes.Primary.Description ?? throw new ArgumentNullException("Missing Description attribute"), EditorSubthemes.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageThemeShade), EditorThemeShades.Light.Description ?? throw new ArgumentNullException("Missing Description attribute"), EditorThemeShades.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AlertStatus), AlertStatuses.Hide.Description ?? throw new ArgumentNullException("Missing Description attribute"), AlertStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AsideStatus), AsideStatuses.Hide.Description ?? throw new ArgumentNullException("Missing Description attribute"), AsideStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.BannerStatus), BannerStatuses.Hide.Description ?? throw new ArgumentNullException("Missing Description attribute"), BannerStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureStatus), FurntitureStatuses.Show.Description ?? throw new ArgumentNullException("Missing Description attribute"), FurntitureStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbStatus), BreadcrumbStatuses.Hide.Description ?? throw new ArgumentNullException("Missing Description attribute"), BreadcrumbStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SeoStatus), SeoStatuses.Disable.Description ?? throw new ArgumentNullException("Missing Description attribute"), SeoStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SubfooterStatus), SubfooterStatuses.Hide.Description ?? throw new ArgumentNullException("Missing Description attribute"), SubfooterStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
             }
             else
             {
                 // Set all statuses to Inherit if they blank
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTheme), EditorThemes.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageSubtheme), EditorSubthemes.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageThemeShade), EditorThemeShades.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AlertStatus), AlertStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AsideStatus), AsideStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.BannerStatus), BannerStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureStatus), FurntitureStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbStatus), BreadcrumbStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SeoStatus), SeoStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.ReviewStatus), ReviewStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SubfooterStatus), SubfooterStatuses.Inherit.Description);
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.VirtualAgentStatus), VirtualAgentStatuses.Inherit.Description);
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTheme), EditorThemes.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageSubtheme), EditorSubthemes.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageThemeShade), EditorThemeShades.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AlertStatus), AlertStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AsideStatus), AsideStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.BannerStatus), BannerStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureStatus), FurntitureStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbStatus), BreadcrumbStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SeoStatus), SeoStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.SubfooterStatus), SubfooterStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
             }
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureHeaderSubtheme), EditorSubthemes.Inherit.Description);
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureFooterSubtheme), EditorSubthemes.Inherit.Description);
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureHeaderThemeShade), EditorThemeShades.Inherit.Description);
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureFooterThemeShade), EditorThemeShades.Inherit.Description);
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbSubtheme), EditorThemeShades.Inherit.Description);
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbThemeShade), EditorThemeShades.Inherit.Description);
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurniturePageTitleSubtheme), EditorThemeShades.Inherit.Description);
-            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurniturePageTitleThemeShade), EditorThemeShades.Inherit.Description);
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureHeaderSubtheme), EditorSubthemes.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureFooterSubtheme), EditorSubthemes.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureHeaderThemeShade), EditorThemeShades.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureFooterThemeShade), EditorThemeShades.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbSubtheme), EditorThemeShades.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.FurnitureBreadcrumbThemeShade), EditorThemeShades.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTitleSubtheme), EditorThemeShades.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+            SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTitleThemeShade), EditorThemeShades.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
         }
     }
 }

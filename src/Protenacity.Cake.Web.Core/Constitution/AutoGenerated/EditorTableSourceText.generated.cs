@@ -61,8 +61,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Separator: Character used as a separator between fields. Not used for XLSX files
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("separator")]
-		public virtual string Separator => global::Protenacity.Cake.Web.Core.Constitution.EditorTableSourceFieldSeparator.GetSeparator(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorTableSourceFileSeparators Separator => global::Protenacity.Cake.Web.Core.Constitution.EditorTableSourceFieldSeparator.GetSeparator(this, _publishedValueFallback);
 	}
 }

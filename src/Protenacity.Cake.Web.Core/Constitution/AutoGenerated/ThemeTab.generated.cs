@@ -29,13 +29,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Theme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string PageTheme { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorThemes PageTheme { get; }
 
 		/// <summary>Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string PageThemeShade { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorThemeShades PageThemeShade { get; }
 	}
 
 	/// <summary>Theme Tab</summary>
@@ -86,26 +84,22 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Theme: Theme for this page. Inherit = Use same theme as parent page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageTheme")]
-		public virtual string PageTheme => GetPageTheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemes PageTheme => GetPageTheme(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Theme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetPageTheme(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "pageTheme");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorThemes GetPageTheme(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorThemes>(publishedValueFallback, "pageTheme");
 
 		///<summary>
 		/// Shade: Overall shade of page.  Inherit = Use same intensity as parent page. Light = Bright page with dark text. Dark = Dark page with light text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageThemeShade")]
-		public virtual string PageThemeShade => GetPageThemeShade(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades PageThemeShade => GetPageThemeShade(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetPageThemeShade(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "pageThemeShade");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorThemeShades GetPageThemeShade(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades>(publishedValueFallback, "pageThemeShade");
 	}
 }

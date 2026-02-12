@@ -13,9 +13,7 @@ public partial interface IFurnitureTab
     EditorThemeShades FooterThemeShadeTyped { get; }
     EditorSubthemes BreadcrumbSubthemeTyped { get; }
     EditorThemeShades BreadcrumbThemeShadeTyped { get; }
-    EditorSubthemes PageTitleSubthemeTyped { get; }
-    EditorThemeShades PageTitleThemeShadeTyped { get; }
-    LogoRatios FurnitureLogoRatioTyped { get; }
+    FurnitureLogoRatios FurnitureLogoRatioTyped { get; }
     double FurnitureLogoRatioCalculated { get; }
     HeaderMenuPositions FurnitureHeaderMenuPositionTyped { get; }
 }
@@ -30,9 +28,7 @@ public partial class FurnitureTab
     public EditorThemeShades FooterThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurnitureFooterThemeShade) ?? EditorThemeShades.Inherit;
     public EditorSubthemes BreadcrumbSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurnitureBreadcrumbSubtheme) ?? EditorSubthemes.Inherit;
     public EditorThemeShades BreadcrumbThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurnitureBreadcrumbThemeShade) ?? EditorThemeShades.Inherit;
-    public EditorSubthemes PageTitleSubthemeTyped => EditorSubthemes.ParseByDescription(this.FurniturePageTitleSubtheme) ?? EditorSubthemes.Inherit;
-    public EditorThemeShades PageTitleThemeShadeTyped => EditorThemeShades.ParseByDescription(this.FurniturePageTitleThemeShade) ?? EditorThemeShades.Inherit;
-    public LogoRatios FurnitureLogoRatioTyped => LogoRatios.ParseByDescription(this.FurnitureLogoRatio) ?? LogoRatios.Ratio1x2;
+    public FurnitureLogoRatios FurnitureLogoRatioTyped => FurnitureLogoRatios.ParseByDescription(this.FurnitureLogoRatio.ToString()) ?? FurnitureLogoRatios.Ratio1x2;
     public double FurnitureLogoRatioCalculated => ((double)FurnitureLogoRatioTyped) / 360.0;
     public HeaderMenuPositions FurnitureHeaderMenuPositionTyped => HeaderMenuPositions.ParseByDescription(this.FurnitureHeaderMenuPosition) ?? HeaderMenuPositions.InsideRight;
 }

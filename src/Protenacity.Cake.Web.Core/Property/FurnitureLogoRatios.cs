@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
 // Divide enum / 360 = ratio as a decimal value
-public enum LogoRatios
+public enum FurnitureLogoRatios
 {
     [Description("5:1")]
     Ratio5x1 = 360 * 5,
@@ -37,4 +39,11 @@ public enum LogoRatios
 
     [Description("1:2")]
     Ratio1x2 = 360 / 2,
+}
+
+public class FurnitureLogoRatiosValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<FurnitureLogoRatios>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Furniture Logo Ratio";
 }

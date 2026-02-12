@@ -13,7 +13,6 @@ public interface IViewService
     Uri CanonicalUri { get; }
     IFurnitureTab CurrentFurniture { get; }
     string CurrentFurnitureUrl { get; }
-    IFurnitureTab CurrentBreadcrumb { get; }
     string? Parse(string? text, IDictionary<string, string>? values = null);
     string? Parse(IHtmlEncodedString? text, IDictionary<string, string>? values = null);
     IDictionary<string, string> StandardParseValues { get; }
@@ -22,7 +21,6 @@ public interface IViewService
     ISeoViewModel CurrentSeo { get; }
     IBannerTab? CurrentBanner { get; }
     ISubfooterTab? CurrentSubfooter { get; }
-    VirtualAgentData? CurrentVirtualAgent { get; }
     string? CurrentSearchCriteria(string queryString);
     int? CurrentSearchPage { get; }
     int? CurrentSearchPageSize { get; }

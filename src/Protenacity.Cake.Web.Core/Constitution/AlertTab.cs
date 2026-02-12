@@ -13,5 +13,5 @@ public partial interface IAlertTab
 public partial class AlertTab
 {
     public AlertStatuses AlertStatusTyped => AlertStatuses.ParseByDescription(this.AlertStatus) ?? AlertStatuses.Inherit;
-    public AlertTypes AlertTypeTyped => AlertTypes.ParseByDescription(this.AlertType) ?? AlertTypes.Primary;
+    public AlertTypes AlertTypeTyped => AlertTypes.ParseByDescription(this.AlertType.ToString()) ?? AlertTypes.Primary;
 }

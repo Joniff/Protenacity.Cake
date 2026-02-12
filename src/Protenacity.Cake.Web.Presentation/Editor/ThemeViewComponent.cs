@@ -10,43 +10,32 @@ namespace Protenacity.Cake.Web.Presentation.Editor;
 public abstract class ThemeViewComponent
     : ViewComponent
 {
-    public EditorCardStyleImageLocations StyleImageLocation([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleImage)
-        ? content.Defaults.CardStyleImageLocation
-        : ((IEditorCardBaseSettings)content.Block.Settings).StyleImageLocationTyped;
+    public EditorCardStyleImageLocations StyleImageLocation([DisallowNull] IEditorContent content) => 
+        (content.Block?.Settings as IEditorCardBaseSettings)?.StyleImage ?? content.Defaults.CardStyleImageLocation;
 
-    public EditorCardStyleImageSizes StyleImageSize([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleImageSize)
-        ? content.Defaults.CardStyleImageSize
-        : ((IEditorCardBaseSettings)content.Block.Settings).StyleImageSizeTyped;
+    public EditorCardStyleImageSizes StyleImageSize([DisallowNull] IEditorContent content) =>
+        (content.Block?.Settings as IEditorCardBaseSettings)?.StyleImageSize ?? content.Defaults.CardStyleImageSize;
 
-    public EditorCardStyleHeaders StyleHeader([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleHeader)
-        ? content.Defaults.CardStyleHeader
-        : ((IEditorCardBaseSettings)content.Block.Settings).StyleHeaderTyped;
+    public EditorCardStyleHeaders StyleHeader([DisallowNull] IEditorContent content) =>
+        (content.Block?.Settings as IEditorCardBaseSettings)?.StyleHeader ?? content.Defaults.CardStyleHeader;
 
-    public EditorCardStyleDates StyleDate([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleDate)
-        ? content.Defaults.CardStyleDate
-        : ((IEditorCardBaseSettings)content.Block.Settings).StyleDateTyped;
+    public EditorCardStyleDates StyleDate([DisallowNull] IEditorContent content) => 
+        (content.Block?.Settings as IEditorCardBaseSettings)?.StyleDate ?? content.Defaults.CardStyleDate;
 
-    public EditorCardStyleTimes StyleTime([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleTime)
-        ? content.Defaults.CardStyleTime
-        : ((IEditorCardBaseSettings)content.Block.Settings).StyleTimeTyped;
+    public EditorCardStyleTimes StyleTime([DisallowNull] IEditorContent content) =>
+        (content.Block?.Settings as IEditorCardBaseSettings)?.StyleTime ?? content.Defaults.CardStyleTime;
 
-    public EditorCardStyleTexts StyleText([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorCardBaseSettings)?.StyleText)
-        ? content.Defaults.CardStyleText
-        : ((IEditorCardBaseSettings)content.Block.Settings).StyleTextTyped;
+    public EditorCardStyleTexts StyleText([DisallowNull] IEditorContent content) =>
+        (content.Block?.Settings as IEditorCardBaseSettings)?.StyleText ?? content.Defaults.CardStyleText;
 
-    public ActionStyles StyleAction([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleAction)
-        ? content.Defaults.CardStyleAction
-        : ((IEditorActionEmbeddedSettings)content.Block.Settings).StyleActionTyped;
+    public ActionStyles StyleAction([DisallowNull] IEditorContent content) =>
+        (content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleAction ?? content.Defaults.CardStyleAction;
 
-    public ActionStyleClickAreas StyleActionClickArea([DisallowNull] IEditorContent content) => string.IsNullOrWhiteSpace((content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleActionClickArea)
-        ? content.Defaults.CardStyleActionClickArea
-        : ((IEditorActionEmbeddedSettings)content.Block.Settings).StyleActionClickAreaTyped;
+    public ActionStyleClickAreas StyleActionClickArea([DisallowNull] IEditorContent content) =>
+        (content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleActionClickArea ?? content.Defaults.CardStyleActionClickArea;
 
-    public ActionStyleAlignments StyleActionAlignment([DisallowNull] IEditorContent content)
-    {
-        var typed = (content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleActionAlignment ?? ActionStyleAlignments.Unset;
-        return typed != ActionStyleAlignments.Unset ? typed : content.Defaults.CardStyleActionAlignment;
-    }
+    public ActionStyleAlignments StyleActionAlignment([DisallowNull] IEditorContent content) =>
+        (content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleActionAlignmentTyped ?? content.Defaults.CardStyleActionAlignment;
 
     public bool StyleShowClickArrow([DisallowNull] IEditorContent content) => (content.Block?.Settings as IEditorCardBaseSettings)?.ShowClickArrow == true;
 

@@ -19,10 +19,7 @@ public class MediaViewComponent(IViewService viewService,
 
     public IViewComponentResult Invoke(IEditorContent content)
     {
-        if (content == null)
-        {
-            throw new ArgumentNullException(nameof(content));
-        }
+        ArgumentNullException.ThrowIfNull(content);
 
         var media = content.Block?.Content as MediaWithCrops;
         var styleImageLocation = StyleImageLocation(content);
@@ -48,7 +45,7 @@ public class MediaViewComponent(IViewService viewService,
         {
             var imageQuality = viewService.CurrentDomainPage.ConfigImageQuality;
             var id = Guid.NewGuid().ToString("N");
-            var size = ((long)(content.Block?.Content?.GetProperty(Constants.Conventions.Media.Bytes)?.GetValue() ?? 0L)).ToReadableFileSize();
+            var size = ((long)(content!.Block?.Content?.GetProperty(Constants.Conventions.Media.Bytes)?.GetValue() ?? 0L)).ToReadableFileSize();
             var widthFactor = WidthFactor(styleImageSize);
             return View(GetTemplate(media != null, styleImageLocation), new CardViewModel
             {

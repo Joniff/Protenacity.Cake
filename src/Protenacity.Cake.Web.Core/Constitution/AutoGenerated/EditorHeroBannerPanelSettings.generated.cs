@@ -53,9 +53,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Alignment: Where to place Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("alignment")]
-		public virtual string Alignment => this.Value<string>(_publishedValueFallback, "alignment");
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorHeroBannerTextAlignments Alignment => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorHeroBannerTextAlignments>(_publishedValueFallback, "alignment");
 
 		///<summary>
 		/// Darken Image Behind Text: When enabled this will darken the image behind the Title & Link so that they are easier to read

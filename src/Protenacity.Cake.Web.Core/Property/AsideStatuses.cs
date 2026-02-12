@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -15,4 +17,11 @@ public enum AsideStatuses
 
     [Description("Right")]
     Right
+}
+
+public class AsideStatusesValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<AsideStatuses>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.RadioButtonList;
+    public override string DataTypeName => "Aside Status";
 }

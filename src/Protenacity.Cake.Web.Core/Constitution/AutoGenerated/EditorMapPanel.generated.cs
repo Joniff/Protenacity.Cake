@@ -58,20 +58,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual string MapName => global::Protenacity.Cake.Web.Core.Constitution.EditorMapBase.GetMapName(this, _publishedValueFallback);
 
 		///<summary>
-		/// Type: For map types other than Region, sets the pin, view and zoom level of map. For Region map set the region required in Name field below   
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("mapType")]
-		public virtual string MapType => global::Protenacity.Cake.Web.Core.Constitution.EditorMapBase.GetMapType(this, _publishedValueFallback);
-
-		///<summary>
 		/// Icon: Optional Icon placed on the left hand side of the Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("panelIcon")]
-		public virtual string PanelIcon => global::Protenacity.Cake.Web.Core.Constitution.EditorPanelName.GetPanelIcon(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons PanelIcon => global::Protenacity.Cake.Web.Core.Constitution.EditorPanelName.GetPanelIcon(this, _publishedValueFallback);
 
 		///<summary>
 		/// Name: Text used to select panel in tab strip or accordion

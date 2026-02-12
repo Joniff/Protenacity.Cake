@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -12,4 +14,11 @@ public enum AlertStatuses
 
     [Description("Hide")]
     Hide
+}
+
+public class AlertStatusesValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<AlertStatuses>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.RadioButtonList;
+    public override string DataTypeName => "Alert Status";
 }

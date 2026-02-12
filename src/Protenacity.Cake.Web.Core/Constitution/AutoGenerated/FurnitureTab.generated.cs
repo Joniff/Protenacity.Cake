@@ -39,8 +39,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Breadcrumb Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurnitureBreadcrumbThemeShade { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorThemeShades FurnitureBreadcrumbThemeShade { get; }
 
 		/// <summary>Override Footer Colours</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -74,8 +73,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Footer Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurnitureFooterThemeShade { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorThemeShades FurnitureFooterThemeShade { get; }
 
 		/// <summary>Override Header Colours</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -103,8 +101,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Header Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurnitureHeaderThemeShade { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorThemeShades FurnitureHeaderThemeShade { get; }
 
 		/// <summary>Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -113,22 +110,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Logo Size</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurnitureLogoRatio { get; }
-
-		/// <summary>Promote Page Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		bool FurniturePageTitlePromote { get; }
-
-		/// <summary>Page Title Subtheme</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurniturePageTitleSubtheme { get; }
-
-		/// <summary>Page Title Shade</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurniturePageTitleThemeShade { get; }
+		global::Protenacity.Cake.Web.Core.Property.FurnitureLogoRatios FurnitureLogoRatio { get; }
 
 		/// <summary>Show All Services</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -226,14 +208,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Breadcrumb Shade: Shade of Breadcrumb.  Only valid if Breadcrumb is being shown
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureBreadcrumbThemeShade")]
-		public virtual string FurnitureBreadcrumbThemeShade => GetFurnitureBreadcrumbThemeShade(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades FurnitureBreadcrumbThemeShade => GetFurnitureBreadcrumbThemeShade(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Breadcrumb Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurnitureBreadcrumbThemeShade(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furnitureBreadcrumbThemeShade");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorThemeShades GetFurnitureBreadcrumbThemeShade(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades>(publishedValueFallback, "furnitureBreadcrumbThemeShade");
 
 		///<summary>
 		/// Override Footer Colours: Set custom colours for Footer. Leave empty to use default theme.
@@ -317,14 +297,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Footer Shade: Set light or dark shade for footer or inherit Page shade value
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureFooterThemeShade")]
-		public virtual string FurnitureFooterThemeShade => GetFurnitureFooterThemeShade(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades FurnitureFooterThemeShade => GetFurnitureFooterThemeShade(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Footer Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurnitureFooterThemeShade(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furnitureFooterThemeShade");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorThemeShades GetFurnitureFooterThemeShade(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades>(publishedValueFallback, "furnitureFooterThemeShade");
 
 		///<summary>
 		/// Override Header Colours: Set custom colours for Header. Leave empty to use default theme.
@@ -393,14 +371,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Header Shade: Set light or dark shade for header or inherit Page shade value
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureHeaderThemeShade")]
-		public virtual string FurnitureHeaderThemeShade => GetFurnitureHeaderThemeShade(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades FurnitureHeaderThemeShade => GetFurnitureHeaderThemeShade(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Header Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurnitureHeaderThemeShade(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furnitureHeaderThemeShade");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorThemeShades GetFurnitureHeaderThemeShade(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades>(publishedValueFallback, "furnitureHeaderThemeShade");
 
 		///<summary>
 		/// Logo: Logo image for micro-site, placed in header
@@ -419,51 +395,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Logo Size: Ratio of logo image in Width x Height
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureLogoRatio")]
-		public virtual string FurnitureLogoRatio => GetFurnitureLogoRatio(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.FurnitureLogoRatios FurnitureLogoRatio => GetFurnitureLogoRatio(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Logo Size</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurnitureLogoRatio(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furnitureLogoRatio");
-
-		///<summary>
-		/// Promote Page Title: Give prominence to Page Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("furniturePageTitlePromote")]
-		public virtual bool FurniturePageTitlePromote => GetFurniturePageTitlePromote(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Promote Page Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		public static bool GetFurniturePageTitlePromote(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<bool>(publishedValueFallback, "furniturePageTitlePromote");
-
-		///<summary>
-		/// Page Title Subtheme: Set a Subtheme for the page title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("furniturePageTitleSubtheme")]
-		public virtual string FurniturePageTitleSubtheme => GetFurniturePageTitleSubtheme(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Page Title Subtheme</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurniturePageTitleSubtheme(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furniturePageTitleSubtheme");
-
-		///<summary>
-		/// Page Title Shade: Set a shade for the page title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("furniturePageTitleThemeShade")]
-		public virtual string FurniturePageTitleThemeShade => GetFurniturePageTitleThemeShade(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Page Title Shade</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurniturePageTitleThemeShade(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furniturePageTitleThemeShade");
+		public static global::Protenacity.Cake.Web.Core.Property.FurnitureLogoRatios GetFurnitureLogoRatio(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.FurnitureLogoRatios>(publishedValueFallback, "furnitureLogoRatio");
 
 		///<summary>
 		/// Show All Services: Show All Services button in header

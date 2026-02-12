@@ -1,12 +1,8 @@
-﻿using Protenacity.Cake.Web.Core.Constitution;
+﻿using Microsoft.AspNetCore.Mvc;
+using Protenacity.Cake.Web.Core.Constitution;
 using Protenacity.Cake.Web.Core.Property;
-using Protenacity.Cake.Web.Presentation.View;
 using Protenacity.Spreadsheet;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Umbraco.Cms.Core.IO;
-using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Extensions;
 using ZiggyCreatures.Caching.Fusion;
 
@@ -15,10 +11,7 @@ namespace Protenacity.Cake.Web.Presentation.Editor.Table;
 public class TableViewComponent(IEditorService editorService,
     ISpreadsheetService spreadsheetService, 
     MediaFileManager mediaFileManager,
-    IFusionCache fusionCache,
-    IServiceProvider serviceProvider,
-    IViewService viewService,
-    ILogger<TableViewComponent> logger)
+    IFusionCache fusionCache)
     : ViewComponent
 {
     public const string Name = nameof(Table);

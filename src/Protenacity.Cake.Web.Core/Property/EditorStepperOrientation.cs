@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -14,4 +11,11 @@ public enum EditorStepperOrientation
 
     [Description("Horizontal")]
     Horizontal
+}
+
+public class EditorStepperOrientationValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<EditorStepperOrientation>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Editor Stepper Orientation";
 }

@@ -24,8 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Default Action Style</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string StyleAction { get; }
+		global::Protenacity.Cake.Web.Core.Property.ActionStyles StyleAction { get; }
 
 		/// <summary>Default Action Alignment</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -33,8 +32,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Default Action Click Area</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string StyleActionClickArea { get; }
+		global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas StyleActionClickArea { get; }
 	}
 
 	/// <summary>Default Settings</summary>
@@ -72,14 +70,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Default Action Style: Display any links as a button or underlined text with optional icon
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleAction")]
-		public virtual string StyleAction => GetStyleAction(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyles StyleAction => GetStyleAction(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Action Style</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetStyleAction(IEditorActionDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "styleAction");
+		public static global::Protenacity.Cake.Web.Core.Property.ActionStyles GetStyleAction(IEditorActionDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.ActionStyles>(publishedValueFallback, "styleAction");
 
 		///<summary>
 		/// Default Action Alignment: Location of Button or Link. Absolute = Will position over the top of other items (if applicable). Relative = Will try and make other items flow around it (if applicable).
@@ -96,13 +92,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Default Action Click Area: Which area can be clicked
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleActionClickArea")]
-		public virtual string StyleActionClickArea => GetStyleActionClickArea(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas StyleActionClickArea => GetStyleActionClickArea(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Action Click Area</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetStyleActionClickArea(IEditorActionDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "styleActionClickArea");
+		public static global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas GetStyleActionClickArea(IEditorActionDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas>(publishedValueFallback, "styleActionClickArea");
 	}
 }

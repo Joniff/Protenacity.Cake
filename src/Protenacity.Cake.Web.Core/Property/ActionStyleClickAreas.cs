@@ -14,7 +14,7 @@ public enum ActionStyleClickAreas
 }
 
 public class ActionStyleClickAreasValueConverter(IDataTypeService dataTypeService)
-    : PropertyValueConverterBase<ActionStyleAlignments>(dataTypeService)
+    : PropertyValueConverterBase<ActionStyleClickAreas>(dataTypeService)
 {
     public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
     public override string DataTypeName => "Editor Card Action Click Area";

@@ -78,7 +78,7 @@ public class GraphEmailSender(ILogger<GraphEmailSender> logger,
     {
         try
         {
-            if (message == null || message.To.Any() != true)
+            if (message?.To?.Any() != true)
             {
                 throw new ArgumentNullException(nameof(message));
             }

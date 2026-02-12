@@ -24,13 +24,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Placement</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Placement { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorTabStripPlacements Placement { get; }
 
 		/// <summary>Style</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Style { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorTabStripStyles Style { get; }
 	}
 
 	/// <summary>Tabs Panel Settings</summary>
@@ -68,26 +66,22 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Placement: Where to place tab strip
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("placement")]
-		public virtual string Placement => GetPlacement(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorTabStripPlacements Placement => GetPlacement(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Placement</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetPlacement(IEditorTabsEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "placement");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorTabStripPlacements GetPlacement(IEditorTabsEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorTabStripPlacements>(publishedValueFallback, "placement");
 
 		///<summary>
 		/// Style: Select style of Panel selectors  Tabs = Uses lines to signify which panel is active. Pills = Uses highlighted button to signify active panel.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("style")]
-		public virtual string Style => GetStyle(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorTabStripStyles Style => GetStyle(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Style</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetStyle(IEditorTabsEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "style");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorTabStripStyles GetStyle(IEditorTabsEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorTabStripStyles>(publishedValueFallback, "style");
 	}
 }

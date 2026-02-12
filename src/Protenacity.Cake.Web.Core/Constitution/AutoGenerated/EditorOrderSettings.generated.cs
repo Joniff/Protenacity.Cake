@@ -24,8 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Order</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Order { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorOrders Order { get; }
 	}
 
 	/// <summary>Shared Order Settings</summary>
@@ -63,13 +62,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Order: Order of items
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("order")]
-		public virtual string Order => GetOrder(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorOrders Order => GetOrder(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Order</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetOrder(IEditorOrderSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "order");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorOrders GetOrder(IEditorOrderSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorOrders>(publishedValueFallback, "order");
 	}
 }

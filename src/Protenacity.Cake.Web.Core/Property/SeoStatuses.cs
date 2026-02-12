@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -12,4 +14,11 @@ public enum SeoStatuses
 
     [Description("Disable")]
     Disable
+}
+
+public class SeoStatusesValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<SeoStatuses>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Seo Status";
 }

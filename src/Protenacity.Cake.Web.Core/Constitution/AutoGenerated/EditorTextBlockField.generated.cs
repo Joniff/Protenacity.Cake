@@ -53,8 +53,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Field: The field you select will be replaced by the current value of that field
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("field")]
-		public virtual string Field => this.Value<string>(_publishedValueFallback, "field");
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorTextFieldTypes Field => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorTextFieldTypes>(_publishedValueFallback, "field");
 	}
 }

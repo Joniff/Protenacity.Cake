@@ -61,9 +61,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Day of Week: Which day of week is this venue open
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("day")]
-		public virtual string Day => this.Value<string>(_publishedValueFallback, "day");
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorDayOfWeek Day => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorDayOfWeek>(_publishedValueFallback, "day");
 
 		///<summary>
 		/// Open Time: Start time of this venue opening in 24 hour clock. 00:00 to 23:59

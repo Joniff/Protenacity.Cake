@@ -24,8 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string AlertStatus { get; }
+		global::Protenacity.Cake.Web.Core.Property.AlertStatuses AlertStatus { get; }
 
 		/// <summary>Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -39,8 +38,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Type</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string AlertType { get; }
+		global::Protenacity.Cake.Web.Core.Property.AlertTypes AlertType { get; }
 	}
 
 	/// <summary>Alert Tab</summary>
@@ -78,14 +76,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Status: {b}Inherit{/b} alert bar status from parent web page or {b}show{/b}/{b}hide{/b} this alert bar 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("alertStatus")]
-		public virtual string AlertStatus => GetAlertStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.AlertStatuses AlertStatus => GetAlertStatus(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetAlertStatus(IAlertTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "alertStatus");
+		public static global::Protenacity.Cake.Web.Core.Property.AlertStatuses GetAlertStatus(IAlertTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.AlertStatuses>(publishedValueFallback, "alertStatus");
 
 		///<summary>
 		/// Text: Text to be displayed when this alert is enabled
@@ -117,13 +113,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Type: What type of alert is this
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("alertType")]
-		public virtual string AlertType => GetAlertType(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.AlertTypes AlertType => GetAlertType(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Type</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetAlertType(IAlertTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "alertType");
+		public static global::Protenacity.Cake.Web.Core.Property.AlertTypes GetAlertType(IAlertTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.AlertTypes>(publishedValueFallback, "alertType");
 	}
 }

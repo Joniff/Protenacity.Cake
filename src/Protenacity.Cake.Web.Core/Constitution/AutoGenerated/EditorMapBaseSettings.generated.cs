@@ -24,13 +24,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Icon</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Icon { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorMapIcons Icon { get; }
 
 		/// <summary>Ratio</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Ratio { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorMapRatios Ratio { get; }
 	}
 
 	/// <summary>Base Settings</summary>
@@ -68,26 +66,22 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Icon: Icon used to signify where the specific location is on map
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("icon")]
-		public virtual string Icon => GetIcon(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorMapIcons Icon => GetIcon(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Icon</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetIcon(IEditorMapBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "icon");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorMapIcons GetIcon(IEditorMapBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorMapIcons>(publishedValueFallback, "icon");
 
 		///<summary>
 		/// Ratio: The map will resize to fit the width of the block given, this decides to height portion in ration to the width. 2 : 1 = Twice as wide as high 1 : 1 = Square  
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("ratio")]
-		public virtual string Ratio => GetRatio(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorMapRatios Ratio => GetRatio(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Ratio</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetRatio(IEditorMapBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "ratio");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorMapRatios GetRatio(IEditorMapBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorMapRatios>(publishedValueFallback, "ratio");
 	}
 }

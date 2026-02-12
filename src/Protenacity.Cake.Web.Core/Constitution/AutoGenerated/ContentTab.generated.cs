@@ -18,14 +18,24 @@ using Umbraco.Extensions;
 
 namespace Protenacity.Cake.Web.Core.Constitution
 {
-	/// <summary>Virtual Agent Data</summary>
-	[PublishedModel("virtualAgentData")]
-	public partial class VirtualAgentData : PublishedContentModel
+	// Mixin Content Type with alias "contentTab"
+	/// <summary>Content Tab</summary>
+	public partial interface IContentTab : IPublishedElement
+	{
+		/// <summary>Body</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Body { get; }
+	}
+
+	/// <summary>Content Tab</summary>
+	[PublishedModel("contentTab")]
+	public partial class ContentTab : PublishedElementModel, IContentTab
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		public new const string ModelTypeAlias = "virtualAgentData";
+		public new const string ModelTypeAlias = "contentTab";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -34,14 +44,14 @@ namespace Protenacity.Cake.Web.Core.Constitution
 			=> PublishedModelUtility.GetModelContentType(contentTypeCache, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<VirtualAgentData, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<ContentTab, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(contentTypeCache), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public VirtualAgentData(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+		public ContentTab(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,19 +60,16 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		// properties
 
 		///<summary>
-		/// Definition Id: Definition
+		/// Body: Main contents of Page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("definitionId")]
-		public virtual string DefinitionId => this.Value<string>(_publishedValueFallback, "definitionId");
+		[ImplementPropertyType("body")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Body => GetBody(this, _publishedValueFallback);
 
-		///<summary>
-		/// Workspace Id: Workspace 
-		///</summary>
+		/// <summary>Static getter for Body</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("workspaceId")]
-		public virtual string WorkspaceId => this.Value<string>(_publishedValueFallback, "workspaceId");
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static global::Umbraco.Cms.Core.Models.Blocks.BlockListModel GetBody(IContentTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(publishedValueFallback, "body");
 	}
 }

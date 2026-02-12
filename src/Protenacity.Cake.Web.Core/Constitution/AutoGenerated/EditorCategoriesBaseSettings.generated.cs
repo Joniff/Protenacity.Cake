@@ -24,8 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Placement</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Placement { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorTabStripPlacements Placement { get; }
 
 		/// <summary>Show Separator</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -71,14 +70,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Placement: Where to place Headings
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("placement")]
-		public virtual string Placement => GetPlacement(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorTabStripPlacements Placement => GetPlacement(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Placement</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetPlacement(IEditorCategoriesBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "placement");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorTabStripPlacements GetPlacement(IEditorCategoriesBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorTabStripPlacements>(publishedValueFallback, "placement");
 
 		///<summary>
 		/// Show Separator: Use a separator between the different catagories

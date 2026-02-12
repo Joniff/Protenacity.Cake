@@ -5,10 +5,10 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial interface ICookieConsentTab
 {
-    StructureCookieConsentPositions CookieConsentModalPositionTyped { get; }
+    CookieConsentPositions CookieConsentModalPositionTyped { get; }
 }
 
 public partial class CookieConsentTab
 {
-    public StructureCookieConsentPositions CookieConsentModalPositionTyped => StructureCookieConsentPositions.ParseByDescription(this.CookieConsentModalPosition) ?? StructureCookieConsentPositions.BottomLeft;
+    public CookieConsentPositions CookieConsentModalPositionTyped => CookieConsentPositions.ParseByDescription(this.CookieConsentModalPosition.ToString()) ?? CookieConsentPositions.BottomLeft;
 }

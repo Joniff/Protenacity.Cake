@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -25,4 +27,11 @@ public enum EditorMapRatios
 
     [Description("1 : 2")]
     Ratio1x2 = 18,
+}
+
+public class EditorMapRatiosValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<EditorMapRatios>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Editor Map Ratio";
 }

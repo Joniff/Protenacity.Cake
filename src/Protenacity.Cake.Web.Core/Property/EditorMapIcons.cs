@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -39,4 +41,11 @@ public enum EditorMapIcons
 
     [Description("Yellow Pin")]
     YellowPin = 600,
+}
+
+public class EditorMapIconsValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<EditorMapIcons>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Editor Map Icon";
 }

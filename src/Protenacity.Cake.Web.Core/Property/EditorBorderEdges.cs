@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -24,4 +26,11 @@ public enum EditorBorderEdges
     // Not set in Umbraco
     [Description("All")]
     All = EditorBorderEdges.Top | EditorBorderEdges.Bottom | EditorBorderEdges.Left | EditorBorderEdges.Right
+}
+
+public class EditorBorderEdgesValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<EditorBorderEdges>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Editor Border Edges";
 }

@@ -10,5 +10,5 @@ public partial interface IEditorCategoriesBaseSettings
 
 public partial class EditorCategoriesBaseSettings
 {
-    public EditorTabStripPlacements PlacementTyped => EditorTabStripPlacements.ParseByDescription(this.Placement) ?? EditorTabStripPlacements.Top;
+    public EditorTabStripPlacements PlacementTyped => EditorTabStripPlacements.ParseByDescription(this.Placement.ToString()) ?? EditorTabStripPlacements.Top;
 }

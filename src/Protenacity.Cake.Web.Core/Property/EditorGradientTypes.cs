@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -15,4 +17,11 @@ public enum EditorGradientTypes
 
     [Description("Radial gradient starting dead centre and radiating outwards")]
     Centre
+}
+
+public class EditorGradientTypesValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<EditorGradientTypes>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Editor Gradient Type";
 }

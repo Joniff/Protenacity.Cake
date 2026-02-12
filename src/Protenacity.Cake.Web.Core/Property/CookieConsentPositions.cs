@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
-public enum StructureCookieConsentPositions
+public enum CookieConsentPositions
 {
     [Description("Top Left")]
     TopLeft,
@@ -30,4 +32,11 @@ public enum StructureCookieConsentPositions
 
     [Description("Bottom Right")]
     BottomRight
+}
+
+public class CookieConsentPositionsValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<CookieConsentPositions>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Cookie Consent Position";
 }

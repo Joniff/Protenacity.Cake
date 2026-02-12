@@ -41,7 +41,6 @@ internal class EditorService(
     ILogger<EditorService> logger,
     IViewService viewService, 
     IUmbracoHelperAccessor umbracoHelperAccessor, 
-    IFormReaderService formReaderService,
     IFusionCache fusionCache,
     FeedReader feedReaderService) : IEditorService
 {
@@ -264,10 +263,10 @@ internal class EditorService(
                 return pages.OrderByDescending(p => p.CreateDate);
 
             case EditorOrders.AtoZ:
-                return pages.OrderBy(p => p.PageHeader?.HasContent() == true ? p.PageHeader.ToText().ToString() : p.Name);
+                return pages.OrderBy(p => p.PageTitleName?.HasContent() == true ? p.PageTitleName.ToText().ToString() : p.Name);
 
             case EditorOrders.ZtoA:
-                return pages.OrderByDescending(p => p.PageHeader?.HasContent() == true ? p.PageHeader.ToText().ToString() : p.Name);
+                return pages.OrderByDescending(p => p.PageTitleName?.HasContent() == true ? p.PageTitleName.ToText().ToString() : p.Name);
 
             default:
                 return pages;
@@ -311,34 +310,34 @@ internal class EditorService(
             var backgroundSettings = settings as IEditorBackgroundSettings;
             var borderSettings = settings as IEditorBorderSettings;
 
-            if (!string.IsNullOrWhiteSpace(cardSettings?.StyleImage))
+            if (cardSettings?.StyleImage != null)
             {
-                defaults.CardStyleImageLocation = cardSettings.StyleImageLocationTyped;
+                defaults.CardStyleImageLocation = cardSettings.StyleImage;
             }
 
-            if (!string.IsNullOrWhiteSpace(cardSettings?.StyleHeader))
+            if (cardSettings?.StyleHeader != null)
             {
-                defaults.CardStyleHeader = cardSettings.StyleHeaderTyped;
+                defaults.CardStyleHeader = cardSettings.StyleHeader;
             }
 
-            if (!string.IsNullOrWhiteSpace(cardSettings?.StyleDate))
+            if (cardSettings?.StyleDate != null)
             {
-                defaults.CardStyleDate = cardSettings.StyleDateTyped;
+                defaults.CardStyleDate = cardSettings.StyleDate;
             }
 
-            if (!string.IsNullOrWhiteSpace(cardSettings?.StyleTime))
+            if (cardSettings?.StyleTime != null)
             {
-                defaults.CardStyleTime = cardSettings.StyleTimeTyped;
+                defaults.CardStyleTime = cardSettings.StyleTime;
             }
 
-            if (!string.IsNullOrWhiteSpace(cardSettings?.StyleText))
+            if (cardSettings?.StyleText != null)
             {
-                defaults.CardStyleText = cardSettings.StyleTextTyped;
+                defaults.CardStyleText = cardSettings.StyleText;
             }
 
-            if (!string.IsNullOrWhiteSpace(actionSettings?.StyleAction))
+            if (actionSettings?.StyleAction != null)
             {
-                defaults.CardStyleAction = actionSettings.StyleActionTyped;
+                defaults.CardStyleAction = actionSettings.StyleAction;
             }
 
             if (backgroundSettings?.OverrideColor?.Any() == true)
@@ -375,13 +374,9 @@ internal class EditorService(
             {
                 Index = index++,
                 Id = EncodeId("page-" + header),
-                Header = page.PageHeader?.HasContent() == true ? page.PageHeader : new HtmlEncodedString(header),
+                Header = page.PageTitleName?.HasContent() == true ? page.PageTitleName : new HtmlEncodedString(header),
                 EditorComponent = PageViewComponent.Name,
-#if NET9_0_OR_GREATER
                 Block = new BlockListItem(page.Key, page, source.SettingsKey, source.Settings),
-#else
-                Block = new BlockListItem(Udi.Create(Constants.UdiEntityType.Document, page.Key), page, source.SettingsUdi, source.Settings),
-#endif
                 Defaults = defaults
             });
         }
@@ -424,13 +419,9 @@ internal class EditorService(
                 {
                     Index = index++,
                     Id = EncodeId("page-" + header),
-                    Header = page.PageHeader?.HasContent() == true ? page.PageHeader : new HtmlEncodedString(header),
+                    Header = page.PageTitleName?.HasContent() == true ? page.PageTitleName : new HtmlEncodedString(header),
                     EditorComponent = PageViewComponent.Name,
-#if NET9_0_OR_GREATER
                     Block = new BlockListItem(page.Key, page, source.SettingsKey, source.Settings),
-#else
-                    Block = new BlockListItem(Udi.Create(Constants.UdiEntityType.Document, page.Key), page, source.SettingsUdi, source.Settings),
-#endif
                     Defaults = defaults
                 });
             }

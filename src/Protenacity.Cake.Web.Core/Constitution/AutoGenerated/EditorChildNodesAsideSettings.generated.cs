@@ -53,8 +53,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Order: Order of items
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("order")]
-		public virtual string Order => global::Protenacity.Cake.Web.Core.Constitution.EditorOrderSettings.GetOrder(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorOrders Order => global::Protenacity.Cake.Web.Core.Constitution.EditorOrderSettings.GetOrder(this, _publishedValueFallback);
 	}
 }

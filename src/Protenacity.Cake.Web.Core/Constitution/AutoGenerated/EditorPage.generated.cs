@@ -20,7 +20,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 {
 	/// <summary>Editor Page</summary>
 	[PublishedModel("editorPage")]
-	public partial class EditorPage : PublishedContentModel, IAlertTab, IAsideTab, IBannerTab, IFurnitureTab, IReviewTab, ISeoTab, ISubfooterTab, IThemeTab, IVirtualAgentTab
+	public partial class EditorPage : PublishedContentModel, IAlertTab, IAsideTab, IBannerTab, ICategoriesTab, IContentTab, IFurnitureTab, IPageTitleTab, ISeoTab, ISubfooterTab, IThemeTab
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,36 +50,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		// properties
 
 		///<summary>
-		/// Body: Main contents of page
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("body")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Body => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "body");
-
-		///<summary>
-		/// Groups: Select which categories, if any, this page is associated with.   Only pages that have Seo Enabled will be included in Category results. 
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("categories")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent> Categories => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent>>(_publishedValueFallback, "categories");
-
-		///<summary>
-		/// Page Header: Main &lt;h1&gt; Header for page. Placed above all content 
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("pageHeader")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString PageHeader => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "pageHeader");
-
-		///<summary>
 		/// Status: {b}Inherit{/b} alert bar status from parent web page or {b}show{/b}/{b}hide{/b} this alert bar 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("alertStatus")]
-		public virtual string AlertStatus => global::Protenacity.Cake.Web.Core.Constitution.AlertTab.GetAlertStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.AlertStatuses AlertStatus => global::Protenacity.Cake.Web.Core.Constitution.AlertTab.GetAlertStatus(this, _publishedValueFallback);
 
 		///<summary>
 		/// Text: Text to be displayed when this alert is enabled
@@ -101,9 +76,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Type: What type of alert is this
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("alertType")]
-		public virtual string AlertType => global::Protenacity.Cake.Web.Core.Constitution.AlertTab.GetAlertType(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.AlertTypes AlertType => global::Protenacity.Cake.Web.Core.Constitution.AlertTab.GetAlertType(this, _publishedValueFallback);
 
 		///<summary>
 		/// Contents: List of links to place to the side of main content.
@@ -160,6 +134,22 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual string BannerStatus => global::Protenacity.Cake.Web.Core.Constitution.BannerTab.GetBannerStatus(this, _publishedValueFallback);
 
 		///<summary>
+		/// Categories: Select which categories, if any, this page is associated with.   Only pages that have Seo Enabled will be included in Category results. 
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("categories")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent> Categories => global::Protenacity.Cake.Web.Core.Constitution.CategoriesTab.GetCategories(this, _publishedValueFallback);
+
+		///<summary>
+		/// Body: Main contents of Page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("body")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Body => global::Protenacity.Cake.Web.Core.Constitution.ContentTab.GetBody(this, _publishedValueFallback);
+
+		///<summary>
 		/// Override Breadcrumbs Colours: Set custom colours for Breadcrumbs. Leave empty to use default theme.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -187,9 +177,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Breadcrumb Shade: Shade of Breadcrumb.  Only valid if Breadcrumb is being shown
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureBreadcrumbThemeShade")]
-		public virtual string FurnitureBreadcrumbThemeShade => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureBreadcrumbThemeShade(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades FurnitureBreadcrumbThemeShade => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureBreadcrumbThemeShade(this, _publishedValueFallback);
 
 		///<summary>
 		/// Override Footer Colours: Set custom colours for Footer. Leave empty to use default theme.
@@ -243,9 +232,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Footer Shade: Set light or dark shade for footer or inherit Page shade value
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureFooterThemeShade")]
-		public virtual string FurnitureFooterThemeShade => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureFooterThemeShade(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades FurnitureFooterThemeShade => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureFooterThemeShade(this, _publishedValueFallback);
 
 		///<summary>
 		/// Override Header Colours: Set custom colours for Header. Leave empty to use default theme.
@@ -290,9 +278,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Header Shade: Set light or dark shade for header or inherit Page shade value
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureHeaderThemeShade")]
-		public virtual string FurnitureHeaderThemeShade => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureHeaderThemeShade(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades FurnitureHeaderThemeShade => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureHeaderThemeShade(this, _publishedValueFallback);
 
 		///<summary>
 		/// Logo: Logo image for micro-site, placed in header
@@ -306,32 +293,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Logo Size: Ratio of logo image in Width x Height
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureLogoRatio")]
-		public virtual string FurnitureLogoRatio => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureLogoRatio(this, _publishedValueFallback);
-
-		///<summary>
-		/// Promote Page Title: Give prominence to Page Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("furniturePageTitlePromote")]
-		public virtual bool FurniturePageTitlePromote => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurniturePageTitlePromote(this, _publishedValueFallback);
-
-		///<summary>
-		/// Page Title Subtheme: Set a Subtheme for the page title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("furniturePageTitleSubtheme")]
-		public virtual string FurniturePageTitleSubtheme => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurniturePageTitleSubtheme(this, _publishedValueFallback);
-
-		///<summary>
-		/// Page Title Shade: Set a shade for the page title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("furniturePageTitleThemeShade")]
-		public virtual string FurniturePageTitleThemeShade => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurniturePageTitleThemeShade(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.FurnitureLogoRatios FurnitureLogoRatio => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureLogoRatio(this, _publishedValueFallback);
 
 		///<summary>
 		/// Show All Services: Show All Services button in header
@@ -370,34 +333,34 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual string FurnitureStatus => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureStatus(this, _publishedValueFallback);
 
 		///<summary>
-		/// Comments: Internal Use Only. Any comments you wish to record.  At no point are these shown on the front end to any users of the website only other content editors can view what is written here.
+		/// Page Title: Main &lt;h1&gt; Header for page. Placed above all content 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("reviewComments")]
-		public virtual string ReviewComments => global::Protenacity.Cake.Web.Core.Constitution.ReviewTab.GetReviewComments(this, _publishedValueFallback);
+		[ImplementPropertyType("pageTitleName")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString PageTitleName => global::Protenacity.Cake.Web.Core.Constitution.PageTitleTab.GetPageTitleName(this, _publishedValueFallback);
 
 		///<summary>
-		/// Date: By which date does this page require to be reviewed
+		/// Promote Page Title: Give prominence to Page Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("reviewDate")]
-		public virtual global::System.DateTime ReviewDate => global::Protenacity.Cake.Web.Core.Constitution.ReviewTab.GetReviewDate(this, _publishedValueFallback);
+		[ImplementPropertyType("pageTitlePromote")]
+		public virtual bool PageTitlePromote => global::Protenacity.Cake.Web.Core.Constitution.PageTitleTab.GetPageTitlePromote(this, _publishedValueFallback);
 
 		///<summary>
-		/// Group: Which User Group should be notified when a review is required. Select a User within that User Group
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("reviewGroup")]
-		public virtual int ReviewGroup => global::Protenacity.Cake.Web.Core.Constitution.ReviewTab.GetReviewGroup(this, _publishedValueFallback);
-
-		///<summary>
-		/// Status: {b}Inherit{/b} whether this page requires content review or not from it's parent page or {b}enable{/b}/{b}disable{/b} this page requiring content review.
+		/// Page Title Subtheme: Set a Subtheme for the page title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("reviewStatus")]
-		public virtual string ReviewStatus => global::Protenacity.Cake.Web.Core.Constitution.ReviewTab.GetReviewStatus(this, _publishedValueFallback);
+		[ImplementPropertyType("pageTitleSubtheme")]
+		public virtual string PageTitleSubtheme => global::Protenacity.Cake.Web.Core.Constitution.PageTitleTab.GetPageTitleSubtheme(this, _publishedValueFallback);
+
+		///<summary>
+		/// Page Title Shade: Set a shade for the page title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[ImplementPropertyType("pageTitleThemeShade")]
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades PageTitleThemeShade => global::Protenacity.Cake.Web.Core.Constitution.PageTitleTab.GetPageTitleThemeShade(this, _publishedValueFallback);
 
 		///<summary>
 		/// Keywords: Most important words for search engines to notice on this page. Don't use same keywords across all pages.
@@ -534,32 +497,14 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Theme: Theme for this page. Inherit = Use same theme as parent page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageTheme")]
-		public virtual string PageTheme => global::Protenacity.Cake.Web.Core.Constitution.ThemeTab.GetPageTheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemes PageTheme => global::Protenacity.Cake.Web.Core.Constitution.ThemeTab.GetPageTheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Shade: Overall shade of page.  Inherit = Use same intensity as parent page. Light = Bright page with dark text. Dark = Dark page with light text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageThemeShade")]
-		public virtual string PageThemeShade => global::Protenacity.Cake.Web.Core.Constitution.ThemeTab.GetPageThemeShade(this, _publishedValueFallback);
-
-		///<summary>
-		/// Install: Select which Virtual Agent to install on this page
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("virtualAgentInstall")]
-		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent VirtualAgentInstall => global::Protenacity.Cake.Web.Core.Constitution.VirtualAgentTab.GetVirtualAgentInstall(this, _publishedValueFallback);
-
-		///<summary>
-		/// Status: Virtual Agent for this page. Inherit = Use same virtual agent as parent page
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("virtualAgentStatus")]
-		public virtual string VirtualAgentStatus => global::Protenacity.Cake.Web.Core.Constitution.VirtualAgentTab.GetVirtualAgentStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades PageThemeShade => global::Protenacity.Cake.Web.Core.Constitution.ThemeTab.GetPageThemeShade(this, _publishedValueFallback);
 	}
 }

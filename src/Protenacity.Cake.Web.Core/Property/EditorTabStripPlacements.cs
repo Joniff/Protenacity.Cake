@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -15,4 +17,11 @@ public enum EditorTabStripPlacements
 
     [Description("Tap strip down Right hand side")]
     Right
+}
+
+public class EditorTabStripPlacementsValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<EditorTabStripPlacements>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Editor Tab Strip Placement";
 }

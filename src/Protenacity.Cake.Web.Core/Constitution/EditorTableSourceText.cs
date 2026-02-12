@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorTableSourceText
 {
-    public EditorTableSourceFileSeparators SeparatorTyped => EditorTableSourceFileSeparators.ParseByDescription(this.Separator) ?? EditorTableSourceFileSeparators.Comma;
+    public EditorTableSourceFileSeparators SeparatorTyped => EditorTableSourceFileSeparators.ParseByDescription(this.Separator.ToString()) ?? EditorTableSourceFileSeparators.Comma;
 }

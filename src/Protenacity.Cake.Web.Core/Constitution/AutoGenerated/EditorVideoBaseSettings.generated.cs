@@ -24,8 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Ratio</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Ratio { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios Ratio { get; }
 
 		/// <summary>Show Controls</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -67,14 +66,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Ratio: Dimensions of the source Video. Usually 16:9 is standard
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("ratio")]
-		public virtual string Ratio => GetRatio(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios Ratio => GetRatio(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Ratio</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetRatio(IEditorVideoBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "ratio");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios GetRatio(IEditorVideoBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios>(publishedValueFallback, "ratio");
 
 		///<summary>
 		/// Show Controls: Show controls to stop, start and skip

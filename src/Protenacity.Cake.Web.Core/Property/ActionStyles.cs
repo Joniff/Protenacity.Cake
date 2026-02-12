@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -42,4 +44,11 @@ public enum ActionStyles
 
     [Description("Button (Dark)")]
     ButtonDark = 8193,
+}
+
+public class ActionStylesValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<ActionStyles>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Editor Card Action Style";
 }

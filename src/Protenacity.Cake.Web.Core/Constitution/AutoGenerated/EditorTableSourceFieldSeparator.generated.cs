@@ -24,8 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Separator</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Separator { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorTableSourceFileSeparators Separator { get; }
 	}
 
 	/// <summary>Field Separator</summary>
@@ -63,13 +62,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Separator: Character used as a separator between fields. Not used for XLSX files
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("separator")]
-		public virtual string Separator => GetSeparator(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorTableSourceFileSeparators Separator => GetSeparator(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Separator</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetSeparator(IEditorTableSourceFieldSeparator that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "separator");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorTableSourceFileSeparators GetSeparator(IEditorTableSourceFieldSeparator that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorTableSourceFileSeparators>(publishedValueFallback, "separator");
 	}
 }

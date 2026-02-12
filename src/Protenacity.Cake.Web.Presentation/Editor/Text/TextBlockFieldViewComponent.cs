@@ -15,8 +15,6 @@ public class TextBlockFieldViewComponent(IViewService viewService) : ThemeViewCo
     {
         var content = block.Content as EditorTextBlockField;
         var settings = block.Settings as EditorTextBlockFieldSettings;
-        var getBusInfo = false;
-        var getBusStopInfo = false;
 
         if (content == null || settings == null)
         {

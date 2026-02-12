@@ -26,11 +26,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string MapName { get; }
-
-		/// <summary>Type</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string MapType { get; }
 	}
 
 	/// <summary>Base</summary>
@@ -76,18 +71,5 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static string GetMapName(IEditorMapBase that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "mapName");
-
-		///<summary>
-		/// Type: For map types other than Region, sets the pin, view and zoom level of map. For Region map set the region required in Name field below   
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("mapType")]
-		public virtual string MapType => GetMapType(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Type</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetMapType(IEditorMapBase that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "mapType");
 	}
 }

@@ -69,9 +69,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Shade: Change section to dark or light mode. Inherit = Use whichever mode the page has
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("themeShade")]
-		public virtual string ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
 
 		///<summary>
 		/// Collapsed Size Unit: Screen Percentage = How much of the screen in percentage should be taken up by this section when section is in collapsed mode. Valid numbers are from 0 for invisible, to 100 the total screen size. The section height can be larger than the screen size.  Section Height = How much of the section should we display when in collapsed mode. Valid numbers are 0 for invisible to 100 the total section size which effectively negates the purpose of this section.  Fixed Height = Height in font units of em where 1 = height of normal font. Valid number are from 0 for invisible to the total section height as measured in font heights.

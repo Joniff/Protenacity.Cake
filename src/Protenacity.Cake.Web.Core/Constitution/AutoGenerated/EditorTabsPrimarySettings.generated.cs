@@ -69,24 +69,21 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Shade: Change section to dark or light mode. Inherit = Use whichever mode the page has
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("themeShade")]
-		public virtual string ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
 
 		///<summary>
 		/// Placement: Where to place tab strip
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("placement")]
-		public virtual string Placement => global::Protenacity.Cake.Web.Core.Constitution.EditorTabsEmbeddedSettings.GetPlacement(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorTabStripPlacements Placement => global::Protenacity.Cake.Web.Core.Constitution.EditorTabsEmbeddedSettings.GetPlacement(this, _publishedValueFallback);
 
 		///<summary>
 		/// Style: Select style of Panel selectors  Tabs = Uses lines to signify which panel is active. Pills = Uses highlighted button to signify active panel.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("style")]
-		public virtual string Style => global::Protenacity.Cake.Web.Core.Constitution.EditorTabsEmbeddedSettings.GetStyle(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorTabStripStyles Style => global::Protenacity.Cake.Web.Core.Constitution.EditorTabsEmbeddedSettings.GetStyle(this, _publishedValueFallback);
 	}
 }

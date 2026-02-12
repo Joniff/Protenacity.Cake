@@ -56,13 +56,5 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("mapName")]
 		public virtual string MapName => global::Protenacity.Cake.Web.Core.Constitution.EditorMapBase.GetMapName(this, _publishedValueFallback);
-
-		///<summary>
-		/// Type: For map types other than Region, sets the pin, view and zoom level of map. For Region map set the region required in Name field below   
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("mapType")]
-		public virtual string MapType => global::Protenacity.Cake.Web.Core.Constitution.EditorMapBase.GetMapType(this, _publishedValueFallback);
 	}
 }

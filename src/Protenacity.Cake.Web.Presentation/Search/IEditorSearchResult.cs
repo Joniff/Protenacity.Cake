@@ -29,6 +29,6 @@ public interface IEditorSearchResult
     int Priority { get; }
 
     [Description("abstract")]
-    string Abstract { get; }
+    string? Abstract { get; }
 }
 

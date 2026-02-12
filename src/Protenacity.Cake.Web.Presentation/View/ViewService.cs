@@ -471,48 +471,6 @@ public class ViewService(
         }
     }
 
-    private bool haveTriedToGetVirtualAgent = false;
-    private VirtualAgentData? currentVirtualAgent = null;
-    public VirtualAgentData? CurrentVirtualAgent
-    {
-        get
-        {
-            if (haveTriedToGetVirtualAgent)
-            {
-                return currentVirtualAgent;
-            }
-
-            haveTriedToGetVirtualAgent = true;
-            var node = CurrentPage as EditorPage;
-
-            while (node != null && node.ContentType.Alias == EditorPage.ModelTypeAlias)
-            {
-                switch (node.VirtualAgentStatusTyped)
-                {
-                    case VirtualAgentStatuses.Inherit:
-                        node = node?.Parent() as EditorPage;
-                        break;
-
-                    case VirtualAgentStatuses.Disable:
-                        return null;
-
-                    case VirtualAgentStatuses.Enable:
-                        if (node.VirtualAgentInstall == null)
-                        {
-                            return null;
-                        }
-
-                        currentVirtualAgent = node.VirtualAgentInstall as VirtualAgentData;
-                        return currentVirtualAgent;
-
-                    default:
-                        throw new ApplicationException(node.VirtualAgentStatusTyped + " is invalid " + nameof(VirtualAgentStatuses));
-                }
-            }
-            return null;
-        }
-    }
-
     public string? CurrentSearchCriteria(string queryString)
     {
         var query = httpContextAccessor?.HttpContext?.Request?.Query[queryString];

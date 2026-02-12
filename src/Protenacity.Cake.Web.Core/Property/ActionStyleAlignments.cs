@@ -6,8 +6,6 @@ namespace Protenacity.Cake.Web.Core.Property;
 
 public enum ActionStyleAlignments
 {
-    Unset = 0,
-
     [Description("Right Absolute")]
     RightAbsolute = 17,
 

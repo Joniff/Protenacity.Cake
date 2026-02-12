@@ -32,7 +32,7 @@ public class EditorSearchInternalService(
     private static string Priority => typeof(EditorSearchResult).Description(nameof(EditorSearchResult.Priority));
     private static string Categories => typeof(EditorSearchResult).Description(nameof(EditorSearchResult.Categories));
     private static string Abstract => typeof(EditorSearchResult).Description(nameof(EditorSearchResult.Abstract));
-    private static string EditorPage_PageHeader => typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.PageHeader));
+    private static string EditorPage_PageHeader => typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.PageTitleName));
     private static string EditorPage_Title => typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.Title));
     private static string EditorPage_Body => typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.Body));
     private static string EditorPage_SeoPriority => typeof(EditorPage).ModelsBuilderAlias(nameof(EditorPage.SeoPriority));

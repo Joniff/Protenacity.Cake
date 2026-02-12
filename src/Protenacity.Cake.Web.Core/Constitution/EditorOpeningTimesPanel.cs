@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorOpeningTimesPanel
 {
-    public EditorNamedIcons PanelIconTyped => EditorNamedIcons.ParseByDescription(this.PanelIcon) ?? EditorNamedIcons.Asterisk;
+    public EditorNamedIcons PanelIconTyped => EditorNamedIcons.ParseByDescription(this.PanelIcon.ToString()) ?? EditorNamedIcons.Asterisk;
 }

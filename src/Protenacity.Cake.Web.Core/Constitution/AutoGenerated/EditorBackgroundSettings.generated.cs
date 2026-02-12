@@ -34,8 +34,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ThemeShade { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorThemeShades ThemeShade { get; }
 	}
 
 	/// <summary>Shared Background Settings</summary>
@@ -99,13 +98,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Shade: Change section to dark or light mode. Inherit = Use whichever mode the page has
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("themeShade")]
-		public virtual string ThemeShade => GetThemeShade(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades ThemeShade => GetThemeShade(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetThemeShade(IEditorBackgroundSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "themeShade");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorThemeShades GetThemeShade(IEditorBackgroundSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades>(publishedValueFallback, "themeShade");
 	}
 }

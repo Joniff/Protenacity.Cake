@@ -14,8 +14,8 @@ internal class CategoriesDataNotifications : NotificationBase<ContentSavingNotif
         foreach (var entity in notification.SavedEntities.Where(n => n.ContentType.Alias == CategorysData.ModelTypeAlias))
         {
             SetAlias(entity, typeof(CategorysData), nameof(CategorysData.HeadingDescriptionStatus), 
-                CategoryHeadingDescriptionStatuses.Hide.Description, 
-                CategoryHeadingDescriptionStatuses.Inherit.Description);
+                CategoryHeadingDescriptionStatuses.Hide.Description ?? throw new ArgumentNullException("Missing Description attribute"), 
+                CategoryHeadingDescriptionStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
         }
     }
 }

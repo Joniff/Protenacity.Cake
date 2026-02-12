@@ -10,5 +10,5 @@ public partial interface IEditorVideoBaseSettings
 
 public partial class EditorVideoBaseSettings
 {
-    public EditorVideoRatios RatioTyped => EditorVideoRatios.ParseByDescription(this.Ratio) ?? EditorVideoRatios.SixteenByNine;
+    public EditorVideoRatios RatioTyped => EditorVideoRatios.ParseByDescription(this.Ratio.ToString()) ?? EditorVideoRatios.SixteenByNine;
 }

@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -27,4 +29,11 @@ public enum EditorThemes
 
     [Description("Poinciana")]
     Poinciana
+}
+
+public class EditorThemesValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<EditorThemes>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.RadioButtonList;
+    public override string DataTypeName => "Editor Theme Picker";
 }

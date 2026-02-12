@@ -20,7 +20,6 @@
 		<ProjectReference Include="..\Protenacity.Cake.Web.Core\Protenacity.Cake.Web.Core.csproj" />
 		<ProjectReference Include="..\Protenacity.Cake.Web.Presentation\Protenacity.Cake.Web.Presentation.csproj" />
 		<ProjectReference Include="..\Protenacity.Web.GraphEmail\Protenacity.Web.GraphEmail.csproj" />
-		<ProjectReference Include="..\Protenacity.Web.Review\Protenacity.Web.Review.csproj" />
 		<ProjectReference Include="..\Protenacity.Web.TipTapHeaders\Protenacity.Web.TipTapHeaders.csproj" />
 		<ProjectReference Include="..\Protenacity.Web.UfmPercent\Protenacity.Web.UfmPercent.csproj" />
 		<ProjectReference Include="..\Protenacity.Web.OpenStreetMap\Protenacity.Web.OpenStreetMap.csproj" />

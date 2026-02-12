@@ -6,11 +6,13 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 public partial interface IEditorActionDefaultSettings
 {
     ActionStyles StyleActionTyped { get; }
+    ActionStyleAlignments StyleActionAlignmentTyped { get; }
     ActionStyleClickAreas StyleActionClickAreaTyped { get; }
 }
 
 public partial class EditorActionDefaultSettings
 {
     public ActionStyles StyleActionTyped => ActionStyles.Button; // QWERTY
+    public ActionStyleAlignments StyleActionAlignmentTyped => ActionStyleAlignments.RightAbsolute;
     public ActionStyleClickAreas StyleActionClickAreaTyped => ActionStyleClickAreas.Action;
 }

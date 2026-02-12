@@ -53,9 +53,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Icon: Icon placed on lefthand side of text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("icon")]
-		public virtual string Icon => this.Value<string>(_publishedValueFallback, "icon");
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons Icon => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons>(_publishedValueFallback, "icon");
 
 		///<summary>
 		/// Link: Turn icon and text into an optional link to a webpage or media item

@@ -143,18 +143,14 @@ public class EditorPageController(
 
         return CurrentTemplate(new EditorPageViewModel(model, publishedValueFallback)
         {
-            Breadcrumbs = viewService.CurrentBreadcrumb.BreadcrumbStatusTyped == BreadcrumbStatuses.Show 
+            Breadcrumbs = viewService.CurrentFurniture.BreadcrumbStatusTyped == BreadcrumbStatuses.Show 
                 ? model.Ancestors<EditorPage>().Reverse().Select(p => new Tuple<string, string>(string.IsNullOrWhiteSpace(p.Title) ? p.Name : p.Title, p.Url())) 
                 : null,
-            BreadcrumbSubtheme = viewService.CurrentBreadcrumb.BreadcrumbSubthemeTyped,
-            BreadcrumbThemeShade = viewService.CurrentBreadcrumb.BreadcrumbThemeShadeTyped,
-            BreadcrumbsColor = viewService.CurrentBreadcrumb.FurnitureBreadcrumbsColor,
-            PageTitleSubtheme = viewService.CurrentFurniture.PageTitleSubthemeTyped != EditorSubthemes.Inherit
-                ? viewService.CurrentFurniture.PageTitleSubthemeTyped
-                : (content?.Contents?.FirstOrDefault()?.Block?.Settings as IEditorBackgroundSettings)?.SubthemeTyped,
-            PageTitleThemeShade = viewService.CurrentFurniture.PageTitleThemeShadeTyped != EditorThemeShades.Inherit
-                ? viewService.CurrentFurniture.PageTitleThemeShadeTyped
-                : (content?.Contents?.FirstOrDefault()?.Block?.Settings as IEditorBackgroundSettings)?.ThemeShadeTyped,
+            BreadcrumbSubtheme = viewService.CurrentFurniture.BreadcrumbSubthemeTyped,
+            BreadcrumbThemeShade = viewService.CurrentFurniture.BreadcrumbThemeShadeTyped,
+            BreadcrumbsColor = viewService.CurrentFurniture.FurnitureBreadcrumbsColor,
+            PageTitleSubtheme = model.PageTitleSubthemeTyped == EditorSubthemes.Inherit ? viewService.CurrentFurniture.HeaderSubthemeTyped : model.PageTitleSubthemeTyped,
+            PageTitleThemeShade = model.PageTitleThemeShadeTyped == EditorThemeShades.Inherit ? viewService.CurrentFurniture.HeaderThemeShadeTyped : model.PageTitleThemeShadeTyped,
             Alert = viewService.CurrentAlert,
             Contents = content!.Contents,
             AboveContents = aboveContent,

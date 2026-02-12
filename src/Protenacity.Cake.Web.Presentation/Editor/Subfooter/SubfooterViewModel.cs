@@ -7,7 +7,6 @@ public class SubfooterViewModel
 {
     public BlockListModel? OverrideColor { get; init; }
     public DateTime? LastUpdated { get; init; }
-    public DateTime? NextReviewed { get; init; }
     public bool ShowReturnToTop { get; init; }
     public EditorThemeShades ReturnToTopShade { get; init; }
 }

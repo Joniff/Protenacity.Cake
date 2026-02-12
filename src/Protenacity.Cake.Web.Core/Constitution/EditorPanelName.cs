@@ -10,5 +10,5 @@ public partial interface IEditorPanelName
 
 public partial class EditorPanelName
 {
-    public EditorNamedIcons PanelIconTyped => EditorNamedIcons.ParseByDescription(this.PanelIcon) ?? EditorNamedIcons.Asterisk;
+    public EditorNamedIcons PanelIconTyped => EditorNamedIcons.ParseByDescription(this.PanelIcon.ToString()) ?? EditorNamedIcons.Asterisk;
 }

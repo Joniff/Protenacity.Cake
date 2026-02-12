@@ -1,12 +1,13 @@
-﻿using Protenacity.Cake.Web.Core.Extensions;
+﻿using Microsoft.AspNetCore.Mvc;
+using Protenacity.Cake.Web.Core.Extensions;
 using Protenacity.Cake.Web.Core.Property;
 using Protenacity.Cake.Web.Presentation.Editor.Action;
-using Microsoft.AspNetCore.Mvc;
 using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Core.Strings;
 using Umbraco.Extensions;
+using static Lucene.Net.Util.Packed.PackedInt32s;
 
 namespace Protenacity.Cake.Web.Presentation.Editor.Card;
 
@@ -17,11 +18,8 @@ public class DownloadMediaViewComponent
 
     public IViewComponentResult Invoke(IEditorContent content)
     {
-        var mediaFile = content?.Block?.Content as IPublishedContent;
-        if (mediaFile == null)
-        {
-            throw new ArgumentNullException(nameof(content));
-        }
+        var mediaFile = content.Block?.Content as IPublishedContent;
+        ArgumentNullException.ThrowIfNull(mediaFile);
 
         var id = Guid.NewGuid().ToString("N");
         var format = mediaFile.GetProperty(Constants.Conventions.Media.Extension)?.GetValue() as string ?? "";

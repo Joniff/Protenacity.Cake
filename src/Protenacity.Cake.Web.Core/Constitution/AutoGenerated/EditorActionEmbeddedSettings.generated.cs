@@ -24,8 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Action Style</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string StyleAction { get; }
+		global::Protenacity.Cake.Web.Core.Property.ActionStyles StyleAction { get; }
 
 		/// <summary>Action Alignment</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -33,8 +32,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Action Click Area</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string StyleActionClickArea { get; }
+		global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas StyleActionClickArea { get; }
 	}
 
 	/// <summary>Action Settings</summary>
@@ -72,14 +70,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Action Style: Display as a button or underlined text with optional icon  Button = Uses current theme to colour button. Link = Hyperlink using current theme to colour link. Link with Icon = Hyperlink with icon using current theme. Header = Makes the header of the card the hyperlink. Hide = No clickable action. Button (Primary) = Blue button Button (Secondary) = Grey button Button (Success) = Green button Button (Danger) = Red button Button (Warning) = Yellow button Button (Info) = Cyan button Button (Light) = White button Button (Dark) = Black button 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleAction")]
-		public virtual string StyleAction => GetStyleAction(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyles StyleAction => GetStyleAction(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Action Style</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetStyleAction(IEditorActionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "styleAction");
+		public static global::Protenacity.Cake.Web.Core.Property.ActionStyles GetStyleAction(IEditorActionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.ActionStyles>(publishedValueFallback, "styleAction");
 
 		///<summary>
 		/// Action Alignment: Location of Button or Link. Absolute = Will position over the top of other items (if applicable). Relative = Will try and make other items flow around it (if applicable).
@@ -96,13 +92,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Action Click Area: Which area that can clicked
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleActionClickArea")]
-		public virtual string StyleActionClickArea => GetStyleActionClickArea(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas StyleActionClickArea => GetStyleActionClickArea(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Action Click Area</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetStyleActionClickArea(IEditorActionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "styleActionClickArea");
+		public static global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas GetStyleActionClickArea(IEditorActionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas>(publishedValueFallback, "styleActionClickArea");
 	}
 }

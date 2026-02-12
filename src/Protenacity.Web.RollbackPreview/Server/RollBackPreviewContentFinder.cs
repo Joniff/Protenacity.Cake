@@ -184,11 +184,20 @@ public class RollBackPreviewContentFinder : IContentFinder
             var _snapshot = scope.ServiceProvider.GetRequiredService<IOptionsSnapshot<CookieAuthenticationOptions>>();
             CookieAuthenticationOptions cookieOptions = _snapshot.Get(Umbraco.Cms.Core.Constants.Security.BackOfficeAuthenticationType);
 
-            string backOfficeCookie = _httpContextAccessor.HttpContext?.Request.Cookies[cookieOptions.Cookie.Name!];
-            AuthenticationTicket unprotected = cookieOptions.TicketDataFormat.Unprotect(backOfficeCookie!);
-            ClaimsIdentity backOfficeIdentity = unprotected?.Principal.GetUmbracoIdentity();
-
-            return backOfficeIdentity != null;
+            if (cookieOptions.Cookie.Name != null)
+            {
+                var backOfficeCookie = _httpContextAccessor.HttpContext?.Request.Cookies[cookieOptions.Cookie.Name];
+                if (backOfficeCookie != null)
+                {
+                    var unprotected = cookieOptions.TicketDataFormat.Unprotect(backOfficeCookie);
+                    if (unprotected != null)
+                    {
+                        var backOfficeIdentity = unprotected.Principal.GetUmbracoIdentity();
+                        return backOfficeIdentity != null;
+                    }
+                }
+            }
+            return false;
         }
     }
 

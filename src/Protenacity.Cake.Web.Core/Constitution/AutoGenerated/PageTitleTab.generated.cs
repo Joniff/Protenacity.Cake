@@ -18,37 +18,37 @@ using Umbraco.Extensions;
 
 namespace Protenacity.Cake.Web.Core.Constitution
 {
-	// Mixin Content Type with alias "reviewTab"
-	/// <summary>Review Tab</summary>
-	public partial interface IReviewTab : IPublishedElement
+	// Mixin Content Type with alias "pageTitleTab"
+	/// <summary>Page Title Tab</summary>
+	public partial interface IPageTitleTab : IPublishedElement
 	{
-		/// <summary>Comments</summary>
+		/// <summary>Page Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ReviewComments { get; }
+		global::Umbraco.Cms.Core.Strings.IHtmlEncodedString PageTitleName { get; }
 
-		/// <summary>Date</summary>
+		/// <summary>Promote Page Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		global::System.DateTime ReviewDate { get; }
+		bool PageTitlePromote { get; }
 
-		/// <summary>Group</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		int ReviewGroup { get; }
-
-		/// <summary>Status</summary>
+		/// <summary>Page Title Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ReviewStatus { get; }
+		string PageTitleSubtheme { get; }
+
+		/// <summary>Page Title Shade</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		global::Protenacity.Cake.Web.Core.Property.EditorThemeShades PageTitleThemeShade { get; }
 	}
 
-	/// <summary>Review Tab</summary>
-	[PublishedModel("reviewTab")]
-	public partial class ReviewTab : PublishedElementModel, IReviewTab
+	/// <summary>Page Title Tab</summary>
+	[PublishedModel("pageTitleTab")]
+	public partial class PageTitleTab : PublishedElementModel, IPageTitleTab
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		public new const string ModelTypeAlias = "reviewTab";
+		public new const string ModelTypeAlias = "pageTitleTab";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -57,14 +57,14 @@ namespace Protenacity.Cake.Web.Core.Constitution
 			=> PublishedModelUtility.GetModelContentType(contentTypeCache, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<ReviewTab, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<PageTitleTab, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(contentTypeCache), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public ReviewTab(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
+		public PageTitleTab(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -73,51 +73,51 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		// properties
 
 		///<summary>
-		/// Comments: Internal Use Only. Any comments you wish to record.  At no point are these shown on the front end to any users of the website only other content editors can view what is written here.
+		/// Page Title: Main &lt;h1&gt; Header for page. Placed above all content 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("reviewComments")]
-		public virtual string ReviewComments => GetReviewComments(this, _publishedValueFallback);
+		[ImplementPropertyType("pageTitleName")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString PageTitleName => GetPageTitleName(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Comments</summary>
+		/// <summary>Static getter for Page Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetReviewComments(IReviewTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "reviewComments");
+		public static global::Umbraco.Cms.Core.Strings.IHtmlEncodedString GetPageTitleName(IPageTitleTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(publishedValueFallback, "pageTitleName");
 
 		///<summary>
-		/// Date: By which date does this page require to be reviewed
+		/// Promote Page Title: Give prominence to Page Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("reviewDate")]
-		public virtual global::System.DateTime ReviewDate => GetReviewDate(this, _publishedValueFallback);
+		[ImplementPropertyType("pageTitlePromote")]
+		public virtual bool PageTitlePromote => GetPageTitlePromote(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Date</summary>
+		/// <summary>Static getter for Promote Page Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		public static global::System.DateTime GetReviewDate(IReviewTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.DateTime>(publishedValueFallback, "reviewDate");
+		public static bool GetPageTitlePromote(IPageTitleTab that, IPublishedValueFallback publishedValueFallback) => that.Value<bool>(publishedValueFallback, "pageTitlePromote");
 
 		///<summary>
-		/// Group: Which User Group should be notified when a review is required. Select a User within that User Group
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("reviewGroup")]
-		public virtual int ReviewGroup => GetReviewGroup(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Group</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		public static int GetReviewGroup(IReviewTab that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "reviewGroup");
-
-		///<summary>
-		/// Status: {b}Inherit{/b} whether this page requires content review or not from it's parent page or {b}enable{/b}/{b}disable{/b} this page requiring content review.
+		/// Page Title Subtheme: Set a Subtheme for the page title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("reviewStatus")]
-		public virtual string ReviewStatus => GetReviewStatus(this, _publishedValueFallback);
+		[ImplementPropertyType("pageTitleSubtheme")]
+		public virtual string PageTitleSubtheme => GetPageTitleSubtheme(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Status</summary>
+		/// <summary>Static getter for Page Title Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetReviewStatus(IReviewTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "reviewStatus");
+		public static string GetPageTitleSubtheme(IPageTitleTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "pageTitleSubtheme");
+
+		///<summary>
+		/// Page Title Shade: Set a shade for the page title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[ImplementPropertyType("pageTitleThemeShade")]
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades PageTitleThemeShade => GetPageTitleThemeShade(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Page Title Shade</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		public static global::Protenacity.Cake.Web.Core.Property.EditorThemeShades GetPageTitleThemeShade(IPageTitleTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades>(publishedValueFallback, "pageTitleThemeShade");
 	}
 }

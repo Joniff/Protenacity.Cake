@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Umbraco.Cms.Core;
+using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
@@ -36,16 +38,11 @@ public enum EditorTextFieldTypes
 
     [Description("Category")]
     Category,
+}
 
-    [Description("Bus Route")]
-    BusRoute,
-
-    [Description("Bus Route Description")]
-    BusRouteDescription,
-
-    [Description("Bus Stop")]
-    BusStop,
-
-    [Description("Bus Day")]
-    BusDay
+public class EditorTextFieldTypesValueConverter(IDataTypeService dataTypeService)
+    : PropertyValueConverterBase<EditorTextFieldTypes>(dataTypeService)
+{
+    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+    public override string DataTypeName => "Editor Text Field Picker";
 }

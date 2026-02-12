@@ -12,77 +12,71 @@ public class ListViewComponent(IEditorService editorService) : ViewComponent
     {
         var cardSettings = content.Block?.Settings as IEditorCardDefaultSettings;
 
-        if (cardSettings != null)
+        if (cardSettings?.StyleCardImage != null)
         {
-            if (!string.IsNullOrWhiteSpace(cardSettings.StyleCardImage))
-            {
-                content.Defaults.CardStyleImageLocation = cardSettings.StyleCardImageLocationTyped;
-            }
+            content.Defaults.CardStyleImageLocation = cardSettings.StyleCardImage;
+        }
 
-            if (!string.IsNullOrWhiteSpace(cardSettings.StyleCardImageSize))
-            {
-                content.Defaults.CardStyleImageSize = cardSettings.StyleCardImageSizeTyped;
-            }
+        if (cardSettings?.StyleCardImageSize != null)
+        {
+            content.Defaults.CardStyleImageSize = cardSettings.StyleCardImageSize;
+        }
 
-            if (!string.IsNullOrWhiteSpace(cardSettings.StyleCardHeader))
-            {
-                content.Defaults.CardStyleHeader = cardSettings.StyleCardHeaderTyped;
-            }
+        if (cardSettings?.StyleCardHeader != null)
+        {
+            content.Defaults.CardStyleHeader = cardSettings.StyleCardHeader;
+        }
 
-            if (!string.IsNullOrWhiteSpace(cardSettings.StyleCardDate))
-            {
-                content.Defaults.CardStyleDate = cardSettings.StyleCardDateTyped;
-            }
+        if (cardSettings?.StyleCardDate != null)
+        {
+            content.Defaults.CardStyleDate = cardSettings.StyleCardDate;
+        }
 
-            if (!string.IsNullOrWhiteSpace(cardSettings.StyleCardTime))
-            {
-                content.Defaults.CardStyleTime = cardSettings.StyleCardTimeTyped;
-            }
+        if (cardSettings?.StyleCardTime != null)
+        {
+            content.Defaults.CardStyleTime = cardSettings.StyleCardTime;
+        }
 
-            if (!string.IsNullOrWhiteSpace(cardSettings.StyleCardText))
-            {
-                content.Defaults.CardStyleText = cardSettings.StyleCardTextTyped;
-            }
+        if (cardSettings?.StyleCardText != null)
+        {
+            content.Defaults.CardStyleText = cardSettings.StyleCardText;
+        }
 
-            if (cardSettings.StyleCardSubthemeTyped != Core.Property.EditorSubthemes.Inherit)
-            {
-                content.Defaults.CardStyleSubtheme = cardSettings.StyleCardSubthemeTyped;
-            }
+        if ((cardSettings?.StyleCardSubthemeTyped ?? Core.Property.EditorSubthemes.Inherit) != Core.Property.EditorSubthemes.Inherit)
+        {
+            content.Defaults.CardStyleSubtheme = cardSettings!.StyleCardSubthemeTyped;
+        }
 
-            if (cardSettings.StyleCardThemeShadeTyped != Core.Property.EditorThemeShades.Inherit)
-            {
-                content.Defaults.CardStyleThemeShade = cardSettings.StyleCardThemeShadeTyped;
-            }
+        if ((cardSettings?.StyleCardThemeShadeTyped ?? Core.Property.EditorThemeShades.Inherit) != Core.Property.EditorThemeShades.Inherit)
+        {
+            content.Defaults.CardStyleThemeShade = cardSettings!.StyleCardThemeShadeTyped;
+        }
 
-            if (cardSettings.StyleCardOverrideColor?.Any() == true)
-            {
-                content.Defaults.CardStyleOverrideColor = cardSettings.StyleCardOverrideColor;
-            }
+        if (cardSettings?.StyleCardOverrideColor?.Any() == true)
+        {
+            content.Defaults.CardStyleOverrideColor = cardSettings.StyleCardOverrideColor;
+        }
 
-            if (!string.IsNullOrWhiteSpace(cardSettings.StyleCardBorderColor?.Color))
-            {
-                content.Defaults.CardStyleBorderColor = cardSettings.StyleCardBorderColor.Color;
-            }
+        if (!string.IsNullOrWhiteSpace(cardSettings?.StyleCardBorderColor?.Color))
+        {
+            content.Defaults.CardStyleBorderColor = cardSettings.StyleCardBorderColor.Color;
         }
 
         var actionSettings = content.Block?.Settings as IEditorActionDefaultSettings;
 
-        if (actionSettings != null)
+        if (actionSettings?.StyleAction != null)
         {
-            if (!string.IsNullOrWhiteSpace(actionSettings.StyleAction))
-            {
-                content.Defaults.CardStyleAction = actionSettings.StyleActionTyped;
-            }
+            content.Defaults.CardStyleAction = actionSettings.StyleAction;
+        }
 
-            if (!string.IsNullOrWhiteSpace(actionSettings.StyleActionClickArea))
-            {
-                content.Defaults.CardStyleActionClickArea = actionSettings.StyleActionClickAreaTyped;
-            }
+        if (actionSettings?.StyleActionClickArea != null)
+        {
+            content.Defaults.CardStyleActionClickArea = actionSettings.StyleActionClickArea;
+        }
 
-            if (actionSettings.StyleActionAlignment != Core.Property.ActionStyleAlignments.Unset)
-            {
-                content.Defaults.CardStyleActionAlignment = actionSettings.StyleActionAlignment;
-            }
+        if (actionSettings?.StyleActionAlignment != null)
+        {
+            content.Defaults.CardStyleActionAlignment = actionSettings.StyleActionAlignment;
         }
 
         var blocks = editorService.Load(null, content.Defaults, (content.Block?.Content as IEditorListEmbedded)?.ListBlocks);
@@ -96,7 +90,7 @@ public class ListViewComponent(IEditorService editorService) : ViewComponent
         return View(new ListViewModel
         {
             Id = Name + Guid.NewGuid().ToString("N"),
-            ListType = (content.Block?.Settings as EditorListPrimarySettings)?.ListTypeTyped ?? Core.Property.ListTypes.Grid,
+            ListType = (content.Block?.Settings as EditorListPrimarySettings)?.ListTypeTyped ?? Core.Property.EditorListTypes.Grid,
             MaxColumns = (content.Block?.Settings as IEditorListBaseSettings)?.MaxColumns ?? 3,
             Blocks = blocks.Contents,
             Paging = blocks.Paging

@@ -7,10 +7,12 @@ public partial interface IEditorActionEmbeddedSettings
 {
     ActionStyles StyleActionTyped { get; }
     ActionStyleClickAreas StyleActionClickAreaTyped { get; }
+    ActionStyleAlignments StyleActionAlignmentTyped { get; }
 }
 
 public partial class EditorActionEmbeddedSettings
 {
-    public ActionStyles StyleActionTyped => ActionStyles.ParseByDescription(this.StyleAction) ?? ActionStyles.Button;
-    public ActionStyleClickAreas StyleActionClickAreaTyped => ActionStyleClickAreas.ParseByDescription(this.StyleActionClickArea) ?? ActionStyleClickAreas.Action;
+    public ActionStyles StyleActionTyped => ActionStyles.ParseByDescription(this.StyleAction.ToString()) ?? ActionStyles.Button;
+    public ActionStyleClickAreas StyleActionClickAreaTyped => ActionStyleClickAreas.ParseByDescription(this.StyleActionClickArea.ToString()) ?? ActionStyleClickAreas.Action;
+    public ActionStyleAlignments StyleActionAlignmentTyped => ActionStyleAlignments.RightAbsolute;
 }

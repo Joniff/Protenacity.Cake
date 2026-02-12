@@ -85,9 +85,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Icon: Optional Icon placed on the left hand side of the Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("panelIcon")]
-		public virtual string PanelIcon => global::Protenacity.Cake.Web.Core.Constitution.EditorPanelName.GetPanelIcon(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons PanelIcon => global::Protenacity.Cake.Web.Core.Constitution.EditorPanelName.GetPanelIcon(this, _publishedValueFallback);
 
 		///<summary>
 		/// Name: Text used to select panel in tab strip or accordion

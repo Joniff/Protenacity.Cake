@@ -145,8 +145,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Position</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string CookieConsentModalPosition { get; }
+		global::Protenacity.Cake.Web.Core.Property.CookieConsentPositions CookieConsentModalPosition { get; }
 
 		/// <summary>Reject All</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -536,14 +535,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Position: Where is the modal popup located within the window
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("cookieConsentModalPosition")]
-		public virtual string CookieConsentModalPosition => GetCookieConsentModalPosition(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.CookieConsentPositions CookieConsentModalPosition => GetCookieConsentModalPosition(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Position</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetCookieConsentModalPosition(ICookieConsentTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "cookieConsentModalPosition");
+		public static global::Protenacity.Cake.Web.Core.Property.CookieConsentPositions GetCookieConsentModalPosition(ICookieConsentTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.CookieConsentPositions>(publishedValueFallback, "cookieConsentModalPosition");
 
 		///<summary>
 		/// Reject All: Text on button that rejects all cookies except those that are deemed necessary for website function
