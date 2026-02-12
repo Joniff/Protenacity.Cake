@@ -60,8 +60,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Orientation: Direction of steps
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("orientation")]
-		public virtual string Orientation => global::Protenacity.Cake.Web.Core.Constitution.EditorStepperEmbeddedSettings.GetOrientation(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorStepperOrientation Orientation => global::Protenacity.Cake.Web.Core.Constitution.EditorStepperEmbeddedSettings.GetOrientation(this, _publishedValueFallback);
 	}
 }

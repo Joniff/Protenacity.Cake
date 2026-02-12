@@ -16,6 +16,6 @@ public enum EditorCardStyleTimes
 public class EditorCardStyleTimesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorCardStyleTimes>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Card Time Style";
 }

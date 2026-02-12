@@ -29,8 +29,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Border Edges</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::System.Collections.Generic.IEnumerable<string> BorderEdges { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges BorderEdges { get; }
 	}
 
 	/// <summary>Shared Border Settings</summary>
@@ -81,13 +80,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Border Edges: Which edges do you wish the border to be displayed on. Select all 4 options to complete the border
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("borderEdges")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> BorderEdges => GetBorderEdges(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges BorderEdges => GetBorderEdges(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Border Edges</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::System.Collections.Generic.IEnumerable<string> GetBorderEdges(IEditorBorderSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<string>>(publishedValueFallback, "borderEdges");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges GetBorderEdges(IEditorBorderSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges>(publishedValueFallback, "borderEdges");
 	}
 }

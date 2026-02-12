@@ -19,6 +19,6 @@ public enum EditorHeroBannerTextAlignments
 public class EditorHeroBannerTextAlignmentsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorHeroBannerTextAlignments>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Hero Banner Text Alignment";
 }

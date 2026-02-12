@@ -16,6 +16,6 @@ public enum EditorTextRestricts
 public class EditorTextRestrictsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorTextRestricts>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Text Restrict";
 }

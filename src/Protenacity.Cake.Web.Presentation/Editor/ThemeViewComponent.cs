@@ -105,9 +105,16 @@ public abstract class ThemeViewComponent
         ? content.Defaults.CardStyleBorderColor
         : (content.Block?.Settings as IEditorBorderSettings)?.BorderColor?.Color;
 
-    public EditorBorderEdges BorderEdges([DisallowNull] IEditorContent content) => (content.Block?.Settings as IEditorBorderSettings)?.BorderEdges?.Any() != true
-        ? content.Defaults.CardStyleBorderEdges
-        : (content.Block?.Settings as IEditorBorderSettings)?.BorderEdgesTyped ?? EditorBorderEdges.All;
+    public EditorBorderEdges BorderEdges([DisallowNull] IEditorContent content)
+    {
+        var borderEdges = (content.Block?.Settings as IEditorBorderSettings)?.BorderEdges;
+        if (borderEdges != null && borderEdges != EditorBorderEdges.None)
+        {
+            return (EditorBorderEdges)borderEdges;
+        }
+
+        return content.Defaults.CardStyleBorderEdges != EditorBorderEdges.None ? content.Defaults.CardStyleBorderEdges : EditorBorderEdges.All;
+    }
 
     public int PageSize([DisallowNull] IEditorContent content, int defaultPageSize, int maximumPageSize)
     {

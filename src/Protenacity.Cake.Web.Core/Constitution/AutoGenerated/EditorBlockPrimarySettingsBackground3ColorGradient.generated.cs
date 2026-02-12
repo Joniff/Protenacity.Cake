@@ -61,9 +61,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Type: Type of gradient required
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("gradientType")]
-		public virtual string GradientType => this.Value<string>(_publishedValueFallback, "gradientType");
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorGradientTypes GradientType => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorGradientTypes>(_publishedValueFallback, "gradientType");
 
 		///<summary>
 		/// Middle Colour: Mid colour required

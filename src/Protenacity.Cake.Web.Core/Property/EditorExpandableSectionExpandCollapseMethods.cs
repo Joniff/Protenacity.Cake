@@ -16,6 +16,6 @@ public enum EditorExpandableSectionExpandCollapseMethods
 public class EditorExpandableSectionExpandCollapseMethodsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorExpandableSectionExpandCollapseMethods>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Expandable Section Expand Collapse Method";
 }

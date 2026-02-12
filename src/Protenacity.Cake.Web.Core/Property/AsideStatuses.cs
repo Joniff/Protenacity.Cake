@@ -22,6 +22,6 @@ public enum AsideStatuses
 public class AsideStatusesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<AsideStatuses>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.RadioButtonList;
+
     public override string DataTypeName => "Aside Status";
 }

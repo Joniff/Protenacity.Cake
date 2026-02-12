@@ -44,6 +44,6 @@ public enum FurnitureLogoRatios
 public class FurnitureLogoRatiosValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<FurnitureLogoRatios>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Furniture Logo Ratio";
 }

@@ -19,6 +19,6 @@ public enum EditorExpandableSectionCollapseSizeUnits
 public class EditorExpandableSectionCollapseSizeUnitsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorExpandableSectionCollapseSizeUnits>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Expandable Section Collapse Size Unit";
 }

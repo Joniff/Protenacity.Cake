@@ -22,6 +22,6 @@ public enum EditorTabStripPlacements
 public class EditorTabStripPlacementsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorTabStripPlacements>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Tab Strip Placement";
 }

@@ -28,8 +28,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Orientation</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Orientation { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorStepperOrientation Orientation { get; }
 	}
 
 	/// <summary>Stepper Settings</summary>
@@ -78,13 +77,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Orientation: Direction of steps
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("orientation")]
-		public virtual string Orientation => GetOrientation(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorStepperOrientation Orientation => GetOrientation(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Orientation</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetOrientation(IEditorStepperEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "orientation");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorStepperOrientation GetOrientation(IEditorStepperEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorStepperOrientation>(publishedValueFallback, "orientation");
 	}
 }

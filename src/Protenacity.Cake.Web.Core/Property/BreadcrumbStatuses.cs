@@ -19,6 +19,6 @@ public enum BreadcrumbStatuses
 public class BreadcrumbStatusesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<BreadcrumbStatuses>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Breadcrumb Status";
 }

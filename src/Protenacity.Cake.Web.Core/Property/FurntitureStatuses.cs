@@ -16,6 +16,6 @@ public enum FurntitureStatuses
 public class FurntitureStatusesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<FurntitureStatuses>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Furniture Status";
 }

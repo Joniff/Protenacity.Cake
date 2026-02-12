@@ -34,8 +34,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string BannerStatus { get; }
+		global::Protenacity.Cake.Web.Core.Property.BannerStatuses BannerStatus { get; }
 	}
 
 	/// <summary>Hero Banner Tab</summary>
@@ -99,13 +98,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Status: {b}Inherit{/b} Hero Banner from parent page or {b}Show Hero Banners{/b}, {b}Show Single Image{/b} or {b}Hide{/b} Hero Banner from information entered below 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("bannerStatus")]
-		public virtual string BannerStatus => GetBannerStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.BannerStatuses BannerStatus => GetBannerStatus(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetBannerStatus(IBannerTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "bannerStatus");
+		public static global::Protenacity.Cake.Web.Core.Property.BannerStatuses GetBannerStatus(IBannerTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.BannerStatuses>(publishedValueFallback, "bannerStatus");
 	}
 }

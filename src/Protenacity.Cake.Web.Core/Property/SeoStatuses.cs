@@ -19,6 +19,6 @@ public enum SeoStatuses
 public class SeoStatusesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<SeoStatuses>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Seo Status";
 }

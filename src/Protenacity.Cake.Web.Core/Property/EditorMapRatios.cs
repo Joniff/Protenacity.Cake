@@ -32,6 +32,6 @@ public enum EditorMapRatios
 public class EditorMapRatiosValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorMapRatios>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Map Ratio";
 }

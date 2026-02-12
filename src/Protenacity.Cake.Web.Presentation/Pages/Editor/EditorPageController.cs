@@ -124,7 +124,7 @@ public class EditorPageController(
         Tuple<bool, IEnumerable<IEditorContent>>? aboveContent = null;
         Tuple<bool, IEnumerable<IEditorContent>>? belowContent = null;
 
-        if (viewService.CurrentAside?.AsideStatusTyped == AsideStatuses.Left || viewService.CurrentAside?.AsideStatusTyped == AsideStatuses.Right)
+        if (viewService.CurrentAside?.AsideStatus == AsideStatuses.Left || viewService.CurrentAside?.AsideStatus == AsideStatuses.Right)
         {
             if (offset == 1)
             {

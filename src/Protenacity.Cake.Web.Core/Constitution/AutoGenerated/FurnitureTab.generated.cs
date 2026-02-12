@@ -29,13 +29,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Breadcrumb Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurnitureBreadcrumbStatus { get; }
+		global::Protenacity.Cake.Web.Core.Property.BreadcrumbStatuses FurnitureBreadcrumbStatus { get; }
 
 		/// <summary>Breadcrumb Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurnitureBreadcrumbSubtheme { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorSubthemes FurnitureBreadcrumbSubtheme { get; }
 
 		/// <summary>Breadcrumb Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -68,8 +66,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Footer Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurnitureFooterSubtheme { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorSubthemes FurnitureFooterSubtheme { get; }
 
 		/// <summary>Footer Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -87,8 +84,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Header Menu Position</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurnitureHeaderMenuPosition { get; }
+		global::Protenacity.Cake.Web.Core.Property.HeaderMenuPositions FurnitureHeaderMenuPosition { get; }
 
 		/// <summary>Header Stick to Top</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -96,8 +92,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Header Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurnitureHeaderSubtheme { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorSubthemes FurnitureHeaderSubtheme { get; }
 
 		/// <summary>Header Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -130,8 +125,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string FurnitureStatus { get; }
+		global::Protenacity.Cake.Web.Core.Property.FurntitureStatuses FurnitureStatus { get; }
 	}
 
 	/// <summary>Header & Footer Tab</summary>
@@ -182,27 +176,23 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Breadcrumb Status: Should this Breadcrumb be shown, hidden or inherit it's status from its parent page. Always hidden on Home Page.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureBreadcrumbStatus")]
-		public virtual string FurnitureBreadcrumbStatus => GetFurnitureBreadcrumbStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.BreadcrumbStatuses FurnitureBreadcrumbStatus => GetFurnitureBreadcrumbStatus(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Breadcrumb Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurnitureBreadcrumbStatus(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furnitureBreadcrumbStatus");
+		public static global::Protenacity.Cake.Web.Core.Property.BreadcrumbStatuses GetFurnitureBreadcrumbStatus(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.BreadcrumbStatuses>(publishedValueFallback, "furnitureBreadcrumbStatus");
 
 		///<summary>
 		/// Breadcrumb Subtheme: Set the subtheme for the Breadcrumb.  Only valid if Breadcrumb is being displayed
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureBreadcrumbSubtheme")]
-		public virtual string FurnitureBreadcrumbSubtheme => GetFurnitureBreadcrumbSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes FurnitureBreadcrumbSubtheme => GetFurnitureBreadcrumbSubtheme(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Breadcrumb Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurnitureBreadcrumbSubtheme(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furnitureBreadcrumbSubtheme");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorSubthemes GetFurnitureBreadcrumbSubtheme(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes>(publishedValueFallback, "furnitureBreadcrumbSubtheme");
 
 		///<summary>
 		/// Breadcrumb Shade: Shade of Breadcrumb.  Only valid if Breadcrumb is being shown
@@ -284,14 +274,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Footer Subtheme: Set subtheme for footer or Inherit Page subtheme
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureFooterSubtheme")]
-		public virtual string FurnitureFooterSubtheme => GetFurnitureFooterSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes FurnitureFooterSubtheme => GetFurnitureFooterSubtheme(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Footer Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurnitureFooterSubtheme(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furnitureFooterSubtheme");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorSubthemes GetFurnitureFooterSubtheme(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes>(publishedValueFallback, "furnitureFooterSubtheme");
 
 		///<summary>
 		/// Footer Shade: Set light or dark shade for footer or inherit Page shade value
@@ -334,14 +322,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Header Menu Position: Where to place the Header menu on Larger devices like laptop or desktop
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureHeaderMenuPosition")]
-		public virtual string FurnitureHeaderMenuPosition => GetFurnitureHeaderMenuPosition(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.HeaderMenuPositions FurnitureHeaderMenuPosition => GetFurnitureHeaderMenuPosition(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Header Menu Position</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurnitureHeaderMenuPosition(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furnitureHeaderMenuPosition");
+		public static global::Protenacity.Cake.Web.Core.Property.HeaderMenuPositions GetFurnitureHeaderMenuPosition(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.HeaderMenuPositions>(publishedValueFallback, "furnitureHeaderMenuPosition");
 
 		///<summary>
 		/// Header Stick to Top: Should the header stick to the top of the page and still be visible even when the user scrolls down
@@ -358,14 +344,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Header Subtheme: Set subtheme for header or Inherit Page subtheme
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureHeaderSubtheme")]
-		public virtual string FurnitureHeaderSubtheme => GetFurnitureHeaderSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes FurnitureHeaderSubtheme => GetFurnitureHeaderSubtheme(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Header Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurnitureHeaderSubtheme(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furnitureHeaderSubtheme");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorSubthemes GetFurnitureHeaderSubtheme(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes>(publishedValueFallback, "furnitureHeaderSubtheme");
 
 		///<summary>
 		/// Header Shade: Set light or dark shade for header or inherit Page shade value
@@ -450,13 +434,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Status: {b}Inherit{/b} header & footer information from parent web page or {b}show{/b} header & footer information below
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureStatus")]
-		public virtual string FurnitureStatus => GetFurnitureStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.FurntitureStatuses FurnitureStatus => GetFurnitureStatus(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetFurnitureStatus(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "furnitureStatus");
+		public static global::Protenacity.Cake.Web.Core.Property.FurntitureStatuses GetFurnitureStatus(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.FurntitureStatuses>(publishedValueFallback, "furnitureStatus");
 	}
 }

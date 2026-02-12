@@ -53,9 +53,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Initial State: Is the Text collapsed or expanded when first viewed
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("initialState")]
-		public virtual string InitialState => this.Value<string>(_publishedValueFallback, "initialState");
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorTextExpandableInitialStates InitialState => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorTextExpandableInitialStates>(_publishedValueFallback, "initialState");
 
 		///<summary>
 		/// Override Colours: OR Set the background to your own specific colour, image or gradient. If set will override current Subtheme.
@@ -69,9 +68,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Subtheme: Change subtheme for this item. Inherit = Use same subtheme as page 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("subtheme")]
-		public virtual string Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Shade: Change section to dark or light mode. Inherit = Use whichever mode the page has

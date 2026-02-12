@@ -22,6 +22,6 @@ public enum EditorTableSourceFileSeparators
 public class EditorTableSourceFileSeparatorsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorTableSourceFileSeparators>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Table Source File Separator";
 }

@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 
 public partial class EditorStepperPanelSettings
 {
-    public EditorStepperOrientation OrientationTyped => EditorStepperOrientation.ParseByDescription(this.Orientation) ?? EditorStepperOrientation.Vertical;
+    public EditorStepperOrientation OrientationTyped => EditorStepperOrientation.ParseByDescription(this.Orientation.ToString()) ?? EditorStepperOrientation.Vertical;
 }

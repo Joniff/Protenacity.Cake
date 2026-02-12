@@ -19,6 +19,5 @@ public enum AlertStatuses
 public class AlertStatusesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<AlertStatuses>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.RadioButtonList;
     public override string DataTypeName => "Alert Status";
 }

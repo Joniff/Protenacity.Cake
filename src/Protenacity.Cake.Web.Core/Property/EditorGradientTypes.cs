@@ -22,6 +22,6 @@ public enum EditorGradientTypes
 public class EditorGradientTypesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorGradientTypes>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Gradient Type";
 }

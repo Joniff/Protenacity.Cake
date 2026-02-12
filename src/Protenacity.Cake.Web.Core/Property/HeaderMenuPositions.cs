@@ -22,6 +22,6 @@ public enum HeaderMenuPositions
 public class HeaderMenuPositionsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<HeaderMenuPositions>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Header Menu Position";
 }

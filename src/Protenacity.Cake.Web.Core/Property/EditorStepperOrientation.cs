@@ -16,6 +16,6 @@ public enum EditorStepperOrientation
 public class EditorStepperOrientationValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorStepperOrientation>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Stepper Orientation";
 }

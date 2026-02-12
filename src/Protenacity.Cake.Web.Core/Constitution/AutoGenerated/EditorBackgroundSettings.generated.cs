@@ -29,8 +29,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Subtheme { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorSubthemes Subtheme { get; }
 
 		/// <summary>Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -85,14 +84,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Subtheme: Change subtheme for this item. Inherit = Use same subtheme as page 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("subtheme")]
-		public virtual string Subtheme => GetSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes Subtheme => GetSubtheme(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetSubtheme(IEditorBackgroundSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "subtheme");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorSubthemes GetSubtheme(IEditorBackgroundSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes>(publishedValueFallback, "subtheme");
 
 		///<summary>
 		/// Shade: Change section to dark or light mode. Inherit = Use whichever mode the page has

@@ -25,6 +25,6 @@ public enum EditorOrders
 public class EditorOrdersValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorOrders>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Order";
 }

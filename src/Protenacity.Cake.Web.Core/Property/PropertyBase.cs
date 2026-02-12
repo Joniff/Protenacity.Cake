@@ -1,6 +1,5 @@
 ﻿using Protenacity.Cake.Web.Core.Extensions;
 using Umbraco.Cms.Core;
-using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Core.PropertyEditors;
 using Umbraco.Cms.Core.Services;
@@ -9,7 +8,6 @@ namespace Protenacity.Cake.Web.Core.Property;
 
 public abstract class PropertyValueConverterBase<E>(IDataTypeService dataTypeService) : IPropertyValueConverter where E : Enum
 {
-    public abstract string PropertyTypeName { get; }
     public abstract string DataTypeName { get; }
 
     private IEnumerable<string>? GetConfigurationItems(string editorAlias, object? config)
@@ -17,16 +15,16 @@ public abstract class PropertyValueConverterBase<E>(IDataTypeService dataTypeSer
         switch (editorAlias)
         {
             case Constants.PropertyEditors.Aliases.DropDownListFlexible:
-                return (config as Umbraco.Cms.Core.PropertyEditors.DropDownFlexibleConfiguration)?.Items;
+                return (config as DropDownFlexibleConfiguration)?.Items;
 
             default:
-                return (config as Umbraco.Cms.Core.PropertyEditors.ValueListConfiguration)?.Items;
+                return (config as ValueListConfiguration)?.Items;
         }
     }
 
     public bool IsConverter(IPublishedPropertyType propertyType)
     {
-        if (!propertyType.IsUserProperty || propertyType.DataType.EditorAlias != PropertyTypeName)
+        if (!propertyType.IsUserProperty)
         {
             return false;
         }
@@ -48,7 +46,7 @@ public abstract class PropertyValueConverterBase<E>(IDataTypeService dataTypeSer
         {
             if (EnumExtensions.ParseByDescription<E>(item, true, default(E)) == null)
             {
-                throw new ArgumentOutOfRangeException("Value " + item + " is not a valid value for " + PropertyTypeName + " Data Type, because it doesn\'t exist in the corresponding " + typeof(E).Name + " Enum");
+                throw new ArgumentOutOfRangeException("Value " + item + " is not a valid value for " + DataTypeName + " Data Type, because it doesn\'t exist in the corresponding " + typeof(E).Name + " Enum");
             }
         }
         return true;

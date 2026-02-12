@@ -105,9 +105,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Status: Either {b}inherit{/b} side panel from parent web page, {b}hide{/b} side panel and allow web page content to be full width or display a side panel using the contents below on the {b}left{/b} or {b}right{/b} hand side of page. 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("asideStatus")]
-		public virtual string AsideStatus => global::Protenacity.Cake.Web.Core.Constitution.AsideTab.GetAsideStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.AsideStatuses AsideStatus => global::Protenacity.Cake.Web.Core.Constitution.AsideTab.GetAsideStatus(this, _publishedValueFallback);
 
 		///<summary>
 		/// Hero Banners: Enter one or more slide that are positioned above page content 
@@ -129,9 +128,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Status: {b}Inherit{/b} Hero Banner from parent page or {b}Show Hero Banners{/b}, {b}Show Single Image{/b} or {b}Hide{/b} Hero Banner from information entered below 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("bannerStatus")]
-		public virtual string BannerStatus => global::Protenacity.Cake.Web.Core.Constitution.BannerTab.GetBannerStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.BannerStatuses BannerStatus => global::Protenacity.Cake.Web.Core.Constitution.BannerTab.GetBannerStatus(this, _publishedValueFallback);
 
 		///<summary>
 		/// Categories: Select which categories, if any, this page is associated with.   Only pages that have Seo Enabled will be included in Category results. 
@@ -161,17 +159,15 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Breadcrumb Status: Should this Breadcrumb be shown, hidden or inherit it's status from its parent page. Always hidden on Home Page.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureBreadcrumbStatus")]
-		public virtual string FurnitureBreadcrumbStatus => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureBreadcrumbStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.BreadcrumbStatuses FurnitureBreadcrumbStatus => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureBreadcrumbStatus(this, _publishedValueFallback);
 
 		///<summary>
 		/// Breadcrumb Subtheme: Set the subtheme for the Breadcrumb.  Only valid if Breadcrumb is being displayed
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureBreadcrumbSubtheme")]
-		public virtual string FurnitureBreadcrumbSubtheme => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureBreadcrumbSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes FurnitureBreadcrumbSubtheme => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureBreadcrumbSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Breadcrumb Shade: Shade of Breadcrumb.  Only valid if Breadcrumb is being shown
@@ -224,9 +220,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Footer Subtheme: Set subtheme for footer or Inherit Page subtheme
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureFooterSubtheme")]
-		public virtual string FurnitureFooterSubtheme => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureFooterSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes FurnitureFooterSubtheme => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureFooterSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Footer Shade: Set light or dark shade for footer or inherit Page shade value
@@ -255,9 +250,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Header Menu Position: Where to place the Header menu on Larger devices like laptop or desktop
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureHeaderMenuPosition")]
-		public virtual string FurnitureHeaderMenuPosition => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureHeaderMenuPosition(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.HeaderMenuPositions FurnitureHeaderMenuPosition => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureHeaderMenuPosition(this, _publishedValueFallback);
 
 		///<summary>
 		/// Header Stick to Top: Should the header stick to the top of the page and still be visible even when the user scrolls down
@@ -270,9 +264,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Header Subtheme: Set subtheme for header or Inherit Page subtheme
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureHeaderSubtheme")]
-		public virtual string FurnitureHeaderSubtheme => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureHeaderSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes FurnitureHeaderSubtheme => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureHeaderSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Header Shade: Set light or dark shade for header or inherit Page shade value
@@ -328,9 +321,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Status: {b}Inherit{/b} header & footer information from parent web page or {b}show{/b} header & footer information below
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("furnitureStatus")]
-		public virtual string FurnitureStatus => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.FurntitureStatuses FurnitureStatus => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureStatus(this, _publishedValueFallback);
 
 		///<summary>
 		/// Page Title: Main &lt;h1&gt; Header for page. Placed above all content 
@@ -351,9 +343,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Page Title Subtheme: Set a Subtheme for the page title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageTitleSubtheme")]
-		public virtual string PageTitleSubtheme => global::Protenacity.Cake.Web.Core.Constitution.PageTitleTab.GetPageTitleSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes PageTitleSubtheme => global::Protenacity.Cake.Web.Core.Constitution.PageTitleTab.GetPageTitleSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Page Title Shade: Set a shade for the page title
@@ -420,9 +411,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Status: {b}Inherit{/b} index status from parent page or {b}enable{/b}/{b}disable{/b} this page from being able to be indexed by search engines like {a href="https://developers.google.com/search/docs/fundamentals/how-search-works"}Google{/a}
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("seoStatus")]
-		public virtual string SeoStatus => global::Protenacity.Cake.Web.Core.Constitution.SeoTab.GetSeoStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.SeoStatuses SeoStatus => global::Protenacity.Cake.Web.Core.Constitution.SeoTab.GetSeoStatus(this, _publishedValueFallback);
 
 		///<summary>
 		/// Thumbnail: Image shown when linked from search engines like Google or from other pages within this site
@@ -481,17 +471,15 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Status: Either {b}inherit{/b} subfooter from parent web page or {b}show{/b}/{b}hide{/b} subfooter using information below
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("subfooterStatus")]
-		public virtual string SubfooterStatus => global::Protenacity.Cake.Web.Core.Constitution.SubfooterTab.GetSubfooterStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.SubfooterStatuses SubfooterStatus => global::Protenacity.Cake.Web.Core.Constitution.SubfooterTab.GetSubfooterStatus(this, _publishedValueFallback);
 
 		///<summary>
 		/// Subtheme: Variant of theme. Inherit = Use same subtheme as parent page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageSubtheme")]
-		public virtual string PageSubtheme => global::Protenacity.Cake.Web.Core.Constitution.ThemeTab.GetPageSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes PageSubtheme => global::Protenacity.Cake.Web.Core.Constitution.ThemeTab.GetPageSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Theme: Theme for this page. Inherit = Use same theme as parent page

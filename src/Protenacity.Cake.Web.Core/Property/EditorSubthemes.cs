@@ -22,6 +22,6 @@ public enum EditorSubthemes
 public class EditorSubthemesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorSubthemes>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Subtheme Picker";
 }

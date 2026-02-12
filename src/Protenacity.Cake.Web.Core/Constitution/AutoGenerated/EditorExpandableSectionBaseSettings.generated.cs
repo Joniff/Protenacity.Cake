@@ -24,8 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Collapsed Size Unit</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string CollapsedSizeUnit { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits CollapsedSizeUnit { get; }
 
 		/// <summary>Collapsed Size Value</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -33,13 +32,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Expand Collapse Method</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ExpandCollapseMethod { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods ExpandCollapseMethod { get; }
 
 		/// <summary>Intial State</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string InitialState { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates InitialState { get; }
 	}
 
 	/// <summary>Expandable Section Base Settings</summary>
@@ -77,14 +74,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Collapsed Size Unit: Screen Percentage = How much of the screen in percentage should be taken up by this section when section is in collapsed mode. Valid numbers are from 0 for invisible, to 100 the total screen size. The section height can be larger than the screen size.  Section Height = How much of the section should we display when in collapsed mode. Valid numbers are 0 for invisible to 100 the total section size which effectively negates the purpose of this section.  Fixed Height = Height in font units of em where 1 = height of normal font. Valid number are from 0 for invisible to the total section height as measured in font heights.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("collapsedSizeUnit")]
-		public virtual string CollapsedSizeUnit => GetCollapsedSizeUnit(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits CollapsedSizeUnit => GetCollapsedSizeUnit(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Collapsed Size Unit</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetCollapsedSizeUnit(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "collapsedSizeUnit");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits GetCollapsedSizeUnit(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits>(publishedValueFallback, "collapsedSizeUnit");
 
 		///<summary>
 		/// Collapsed Size Value: Value for Collapsed Size. What this value means depends on what the Unit is.
@@ -101,26 +96,22 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Expand Collapse Method: How does the user expand and collapse this section
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("expandCollapseMethod")]
-		public virtual string ExpandCollapseMethod => GetExpandCollapseMethod(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods ExpandCollapseMethod => GetExpandCollapseMethod(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Expand Collapse Method</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetExpandCollapseMethod(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "expandCollapseMethod");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods GetExpandCollapseMethod(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods>(publishedValueFallback, "expandCollapseMethod");
 
 		///<summary>
 		/// Intial State
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("initialState")]
-		public virtual string InitialState => GetInitialState(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates InitialState => GetInitialState(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Intial State</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetInitialState(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "initialState");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates GetInitialState(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates>(publishedValueFallback, "initialState");
 	}
 }

@@ -6,6 +6,6 @@ namespace Protenacity.Cake.Web.Core.Constitution;
 public partial class EditorVideoPanelSettings
 {
     public EditorVideoRatios RatioTyped => EditorVideoRatios.ParseByDescription(this.Ratio.ToString()) ?? EditorVideoRatios.SixteenByNine;
-    public EditorSubthemes SubthemeTyped => EditorSubthemes.ParseByDescription(this.Subtheme) ?? EditorSubthemes.Inherit;
-    public EditorThemeShades ThemeShadeTyped => EditorThemeShades.ParseByDescription(this.ThemeShade) ?? EditorThemeShades.Inherit ;
+    public EditorSubthemes SubthemeTyped => EditorSubthemes.ParseByDescription(this.Subtheme.ToString()) ?? EditorSubthemes.Inherit;
+    public EditorThemeShades ThemeShadeTyped => EditorThemeShades.ParseByDescription(this.ThemeShade.ToString()) ?? EditorThemeShades.Inherit ;
 }

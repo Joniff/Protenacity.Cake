@@ -57,8 +57,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string SeoStatus { get; }
+		global::Protenacity.Cake.Web.Core.Property.SeoStatuses SeoStatus { get; }
 
 		/// <summary>Thumbnail</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -198,14 +197,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Status: {b}Inherit{/b} index status from parent page or {b}enable{/b}/{b}disable{/b} this page from being able to be indexed by search engines like {a href="https://developers.google.com/search/docs/fundamentals/how-search-works"}Google{/a}
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("seoStatus")]
-		public virtual string SeoStatus => GetSeoStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.SeoStatuses SeoStatus => GetSeoStatus(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetSeoStatus(ISeoTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "seoStatus");
+		public static global::Protenacity.Cake.Web.Core.Property.SeoStatuses GetSeoStatus(ISeoTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.SeoStatuses>(publishedValueFallback, "seoStatus");
 
 		///<summary>
 		/// Thumbnail: Image shown when linked from search engines like Google or from other pages within this site

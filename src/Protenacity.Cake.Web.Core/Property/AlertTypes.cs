@@ -25,6 +25,6 @@ public enum AlertTypes
 public class AlertTypesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<AlertTypes>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Alert Type";
 }

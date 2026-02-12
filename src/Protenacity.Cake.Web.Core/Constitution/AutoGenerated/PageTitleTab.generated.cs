@@ -33,8 +33,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Page Title Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string PageTitleSubtheme { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorSubthemes PageTitleSubtheme { get; }
 
 		/// <summary>Page Title Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -100,14 +99,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Page Title Subtheme: Set a Subtheme for the page title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageTitleSubtheme")]
-		public virtual string PageTitleSubtheme => GetPageTitleSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes PageTitleSubtheme => GetPageTitleSubtheme(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Page Title Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetPageTitleSubtheme(IPageTitleTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "pageTitleSubtheme");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorSubthemes GetPageTitleSubtheme(IPageTitleTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes>(publishedValueFallback, "pageTitleSubtheme");
 
 		///<summary>
 		/// Page Title Shade: Set a shade for the page title

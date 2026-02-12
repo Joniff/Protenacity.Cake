@@ -61,8 +61,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Heading Description Status: Should we show below Heading Description or not.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("headingDescriptionStatus")]
-		public virtual string HeadingDescriptionStatus => this.Value<string>(_publishedValueFallback, "headingDescriptionStatus");
+		public virtual global::Protenacity.Cake.Web.Core.Property.CategoryHeadingDescriptionStatuses HeadingDescriptionStatus => this.Value<global::Protenacity.Cake.Web.Core.Property.CategoryHeadingDescriptionStatuses>(_publishedValueFallback, "headingDescriptionStatus");
 	}
 }

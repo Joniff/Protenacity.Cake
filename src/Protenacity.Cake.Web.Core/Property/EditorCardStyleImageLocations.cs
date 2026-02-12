@@ -28,6 +28,6 @@ public enum EditorCardStyleImageLocations
 public class EditorCardStyleImageLocationsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorCardStyleImageLocations>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Card Image Style";
 }

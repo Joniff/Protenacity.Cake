@@ -19,6 +19,6 @@ public enum EditorThemeShades
 public class EditorThemeShadesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorThemeShades>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.RadioButtonList;
+
     public override string DataTypeName => "Editor Theme Shade Picker";
 }

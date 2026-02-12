@@ -37,6 +37,6 @@ public enum CookieConsentPositions
 public class CookieConsentPositionsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<CookieConsentPositions>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Cookie Consent Position";
 }

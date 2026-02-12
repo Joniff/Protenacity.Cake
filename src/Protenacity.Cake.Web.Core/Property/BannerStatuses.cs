@@ -22,6 +22,6 @@ public enum BannerStatuses
 public class BannerStatusesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<BannerStatuses>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.RadioButtonList;
+
     public override string DataTypeName => "Banner Status";
 }

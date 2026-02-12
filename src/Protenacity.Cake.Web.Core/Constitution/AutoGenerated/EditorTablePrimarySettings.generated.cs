@@ -61,9 +61,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Subtheme: Change subtheme for this item. Inherit = Use same subtheme as page 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("subtheme")]
-		public virtual string Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Shade: Change section to dark or light mode. Inherit = Use whichever mode the page has

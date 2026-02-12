@@ -41,8 +41,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string SubfooterStatus { get; }
+		global::Protenacity.Cake.Web.Core.Property.SubfooterStatuses SubfooterStatus { get; }
 	}
 
 	/// <summary>Subfooter Tab</summary>
@@ -126,13 +125,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Status: Either {b}inherit{/b} subfooter from parent web page or {b}show{/b}/{b}hide{/b} subfooter using information below
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("subfooterStatus")]
-		public virtual string SubfooterStatus => GetSubfooterStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.SubfooterStatuses SubfooterStatus => GetSubfooterStatus(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetSubfooterStatus(ISubfooterTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "subfooterStatus");
+		public static global::Protenacity.Cake.Web.Core.Property.SubfooterStatuses GetSubfooterStatus(ISubfooterTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.SubfooterStatuses>(publishedValueFallback, "subfooterStatus");
 	}
 }

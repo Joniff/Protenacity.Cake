@@ -46,6 +46,6 @@ public enum EditorMapIcons
 public class EditorMapIconsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorMapIcons>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Map Icon";
 }

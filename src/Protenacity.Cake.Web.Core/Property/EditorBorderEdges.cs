@@ -31,6 +31,5 @@ public enum EditorBorderEdges
 public class EditorBorderEdgesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorBorderEdges>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
     public override string DataTypeName => "Editor Border Edges";
 }

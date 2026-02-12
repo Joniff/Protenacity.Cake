@@ -61,8 +61,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Default Aside Border Edges</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::System.Collections.Generic.IEnumerable<string> ConfigDefaultAsideBorderEdges { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges ConfigDefaultAsideBorderEdges { get; }
 
 		/// <summary>Missing Image Background Color</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -322,14 +321,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Default Aside Border Edges: Default edges that are shown around the side panel
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("configDefaultAsideBorderEdges")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> ConfigDefaultAsideBorderEdges => GetConfigDefaultAsideBorderEdges(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges ConfigDefaultAsideBorderEdges => GetConfigDefaultAsideBorderEdges(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Aside Border Edges</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::System.Collections.Generic.IEnumerable<string> GetConfigDefaultAsideBorderEdges(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<string>>(publishedValueFallback, "configDefaultAsideBorderEdges");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges GetConfigDefaultAsideBorderEdges(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges>(publishedValueFallback, "configDefaultAsideBorderEdges");
 
 		///<summary>
 		/// Missing Image Background Color: What col,our to use when an image is missing

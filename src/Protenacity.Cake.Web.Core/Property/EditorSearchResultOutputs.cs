@@ -16,6 +16,6 @@ public enum EditorSearchResultOutputs
 public class EditorSearchResultOutputsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorSearchResultOutputs>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Search Result Output";
 }

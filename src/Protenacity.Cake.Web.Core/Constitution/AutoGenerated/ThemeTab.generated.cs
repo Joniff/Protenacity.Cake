@@ -24,8 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string PageSubtheme { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorSubthemes PageSubtheme { get; }
 
 		/// <summary>Theme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -71,14 +70,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Subtheme: Variant of theme. Inherit = Use same subtheme as parent page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageSubtheme")]
-		public virtual string PageSubtheme => GetPageSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes PageSubtheme => GetPageSubtheme(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetPageSubtheme(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "pageSubtheme");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorSubthemes GetPageSubtheme(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes>(publishedValueFallback, "pageSubtheme");
 
 		///<summary>
 		/// Theme: Theme for this page. Inherit = Use same theme as parent page

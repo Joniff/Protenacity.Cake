@@ -13,7 +13,7 @@ public partial class EditorListPanelSettings
     public EditorCardStyleTexts StyleCardTextTyped => EditorCardStyleTexts.ParseByDescription(this.StyleCardText.ToString()) ?? EditorCardStyleTexts.Show;
     public ActionStyles StyleActionTyped => ActionStyles.Button;
     public ActionStyleClickAreas StyleActionClickAreaTyped => ActionStyleClickAreas.Action;
-    public EditorSubthemes StyleCardSubthemeTyped => EditorSubthemes.ParseByDescription(this.StyleCardSubtheme) ?? EditorSubthemes.Primary;
-    public EditorThemeShades StyleCardThemeShadeTyped => EditorThemeShades.ParseByDescription(this.StyleDefaultCardThemeShade) ?? EditorThemeShades.Light;
+    public EditorSubthemes StyleCardSubthemeTyped => EditorSubthemes.ParseByDescription(this.StyleCardSubtheme.ToString()) ?? EditorSubthemes.Primary;
+    public EditorThemeShades StyleCardThemeShadeTyped => EditorThemeShades.ParseByDescription(this.StyleDefaultCardThemeShade.ToString()) ?? EditorThemeShades.Light;
     public ActionStyleAlignments StyleActionAlignmentTyped => ActionStyleAlignments.RightAbsolute; // QWERTY
 }

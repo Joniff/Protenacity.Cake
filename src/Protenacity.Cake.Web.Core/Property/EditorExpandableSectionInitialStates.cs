@@ -16,6 +16,6 @@ public enum EditorExpandableSectionInitialStates
 public class EditorExpandableSectionInitialStatesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorExpandableSectionInitialStates>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Expandable Section Initial State";
 }

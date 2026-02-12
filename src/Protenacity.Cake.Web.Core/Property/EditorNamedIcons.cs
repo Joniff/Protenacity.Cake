@@ -97,6 +97,6 @@ public enum EditorNamedIcons
 public class EditorNamedIconsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorNamedIcons>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Named Icon";
 }

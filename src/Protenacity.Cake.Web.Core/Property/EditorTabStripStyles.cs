@@ -16,6 +16,6 @@ public enum EditorTabStripStyles
 public class EditorTabStripStylesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorTabStripStyles>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Tab Strip Style";
 }

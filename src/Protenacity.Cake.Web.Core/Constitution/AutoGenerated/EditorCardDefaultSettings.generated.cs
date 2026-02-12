@@ -29,8 +29,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Default Card Border Edges </summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::System.Collections.Generic.IEnumerable<string> StyleCardBorderEdges { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges StyleCardBorderEdges { get; }
 
 		/// <summary>Default Card Date</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -55,8 +54,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Default Card Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string StyleCardSubtheme { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorSubthemes StyleCardSubtheme { get; }
 
 		/// <summary>Default Card Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -119,14 +117,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Default Card Border Edges : Which border edges are displayed 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardBorderEdges")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> StyleCardBorderEdges => GetStyleCardBorderEdges(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges StyleCardBorderEdges => GetStyleCardBorderEdges(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Card Border Edges </summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::System.Collections.Generic.IEnumerable<string> GetStyleCardBorderEdges(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<string>>(publishedValueFallback, "styleCardBorderEdges");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges GetStyleCardBorderEdges(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges>(publishedValueFallback, "styleCardBorderEdges");
 
 		///<summary>
 		/// Default Card Date: Do we show the date on cards
@@ -189,14 +185,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Default Card Subtheme: Standard Subtheme for cards
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardSubtheme")]
-		public virtual string StyleCardSubtheme => GetStyleCardSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes StyleCardSubtheme => GetStyleCardSubtheme(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Card Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetStyleCardSubtheme(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "styleCardSubtheme");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorSubthemes GetStyleCardSubtheme(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes>(publishedValueFallback, "styleCardSubtheme");
 
 		///<summary>
 		/// Default Card Text: Do we show the Text on cards

@@ -53,9 +53,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Text Restrict: Truncate = Restrict text to width of container and use ellipsis Word Wrap = Place any overflow words on next line 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("textRestrict")]
-		public virtual string TextRestrict => this.Value<string>(_publishedValueFallback, "textRestrict");
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorTextRestricts TextRestrict => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorTextRestricts>(_publishedValueFallback, "textRestrict");
 
 		///<summary>
 		/// Override Colours: OR Set the background to your own specific colour, image or gradient. If set will override current Subtheme.
@@ -69,9 +68,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Subtheme: Change subtheme for this item. Inherit = Use same subtheme as page 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("subtheme")]
-		public virtual string Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Shade: Change section to dark or light mode. Inherit = Use whichever mode the page has
@@ -92,8 +90,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Border Edges: Which edges do you wish the border to be displayed on. Select all 4 options to complete the border
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("borderEdges")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> BorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorBorderSettings.GetBorderEdges(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges BorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorBorderSettings.GetBorderEdges(this, _publishedValueFallback);
 	}
 }

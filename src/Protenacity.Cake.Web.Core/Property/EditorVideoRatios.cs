@@ -22,6 +22,6 @@ public enum EditorVideoRatios
 public class EditorVideoRatiosValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorVideoRatios>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Video Ratio";
 }

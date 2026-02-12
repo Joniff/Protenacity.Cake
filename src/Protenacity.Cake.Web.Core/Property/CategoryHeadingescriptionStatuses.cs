@@ -19,6 +19,6 @@ public enum CategoryHeadingDescriptionStatuses
 public class CategoryHeadingDescriptionStatusesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<CategoryHeadingDescriptionStatuses>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Global Category Heading Description Status";
 }

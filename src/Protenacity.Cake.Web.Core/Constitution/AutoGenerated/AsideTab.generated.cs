@@ -37,8 +37,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string AsideStatus { get; }
+		global::Protenacity.Cake.Web.Core.Property.AsideStatuses AsideStatus { get; }
 	}
 
 	/// <summary>Aside Tab</summary>
@@ -111,13 +110,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Status: Either {b}inherit{/b} side panel from parent web page, {b}hide{/b} side panel and allow web page content to be full width or display a side panel using the contents below on the {b}left{/b} or {b}right{/b} hand side of page. 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("asideStatus")]
-		public virtual string AsideStatus => GetAsideStatus(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.AsideStatuses AsideStatus => GetAsideStatus(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetAsideStatus(IAsideTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "asideStatus");
+		public static global::Protenacity.Cake.Web.Core.Property.AsideStatuses GetAsideStatus(IAsideTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.AsideStatuses>(publishedValueFallback, "asideStatus");
 	}
 }

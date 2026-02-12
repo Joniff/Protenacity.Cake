@@ -49,6 +49,6 @@ public enum ActionStyles
 public class ActionStylesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<ActionStyles>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Card Action Style";
 }

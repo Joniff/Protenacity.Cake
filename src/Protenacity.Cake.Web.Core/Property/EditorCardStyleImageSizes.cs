@@ -34,6 +34,6 @@ public enum EditorCardStyleImageSizes
 public class EditorCardStyleImageSizesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorCardStyleImageSizes>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor Card Image Size";
 }

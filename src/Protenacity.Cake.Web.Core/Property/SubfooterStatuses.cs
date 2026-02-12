@@ -19,6 +19,6 @@ public enum SubfooterStatuses
 public class SubfooterStatusesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<SubfooterStatuses>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Subfooter Status";
 }

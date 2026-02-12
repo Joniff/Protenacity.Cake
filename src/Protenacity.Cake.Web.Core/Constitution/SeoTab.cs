@@ -11,5 +11,5 @@ public partial interface ISeoTab
 
 public partial class SeoTab
 {
-    public SeoStatuses SeoStatusTyped => SeoStatuses.ParseByDescription(this.SeoStatus) ?? SeoStatuses.Inherit;
+    public SeoStatuses SeoStatusTyped => SeoStatuses.ParseByDescription(this.SeoStatus.ToString()) ?? SeoStatuses.Inherit;
 }

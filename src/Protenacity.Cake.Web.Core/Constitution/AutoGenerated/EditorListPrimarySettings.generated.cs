@@ -53,9 +53,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// List Type: {b}Flexible Grid{/b} = Show blocks in columns and rows depending on device size   {b}Carousel{/b} = Show blocks in a single scrollable row
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("listType")]
-		public virtual string ListType => this.Value<string>(_publishedValueFallback, "listType");
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorListTypes ListType => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorListTypes>(_publishedValueFallback, "listType");
 
 		///<summary>
 		/// Default Action Style: Display any links as a button or underlined text with optional icon
@@ -90,9 +89,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Subtheme: Change subtheme for this item. Inherit = Use same subtheme as page 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("subtheme")]
-		public virtual string Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Shade: Change section to dark or light mode. Inherit = Use whichever mode the page has
@@ -113,9 +111,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Default Card Border Edges : Which border edges are displayed 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardBorderEdges")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> StyleCardBorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardBorderEdges(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges StyleCardBorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardBorderEdges(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Date: Do we show the date on cards
@@ -157,9 +154,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Default Card Subtheme: Standard Subtheme for cards
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleCardSubtheme")]
-		public virtual string StyleCardSubtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardSubtheme(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes StyleCardSubtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorCardDefaultSettings.GetStyleCardSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Card Text: Do we show the Text on cards

@@ -16,6 +16,6 @@ public enum EditorListTypes
 public class EditorListTypesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorListTypes>(dataTypeService)
 {
-    public override string PropertyTypeName => Constants.PropertyEditors.Aliases.DropDownListFlexible;
+
     public override string DataTypeName => "Editor List Type";
 }
