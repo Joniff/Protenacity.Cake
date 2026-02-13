@@ -270,8 +270,8 @@ public class ThemeTagHelper(IViewService viewService, IResponsiveImageService re
                             var source = overrideColors.Content as EditorBlockPrimarySettingsBackground2ColorGradient
                                 ?? throw new ApplicationException(nameof(overrideColors.Content) + " should be of type " + nameof(EditorBlockPrimarySettingsBackground2ColorGradient));
 
-                            attributeStyle.Add("background-image:" + (source.GradientTypeTyped == EditorGradientTypes.Centre ? "radial-gradient" : "linear-gradient") + "(" +
-                                GradientAngle(source.GradientTypeTyped) + "," + source.StartingColor + "," + source.EndingColor + ");");
+                            attributeStyle.Add("background-image:" + (source.GradientType == EditorGradientTypes.Centre ? "radial-gradient" : "linear-gradient") + "(" +
+                                GradientAngle(source.GradientType) + "," + source.StartingColor + "," + source.EndingColor + ");");
                         }
                         break;
 
@@ -279,8 +279,8 @@ public class ThemeTagHelper(IViewService viewService, IResponsiveImageService re
                         {
                             var source = overrideColors.Content as EditorBlockPrimarySettingsBackground3ColorGradient
                                 ?? throw new ApplicationException(nameof(overrideColors.Content) + " should be of type " + nameof(EditorBlockPrimarySettingsBackground3ColorGradient));
-                            attributeStyle.Add("background-image:" + (source.GradientTypeTyped == EditorGradientTypes.Centre ? "radial-gradient" : "linear-gradient") + "(" +
-                                GradientAngle(source.GradientTypeTyped) + "," + source.StartingColor + "," + source.MiddleColor + "," + source.EndingColor + ");");
+                            attributeStyle.Add("background-image:" + (source.GradientType == EditorGradientTypes.Centre ? "radial-gradient" : "linear-gradient") + "(" +
+                                GradientAngle(source.GradientType) + "," + source.StartingColor + "," + source.MiddleColor + "," + source.EndingColor + ");");
                         }
                         break;
 

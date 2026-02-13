@@ -84,7 +84,7 @@ public class VideoViewComponent(IViewService viewService,
             Copyright = video.Content.Copyright,
             SourceType = sourceType,
             SourceCode = sourceCode,
-            Ratio = video.Settings?.RatioTyped ?? Core.Property.EditorVideoRatios.SixteenByNine,
+            Ratio = video.Settings?.Ratio ?? Core.Property.EditorVideoRatios.SixteenByNine,
             ShowControls = video.Settings?.ShowControls ?? false,
         });
     }

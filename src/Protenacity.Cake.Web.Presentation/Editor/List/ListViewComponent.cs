@@ -42,14 +42,14 @@ public class ListViewComponent(IEditorService editorService) : ViewComponent
             content.Defaults.CardStyleText = cardSettings.StyleCardText;
         }
 
-        if ((cardSettings?.StyleCardSubthemeTyped ?? Core.Property.EditorSubthemes.Inherit) != Core.Property.EditorSubthemes.Inherit)
+        if ((cardSettings?.StyleCardSubtheme ?? Core.Property.EditorSubthemes.Inherit) != Core.Property.EditorSubthemes.Inherit)
         {
-            content.Defaults.CardStyleSubtheme = cardSettings!.StyleCardSubthemeTyped;
+            content.Defaults.CardStyleSubtheme = cardSettings!.StyleCardSubtheme;
         }
 
-        if ((cardSettings?.StyleCardThemeShadeTyped ?? Core.Property.EditorThemeShades.Inherit) != Core.Property.EditorThemeShades.Inherit)
+        if ((cardSettings?.StyleDefaultCardThemeShade ?? Core.Property.EditorThemeShades.Inherit) != Core.Property.EditorThemeShades.Inherit)
         {
-            content.Defaults.CardStyleThemeShade = cardSettings!.StyleCardThemeShadeTyped;
+            content.Defaults.CardStyleThemeShade = cardSettings!.StyleDefaultCardThemeShade;
         }
 
         if (cardSettings?.StyleCardOverrideColor?.Any() == true)
@@ -90,7 +90,7 @@ public class ListViewComponent(IEditorService editorService) : ViewComponent
         return View(new ListViewModel
         {
             Id = Name + Guid.NewGuid().ToString("N"),
-            ListType = (content.Block?.Settings as EditorListPrimarySettings)?.ListTypeTyped ?? Core.Property.EditorListTypes.Grid,
+            ListType = (content.Block?.Settings as EditorListPrimarySettings)?.ListType ?? Core.Property.EditorListTypes.Grid,
             MaxColumns = (content.Block?.Settings as IEditorListBaseSettings)?.MaxColumns ?? 3,
             Blocks = blocks.Contents,
             Paging = blocks.Paging

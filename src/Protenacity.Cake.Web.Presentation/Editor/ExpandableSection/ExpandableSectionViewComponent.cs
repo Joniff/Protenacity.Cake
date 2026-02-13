@@ -30,12 +30,12 @@ public class ExpandableSectionViewComponent(IEditorService editorService) : View
         {
             Id = Name + Guid.NewGuid().ToString("N"),
             Body = body.Contents,
-            Subtheme = settings?.SubthemeTyped ?? EditorSubthemes.Inherit,
-            ThemeShades = settings?.ThemeShadeTyped ?? EditorThemeShades.Inherit,
+            Subtheme = settings?.Subtheme ?? EditorSubthemes.Inherit,
+            ThemeShades = settings?.ThemeShade ?? EditorThemeShades.Inherit,
             CollapsedSize = settings?.CollapsedSizeValue ?? 0,
-            CollapsedSizeUnit = settings?.CollapsedSizeUnitTyped ?? EditorExpandableSectionCollapseSizeUnits.SectionPercentage,
-            ExpandCollapseMethod = settings?.ExpandCollapseMethodTyped ?? EditorExpandableSectionExpandCollapseMethods.Arrow,
-            InitialState = settings?.InitialStateTyped ?? EditorExpandableSectionInitialStates.Collapsed
+            CollapsedSizeUnit = settings?.CollapsedSizeUnit ?? EditorExpandableSectionCollapseSizeUnits.SectionPercentage,
+            ExpandCollapseMethod = settings?.ExpandCollapseMethod ?? EditorExpandableSectionExpandCollapseMethods.Arrow,
+            InitialState = settings?.InitialState ?? EditorExpandableSectionInitialStates.Collapsed
         });
     }
 }

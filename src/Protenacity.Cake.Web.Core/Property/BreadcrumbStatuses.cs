@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
@@ -19,6 +18,5 @@ public enum BreadcrumbStatuses
 public class BreadcrumbStatusesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<BreadcrumbStatuses>(dataTypeService)
 {
-
     public override string DataTypeName => "Breadcrumb Status";
 }

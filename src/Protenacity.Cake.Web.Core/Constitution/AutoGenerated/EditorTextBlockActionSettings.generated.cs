@@ -53,8 +53,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Button Style: Select colour for button.  Button = Uses current theme to colour button. Primary = Blue Secondary = Grey Success = Green Danger = Red Warning = Yellow Info = Cyan Light = White Dark = Black 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("styleAction")]
-		public virtual string StyleAction => this.Value<string>(_publishedValueFallback, "styleAction");
+		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyles StyleAction => this.Value<global::Protenacity.Cake.Web.Core.Property.ActionStyles>(_publishedValueFallback, "styleAction");
 	}
 }

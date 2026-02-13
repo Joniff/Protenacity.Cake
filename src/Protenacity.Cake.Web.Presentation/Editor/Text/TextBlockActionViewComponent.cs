@@ -31,7 +31,7 @@ public class TextBlockActionViewComponent : ThemeViewComponent
             : ActionTargets.ParseByDescription(actionContent?.Target) ?? ActionTargets.CurrentTab,
             Url = actionContent?.Url,
             Alignment = ActionStyleAlignments.LeftRelative,
-            Style = settings?.StyleActionTyped ?? ActionStyles.Button
+            Style = settings?.StyleAction ?? ActionStyles.Button
         });
     }
 }

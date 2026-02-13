@@ -35,7 +35,7 @@ public class OpeningTimesViewComponent(IViewService viewService) : ThemeViewComp
                 {
                     slots.Add(new OpeningTimesViewModel.Timeslot
                     {
-                        Day = editorTimeslot.DayTyped,
+                        Day = editorTimeslot.Day,
                         Text = editorTimeslot.Text,
                         Start = start ?? DateTime.MinValue,
                         End = end ?? DateTime.MinValue

@@ -367,7 +367,7 @@ internal class EditorService(
         defaults = SetDefault(defaults, source.Settings);
         var pages = content.Pages.Where(c => c.IsVisible() && c.ContentType.Alias == EditorPage.ModelTypeAlias).Cast<EditorPage>();
 
-        foreach (var page in OrderPages(pages, orderSettings?.OrderTyped ?? EditorOrders.Default))
+        foreach (var page in OrderPages(pages, orderSettings?.Order ?? EditorOrders.Default))
         {
             var header = string.IsNullOrWhiteSpace(page.Title) ? page.Name : page.Title;
             blocks.Add(new EditorContent
@@ -391,12 +391,12 @@ internal class EditorService(
         var parent = (parentContentKey != null ? (umbracoHelperAccessor.TryGetUmbracoHelper(out var umbracoHelper) ? umbracoHelper.Content(parentContentKey) : null) : null) ?? viewService.CurrentPage;
         defaults = SetDefault(defaults, source.Settings);
 
-        var status = (parent as EditorPage)?.SeoStatusTyped;
+        var status = (parent as EditorPage)?.SeoStatus;
         var ancestor = parent;
         while (status == SeoStatuses.Inherit && ancestor != null)
         {
             ancestor = ancestor.Parent();
-            status = (ancestor as EditorPage)?.SeoStatusTyped;
+            status = (ancestor as EditorPage)?.SeoStatus;
         }
 
         if (status == SeoStatuses.Inherit)
@@ -409,10 +409,10 @@ internal class EditorService(
         var children = parent.ChildrenOfType(EditorPage.ModelTypeAlias)?
             .Where(c => c.IsVisible() && c.ContentType.Alias == EditorPage.ModelTypeAlias)
             .Cast<EditorPage>()
-            .Where(c => c.SeoStatusTyped == SeoStatuses.Enable || (c.SeoStatusTyped == SeoStatuses.Inherit && status == SeoStatuses.Enable));
+            .Where(c => c.SeoStatus == SeoStatuses.Enable || (c.SeoStatus == SeoStatuses.Inherit && status == SeoStatuses.Enable));
         if (children?.Any() == true)
         {
-            foreach (var page in OrderPages(children, orderSettings?.OrderTyped ?? EditorOrders.Default))
+            foreach (var page in OrderPages(children, orderSettings?.Order ?? EditorOrders.Default))
             {
                 var header = string.IsNullOrWhiteSpace(page.Title) ? page.Name : page.Title;
                 blocks.Add(new EditorContent
@@ -471,7 +471,7 @@ internal class EditorService(
         defaults.CardStyleImageLocation = EditorCardStyleImageLocations.Hide;
         defaults = SetDefault(defaults, source.Settings);
 
-        foreach (var item in OrderMedia(GetMedia(content.MediaItems), orderSettings?.OrderTyped ?? EditorOrders.Default))
+        foreach (var item in OrderMedia(GetMedia(content.MediaItems), orderSettings?.Order ?? EditorOrders.Default))
         {
             blocks.Add(new EditorContent
             {

@@ -31,11 +31,11 @@ public class StepperViewComponent : ThemeViewComponent
                 Header = editorStep.Item2.Header,
                 Text = editorStep.Item2.Text,
                 IconText = (editorStep.Item1 + 1).ToString(),
-                Subtheme = editorStep.Item3?.SubthemeTyped == null || editorStep.Item3.SubthemeTyped == EditorSubthemes.Inherit ? Subtheme(content) : editorStep.Item3.SubthemeTyped,
-                ThemeShade = editorStep.Item3?.ThemeShadeTyped == null || editorStep.Item3.ThemeShadeTyped == EditorThemeShades.Inherit ? ThemeShade(content) : editorStep.Item3.ThemeShadeTyped,
+                Subtheme = editorStep.Item3?.Subtheme == null || editorStep.Item3.Subtheme == EditorSubthemes.Inherit ? Subtheme(content) : editorStep.Item3.Subtheme,
+                ThemeShade = editorStep.Item3?.ThemeShade == null || editorStep.Item3.ThemeShade == EditorThemeShades.Inherit ? ThemeShade(content) : editorStep.Item3.ThemeShade,
                 OverrideColor = editorStep.Item3?.OverrideColor,
                 BorderColor = editorStep.Item3?.BorderColor?.Color,
-                BorderEdges = editorStep.Item3?.BorderEdgesTyped ?? EditorBorderEdges.All
+                BorderEdges = editorStep.Item3?.BorderEdges ?? EditorBorderEdges.All
             };
 
             var stepIcon = editorStep.Item2.Icon?.FirstOrDefault()?.Content;
@@ -59,7 +59,7 @@ public class StepperViewComponent : ThemeViewComponent
         return View(new StepperViewModel
         {
             Id = Name + Guid.NewGuid().ToString("N"),
-            Orientation = settings?.OrientationTyped ?? EditorStepperOrientation.Vertical,
+            Orientation = settings?.Orientation ?? EditorStepperOrientation.Vertical,
             IconCircle = settings?.IconCircle ?? true,
             Steps = steps
         });

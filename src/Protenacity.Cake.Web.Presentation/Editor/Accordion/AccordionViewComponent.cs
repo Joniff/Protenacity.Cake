@@ -18,7 +18,7 @@ public class AccordionViewComponent(IEditorService editorService) : ViewComponen
 
         var accordion = editorService.Cast<EditorAccordionPrimary, IEditorAccordionEmbeddedSettings>(content.Block);
         var panels = editorService.Load(null, content.Defaults, ((EditorAccordionPrimary)content.Block.Content).PanelBlocks);
-        var initialState = accordion?.Settings?.InitialStateTyped ?? EditorAccordionInitialStates.FirstPanelExpanded;
+        var initialState = accordion?.Settings?.InitialState ?? EditorAccordionInitialStates.FirstPanelExpanded;
 
         if (panels?.Contents.Any() != true)
         {
@@ -28,7 +28,7 @@ public class AccordionViewComponent(IEditorService editorService) : ViewComponen
         return View(new AccordionViewModel
         {
             Id = Name + Guid.NewGuid().ToString("N"),
-            InitialStates = accordion?.Settings?.InitialStateTyped ?? EditorAccordionInitialStates.FirstPanelExpanded,
+            InitialStates = accordion?.Settings?.InitialState ?? EditorAccordionInitialStates.FirstPanelExpanded,
             Panels = panels.Contents.Select((x, i) => new Tuple<bool, IEditorContent>(
                 initialState == EditorAccordionInitialStates.AllCollapsed ? false : 
                 (initialState == EditorAccordionInitialStates.AllPanelsExpanded ? true : i == 0), x))

@@ -23,7 +23,7 @@ public class TextBlockFieldViewComponent(IViewService viewService) : ThemeViewCo
 
         string? text = null;
 
-        switch (content.FieldTyped)
+        switch (content.Field)
         {
             case Core.Property.EditorTextFieldTypes.Week:
                 text = RichTextFields.Week;
@@ -67,8 +67,8 @@ public class TextBlockFieldViewComponent(IViewService viewService) : ThemeViewCo
         return View(new TextBlockFieldViewModel
         {
             Text = new HtmlEncodedString(parse),
-            Subtheme = settings.SubthemeTyped == Core.Property.EditorSubthemes.Inherit ? Subtheme() : settings.SubthemeTyped,
-            Shade = settings.ThemeShadeTyped == Core.Property.EditorThemeShades.Inherit ? ThemeShade() : settings.ThemeShadeTyped,
+            Subtheme = settings.Subtheme == Core.Property.EditorSubthemes.Inherit ? Subtheme() : settings.Subtheme,
+            Shade = settings.ThemeShade == Core.Property.EditorThemeShades.Inherit ? ThemeShade() : settings.ThemeShade,
             OverrideColor = settings.OverrideColor
         });
     }

@@ -55,7 +55,7 @@ public class RssFeedMiddleware(IRuntimeState runtimeState,
     private IEnumerable<XElement> Pages(IPublishedContent? parent, bool includeDecendants = false)
     {
         var currentUri = viewService.CurrentUri;
-        var pages = parent?.Children<EditorPage>()?.Where(p => p.SeoStatusTyped != SeoStatuses.Disable);
+        var pages = parent?.Children<EditorPage>()?.Where(p => p.SeoStatus != SeoStatuses.Disable);
         if (pages?.Any() == true)
         {
             foreach (var page in pages)
@@ -84,7 +84,7 @@ public class RssFeedMiddleware(IRuntimeState runtimeState,
         var node = source;
         while (node != null && node.ContentType.Alias == EditorPage.ModelTypeAlias)
         {
-            if (node?.SeoStatusTyped == SeoStatuses.Inherit)
+            if (node?.SeoStatus == SeoStatuses.Inherit)
             {
                 node = node?.Parent() as EditorPage;
             }
@@ -94,7 +94,7 @@ public class RssFeedMiddleware(IRuntimeState runtimeState,
             }
         }
 
-        return node?.SeoStatusTyped == SeoStatuses.Enable;
+        return node?.SeoStatus == SeoStatuses.Enable;
     }
 
     private string RssFeed(RssFeedEntryTab entry)

@@ -1,7 +1,6 @@
-﻿using Protenacity.Cake.Web.Core.Constitution;
+﻿using Microsoft.AspNetCore.Mvc;
+using Protenacity.Cake.Web.Core.Constitution;
 using Protenacity.Cake.Web.Core.Property;
-using Microsoft.AspNetCore.Mvc;
-using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace Protenacity.Cake.Web.Presentation.Editor.Text;
 
@@ -18,8 +17,8 @@ public class TextViewComponent(IEditorService editorService) : ViewComponent
         }
 
         var block = editorService.Cast<IEditorTextEmbedded, IEditorTextEmbeddedSettings>(content.Block);
-        TempData[Name + nameof(EditorSubthemes)] = (int?) (content.Block.Settings as IEditorBackgroundSettings)?.SubthemeTyped;
-        TempData[Name + nameof(EditorThemeShades)] = (int?) (content.Block.Settings as IEditorBackgroundSettings)?.ThemeShadeTyped;
+        TempData[Name + nameof(EditorSubthemes)] = (int?) (content.Block.Settings as IEditorBackgroundSettings)?.Subtheme;
+        TempData[Name + nameof(EditorThemeShades)] = (int?) (content.Block.Settings as IEditorBackgroundSettings)?.ThemeShade;
 
         return View(block);
     }

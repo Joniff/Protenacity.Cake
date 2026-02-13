@@ -24,8 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Initial State</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string InitialState { get; }
+		global::Protenacity.Cake.Web.Core.Property.EditorAccordionInitialStates InitialState { get; }
 	}
 
 	/// <summary>Sub Accordion Settings</summary>
@@ -63,13 +62,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Initial State: How should the accordion first be viewed before being interacted with by the user
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("initialState")]
-		public virtual string InitialState => GetInitialState(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorAccordionInitialStates InitialState => GetInitialState(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Initial State</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetInitialState(IEditorAccordionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "initialState");
+		public static global::Protenacity.Cake.Web.Core.Property.EditorAccordionInitialStates GetInitialState(IEditorAccordionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorAccordionInitialStates>(publishedValueFallback, "initialState");
 	}
 }

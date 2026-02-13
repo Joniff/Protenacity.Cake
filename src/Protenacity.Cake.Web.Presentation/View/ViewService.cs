@@ -155,7 +155,7 @@ public class ViewService(
 
         while (node != null && node.ContentType.Alias == EditorPage.ModelTypeAlias)
         {
-            switch (node.FurnitureStatusTyped)
+            switch (node.FurnitureStatus)
             {
                 case FurntitureStatuses.Inherit:
                     node = node?.Parent() as EditorPage;
@@ -167,7 +167,7 @@ public class ViewService(
                     return;
 
                 default:
-                    throw new ApplicationException(node.FurnitureStatusTyped + " is invalid " + nameof(FurntitureStatuses));
+                    throw new ApplicationException(node.FurnitureStatus + " is invalid " + nameof(FurntitureStatuses));
             }
         }
         throw new ApplicationException("Home page has to have Furniture status set to Show");
@@ -211,7 +211,7 @@ public class ViewService(
 
             while (node != null && node.ContentType.Alias == EditorPage.ModelTypeAlias)
             {
-                switch (node.BreadcrumbStatusTyped)
+                switch (node.FurnitureBreadcrumbStatus)
                 {
                     case BreadcrumbStatuses.Inherit:
                         node = node?.Parent() as EditorPage;
@@ -280,7 +280,7 @@ public class ViewService(
 
             while (node != null && node.ContentType.Alias == EditorPage.ModelTypeAlias)
             {
-                switch (node.AlertStatusTyped)
+                switch (node.AlertStatus)
                 {
                     case AlertStatuses.Inherit:
                         node = node?.Parent() as EditorPage;
@@ -294,7 +294,7 @@ public class ViewService(
                         return node;
 
                     default:
-                        throw new ApplicationException(node.AlertStatusTyped + " is invalid " + nameof(AlertStatuses));
+                        throw new ApplicationException(node.AlertStatus + " is invalid " + nameof(AlertStatuses));
                 }
             }
             return null;
@@ -317,7 +317,7 @@ public class ViewService(
 
             while (node != null && node.ContentType.Alias == EditorPage.ModelTypeAlias)
             {
-                switch (node.AsideStatusTyped)
+                switch (node.AsideStatus)
                 {
                     case AsideStatuses.Inherit:
                         node = node?.Parent() as EditorPage;
@@ -332,7 +332,7 @@ public class ViewService(
                         return node;
 
                     default:
-                        throw new ApplicationException(node.AsideStatusTyped + " is invalid " + nameof(AsideStatuses));
+                        throw new ApplicationException(node.AsideStatus + " is invalid " + nameof(AsideStatuses));
                 }
             }
             return null;
@@ -353,7 +353,7 @@ public class ViewService(
 
             while (node != null && node.ContentType.Alias == EditorPage.ModelTypeAlias)
             {
-                switch (node.SeoStatusTyped)
+                switch (node.SeoStatus)
                 {
                     case SeoStatuses.Inherit:
                         node = node?.Parent() as EditorPage;
@@ -361,7 +361,7 @@ public class ViewService(
 
                     case SeoStatuses.Enable:
                     case SeoStatuses.Disable:
-                        var content = (OriginalContent as ISeoTab)?.SeoStatusTyped == SeoStatuses.Enable || (OriginalContent as ISeoTab)?.SeoStatusTyped == SeoStatuses.Disable ? OriginalContent! : CurrentPage;
+                        var content = (OriginalContent as ISeoTab)?.SeoStatus == SeoStatuses.Enable || (OriginalContent as ISeoTab)?.SeoStatus == SeoStatuses.Disable ? OriginalContent! : CurrentPage;
                         var seo = content as ISeoTab;
 
                         DateTime date = content.UpdateDate;
@@ -377,7 +377,7 @@ public class ViewService(
 
                         currentSeo = new SeoViewModel
                         {
-                            Enable = node.SeoStatusTyped == SeoStatuses.Enable,
+                            Enable = node.SeoStatus == SeoStatuses.Enable,
                             Keywords = seo?.Keywords?.Any() == true ? seo.Keywords : node.Keywords,
                             DatePublished = date,
                             Description = string.IsNullOrWhiteSpace(seo?.SeoDescription) ? node.SeoDescription : seo.SeoDescription,
@@ -388,7 +388,7 @@ public class ViewService(
                         return currentSeo;
 
                     default:
-                        throw new ApplicationException(node.SeoStatusTyped + " is invalid " + nameof(SeoStatuses));
+                        throw new ApplicationException(node.SeoStatus + " is invalid " + nameof(SeoStatuses));
                 }
             }
 
@@ -412,7 +412,7 @@ public class ViewService(
 
             while (node != null && node.ContentType.Alias == EditorPage.ModelTypeAlias)
             {
-                switch (node.BannerStatusTyped)
+                switch (node.BannerStatus)
                 {
                     case BannerStatuses.Inherit:
                         node = node?.Parent() as EditorPage;
@@ -427,7 +427,7 @@ public class ViewService(
                         return node;
 
                     default:
-                        throw new ApplicationException(node.BannerStatusTyped + " is invalid " + nameof(BannerStatuses));
+                        throw new ApplicationException(node.BannerStatus + " is invalid " + nameof(BannerStatuses));
                 }
             }
             return null;
@@ -450,7 +450,7 @@ public class ViewService(
 
             while (node != null && node.ContentType.Alias == EditorPage.ModelTypeAlias)
             {
-                switch (node.SubfooterStatusTyped)
+                switch (node.SubfooterStatus)
                 {
                     case SubfooterStatuses.Inherit:
                         node = node?.Parent() as EditorPage;
@@ -464,7 +464,7 @@ public class ViewService(
                         return node;
 
                     default:
-                        throw new ApplicationException(node.SubfooterStatusTyped + " is invalid " + nameof(SubfooterStatuses));
+                        throw new ApplicationException(node.SubfooterStatus + " is invalid " + nameof(SubfooterStatuses));
                 }
             }
             return null;
@@ -494,11 +494,11 @@ public class ViewService(
             if (currentTheme == null)
             {
                 var current = CurrentPage as EditorPage;
-                while (current != null && current.IsDocumentType(EditorPage.ModelTypeAlias) && current.ThemeTyped == EditorThemes.Inherit)
+                while (current != null && current.IsDocumentType(EditorPage.ModelTypeAlias) && current.PageTheme == EditorThemes.Inherit)
                 {
                     current = current?.Parent() as EditorPage;
                 }
-                currentTheme = current?.ThemeTyped ?? EditorThemes.Venice;
+                currentTheme = current?.PageTheme ?? EditorThemes.Venice;
             }
             return currentTheme ?? EditorThemes.Venice;
         }
@@ -512,11 +512,11 @@ public class ViewService(
             if (currentSubtheme == null)
             {
                 var current = CurrentPage as EditorPage;
-                while (current != null && current.IsDocumentType(EditorPage.ModelTypeAlias) && current.SubthemeTyped == EditorSubthemes.Inherit)
+                while (current != null && current.IsDocumentType(EditorPage.ModelTypeAlias) && current.PageSubtheme == EditorSubthemes.Inherit)
                 {
                     current = current?.Parent() as EditorPage;
                 }
-                currentSubtheme = current?.SubthemeTyped ?? EditorSubthemes.Primary;
+                currentSubtheme = current?.PageSubtheme ?? EditorSubthemes.Primary;
             }
             return currentSubtheme ?? EditorSubthemes.Primary;
         }
@@ -530,11 +530,11 @@ public class ViewService(
             if (currentThemeShade == null)
             {
                 var current = CurrentPage as EditorPage;
-                while (current != null && current.IsDocumentType(EditorPage.ModelTypeAlias) && current.ThemeShadeTyped == EditorThemeShades.Inherit)
+                while (current != null && current.IsDocumentType(EditorPage.ModelTypeAlias) && current.PageThemeShade == EditorThemeShades.Inherit)
                 {
                     current = current?.Parent() as EditorPage;
                 }
-                currentThemeShade = current?.ThemeShadeTyped ?? EditorThemeShades.Light;
+                currentThemeShade = current?.PageThemeShade ?? EditorThemeShades.Light;
             }
             return currentThemeShade ?? EditorThemeShades.Light;
         }

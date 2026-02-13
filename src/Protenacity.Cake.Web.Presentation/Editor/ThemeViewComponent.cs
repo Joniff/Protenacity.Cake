@@ -35,7 +35,7 @@ public abstract class ThemeViewComponent
         (content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleActionClickArea ?? content.Defaults.CardStyleActionClickArea;
 
     public ActionStyleAlignments StyleActionAlignment([DisallowNull] IEditorContent content) =>
-        (content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleActionAlignmentTyped ?? content.Defaults.CardStyleActionAlignment;
+        (content.Block?.Settings as IEditorActionEmbeddedSettings)?.StyleActionAlignment ?? content.Defaults.CardStyleActionAlignment;
 
     public bool StyleShowClickArrow([DisallowNull] IEditorContent content) => (content.Block?.Settings as IEditorCardBaseSettings)?.ShowClickArrow == true;
 
@@ -54,10 +54,10 @@ public abstract class ThemeViewComponent
     public EditorSubthemes Subtheme([DisallowNull] IEditorContent content)
     {
         var background = content.Block?.Settings as IEditorBackgroundSettings;
-        if (background != null && background.SubthemeTyped != EditorSubthemes.Inherit)
+        if (background != null && background.Subtheme != EditorSubthemes.Inherit)
         {
-            TempData[SubthemeKey] = (int)background.SubthemeTyped;
-            return background.SubthemeTyped;
+            TempData[SubthemeKey] = (int)background.Subtheme;
+            return background.Subtheme;
         }
         //var obj = TempData[SubthemeKey];
         //if (obj != null)
@@ -83,10 +83,10 @@ public abstract class ThemeViewComponent
     public EditorThemeShades ThemeShade([DisallowNull] IEditorContent content)
     {
         var background = content.Block?.Settings as IEditorBackgroundSettings;
-        if (background != null && background.ThemeShadeTyped != EditorThemeShades.Inherit)
+        if (background != null && background.ThemeShade != EditorThemeShades.Inherit)
         {
-            TempData[ThemeShadeKey] = (int)background.ThemeShadeTyped;
-            return background.ThemeShadeTyped;
+            TempData[ThemeShadeKey] = (int)background.ThemeShade;
+            return background.ThemeShade;
         }
         //var obj = TempData[ThemeShadeKey];
         //if (obj != null)

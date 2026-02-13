@@ -53,9 +53,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// Initial State: How should the accordion first be viewed before being interacted with by the user
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("initialState")]
-		public virtual string InitialState => global::Protenacity.Cake.Web.Core.Constitution.EditorAccordionEmbeddedSettings.GetInitialState(this, _publishedValueFallback);
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorAccordionInitialStates InitialState => global::Protenacity.Cake.Web.Core.Constitution.EditorAccordionEmbeddedSettings.GetInitialState(this, _publishedValueFallback);
 
 		///<summary>
 		/// Override Colours: OR Set the background to your own specific colour, image or gradient. If set will override current Subtheme.

@@ -16,7 +16,7 @@ public class GroupViewComponent(IEditorService editorService) : ViewComponent
         }
 
         var contentDefaults = content.Defaults ?? new EditorDefaults();
-        if ((content.Block?.Settings as EditorGroupAsideSettings)?.TextRestrictTyped == Core.Property.EditorTextRestricts.WordWrap)
+        if ((content.Block?.Settings as EditorGroupAsideSettings)?.TextRestrict == Core.Property.EditorTextRestricts.WordWrap)
         {
             contentDefaults.TextRestrict = Core.Property.EditorTextRestricts.WordWrap;
         }

@@ -47,7 +47,7 @@ public class SearchViewComponent(IViewService viewService,
             {
                 ContentId = r.ContentId,
                 DomainId = r.DomainId,
-                Body = settings?.ResultOutputTyped == Core.Property.EditorSearchResultOutputs.Highlight ? r.Body : r.Abstract,
+                Body = settings?.ResultOutput == Core.Property.EditorSearchResultOutputs.Highlight ? r.Body : r.Abstract,
                 Headers = r.Headers,
                 Path = r.Path,
                 Priority = r.Priority,

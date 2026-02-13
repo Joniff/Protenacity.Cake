@@ -50,13 +50,13 @@ internal class CategoryService(IDocumentNavigationQueryService documentNavigatio
     {
         IHtmlEncodedString? text = null;
 
-        switch (categoryHeaderData.HeadingDescriptionStatusTyped)
+        switch (categoryHeaderData.HeadingDescriptionStatus)
         {
             case Core.Property.CategoryHeadingDescriptionStatuses.Inherit:
                 var parent = categoryHeaderData.Parent() as CategorysData;
                 if (parent != null)
                 {
-                    switch (parent.HeadingDescriptionStatusTyped)
+                    switch (parent.HeadingDescriptionStatus)
                     {
                         case Core.Property.CategoryHeadingDescriptionStatuses.Show:
                         case Core.Property.CategoryHeadingDescriptionStatuses.Inherit:

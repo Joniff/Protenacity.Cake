@@ -143,19 +143,19 @@ public class EditorPageController(
 
         return CurrentTemplate(new EditorPageViewModel(model, publishedValueFallback)
         {
-            Breadcrumbs = viewService.CurrentFurniture.BreadcrumbStatusTyped == BreadcrumbStatuses.Show 
+            Breadcrumbs = viewService.CurrentFurniture.FurnitureBreadcrumbStatus == BreadcrumbStatuses.Show 
                 ? model.Ancestors<EditorPage>().Reverse().Select(p => new Tuple<string, string>(string.IsNullOrWhiteSpace(p.Title) ? p.Name : p.Title, p.Url())) 
                 : null,
-            BreadcrumbSubtheme = viewService.CurrentFurniture.BreadcrumbSubthemeTyped,
-            BreadcrumbThemeShade = viewService.CurrentFurniture.BreadcrumbThemeShadeTyped,
+            BreadcrumbSubtheme = viewService.CurrentFurniture.FurnitureBreadcrumbSubtheme,
+            BreadcrumbThemeShade = viewService.CurrentFurniture.FurnitureBreadcrumbThemeShade,
             BreadcrumbsColor = viewService.CurrentFurniture.FurnitureBreadcrumbsColor,
-            PageTitleSubtheme = model.PageTitleSubthemeTyped == EditorSubthemes.Inherit ? viewService.CurrentFurniture.HeaderSubthemeTyped : model.PageTitleSubthemeTyped,
-            PageTitleThemeShade = model.PageTitleThemeShadeTyped == EditorThemeShades.Inherit ? viewService.CurrentFurniture.HeaderThemeShadeTyped : model.PageTitleThemeShadeTyped,
+            PageTitleSubtheme = model.PageTitleSubtheme == EditorSubthemes.Inherit ? viewService.CurrentFurniture.FurnitureHeaderSubtheme : model.PageTitleSubtheme,
+            PageTitleThemeShade = model.PageTitleThemeShade == EditorThemeShades.Inherit ? viewService.CurrentFurniture.FurnitureHeaderThemeShade : model.PageTitleThemeShade,
             Alert = viewService.CurrentAlert,
             Contents = content!.Contents,
             AboveContents = aboveContent,
             BelowContents = belowContent,
-            PageLayout = viewService.CurrentAside?.AsideStatusTyped ?? AsideStatuses.Hide,
+            PageLayout = viewService.CurrentAside?.AsideStatus ?? AsideStatuses.Hide,
             AsideDesktop = AsideToGroups(viewService.CurrentAside, false),
             AsideMobile = AsideToGroups(viewService.CurrentAside, true),
             Subfooter = viewService.CurrentSubfooter,

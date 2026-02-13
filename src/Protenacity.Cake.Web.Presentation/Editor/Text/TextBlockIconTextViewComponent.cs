@@ -26,17 +26,17 @@ public class TextBlockIconTextViewComponent : ThemeViewComponent
 
         var url = content.Link?.Url;
 
-        if (content.IconTyped == EditorNamedIcons.Email && url?.StartsWith(MailTo, true, null) == false && url?.IsValidEmail() == true)
+        if (content.Icon == EditorNamedIcons.Email && url?.StartsWith(MailTo, true, null) == false && url?.IsValidEmail() == true)
         {
             url = MailTo + url;
         }
 
         return View(new TextBlockIconTextViewModel
         {
-            Icon = content.IconTyped,
+            Icon = content.Icon,
             Text = content.Text ?? new HtmlEncodedString(""),
-            Subtheme = settings.SubthemeTyped == Core.Property.EditorSubthemes.Inherit ? Subtheme() : settings.SubthemeTyped,
-            Shade = settings.ThemeShadeTyped == Core.Property.EditorThemeShades.Inherit ? ThemeShade() : settings.ThemeShadeTyped,
+            Subtheme = settings.Subtheme == Core.Property.EditorSubthemes.Inherit ? Subtheme() : settings.Subtheme,
+            Shade = settings.ThemeShade == Core.Property.EditorThemeShades.Inherit ? ThemeShade() : settings.ThemeShade,
             OverrideColor = settings.OverrideColor,
             IconColor = settings.IconColor?.Color,
             LinkUrl = url,

@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
@@ -19,6 +18,5 @@ public enum EditorAccordionInitialStates
 public class EditorAccordionInitialStatesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorAccordionInitialStates>(dataTypeService)
 {
-
-    public override string DataTypeName => "Editor Accordion Expands";
+    public override string DataTypeName => "Editor Accordion Expand";
 }

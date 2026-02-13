@@ -25,15 +25,15 @@ public class ActionViewComponent : ViewComponent
 
             action = new ActionViewModel
             {
-                Style = settings?.StyleActionTyped ?? ActionStyles.Link,
-                Alignment = settings?.StyleActionAlignmentTyped ?? ActionStyleAlignments.RightAbsolute,
+                Style = settings?.StyleAction ?? ActionStyles.Link,
+                Alignment = settings?.StyleActionAlignment ?? ActionStyleAlignments.RightAbsolute,
                 Name = new HtmlEncodedString(block?.Link?.Name ?? block?.Link?.Url ?? ""),
                 Target = string.IsNullOrWhiteSpace(block?.Link?.Target) 
                     ? ActionTargets.CurrentTab 
                     : ActionTargets.ParseByDescription(block?.Link?.Target) ?? ActionTargets.CurrentTab,
                 Url = block?.Link?.Url,
-                Subtheme = backgroundSettings?.SubthemeTyped ?? EditorSubthemes.Inherit,
-                ThemeShade = backgroundSettings?.ThemeShadeTyped ?? EditorThemeShades.Inherit,
+                Subtheme = backgroundSettings?.Subtheme ?? EditorSubthemes.Inherit,
+                ThemeShade = backgroundSettings?.ThemeShade ?? EditorThemeShades.Inherit,
                 Download = false
             };
         }

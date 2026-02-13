@@ -44,7 +44,7 @@ public class TableViewComponent(IEditorService editorService,
             return Content(string.Empty);
         }
 
-        var data = spreadsheetService.ReadCsv(text, Separator(content?.SeparatorTyped));
+        var data = spreadsheetService.ReadCsv(text, Separator(content?.Separator));
 
         return View(TemplateSimple, new TableSimpleViewModel
         {
@@ -71,7 +71,7 @@ public class TableViewComponent(IEditorService editorService,
         {
             using (var stream = mediaFileManager.FileSystem.OpenFile(file))
             {
-                return spreadsheetService.Read(stream, Separator(content?.SeparatorTyped));
+                return spreadsheetService.Read(stream, Separator(content?.Separator));
             }
         }, TimeSpan.FromHours(1));
 

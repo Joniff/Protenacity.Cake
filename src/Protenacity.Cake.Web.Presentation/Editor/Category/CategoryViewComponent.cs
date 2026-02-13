@@ -30,7 +30,7 @@ public class CategoryViewComponent(ICategoryService categoryService,
             BorderColor = BorderColor(content),
             BorderEdges = BorderEdges(content),
             Heading = categoryService.GetCategories(viewService.CurrentDomainPage, category.Categories),
-            Placement = settings?.PlacementTyped ?? Core.Property.EditorTabStripPlacements.Top,
+            Placement = settings?.Placement ?? Core.Property.EditorTabStripPlacements.Top,
             ShowHeadingDescription = settings?.ShowHeadingDescription ?? true,
             ShowSeparator = settings?.Separator ?? true
         });
