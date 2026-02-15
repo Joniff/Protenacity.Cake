@@ -64,12 +64,12 @@
     }
     <link href="/style/css/stepper.css" rel="stylesheet">
     <link href="/style/css/site.css" rel="stylesheet">
-    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/alerts.css" rel="stylesheet">
-    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/blocks.css" rel="stylesheet">
-    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/text.css" rel="stylesheet">
-    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/buttons.css" rel="stylesheet">
-    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/breadcrumbs.css" rel="stylesheet">
-    <link href="/style/themes/@(View.CurrentDomainPage.ConfigTheme)/tables.css" rel="stylesheet">
+    <link href="/style/themes/alerts.css" rel="stylesheet">
+    <link href="/style/themes/blocks.css" rel="stylesheet">
+    <link href="/style/themes/text.css" rel="stylesheet">
+    <link href="/style/themes/buttons.css" rel="stylesheet">
+    <link href="/style/themes/breadcrumbs.css" rel="stylesheet">
+    <link href="/style/themes/tables.css" rel="stylesheet">
 </head>
 
 <body>
@@ -100,11 +100,6 @@
                 @Html.Raw(View.CurrentDomainPage.CookieConsentBespokeScript)
             </script>
         }
-    }
-    @Html.RenderUmbracoFormDependencies(Url)
-    @if (View.CurrentVirtualAgent != null)
-    {
-        <script src="/script/virtualagent.js" data-virtual-agent="@(View.CurrentVirtualAgent.WorkspaceId),@(View.CurrentVirtualAgent.DefinitionId)"></script>
     }
     <script src="/script/alert.js"></script>
     <script src="/script/return-to-top.js"></script>

@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
@@ -43,6 +42,6 @@ public enum EditorTextFieldTypes
 public class EditorTextFieldTypesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorTextFieldTypes>(dataTypeService)
 {
-
     public override string DataTypeName => "Editor Text Field Picker";
 }
+

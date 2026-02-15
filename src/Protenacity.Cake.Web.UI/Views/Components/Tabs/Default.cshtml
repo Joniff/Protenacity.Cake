@@ -1,10 +1,10 @@
 ﻿@model Protenacity.Cake.Web.Presentation.Editor.Tabs.TabsViewModel
 @{
-    var navStyle = Model.Tabs.Settings?.StylesTyped == EditorTabStripStyles.Tabs ? "nav-tabs" : "nav-pills";
+    var navStyle = Model.Tabs.Settings?.Styles == EditorTabStripStyles.Tabs ? "nav-tabs" : "nav-pills";
 }
 
-<theme subtheme="Model?.Tabs?.Settings?.SubthemeTyped" shade="Model?.Tabs?.Settings?.ThemeShadeTyped" override="Model?.Tabs?.Settings?.OverrideColor" class="p-2">
-    @switch (Model.Tabs.Settings?.PlacementTyped ?? EditorTabStripPlacements.Top)
+<theme subtheme="Model?.Tabs?.Settings?.Subtheme" shade="Model?.Tabs?.Settings?.ThemeShade" override="Model?.Tabs?.Settings?.OverrideColor" class="p-2">
+    @switch (Model.Tabs.Settings?.Placement ?? EditorTabStripPlacements.Top)
     {
         case EditorTabStripPlacements.Left:
             <text>
@@ -95,7 +95,7 @@
                             <span>
                                 @if (!string.IsNullOrWhiteSpace((panel.Block?.Content as IEditorPanelName)?.PanelIcon))
                                 {
-                                    @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.NamedIcon.NamedIconViewComponent.Name, (panel.Block.Content as IEditorPanelName)?.PanelIconTyped))
+                                    @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.NamedIcon.NamedIconViewComponent.Name, (panel.Block.Content as IEditorPanelName)?.PanelIcon))
                                 }
                                 @Html.Raw(panel.Header?.ToHeader())
                             </span>

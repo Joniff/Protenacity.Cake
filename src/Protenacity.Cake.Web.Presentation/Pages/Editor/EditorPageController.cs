@@ -161,7 +161,7 @@ public class EditorPageController(
             Subfooter = viewService.CurrentSubfooter,
             Theme = viewService.CurrentTheme,
             Subtheme = viewService.CurrentSubtheme,
-            ThemeShade = viewService.CurrentThemeShade
+            ThemeShade = viewService.CurrentThemeShade,
         });
     }
 }

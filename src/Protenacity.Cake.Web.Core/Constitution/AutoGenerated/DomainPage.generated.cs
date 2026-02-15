@@ -50,14 +50,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		// properties
 
 		///<summary>
-		/// All Services: Set All Service Page
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("allServices")]
-		public virtual global::Umbraco.Cms.Core.Models.Link AllServices => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "allServices");
-
-		///<summary>
 		/// Bing: Bing verification code ('msvalidate.01')
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -111,6 +103,14 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual string GoogleVerification => this.Value<string>(_publishedValueFallback, "googleVerification");
 
 		///<summary>
+		/// Help: Set Help Page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("helpPage")]
+		public virtual global::Umbraco.Cms.Core.Models.Link HelpPage => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "helpPage");
+
+		///<summary>
 		/// Icon: Website Icon
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -147,8 +147,8 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("search")]
-		public virtual global::Umbraco.Cms.Core.Models.Link Search => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "search");
+		[ImplementPropertyType("searchPage")]
+		public virtual global::Umbraco.Cms.Core.Models.Link SearchPage => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "searchPage");
 
 		///<summary>
 		/// Title: Title of Website
@@ -455,22 +455,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual int ConfigCategoryCache => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigCategoryCache(this, _publishedValueFallback);
 
 		///<summary>
-		/// Date Format: Date format used to display Coroner dates. Formats include dd/MM/yyyy
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configCoronerDateFormat")]
-		public virtual string ConfigCoronerDateFormat => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigCoronerDateFormat(this, _publishedValueFallback);
-
-		///<summary>
-		/// Time Format: Time format used to display Coroner times. Formats include HH:mm
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configCoronerTimeFormat")]
-		public virtual string ConfigCoronerTimeFormat => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigCoronerTimeFormat(this, _publishedValueFallback);
-
-		///<summary>
 		/// Default Aside Background: Default background used for side panels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -492,14 +476,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("configDefaultImageMissingColor")]
 		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ConfigDefaultImageMissingColor => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigDefaultImageMissingColor(this, _publishedValueFallback);
-
-		///<summary>
-		/// From Email : When sending emails as part of submit workflow, who to send the email from
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configFormFromEmail")]
-		public virtual string ConfigFormFromEmail => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigFormFromEmail(this, _publishedValueFallback);
 
 		///<summary>
 		/// Image Quality: Select number between 1 to 100. 1 = Awful images but fast. 100 = Perfect images, but slow.
@@ -536,45 +512,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[ImplementPropertyType("configPageSizeMaximum")]
 		public virtual int ConfigPageSizeMaximum => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigPageSizeMaximum(this, _publishedValueFallback);
-
-		///<summary>
-		/// Review Email Body: Email body for review content email
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configReviewEmailBody")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString ConfigReviewEmailBody => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigReviewEmailBody(this, _publishedValueFallback);
-
-		///<summary>
-		/// Review Email Frequency: Which days of the week would you like to send review content emails
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configReviewEmailFrequency")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> ConfigReviewEmailFrequency => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigReviewEmailFrequency(this, _publishedValueFallback);
-
-		///<summary>
-		/// Review From Email: Which email address should we use to send review emails from
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configReviewEmailFrom")]
-		public virtual string ConfigReviewEmailFrom => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigReviewEmailFrom(this, _publishedValueFallback);
-
-		///<summary>
-		/// Review Email Subject: Subject element for emails sent out when content requires review
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configReviewEmailSubject")]
-		public virtual string ConfigReviewEmailSubject => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigReviewEmailSubject(this, _publishedValueFallback);
-
-		///<summary>
-		/// Default Cache Length: How long, in minutes, to cache Rss Feed when reading them, if the Rss Feed itself doesn't broadcast its cache rate/TTL.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("configRssFeedReaderCache")]
-		public virtual int ConfigRssFeedReaderCache => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigRssFeedReaderCache(this, _publishedValueFallback);
 
 		///<summary>
 		/// Fuzziness: Required similarity between search query and matching results.  90 = Close matching only, 1 or 2 characters difference. 50 = Only half the characters are required to match.   Lower the value more matches but slower the search takes to execute. If value is too low, search query will match everything. 
@@ -653,45 +590,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("configSearchSeoPriorities")]
 		public virtual string ConfigSearchSeoPriorities => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigSearchSeoPriorities(this, _publishedValueFallback);
-
-		///<summary>
-		/// Name: Actual css folder where themes is stored. {i}wwwroot/style/themes{/i} Folder
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configTheme")]
-		public virtual string ConfigTheme => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigTheme(this, _publishedValueFallback);
-
-		///<summary>
-		/// Cache Length For Form Entries: How long in minutes should we cache Umbraco Form Results when displayed on front end. As each call is a hit on the database, its best to cache for as long as possible.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("configUmbracoFormCacheLength")]
-		public virtual int ConfigUmbracoFormCacheLength => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigUmbracoFormCacheLength(this, _publishedValueFallback);
-
-		///<summary>
-		/// Select Form Entries Message Field: Name of the field that stores the Message in an Umbraco Form
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configUmbracoFormFieldMessage")]
-		public virtual string ConfigUmbracoFormFieldMessage => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigUmbracoFormFieldMessage(this, _publishedValueFallback);
-
-		///<summary>
-		/// Select Form Entries Field Name: Name of the field that stores the Name in an Umbraco Form
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configUmbracoFormFieldName")]
-		public virtual string ConfigUmbracoFormFieldName => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigUmbracoFormFieldName(this, _publishedValueFallback);
-
-		///<summary>
-		/// Default Select Form Entries Field Name: Text displayed when a user doesn't fill in their Name field
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configUmbracoFormFieldNameDefault")]
-		public virtual string ConfigUmbracoFormFieldNameDefault => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigUmbracoFormFieldNameDefault(this, _publishedValueFallback);
 
 		///<summary>
 		/// Acknowledgments: A link to a web page where you say thank you to security researchers who have helped you

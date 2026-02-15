@@ -107,10 +107,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		global::Protenacity.Cake.Web.Core.Property.FurnitureLogoRatios FurnitureLogoRatio { get; }
 
-		/// <summary>Show All Services</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		bool FurnitureShowAllServices { get; }
-
 		/// <summary>Show Header Menu on Larger Devices</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		bool FurnitureShowHeaderMenuOnLargerDevices { get; }
@@ -118,6 +114,10 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// <summary>Show Header Menu on Smaller Devices</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		bool FurnitureShowHeaderMenuOnSmallerDevices { get; }
+
+		/// <summary>Show Help button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		bool FurnitureShowHelp { get; }
 
 		/// <summary>Show Search Bar</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -219,7 +219,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public static global::Umbraco.Cms.Core.Models.Blocks.BlockListModel GetFurnitureFooterColor(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(publishedValueFallback, "furnitureFooterColor");
 
 		///<summary>
-		/// Footer Information: Area to place Copyright, address and other information about website.  {{year}} = Current Year
+		/// Footer Information: Area to place Copyright, address and other information about website.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -387,17 +387,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public static global::Protenacity.Cake.Web.Core.Property.FurnitureLogoRatios GetFurnitureLogoRatio(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.FurnitureLogoRatios>(publishedValueFallback, "furnitureLogoRatio");
 
 		///<summary>
-		/// Show All Services: Show All Services button in header
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("furnitureShowAllServices")]
-		public virtual bool FurnitureShowAllServices => GetFurnitureShowAllServices(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Show All Services</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		public static bool GetFurnitureShowAllServices(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<bool>(publishedValueFallback, "furnitureShowAllServices");
-
-		///<summary>
 		/// Show Header Menu on Larger Devices: Show standard menu in header section when being displayed on larger devices like laptop or desktop
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -418,6 +407,17 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// <summary>Static getter for Show Header Menu on Smaller Devices</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		public static bool GetFurnitureShowHeaderMenuOnSmallerDevices(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<bool>(publishedValueFallback, "furnitureShowHeaderMenuOnSmallerDevices");
+
+		///<summary>
+		/// Show Help button: Show help button in header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[ImplementPropertyType("furnitureShowHelp")]
+		public virtual bool FurnitureShowHelp => GetFurnitureShowHelp(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Show Help button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		public static bool GetFurnitureShowHelp(IFurnitureTab that, IPublishedValueFallback publishedValueFallback) => that.Value<bool>(publishedValueFallback, "furnitureShowHelp");
 
 		///<summary>
 		/// Show Search Bar: Show search bar in header

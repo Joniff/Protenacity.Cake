@@ -2,7 +2,7 @@
 
 @if (Model.FurnitureHeaderSticky)
 {
-    var pixel = (Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.BelowLeft || Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.BelowRight) ? "130px" : "100px";
+    var pixel = (Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.BelowLeft || Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.BelowRight) ? "130px" : "100px";
 
     <style>
         .anchor::before {
@@ -17,20 +17,20 @@
 }
 
 <header id="site_header" aria-label="Global" class="@(Model.FurnitureHeaderSticky ? "sticky-top" : null)">
-    <theme class="py-2" subtheme="Model.HeaderSubthemeTyped" shade="Model.HeaderThemeShadeTyped" override="Model.FurnitureHeaderColor">
+    <theme class="py-2" subtheme="Model.FurnitureHeaderSubtheme" shade="Model.FurnitureHeaderThemeShade" override="Model.FurnitureHeaderColor">
         <div class="header">
             <div class="navbar navbar-expand-lg pt-0 pb-0">
                 <div class="container">
                     @if (Model.FurnitureLogoImage != null)
                     {
                         <a class="navbar-brand" href="@View.CurrentFurnitureUrl">
-                            <img src="@Model.FurnitureLogoImage.Url()" style="height:60px;width:@(Math.Floor(60.0 * Model.FurnitureLogoRatioCalculated))px" alt="@View.CurrentDomainPage.Title">
+                            <img src="@Model.FurnitureLogoImage.Url()" style="height:60px;width:@(Math.Floor(((double)Model.FurnitureLogoRatio) / 6.0))px" alt="@View.CurrentDomainPage.Title">
                         </a>
                     }
                     @if (Model.FurnitureShowHeaderMenuOnLargerDevices && Model.FurnitureHeaderMenu?.Any() == true &&
-                        Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.InsideLeft)
+                        Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.InsideLeft)
                     {
-                        <div class="@(Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.InsideLeft ? "me-auto" : "ms-auto")">
+                        <div class="@(Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.InsideLeft ? "me-auto" : "ms-auto")">
                             @(await Html.PartialAsync("MainMenu", Model.FurnitureHeaderMenu.Select(m => (FurnitureMenuItem)m.Content)))
                         </div>
                     }
@@ -38,24 +38,31 @@
                     <div class="navbar-text ms-auto d-flex">
 
                         @if (Model.FurnitureShowHeaderMenuOnLargerDevices && Model.FurnitureHeaderMenu?.Any() == true &&
-                            Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.InsideRight)
+                            Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.InsideRight)
                         {
-                            <div class="d-none d-lg-block @(Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.InsideLeft ? "me-auto" : "ms-auto")">
+                            <div class="d-none d-lg-block @(Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.InsideLeft ? "me-auto" : "ms-auto")">
                                 @(await Html.PartialAsync("MainMenu", Model.FurnitureHeaderMenu.Select(m => (FurnitureMenuItem)m.Content)))
                             </div>
                         }
 
-                        @if (Model.FurnitureShowAllServices && !string.IsNullOrEmpty(View.CurrentDomainPage.AllServices?.Url))
+                        @if (Model.FurnitureShowHelp && !string.IsNullOrEmpty(View.CurrentDomainPage.HelpPage?.Url))
                         {
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="@View.CurrentDomainPage.AllServices.Url" target="@(string.IsNullOrWhiteSpace(View.CurrentDomainPage.AllServices.Target) ? "_self" : View.CurrentDomainPage.AllServices.Target)">
-                                        @(string.IsNullOrWhiteSpace(View.CurrentDomainPage.AllServices.Name) ? "Services" : View.CurrentDomainPage.AllServices.Name)
+                                    <a class="nav-link" href="@View.CurrentDomainPage.HelpPage.Url" target="@(string.IsNullOrWhiteSpace(View.CurrentDomainPage.HelpPage.Target) ? "_self" : View.CurrentDomainPage.HelpPage.Target)">
+                                        @if (string.IsNullOrWhiteSpace(View.CurrentDomainPage.HelpPage.Name))
+                                        {
+                                            <i class="fa-solid fa-circle-info"></i>
+                                        }
+                                        else
+                                        {
+                                            @View.CurrentDomainPage.HelpPage.Name
+                                        }
                                     </a>
                                 </li>
                             </ul>
                         }
-                        @if (View.CurrentDomainPage.Search != null && Model.FurnitureShowSearchBar)
+                        @if (View.CurrentDomainPage.SearchPage != null && Model.FurnitureShowSearchBar)
                         {
                             <div class="ps-3">
                                 <div class="d-lg-none justify-content-end">
@@ -64,7 +71,7 @@
                                         <span id="hideSiteSearch" class="fa-solid fa-xmark"></span>
                                     </button>
                                 </div>
-                                <form class="d-none d-lg-block" role="search" method="get" action="@View.CurrentDomainPage.Search.Url">
+                                <form class="d-none d-lg-block" role="search" method="get" action="@View.CurrentDomainPage.SearchPage.Url">
                                     <div class="input-group">
                                         <input type="search" class="form-control border-0" name="@Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString" aria-label="Search @View.CurrentDomainPage.Title" value="@View.CurrentSearchCriteria(Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString)">
                                         <button class="btn btn-link bg-white input-group-append" type="submit">
@@ -87,21 +94,21 @@
                 </div>
             </div>
             @if (Model.FurnitureShowHeaderMenuOnLargerDevices && Model.FurnitureHeaderMenu?.Any() == true &&
-               (Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.BelowLeft || Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.BelowRight))
+               (Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.BelowLeft || Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.BelowRight))
             {
                 <div class="navbar navbar-expand-lg pt-0 pb-0">
                     <div class="container">
-                        <div class="@(Model.FurnitureHeaderMenuPositionTyped == HeaderMenuPositions.BelowLeft ? "me-auto" : "ms-auto")">
+                        <div class="@(Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.BelowLeft ? "me-auto" : "ms-auto")">
                             @(await Html.PartialAsync("MainMenu", Model.FurnitureHeaderMenu.Select(m => (FurnitureMenuItem)m.Content)))
                         </div>
                     </div>
                 </div>
             }
 
-            @if (View.CurrentDomainPage.Search != null && Model.FurnitureShowSearchBar)
+            @if (View.CurrentDomainPage.SearchPage != null && Model.FurnitureShowSearchBar)
             {
                 <div class="collapse" id="collapseSiteSearch">
-                    <form class="d-block d-lg-none bg-light p-3" role="search" method="get" action="@View.CurrentDomainPage.Search.Url">
+                    <form class="d-block d-lg-none bg-light p-3" role="search" method="get" action="@View.CurrentDomainPage.SearchPage.Url">
                         <div class="container">
                             <div class="input-group">
                                 <input type="search" class="form-control" name="Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString" aria-label="Search @View.CurrentDomainPage.Title" value="@View.CurrentSearchCriteria(Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString)">

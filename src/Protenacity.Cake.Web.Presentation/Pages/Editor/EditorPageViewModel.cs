@@ -13,8 +13,8 @@ public class EditorPageViewModel(IPublishedContent content, IPublishedValueFallb
     public EditorSubthemes BreadcrumbSubtheme { get; init; }
     public EditorThemeShades BreadcrumbThemeShade { get; init; }
     public BlockListModel? BreadcrumbsColor { get; init; }
-    public EditorSubthemes? PageTitleSubtheme { get; init; }
-    public EditorThemeShades? PageTitleThemeShade { get; init; }
+    public new EditorSubthemes? PageTitleSubtheme { get; init; }
+    public new EditorThemeShades? PageTitleThemeShade { get; init; }
     public IAlertTab? Alert { get; init; }
     public required IEnumerable<IEditorContent> Contents { get; init; }
     public Tuple<bool, IEnumerable<IEditorContent>>? AboveContents { get; init; }

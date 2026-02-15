@@ -40,7 +40,7 @@
                 @if (slide.Block.Content.Title?.HasContent() == true || slide.Block.Content.Description?.HasContent() == true || !string.IsNullOrWhiteSpace(slide.Block.Content.Link?.Url))
                 {
                     <div class="">
-                        <div class="carousel-caption p-1 @(slide.Block.Settings?.AlignmentTyped == EditorHeroBannerTextAlignments.Left ? "text-start" : (slide.Block.Settings?.AlignmentTyped == EditorHeroBannerTextAlignments.Right ? "text-end" : null))" 
+                        <div class="carousel-caption p-1 @(slide.Block.Settings?.Alignment == EditorHeroBannerTextAlignments.Left ? "text-start" : (slide.Block.Settings?.Alignment == EditorHeroBannerTextAlignments.Right ? "text-end" : null))" 
                             style="@(slide.Block.Settings?.Darken == true ? "background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));" : null)">
 
                             <div class="card bg-transparent border-0">

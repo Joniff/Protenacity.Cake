@@ -62,7 +62,6 @@ public static class EnumExtensions
         => (typeof(T).GetField(source?.ToString() ?? throw new ArgumentNullException())?.GetCustomAttributes(typeof(DescriptionAttribute), false).FirstOrDefault() as DescriptionAttribute)?.Description;
 }
 
-
 public static class EnumExtensions14
 {
     extension<T>(T source) where T : struct, Enum

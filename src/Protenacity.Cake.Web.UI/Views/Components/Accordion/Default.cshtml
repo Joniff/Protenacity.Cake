@@ -9,7 +9,7 @@
                     <span>
                         @if (!string.IsNullOrWhiteSpace((panel.Item2.Block?.Content as IEditorPanelName)?.PanelIcon))
                         {
-                            @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.NamedIcon.NamedIconViewComponent.Name, (panel.Item2.Block.Content as IEditorPanelName)?.PanelIconTyped))
+                            @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.NamedIcon.NamedIconViewComponent.Name, (panel.Item2.Block.Content as IEditorPanelName)?.PanelIcon))
                         }
                         @Html.Raw(@panel.Item2.Header?.ToHeader())
                     </span>

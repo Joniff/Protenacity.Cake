@@ -1,4 +1,5 @@
 ﻿using Protenacity.Cake.Web.Core.Extensions;
+using System.Text.Json;
 using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Core.PropertyEditors;
@@ -52,20 +53,47 @@ public abstract class PropertyValueConverterBase<E>(IDataTypeService dataTypeSer
         return true;
     }
 
+    private E? Convert(object? obj)
+    {
+        if (obj == null)
+        {
+            return default(E);
+        }
+
+        switch (obj)
+        {
+            case string source:
+                if (string.IsNullOrEmpty(source))
+                {
+                    return default(E);
+                }
+                if (source[0] == '[' && source[source.Length - 1] == ']')
+                {
+                    return EnumExtensions.ParseByDescription<E>(JsonSerializer.Deserialize<IEnumerable<string>>(source), true, default(E));
+                }
+                return EnumExtensions.ParseByDescription<E>(source, true, default(E));
+
+            case E esource:
+                return esource;
+
+            default:
+                throw new ArgumentOutOfRangeException("Unknown type");
+        }
+    }
+
+
     public object? ConvertIntermediateToObject(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object? inter, bool preview)
-        => EnumExtensions.ParseByDescription<E>(inter?.ToString(), true, default(E));
+        => Convert(inter );
 
     public object ConvertIntermediateToXPath(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object inter, bool preview)
     {
         throw new NotImplementedException();
     }
 
-    public object? ConvertSourceToIntermediate(IPublishedElement owner, IPublishedPropertyType propertyType, object? source, bool preview) 
-        => EnumExtensions.ParseByDescription<E>(source?.ToString(), true, default(E));
+    public object? ConvertSourceToIntermediate(IPublishedElement owner, IPublishedPropertyType propertyType, object? source, bool preview)
+        => Convert(source);
 
     public PropertyCacheLevel GetPropertyCacheLevel(IPublishedPropertyType propertyType) => PropertyCacheLevel.Element;
-    public bool? IsValue(object? value, PropertyValueLevel level) => Enum.TryParse<ActionStyleAlignments>(value?.ToString(), out _);
-
+    public bool? IsValue(object? value, PropertyValueLevel level) => Convert(value) != null;
     Type IPropertyValueConverter.GetPropertyValueType(IPublishedPropertyType propertyType) => typeof(E);
-
 }

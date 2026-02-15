@@ -185,7 +185,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel FurnitureFooterColor => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureFooterColor(this, _publishedValueFallback);
 
 		///<summary>
-		/// Footer Information: Area to place Copyright, address and other information about website.  {{year}} = Current Year
+		/// Footer Information: Area to place Copyright, address and other information about website.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -290,13 +290,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual global::Protenacity.Cake.Web.Core.Property.FurnitureLogoRatios FurnitureLogoRatio => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureLogoRatio(this, _publishedValueFallback);
 
 		///<summary>
-		/// Show All Services: Show All Services button in header
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("furnitureShowAllServices")]
-		public virtual bool FurnitureShowAllServices => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureShowAllServices(this, _publishedValueFallback);
-
-		///<summary>
 		/// Show Header Menu on Larger Devices: Show standard menu in header section when being displayed on larger devices like laptop or desktop
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -309,6 +302,13 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[ImplementPropertyType("furnitureShowHeaderMenuOnSmallerDevices")]
 		public virtual bool FurnitureShowHeaderMenuOnSmallerDevices => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureShowHeaderMenuOnSmallerDevices(this, _publishedValueFallback);
+
+		///<summary>
+		/// Show Help button: Show help button in header
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[ImplementPropertyType("furnitureShowHelp")]
+		public virtual bool FurnitureShowHelp => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureShowHelp(this, _publishedValueFallback);
 
 		///<summary>
 		/// Show Search Bar: Show search bar in header

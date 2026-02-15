@@ -548,7 +548,7 @@ internal class EditorService(
         var content = source.Content as EditorRssFeed;
         var endpoint = (content?.Feed as RssFeedData)?.Endpoint;
         defaults = SetDefault(defaults, source.Settings);
-        var cacheLength = TimeSpan.FromMinutes(viewService.CurrentDomainPage.ConfigRssFeedReaderCache);
+        var cacheLength = TimeSpan.FromMinutes(/*viewService.CurrentDomainPage.ConfigRssFeedReaderCache*/ 60);
 
         if (content == null || endpoint == null)
         {

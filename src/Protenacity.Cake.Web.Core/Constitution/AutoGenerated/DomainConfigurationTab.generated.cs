@@ -44,16 +44,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		int ConfigCategoryCache { get; }
 
-		/// <summary>Date Format</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ConfigCoronerDateFormat { get; }
-
-		/// <summary>Time Format</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ConfigCoronerTimeFormat { get; }
-
 		/// <summary>Default Aside Background</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -67,11 +57,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ConfigDefaultImageMissingColor { get; }
-
-		/// <summary>From Email </summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ConfigFormFromEmail { get; }
 
 		/// <summary>Image Quality</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -93,30 +78,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// <summary>Maximum Page Size</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		int ConfigPageSizeMaximum { get; }
-
-		/// <summary>Review Email Body</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Umbraco.Cms.Core.Strings.IHtmlEncodedString ConfigReviewEmailBody { get; }
-
-		/// <summary>Review Email Frequency</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::System.Collections.Generic.IEnumerable<string> ConfigReviewEmailFrequency { get; }
-
-		/// <summary>Review From Email</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ConfigReviewEmailFrom { get; }
-
-		/// <summary>Review Email Subject</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ConfigReviewEmailSubject { get; }
-
-		/// <summary>Default Cache Length</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		int ConfigRssFeedReaderCache { get; }
 
 		/// <summary>Fuzziness</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -162,30 +123,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string ConfigSearchSeoPriorities { get; }
-
-		/// <summary>Name</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ConfigTheme { get; }
-
-		/// <summary>Cache Length For Form Entries</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		int ConfigUmbracoFormCacheLength { get; }
-
-		/// <summary>Select Form Entries Message Field</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ConfigUmbracoFormFieldMessage { get; }
-
-		/// <summary>Select Form Entries Field Name</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ConfigUmbracoFormFieldName { get; }
-
-		/// <summary>Default Select Form Entries Field Name</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string ConfigUmbracoFormFieldNameDefault { get; }
 	}
 
 	/// <summary>Domain Configuration Tab</summary>
@@ -279,32 +216,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public static int GetConfigCategoryCache(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "configCategoryCache");
 
 		///<summary>
-		/// Date Format: Date format used to display Coroner dates. Formats include dd/MM/yyyy
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configCoronerDateFormat")]
-		public virtual string ConfigCoronerDateFormat => GetConfigCoronerDateFormat(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Date Format</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetConfigCoronerDateFormat(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "configCoronerDateFormat");
-
-		///<summary>
-		/// Time Format: Time format used to display Coroner times. Formats include HH:mm
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configCoronerTimeFormat")]
-		public virtual string ConfigCoronerTimeFormat => GetConfigCoronerTimeFormat(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Time Format</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetConfigCoronerTimeFormat(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "configCoronerTimeFormat");
-
-		///<summary>
 		/// Default Aside Background: Default background used for side panels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -340,19 +251,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor GetConfigDefaultImageMissingColor(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor>(publishedValueFallback, "configDefaultImageMissingColor");
-
-		///<summary>
-		/// From Email : When sending emails as part of submit workflow, who to send the email from
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configFormFromEmail")]
-		public virtual string ConfigFormFromEmail => GetConfigFormFromEmail(this, _publishedValueFallback);
-
-		/// <summary>Static getter for From Email </summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetConfigFormFromEmail(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "configFormFromEmail");
 
 		///<summary>
 		/// Image Quality: Select number between 1 to 100. 1 = Awful images but fast. 100 = Perfect images, but slow.
@@ -410,69 +308,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// <summary>Static getter for Maximum Page Size</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		public static int GetConfigPageSizeMaximum(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "configPageSizeMaximum");
-
-		///<summary>
-		/// Review Email Body: Email body for review content email
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configReviewEmailBody")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString ConfigReviewEmailBody => GetConfigReviewEmailBody(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Review Email Body</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Umbraco.Cms.Core.Strings.IHtmlEncodedString GetConfigReviewEmailBody(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(publishedValueFallback, "configReviewEmailBody");
-
-		///<summary>
-		/// Review Email Frequency: Which days of the week would you like to send review content emails
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configReviewEmailFrequency")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> ConfigReviewEmailFrequency => GetConfigReviewEmailFrequency(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Review Email Frequency</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::System.Collections.Generic.IEnumerable<string> GetConfigReviewEmailFrequency(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<string>>(publishedValueFallback, "configReviewEmailFrequency");
-
-		///<summary>
-		/// Review From Email: Which email address should we use to send review emails from
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configReviewEmailFrom")]
-		public virtual string ConfigReviewEmailFrom => GetConfigReviewEmailFrom(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Review From Email</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetConfigReviewEmailFrom(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "configReviewEmailFrom");
-
-		///<summary>
-		/// Review Email Subject: Subject element for emails sent out when content requires review
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configReviewEmailSubject")]
-		public virtual string ConfigReviewEmailSubject => GetConfigReviewEmailSubject(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Review Email Subject</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetConfigReviewEmailSubject(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "configReviewEmailSubject");
-
-		///<summary>
-		/// Default Cache Length: How long, in minutes, to cache Rss Feed when reading them, if the Rss Feed itself doesn't broadcast its cache rate/TTL.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("configRssFeedReaderCache")]
-		public virtual int ConfigRssFeedReaderCache => GetConfigRssFeedReaderCache(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Default Cache Length</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		public static int GetConfigRssFeedReaderCache(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "configRssFeedReaderCache");
 
 		///<summary>
 		/// Fuzziness: Required similarity between search query and matching results.  90 = Close matching only, 1 or 2 characters difference. 50 = Only half the characters are required to match.   Lower the value more matches but slower the search takes to execute. If value is too low, search query will match everything. 
@@ -596,68 +431,5 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static string GetConfigSearchSeoPriorities(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "configSearchSeoPriorities");
-
-		///<summary>
-		/// Name: Actual css folder where themes is stored. {i}wwwroot/style/themes{/i} Folder
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configTheme")]
-		public virtual string ConfigTheme => GetConfigTheme(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Name</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetConfigTheme(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "configTheme");
-
-		///<summary>
-		/// Cache Length For Form Entries: How long in minutes should we cache Umbraco Form Results when displayed on front end. As each call is a hit on the database, its best to cache for as long as possible.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("configUmbracoFormCacheLength")]
-		public virtual int ConfigUmbracoFormCacheLength => GetConfigUmbracoFormCacheLength(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Cache Length For Form Entries</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		public static int GetConfigUmbracoFormCacheLength(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "configUmbracoFormCacheLength");
-
-		///<summary>
-		/// Select Form Entries Message Field: Name of the field that stores the Message in an Umbraco Form
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configUmbracoFormFieldMessage")]
-		public virtual string ConfigUmbracoFormFieldMessage => GetConfigUmbracoFormFieldMessage(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Select Form Entries Message Field</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetConfigUmbracoFormFieldMessage(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "configUmbracoFormFieldMessage");
-
-		///<summary>
-		/// Select Form Entries Field Name: Name of the field that stores the Name in an Umbraco Form
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configUmbracoFormFieldName")]
-		public virtual string ConfigUmbracoFormFieldName => GetConfigUmbracoFormFieldName(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Select Form Entries Field Name</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetConfigUmbracoFormFieldName(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "configUmbracoFormFieldName");
-
-		///<summary>
-		/// Default Select Form Entries Field Name: Text displayed when a user doesn't fill in their Name field
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configUmbracoFormFieldNameDefault")]
-		public virtual string ConfigUmbracoFormFieldNameDefault => GetConfigUmbracoFormFieldNameDefault(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Default Select Form Entries Field Name</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetConfigUmbracoFormFieldNameDefault(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "configUmbracoFormFieldNameDefault");
 	}
 }

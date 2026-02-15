@@ -12,11 +12,11 @@
         @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.Alert.AlertViewComponent.Name, Model.Alert))
     }
 
-    @if (View.CurrentBanner?.BannerStatusTyped == BannerStatuses.ShowBanners && View.CurrentBanner?.BannerContent?.Any() == true)
+    @if (View.CurrentBanner?.BannerStatus == BannerStatuses.ShowBanners && View.CurrentBanner?.BannerContent?.Any() == true)
     {
         @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.HeroBanner.HeroBannerViewComponent.Name, View.CurrentBanner?.BannerContent))
     }
-    else if (View.CurrentBanner?.BannerStatusTyped == BannerStatuses.ShowImage && View.CurrentBanner?.BannerHeroImage != null)
+    else if (View.CurrentBanner?.BannerStatus == BannerStatuses.ShowImage && View.CurrentBanner?.BannerHeroImage != null)
     {
         <img class="img-fluid img-hero-banner" src="@View.CurrentBanner?.BannerHeroImage.MediaUrl()" />
     }
