@@ -50,11 +50,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		// properties
 
 		///<summary>
-		/// Name: If Map is Region type, then is used to set Region shown otherwise optional Name for location
+		/// Map: Set location
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("mapName")]
-		public virtual string MapName => global::Protenacity.Cake.Web.Core.Constitution.EditorMapBase.GetMapName(this, _publishedValueFallback);
+		[ImplementPropertyType("mapPosition")]
+		public virtual global::Protenacity.Web.OpenStreetMap.Core.Map MapPosition => global::Protenacity.Cake.Web.Core.Constitution.EditorMapBase.GetMapPosition(this, _publishedValueFallback);
 	}
 }

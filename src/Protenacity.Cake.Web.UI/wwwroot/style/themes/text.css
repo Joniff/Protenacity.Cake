@@ -1,20 +1,4 @@
-/* headings spacing */
-h6:not(:first-child),
-.h6:not(:first-child),
-h5:not(:first-child),
-.h5:not(:first-child),
-h4:not(:first-child),
-.h4:not(:first-child),
-h3:not(:first-child),
-.h3:not(:first-child),
-h2:not(:first-child),
-.h2:not(:first-child),
-h1:not(:first-child),
-.h1:not(:first-child) {
-    margin-top: 2rem;
-}
-
-.theme-default, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana {
+.theme-slate, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana {
     --lcc-l-a: #0c3571;
     --lcc-l-ahover: #0e2c5b;
     --lcc-l-avisited: #3b1e7c;
@@ -24,10 +8,19 @@ h1:not(:first-child),
     --lcc-d-avisited: #ffffff;
 }
 
-.theme-light .text a:not(.btn), 
-.text .theme-light a:not(.btn), 
-.theme-light .breadcrumb-item a, 
-.theme-light .header a, 
+.theme-golden-sands {
+    --lcc-l-a: #020014;
+    --lcc-l-ahover: #0b0076;
+    --lcc-l-avisited: #020014;
+    --lcc-d-a: #cac4ff;
+    --lcc-d-ahover: #dcd8ff;
+    --lcc-d-avisited: #cac4ff;
+}
+
+.theme-light .text a:not(.btn),
+.text .theme-light a:not(.btn),
+.theme-light .breadcrumb-item a,
+.theme-light .header a,
 .theme-light .footer a {
     color: var(--lcc-l-a, black);
 }

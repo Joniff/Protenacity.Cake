@@ -1,9 +1,8 @@
-﻿.theme-default, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana {
+﻿.theme-slate, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana .theme-golden-sands {
     --lcc-l-th-bg: #0b0c0c;
     --lcc-l-th-fg: #ffffff;
     --lcc-l-td-bg: #ffffff;
     --lcc-l-td-fg: #0b0c0c;
-
     --lcc-d-th-bg: #ffffff;
     --lcc-d-th-fg: #0b0c0c;
     --lcc-d-td-bg: #0b0c0c;

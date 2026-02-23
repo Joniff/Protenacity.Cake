@@ -6,9 +6,9 @@ namespace Protenacity.Web.OpenStreetMap.Core;
 
 public static class MapExtensions
 {
-    public static IHtmlContent LeafletRendering(this Map model)
+    public static IHtmlContent LeafletRendering(this Map model, int height)
     {
-        return new HtmlString(@$"<div data-openstreetmap='{JsonConvert.SerializeObject(model)}' data-openstreetmapdefaultconfig='{JsonConvert.SerializeObject(model.Configuration)}' style='width: 100%; height: 400px;'></div>");
+        return new HtmlString(@$"<div data-openstreetmap='{JsonConvert.SerializeObject(model)}' data-openstreetmapdefaultconfig='{JsonConvert.SerializeObject(model.Configuration)}' style='width: 100%; height: {height}px;'></div>");
     }
         
     public static IHtmlContent LeafletScripts(this IHtmlHelper htmlHelper)

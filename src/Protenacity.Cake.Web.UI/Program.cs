@@ -1,6 +1,9 @@
+using Protenacity.Cake.Web.Core.Proxy;
 using ZiggyCreatures.Caching.Fusion;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.EnableProxy();
 
 builder.CreateUmbracoBuilder()
     .AddBackOffice()
@@ -17,7 +20,16 @@ builder.Services.AddFusionCache().WithOptions(opt =>
     opt.FactorySoftTimeout = TimeSpan.FromMinutes(30);
 });
 
+builder.Services.AddOpenIddict()
+    .AddServer(options =>
+    {
+        options.Configure(options => options.RequireProofKeyForCodeExchange = false);
+    });
+
+
+
 WebApplication app = builder.Build();
+app.UseForwardedHeaders();
 
 await app.BootUmbracoAsync();
 

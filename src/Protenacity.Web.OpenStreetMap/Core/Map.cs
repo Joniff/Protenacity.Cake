@@ -45,7 +45,6 @@ public class Map : IHtmlContent
 
     public void WriteTo(TextWriter writer, HtmlEncoder encoder)
     {
-
         ArgumentNullException.ThrowIfNull(writer);
         ArgumentNullException.ThrowIfNull(encoder);
 

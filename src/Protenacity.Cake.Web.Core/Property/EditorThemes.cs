@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
@@ -9,8 +8,8 @@ public enum EditorThemes
     [Description("Inherit")]
     Inherit,
 
-    [Description("Default")]
-    Default,
+    [Description("Slate")]
+    Slate,
 
     [Description("Venice")]
     Venice,
@@ -28,12 +27,14 @@ public enum EditorThemes
     MysticTulip,
 
     [Description("Poinciana")]
-    Poinciana
+    Poinciana,
+
+    [Description("Golden Sands")]
+    GoldenSands
 }
 
 public class EditorThemesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorThemes>(dataTypeService)
 {
-
     public override string DataTypeName => "Editor Theme Picker";
 }

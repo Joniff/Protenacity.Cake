@@ -1,4 +1,4 @@
-﻿.theme-default, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana {
+﻿.theme-slate, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana {
     --lcc-theme-1l-abtn-fg: #ffffff;
     --lcc-theme-1l-abtn-bg: #317918;
     --lcc-theme-1l-abtnhover-fg: #ffffff;
@@ -36,13 +36,45 @@
     --lcc-theme-3d-cbc-bg: #005ea5;
 }
 
+.theme-golden-sands {
+    --lcc-theme-1l-abtn-fg: #ffffff;
+    --lcc-theme-1l-abtn-bg: #317918;
+    --lcc-theme-1l-abtnhover-fg: #ffffff;
+    --lcc-theme-1l-abtnhover-bg: #245912;
+    --lcc-theme-1l-cbc-bg: #ced4de;
+    --lcc-theme-2l-abtn-fg: #ffffff;
+    --lcc-theme-2l-abtn-bg: #317918;
+    --lcc-theme-2l-abtnhover-fg: #ffffff;
+    --lcc-theme-2l-abtnhover-bg: #245912;
+    --lcc-theme-2l-cbc-bg: #ced4de;
+    --lcc-theme-3l-abtn-fg: #ffffff;
+    --lcc-theme-3l-abtn-bg: #317918;
+    --lcc-theme-3l-abtnhover-fg: #ffffff;
+    --lcc-theme-3l-abtnhover-bg: #245912;
+    --lcc-theme-3l-cbc-bg: #ced4de;
+    --lcc-theme-1d-abtn-bg: #ffffff;
+    --lcc-theme-1d-abtn-fg: #317918;
+    --lcc-theme-1d-abtnhover-bg: #ffffff;
+    --lcc-theme-1d-abtnhover-fg: #245912;
+    --lcc-theme-1d-cbc-bg: #005ea5;
+    --lcc-theme-2d-abtn-bg: #ffffff;
+    --lcc-theme-2d-abtn-fg: #317918;
+    --lcc-theme-2d-abtnhover-bg: #ffffff;
+    --lcc-theme-2d-abtnhover-fg: #245912;
+    --lcc-theme-2d-cbc-bg: #005ea5;
+    --lcc-theme-3d-abtn-bg: #ffffff;
+    --lcc-theme-3d-abtn-fg: #317918;
+    --lcc-theme-3d-abtnhover-bg: #ffffff;
+    --lcc-theme-3d-abtnhover-fg: #245912;
+    --lcc-theme-3d-cbc-bg: #005ea5;
+}
+
 .theme-primary {
     --lcc-l-abtn-fg: var(--lcc-theme-1l-abtn-fg, black);
     --lcc-l-abtn-bg: var(--lcc-theme-1l-abtn-bg, white);
     --lcc-l-abtnhover-fg: var(--lcc-theme-1l-abtnhover-fg, black);
     --lcc-l-abtnhover-bg: var(--lcc-theme-1l-abtnhover-bg, white);
     --lcc-l-cbc-bg: var(--lcc-theme-1l-cbc-bg, black);
-
     --lcc-d-abtn-bg: var(--lcc-theme-1d-abtn-bg, white);
     --lcc-d-abtn-fg: var(--lcc-theme-1d-abtn-fg, black);
     --lcc-d-abtnhover-bg: var(--lcc-theme-1d-abtnhover-bg, white);

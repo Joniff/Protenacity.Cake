@@ -10,7 +10,7 @@
     background-color: unset;
 }
 
-.theme-default {
+.theme-slate {
     --lcc-theme-1d-bg: #343a40; /* Primary Dark Background */
     --lcc-theme-1d-fg: #ffffff; /* Primary Dark Foreground */
     --lcc-theme-2d-bg: #343a40; /* Secondary Dark Background */
@@ -112,7 +112,7 @@
     --lcc-theme-2d-bg: #c83020; /* Secondary Dark Background */
     --lcc-theme-2d-fg: #f8f8f9; /* Secondary Dark Foreground */
     --lcc-theme-3d-bg: #c83020; /* Tertiary Dark Background */
-    --lcc-theme-3d-fg: #f3f7fa; /* Tertiary Dark Foreground */
+    --lcc-theme-3d-fg: #ffcac4; /* Tertiary Dark Foreground */
 
     --lcc-theme-1l-bg: #ffffff; /* Primary Light Background */
     --lcc-theme-1l-fg: #0b0c0c; /* Primary Light Foreground */
@@ -120,6 +120,22 @@
     --lcc-theme-2l-fg: #0b0c0c; /* Secondary Light Foreground */
     --lcc-theme-3l-bg: #f8f8f9; /* Tertiary Light Background */
     --lcc-theme-3l-fg: #0b0c0c; /* Tertiary Light Foreground */
+}
+
+.theme-golden-sands {
+    --lcc-theme-1d-bg: #140c00; /* Primary Dark Background */
+    --lcc-theme-1d-fg: #ffe8c5; /* Primary Dark Foreground */
+    --lcc-theme-2d-bg: #4f2f00; /* Secondary Dark Background */
+    --lcc-theme-2d-fg: #ffe8c5; /* Secondary Dark Foreground */
+    --lcc-theme-3d-bg: #ff4e3b; /* Tertiary Dark Background */
+    --lcc-theme-3d-fg: #ffdcd8; /* Tertiary Dark Foreground */
+
+    --lcc-theme-1l-bg: #ffefd8; /* Primary Light Background */
+    --lcc-theme-1l-fg: #140c00; /* Primary Light Foreground */
+    --lcc-theme-2l-bg: #ffdcd8; /* Secondary Light Background */
+    --lcc-theme-2l-fg: #140200; /* Secondary Light Foreground */
+    --lcc-theme-3l-bg: #dcd8ff; /* Tertiary Light Background */
+    --lcc-theme-3l-fg: #020014; /* Tertiary Light Foreground */
 }
 
 .theme-primary {

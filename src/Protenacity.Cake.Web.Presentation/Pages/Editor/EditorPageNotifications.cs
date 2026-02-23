@@ -33,7 +33,7 @@ internal class EditorPageNotifications(IContentService contentService) : Notific
             if (IsHomePage(entity))
             {
                 // Likely to be Home Page - stop any statuses being Inherit
-                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTheme), EditorThemes.Default.Description ?? throw new ArgumentNullException("Missing Description attribute"), EditorThemes.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
+                SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageTheme), EditorThemes.Slate.Description ?? throw new ArgumentNullException("Missing Description attribute"), EditorThemes.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
                 SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageSubtheme), EditorSubthemes.Primary.Description ?? throw new ArgumentNullException("Missing Description attribute"), EditorSubthemes.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
                 SetAlias(entity, typeof(EditorPage), nameof(EditorPage.PageThemeShade), EditorThemeShades.Light.Description ?? throw new ArgumentNullException("Missing Description attribute"), EditorThemeShades.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));
                 SetAlias(entity, typeof(EditorPage), nameof(EditorPage.AlertStatus), AlertStatuses.Hide.Description ?? throw new ArgumentNullException("Missing Description attribute"), AlertStatuses.Inherit.Description ?? throw new ArgumentNullException("Missing Description attribute"));

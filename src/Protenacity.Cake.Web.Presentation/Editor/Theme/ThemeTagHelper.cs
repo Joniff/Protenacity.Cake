@@ -89,8 +89,8 @@ public class ThemeTagHelper(IViewService viewService, IResponsiveImageService re
     {
         switch (theme)
         {
-            case EditorThemes.Default:
-                return "theme-default";
+            case EditorThemes.Slate:
+                return "theme-slate";
 
             case EditorThemes.Venice:
                 return "theme-venice";
@@ -109,6 +109,9 @@ public class ThemeTagHelper(IViewService viewService, IResponsiveImageService re
 
             case EditorThemes.Poinciana:
                 return "theme-poinciana";
+
+            case EditorThemes.GoldenSands:
+                return "theme-golden-sands";
         }
         throw new ArgumentException(nameof(EditorThemes) + " invalid value of " + theme);
     }

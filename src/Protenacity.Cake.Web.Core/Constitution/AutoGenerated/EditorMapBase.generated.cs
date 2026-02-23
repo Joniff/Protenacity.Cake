@@ -22,10 +22,10 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	/// <summary>Base</summary>
 	public partial interface IEditorMapBase : IPublishedElement
 	{
-		/// <summary>Name</summary>
+		/// <summary>Map</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string MapName { get; }
+		global::Protenacity.Web.OpenStreetMap.Core.Map MapPosition { get; }
 	}
 
 	/// <summary>Base</summary>
@@ -60,16 +60,16 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		// properties
 
 		///<summary>
-		/// Name: If Map is Region type, then is used to set Region shown otherwise optional Name for location
+		/// Map: Set location
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("mapName")]
-		public virtual string MapName => GetMapName(this, _publishedValueFallback);
+		[ImplementPropertyType("mapPosition")]
+		public virtual global::Protenacity.Web.OpenStreetMap.Core.Map MapPosition => GetMapPosition(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Name</summary>
+		/// <summary>Static getter for Map</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetMapName(IEditorMapBase that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "mapName");
+		public static global::Protenacity.Web.OpenStreetMap.Core.Map GetMapPosition(IEditorMapBase that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Web.OpenStreetMap.Core.Map>(publishedValueFallback, "mapPosition");
 	}
 }

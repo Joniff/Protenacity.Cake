@@ -2,11 +2,6 @@
 
 public class MapViewModel
 {
-    public required string Id { get; init; }
-    public required decimal Latitude { get; init; }
-    public required decimal Longitude { get; init; }
-    public required string IconUrl { get; init; }
-    public required string Name { get; init; }
-    public int Zoom { get; init; }
+    public required Protenacity.Web.OpenStreetMap.Core.Map Map { get; init; }
     public double Ratio { get; init; }
 }
