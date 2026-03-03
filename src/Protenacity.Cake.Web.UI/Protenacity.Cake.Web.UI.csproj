@@ -32,16 +32,12 @@
 		<CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
 	</PropertyGroup>
 
+	<!--
 	<ItemGroup>
 		<Folder Include="wwwroot\App_Plugins\Protenacity.TipTapHeaders\" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Update="appsettings - Copy.Development.json">
-	    <DependentUpon>appsettings.json</DependentUpon>
-	  </Content>
-	</ItemGroup>
-
+	-->
+	
 	<PropertyGroup>
 		<!-- Remove RazorCompileOnBuild and RazorCompileOnPublish when not using ModelsMode InMemoryAuto -->
 		<RazorCompileOnBuild>false</RazorCompileOnBuild>

@@ -2,7 +2,7 @@
 
 @switch (Model.ListType)
 {
-    case ListTypes.Grid:
+    case EditorListTypes.Grid:
         <text>
             <div class="row row-cols-1 row-cols-md-@(Model.MaxColumns > 1 ? 2 : 1) row-cols-lg-@Model.MaxColumns">
                 @foreach (var block in Model.Blocks)
@@ -20,7 +20,7 @@
         </text>
         break;
 
-    case ListTypes.Carousel:
+    case EditorListTypes.Carousel:
         @* 
             Using GlideJs 
             https://github.com/glidejs/glide

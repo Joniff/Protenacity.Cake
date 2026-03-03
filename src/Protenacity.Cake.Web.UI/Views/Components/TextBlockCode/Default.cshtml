@@ -1,7 +1,8 @@
-﻿@model Protenacity.Cake.Web.Presentation.Editor.Text.TextBlockCodeTextViewModel
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Text.TextBlockCodeViewModel
+@using Protenacity.Cake.Web.Core.Extensions
 
 @{
-    var language = Model.Language;
+    string? language = null;
     switch (Model.Language)
     {
         case EditorCodeLanguage.Cpp:
@@ -33,15 +34,11 @@
     </script>
 }
 
-@if (Model.AddDependencyLibraryLanguage)
+@if (language != null && Model.AddDependencyLibraryLanguage)
 {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/@(language).min.js"></script>
 }
 
 <theme subtheme="Model.Subtheme" shade="Model.Shade" override="Model.OverrideColor">
-    <pre>
-        <code class="language-@(language)">
-            @Html.Raw(Model.Text)
-        </code>
-    </pre>
+<pre><code class="@(language != null ? "language-" + language : null)">@Html.Raw(Model.Text)</code></pre>
 </theme>

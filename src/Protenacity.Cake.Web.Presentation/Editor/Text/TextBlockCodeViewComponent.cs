@@ -14,7 +14,7 @@ public class TextBlockCodeViewComponent : ThemeViewComponent
     private bool FirstTime(EditorCodeLanguage? language = null)
     {
         var contextKey = "e6baceea-5873-45c8-a0be-9bea1d2437a0" + (language?.Description ?? "");
-        var value = HttpContext.Items[contextKey] != null;
+        var value = HttpContext.Items[contextKey] == null;
         HttpContext.Items[contextKey] = true;
         return value;
     }
