@@ -1,0 +1,47 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Text.TextBlockCodeTextViewModel
+
+@{
+    var language = Model.Language;
+    switch (Model.Language)
+    {
+        case EditorCodeLanguage.Cpp:
+            language = "cpp";
+            break;
+
+        case EditorCodeLanguage.CSharp:
+            language = "csharp";
+            break;
+    }
+}
+
+@if (Model.AddDependencyLibrary)
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script>
+        (function () {
+            var head = document.getElementsByTagName('HEAD')[0];  
+            var link = document.createElement('link'); 
+            link.rel = 'stylesheet';  
+            link.type = 'text/css'; 
+            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css';  
+            head.appendChild(link);
+
+            document.addEventListener('DOMContentLoaded', function (event) {
+                hljs.highlightAll();
+            });
+        })();
+    </script>
+}
+
+@if (Model.AddDependencyLibraryLanguage)
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/@(language).min.js"></script>
+}
+
+<theme subtheme="Model.Subtheme" shade="Model.Shade" override="Model.OverrideColor">
+    <pre>
+        <code class="language-@(language)">
+            @Html.Raw(Model.Text)
+        </code>
+    </pre>
+</theme>

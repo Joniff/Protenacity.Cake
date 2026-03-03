@@ -47,5 +47,18 @@
 		<RazorCompileOnBuild>false</RazorCompileOnBuild>
 		<RazorCompileOnPublish>false</RazorCompileOnPublish>
 	</PropertyGroup>
+	
+	<ItemGroup Condition="'$(DesignTimeBuild)' == 'true'">
+		<!-- 
+			The cohosting editor uses the Razor source generator for VS functionality, so we have to make sure
+			it can see the .cshtml files.
+		-->
+		<AdditionalFiles Include="**\*.cshtml" />
+
+		<!--
+			Make sure the source generator knows where the project is, for computing target paths.
+		-->
+		<CompilerVisibleProperty Include="MSBuildProjectDirectory" />
+	</ItemGroup>	
 
 </Project>

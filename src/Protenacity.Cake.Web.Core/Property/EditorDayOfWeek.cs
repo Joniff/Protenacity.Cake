@@ -31,6 +31,5 @@ public enum EditorDayOfWeek
 public class EditorDayOfWeekValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorDayOfWeek>(dataTypeService)
 {
-
     public override string DataTypeName => "Editor Day Of Week";
 }

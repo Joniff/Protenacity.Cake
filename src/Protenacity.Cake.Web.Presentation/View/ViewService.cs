@@ -551,17 +551,23 @@ public class ViewService(
 
         foreach (var prop in props)
         {
+            var result = JsonField(prop.Name, prop.GetValue(value));
+            if (result == null)
+            {
+                continue;
+            }
+
             if (fieldCount++ != 0)
             {
                 json.Append(',');
             }
-            json.Append(JsonField(prop.Name, prop.GetValue(value)));
+            json.Append(result);
         }
         json.Append('}');
         return json.ToString();
     }
 
-    private string JsonField(string? name, object? value)
+    private string? JsonField(string? name, object? value)
     {
         var json = new StringBuilder();
         if (!string.IsNullOrWhiteSpace(name))
@@ -574,7 +580,7 @@ public class ViewService(
         switch (value)
         {
             case null:
-                return "";
+                return null;
 
             case string stringValue:
                 json.Append('\"');

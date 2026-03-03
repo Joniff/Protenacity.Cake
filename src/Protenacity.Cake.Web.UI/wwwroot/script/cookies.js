@@ -146,7 +146,7 @@
                     guiOptions: {
                         consentModal: {
                             layout: 'cloud inline',
-                            position: model.modalPosition.toLowerCase() ?? 'bottom center',
+                            position: toString.call(model.modalPosition) == '[object string]' && model.modalPosition != '' ? model.modalPosition.toLowerCase() : 'bottom center',
                             equalWeightButtons: true,
                             flipButtons: false
                         },
