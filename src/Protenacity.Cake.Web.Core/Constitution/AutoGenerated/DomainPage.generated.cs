@@ -459,8 +459,16 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configDefaultAsideBackground")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ConfigDefaultAsideBackground => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigDefaultAsideBackground(this, _publishedValueFallback);
+		[ImplementPropertyType("configDefaultAsideBackgroundColor")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ConfigDefaultAsideBackgroundColor => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigDefaultAsideBackgroundColor(this, _publishedValueFallback);
+
+		///<summary>
+		/// Default Border Color: Default color shown around side panels
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("configDefaultAsideBorderColor")]
+		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ConfigDefaultAsideBorderColor => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigDefaultAsideBorderColor(this, _publishedValueFallback);
 
 		///<summary>
 		/// Default Aside Border Edges: Default edges that are shown around the side panel

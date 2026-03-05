@@ -325,6 +325,14 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual global::Protenacity.Cake.Web.Core.Property.FurntitureStatuses FurnitureStatus => global::Protenacity.Cake.Web.Core.Constitution.FurnitureTab.GetFurnitureStatus(this, _publishedValueFallback);
 
 		///<summary>
+		/// Page Subtitle: &lt;h5&gt; placed just below Page Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("pageSubtitle")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString PageSubtitle => global::Protenacity.Cake.Web.Core.Constitution.PageTitleTab.GetPageSubtitle(this, _publishedValueFallback);
+
+		///<summary>
 		/// Page Title: Main &lt;h1&gt; Header for page. Placed above all content 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]

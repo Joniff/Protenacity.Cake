@@ -2,7 +2,7 @@
 
 @if (Model.Item2?.Any() == true)
 {
-    <div class="position-fixed d-sm-block d-md-none @(Model.Item1 ? "" : "end-0") z-1">
+    <div class="position-fixed d-sm-block d-md-none @(Model.Item1 ? "" : "end-0")">
         <a class="border-0 navbar-toggler text-bg-dark fs-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvas@(Model.GetHashCode())" aria-controls="offcanvas@(Model.GetHashCode())">
             <i class="bi @(Model.Item1 ? "bi-caret-right" : "bi-caret-left") pt-5 pb-5"></i>
         </a>

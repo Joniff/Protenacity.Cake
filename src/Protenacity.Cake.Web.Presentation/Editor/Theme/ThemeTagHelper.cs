@@ -112,6 +112,12 @@ public class ThemeTagHelper(IViewService viewService, IResponsiveImageService re
 
             case EditorThemes.GoldenSands:
                 return "theme-golden-sands";
+
+            case EditorThemes.Myrtle:
+                return "theme-myrtle";
+
+            case EditorThemes.CandyFloss:
+                return "theme-candy-floss";
         }
         throw new ArgumentException(nameof(EditorThemes) + " invalid value of " + theme);
     }

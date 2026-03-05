@@ -22,6 +22,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	/// <summary>Page Title Tab</summary>
 	public partial interface IPageTitleTab : IPublishedElement
 	{
+		/// <summary>Page Subtitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		global::Umbraco.Cms.Core.Strings.IHtmlEncodedString PageSubtitle { get; }
+
 		/// <summary>Page Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -70,6 +75,19 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		}
 
 		// properties
+
+		///<summary>
+		/// Page Subtitle: &lt;h5&gt; placed just below Page Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("pageSubtitle")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString PageSubtitle => GetPageSubtitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Page Subtitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static global::Umbraco.Cms.Core.Strings.IHtmlEncodedString GetPageSubtitle(IPageTitleTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(publishedValueFallback, "pageSubtitle");
 
 		///<summary>
 		/// Page Title: Main &lt;h1&gt; Header for page. Placed above all content 

@@ -30,7 +30,13 @@ public enum EditorThemes
     Poinciana,
 
     [Description("Golden Sands")]
-    GoldenSands
+    GoldenSands,
+
+    [Description("Myrtle")]
+    Myrtle,
+
+    [Description("Candy Floss")]
+    CandyFloss,
 }
 
 public class EditorThemesValueConverter(IDataTypeService dataTypeService)

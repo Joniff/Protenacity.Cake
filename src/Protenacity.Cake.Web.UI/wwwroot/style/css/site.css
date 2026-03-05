@@ -136,3 +136,11 @@ h1.promote-page-title {
     max-height: 30rem;
     overflow-y: scroll;
 }
+
+small.subtitle {
+    font-size: small;
+    display: block;
+    padding-left: 0.5em;
+    font-weight:normal;
+    font-style:italic;
+}

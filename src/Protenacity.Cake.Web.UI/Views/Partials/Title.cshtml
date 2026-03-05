@@ -8,6 +8,12 @@
     <div class="row pb-3">
         <h1 class="@(Model.Item2.PageTitlePromote ? "promote-page-title" : null)">
             @Html.Raw(Model.Item2.PageTitleName?.HasContent() == true ? Model.Item2.PageTitleName.ToHeader() : (string.IsNullOrWhiteSpace(Model.Item2.Title) ? Model.Item2.Name : Model.Item2.Title))
+            @if (Model.Item2.PageSubtitle?.HasContent() == true)
+            {
+                <small class="subtitle">
+                    @Model.Item2.PageSubtitle.ToHeader()
+                </small>
+            }
         </h1>
     </div>
     @if (Model.Item1)

@@ -1,8 +1,11 @@
 ﻿@model Protenacity.Cake.Web.Presentation.Editor.Text.TextBlockCodeViewModel
-@using Protenacity.Cake.Web.Core.Extensions
 
 @{
+
+    @* https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md *@
+
     string? language = null;
+    string? script = null;
     switch (Model.Language)
     {
         case EditorCodeLanguage.Cpp:
@@ -12,33 +15,73 @@
         case EditorCodeLanguage.CSharp:
             language = "csharp";
             break;
+
+        case EditorCodeLanguage.Javascript:
+            language = "javascript";
+            break;
+
+        case EditorCodeLanguage.Css:
+            language = "css";
+            break;
+
+        case EditorCodeLanguage.CommandLine:
+            language = "powershell";
+            break;
+
+        case EditorCodeLanguage.Html:
+            language = "html";
+            break;
+
+        case EditorCodeLanguage.Json:
+            language = "javascript";
+            break;
+
+        case EditorCodeLanguage.Python:
+            language = "python";
+            break;
+
+        case EditorCodeLanguage.Razor:
+            language = "cshtml-razor";
+            script = "https://unpkg.com/highlightjs-cshtml-razor/dist/cshtml-razor.min.js";
+            break;
+
+        case EditorCodeLanguage.Scss:
+            language = "scss";
+            break;
+
+        case EditorCodeLanguage.Sql:
+            language = "sql";
+            break;
+
+        case EditorCodeLanguage.Typescript:
+            language = "typescript";
+            break;
+
+        case EditorCodeLanguage.Dockerfile:
+            language = "dockerfile";
+            break;
+
+        case EditorCodeLanguage.Markdown:
+            language = "markdown";
+            break;
     }
 }
 
 @if (Model.AddDependencyLibrary)
 {
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-    <script>
-        (function () {
-            var head = document.getElementsByTagName('HEAD')[0];  
-            var link = document.createElement('link'); 
-            link.rel = 'stylesheet';  
-            link.type = 'text/css'; 
-            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css';  
-            head.appendChild(link);
-
-            document.addEventListener('DOMContentLoaded', function (event) {
-                hljs.highlightAll();
-            });
-        })();
-    </script>
+    <script src="/script/code.js"></script>
 }
 
 @if (language != null && Model.AddDependencyLibraryLanguage)
 {
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/@(language).min.js"></script>
+    if (script == null)
+    {
+        script = @"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/" + language + ".min.js";
+    }
+
+    <script src="@script"></script>
 }
 
 <theme subtheme="Model.Subtheme" shade="Model.Shade" override="Model.OverrideColor">
-<pre><code class="@(language != null ? "language-" + language : null)">@Html.Raw(Model.Text)</code></pre>
+<pre><code class="@(language != null ? "language-" + language : null)">@Model.Text</code></pre>
 </theme>

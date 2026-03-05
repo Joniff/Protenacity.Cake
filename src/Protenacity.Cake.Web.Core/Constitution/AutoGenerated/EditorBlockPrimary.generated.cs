@@ -36,6 +36,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::Umbraco.Cms.Core.Models.Link MainLink { get; }
 
+		/// <summary>Section Subtitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		global::Umbraco.Cms.Core.Strings.IHtmlEncodedString MainSubtitle { get; }
+
 		/// <summary>Section Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -109,6 +114,19 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static global::Umbraco.Cms.Core.Models.Link GetMainLink(IEditorBlockPrimary that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Link>(publishedValueFallback, "mainLink");
+
+		///<summary>
+		/// Section Subtitle: Optional &lt;h5&gt; subtitle placed directly below Section Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("mainSubtitle")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString MainSubtitle => GetMainSubtitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Section Subtitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static global::Umbraco.Cms.Core.Strings.IHtmlEncodedString GetMainSubtitle(IEditorBlockPrimary that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(publishedValueFallback, "mainSubtitle");
 
 		///<summary>
 		/// Section Title: Optional &lt;h2&gt; title placed above block

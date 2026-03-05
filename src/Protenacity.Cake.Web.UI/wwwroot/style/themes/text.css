@@ -1,20 +1,53 @@
 .theme-slate, .theme-venice, .theme-metallic-seaweed, .theme-deep-dairei, .theme-cactus-flower, .theme-mystic-tulip, .theme-poinciana {
-    --lcc-l-a: #0c3571;
-    --lcc-l-ahover: #0e2c5b;
-    --lcc-l-avisited: #3b1e7c;
-
-    --lcc-d-a: #ffffff;
-    --lcc-d-ahover: #ffffff;
-    --lcc-d-avisited: #ffffff;
+    --cake-l-a: #0c3571;
+    --cake-l-ahover: #0e2c5b;
+    --cake-l-avisited: #3b1e7c;
+    --cake-d-a: #ffffff;
+    --cake-d-ahover: #ffffff;
+    --cake-d-avisited: #ffffff;
+    --cake-l-code-bg: #ffffff;
+    --cake-l-code-fg: #000000;
+    --cake-d-code-bg: #000000;
+    --cake-d-code-fg: #ffffff;
 }
 
 .theme-golden-sands {
-    --lcc-l-a: #020014;
-    --lcc-l-ahover: #0b0076;
-    --lcc-l-avisited: #020014;
-    --lcc-d-a: #cac4ff;
-    --lcc-d-ahover: #dcd8ff;
-    --lcc-d-avisited: #cac4ff;
+    --cake-l-a: #020014;
+    --cake-l-ahover: #0b0076;
+    --cake-l-avisited: #020014;
+    --cake-d-a: #cac4ff;
+    --cake-d-ahover: #dcd8ff;
+    --cake-d-avisited: #cac4ff;
+    --cake-l-code-bg: #ffffff;
+    --cake-l-code-fg: #000000;
+    --cake-d-code-bg: #000000;
+    --cake-d-code-fg: #ffffff;
+}
+
+.theme-myrtle {
+    --cake-l-a: #3a1b1d;
+    --cake-l-ahover: #273a1b;
+    --cake-l-avisited: #020014;
+    --cake-d-a: #eae5e5;
+    --cake-d-ahover: #998585;
+    --cake-d-avisited: #cac4ff;
+    --cake-l-code-bg: #ffffff;
+    --cake-l-code-fg: #000000;
+    --cake-d-code-bg: #000000;
+    --cake-d-code-fg: #ffffff;
+}
+
+.theme-candy-floss {
+    --cake-l-a: #583c47;
+    --cake-l-ahover: #3c4032;
+    --cake-l-avisited: #2e1f25;
+    --cake-d-a: #583c47;
+    --cake-d-ahover: #3c4032;
+    --cake-d-avisited: #2e1f25;
+    --cake-l-code-bg: #ffffff;
+    --cake-l-code-fg: #000000;
+    --cake-d-code-bg: #000000;
+    --cake-d-code-fg: #ffffff;
 }
 
 .theme-light .text a:not(.btn),
@@ -22,7 +55,7 @@
 .theme-light .breadcrumb-item a,
 .theme-light .header a,
 .theme-light .footer a {
-    color: var(--lcc-l-a, black);
+    color: var(--cake-l-a, black);
 }
 
 .theme-light .text a:hover:not(.btn), 
@@ -30,23 +63,23 @@
 .theme-light .breadcrumb-item a:hover, 
 .theme-light .header a:hover, 
 .theme-light .footer a:hover {
-    color: var(--lcc-l-ahover, black);
+    color: var(--cake-l-ahover, black);
 }
-
+/*
 .theme-light .text a:visited:not(.btn), 
 .text .theme-light a:visited:not(.btn), 
 .theme-light .breadcrumb-item a:visited,
 .theme-light .header a:visited,
 .theme-light .footer a:visited {
-    color: var(--lcc-l-avisited, black);
+    color: var(--cake-l-avisited, black);
 }
-
+*/
 .theme-dark .text a:not(.btn), 
 .text .theme-dark a:not(.btn), 
 .theme-dark .breadcrumb-item a,
 .theme-dark .header a,
 .theme-dark .footer a {
-    color: var(--lcc-d-a, white);
+    color: var(--cake-d-a, white);
     text-decoration: unset;
 }
 
@@ -55,13 +88,22 @@
 .theme-dark .breadcrumb-item a:hover,
 .theme-dark .header a:hover,
 .theme-dark .footer a:hover {
-    color: var(--lcc-d-ahover, white);
+    color: var(--cake-d-ahover, white);
 }
-
+/*
 .theme-dark .text a:visited:not(.btn), 
 .text .theme-dark a:visited:not(.btn), 
 .theme-dark .breadcrumb-item a:visited,
 .theme-dark .header a:visited,
 .theme-dark .footer a:visited {
-    color: var(--lcc-d-avisited, white);
+    color: var(--cake-d-avisited, white);
+}
+*/
+.theme-light code, code.theme-light {
+    color: var(--cake-l-code-fg, black);
+    background-color: var(--cake-l-code-bg, white);
+}
+.theme-dark code, code.theme-dark {
+    color: var(--cake-d-code-fg, white);
+    background-color: var(--cake-d-code-bg, black);
 }

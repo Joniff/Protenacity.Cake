@@ -1,21 +1,5 @@
 ﻿@model IFurnitureTab
 
-@if (Model.FurnitureHeaderSticky)
-{
-    var pixel = (Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.BelowLeft || Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.BelowRight) ? "130px" : "100px";
-
-    <style>
-        .anchor::before {
-        display: block;
-        content: " ";
-        margin-top: -@(pixel);
-        height: @(pixel);
-        visibility: hidden;
-        pointer-events: none;
-        }
-    </style>
-}
-
 <header id="site_header" aria-label="Global" class="@(Model.FurnitureHeaderSticky ? "sticky-top" : null)">
     <theme class="py-2" subtheme="Model.FurnitureHeaderSubtheme" shade="Model.FurnitureHeaderThemeShade" override="Model.FurnitureHeaderColor">
         <div class="header">

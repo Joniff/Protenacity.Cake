@@ -47,7 +47,12 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		/// <summary>Default Aside Background</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ConfigDefaultAsideBackground { get; }
+		global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ConfigDefaultAsideBackgroundColor { get; }
+
+		/// <summary>Default Border Color</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ConfigDefaultAsideBorderColor { get; }
 
 		/// <summary>Default Aside Border Edges</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
@@ -220,13 +225,26 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("configDefaultAsideBackground")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ConfigDefaultAsideBackground => GetConfigDefaultAsideBackground(this, _publishedValueFallback);
+		[ImplementPropertyType("configDefaultAsideBackgroundColor")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel ConfigDefaultAsideBackgroundColor => GetConfigDefaultAsideBackgroundColor(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Aside Background</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Umbraco.Cms.Core.Models.Blocks.BlockListModel GetConfigDefaultAsideBackground(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(publishedValueFallback, "configDefaultAsideBackground");
+		public static global::Umbraco.Cms.Core.Models.Blocks.BlockListModel GetConfigDefaultAsideBackgroundColor(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(publishedValueFallback, "configDefaultAsideBackgroundColor");
+
+		///<summary>
+		/// Default Border Color: Default color shown around side panels
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("configDefaultAsideBorderColor")]
+		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ConfigDefaultAsideBorderColor => GetConfigDefaultAsideBorderColor(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Default Border Color</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor GetConfigDefaultAsideBorderColor(IDomainConfigurationTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor>(publishedValueFallback, "configDefaultAsideBorderColor");
 
 		///<summary>
 		/// Default Aside Border Edges: Default edges that are shown around the side panel

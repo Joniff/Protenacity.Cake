@@ -73,6 +73,14 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual global::Umbraco.Cms.Core.Models.Link MainLink => global::Protenacity.Cake.Web.Core.Constitution.EditorBlockPrimary.GetMainLink(this, _publishedValueFallback);
 
 		///<summary>
+		/// Section Subtitle: Optional &lt;h5&gt; subtitle placed directly below Section Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("mainSubtitle")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString MainSubtitle => global::Protenacity.Cake.Web.Core.Constitution.EditorBlockPrimary.GetMainSubtitle(this, _publishedValueFallback);
+
+		///<summary>
 		/// Section Title: Optional &lt;h2&gt; title placed above block
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
