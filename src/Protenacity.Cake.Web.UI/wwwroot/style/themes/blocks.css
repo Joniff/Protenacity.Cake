@@ -150,7 +150,7 @@
     --cake-theme-4l-fg: #eae9ea; /* Quaternary Dark Foreground */
 }
 
-.theme-golden-sands {
+.theme-golden-sands-new {
     --cake-theme-1d-bg: #2e1c04; /* Primary Dark Background */
     --cake-theme-1d-fg: #ffe8cb; /* Primary Dark Foreground */
     --cake-theme-2d-bg: #633111; /* Tertiary Dark Background */
@@ -170,15 +170,15 @@
     --cake-theme-4l-fg: #2b042e; /* Quaternary Light Foreground */
 }
 
-.theme-golden-sands-original {
+.theme-golden-sands {
     --cake-theme-1d-bg: #140c00; /* Primary Dark Background */
     --cake-theme-1d-fg: #ffe8c5; /* Primary Dark Foreground */
     --cake-theme-2d-bg: #4f2f00; /* Secondary Dark Background */
     --cake-theme-2d-fg: #ffe8c5; /* Secondary Dark Foreground */
     --cake-theme-3d-bg: #935800; /* Tertiary Dark Background */
     --cake-theme-3d-fg: #ffdcd8; /* Tertiary Dark Foreground */
-    --cake-theme-4d-bg: #3c3440; /* Quaternary Dark Background */
-    --cake-theme-4d-fg: #eae9ea; /* Quaternary Dark Foreground */
+    --cake-theme-4d-bg: #2b042e; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #ffdfff; /* Quaternary Dark Foreground */
 
     --cake-theme-1l-bg: #fef4eb; /* Primary Light Background */
     --cake-theme-1l-fg: #291400; /* Primary Light Foreground */
@@ -186,8 +186,8 @@
     --cake-theme-2l-fg: #291400; /* Secondary Light Foreground */
     --cake-theme-3l-bg: #fbddc2; /* Tertiary Light Background */
     --cake-theme-3l-fg: #291400; /* Tertiary Light Foreground */
-    --cake-theme-4l-bg: #3c3440; /* Quaternary Dark Background */
-    --cake-theme-4l-fg: #eae9ea; /* Quaternary Dark Foreground */
+    --cake-theme-4l-bg: #feacff; /* Quaternary Light Background */
+    --cake-theme-4l-fg: #2b042e; /* Quaternary Light Foreground */
 }
 
 
@@ -256,19 +256,19 @@
     --cake-theme-1d-fg: #fff2ea; /* Primary Dark Foreground */
     --cake-theme-2d-bg: #be5000; /* Secondary Dark Background */
     --cake-theme-2d-fg: #ffd7c1; /* Secondary Dark Foreground */
-    --cake-theme-3d-bg: #0091ff; /* Tertiary Dark Background */
+    --cake-theme-3d-bg: #004680; /* Tertiary Dark Background */
     --cake-theme-3d-fg: #eaf5ff; /* Tertiary Dark Foreground */
-    --cake-theme-4d-bg: #3c3440; /* Quaternary Dark Background */
-    --cake-theme-4d-fg: #eae9ea; /* Quaternary Dark Foreground */
+    --cake-theme-4d-bg: #006326; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #e1ffe5; /* Quaternary Dark Foreground */
 
-    --cake-theme-1l-bg: #ff8f54; /* Primary Light Background */
+    --cake-theme-1l-bg: #ffe4d6; /* Primary Light Background */
     --cake-theme-1l-fg: #030100; /* Primary Light Foreground */
-    --cake-theme-2l-bg: #ffd7c1; /* Tertiary Light Background */
-    --cake-theme-2l-fg: #632600; /* Tertiary Light Foreground */
-    --cake-theme-3l-bg: #eaf5ff; /* Secondary Light Background */
+    --cake-theme-2l-bg: #ffc9ad; /* Tertiary Light Background */
+    --cake-theme-2l-fg: #030100; /* Tertiary Light Foreground */
+    --cake-theme-3l-bg: #c1e0ff; /* Secondary Light Background */
     --cake-theme-3l-fg: #000103; /* Secondary Light Foreground */
-    --cake-theme-4l-bg: #3c3440; /* Quaternary Dark Background */
-    --cake-theme-4l-fg: #eae9ea; /* Quaternary Dark Foreground */
+    --cake-theme-4l-bg: #c0ffc9; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #001604; /* Quaternary Dark Foreground */
 }
 
 .theme-avacado {
@@ -292,18 +292,18 @@
 }
 
 .theme-bumblebee {
-    --cake-theme-1d-bg: #ff6b31; /* Primary Dark Background */
+    --cake-theme-1d-bg: #9e741a; /* Primary Dark Background */
     --cake-theme-1d-fg: #fff1ec; /* Primary Dark Foreground */
     --cake-theme-2d-bg: #be4e22; /* Secondary Dark Background */
     --cake-theme-2d-fg: #fff1ec; /* Secondary Dark Foreground */
-    --cake-theme-3d-bg: #3173ff; /* Tertiary Dark Background */
+    --cake-theme-3d-bg: #1a459e; /* Tertiary Dark Background */
     --cake-theme-3d-fg: #eaf2ff; /* Tertiary Dark Foreground */
-    --cake-theme-4d-bg: #bd31ff; /* Quaternary Dark Background */
+    --cake-theme-4d-bg: #741a9e; /* Quaternary Dark Background */
     --cake-theme-4d-fg: #f9eeff; /* Quaternary Dark Foreground */
 
-    --cake-theme-1l-bg: #ffbd31; /* Primary Light Background */
+    --cake-theme-1l-bg: #ffcb6b; /* Primary Light Background */
     --cake-theme-1l-fg: #030200; /* Primary Light Foreground */
-    --cake-theme-2l-bg: #ffd994; /* Tertiary Light Background */
+    --cake-theme-2l-bg: #ffbd31; /* Tertiary Light Background */
     --cake-theme-2l-fg: #030200; /* Tertiary Light Foreground */
     --cake-theme-3l-bg: #d5e5ff; /* Secondary Light Background */
     --cake-theme-3l-fg: #000103; /* Secondary Light Foreground */
