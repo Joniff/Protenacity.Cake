@@ -25,7 +25,7 @@ public class ResponsiveImageViewComponent(IResponsiveImageService responsiveImag
                 BackgroundId = responsiveImage.BackgroundId,
                 Opacity = responsiveImage.Opacity,
                 Urls = responsiveImageService.ImageUrls(responsiveImage.Image, responsiveImage.ImageCrop, responsiveImage.WidthFactorImage, responsiveImage.ImageQuality ?? viewService.CurrentDomainPage.ConfigImageQuality),
-                WidthFactorImage = responsiveImage.WidthFactorImage,
+                WidthFactorImage = responsiveImage.WidthFactorImage == 0 ? 100 :responsiveImage.WidthFactorImage,
                 WidthFactorContainer = responsiveImage.WidthFactorContainer
             });
         }

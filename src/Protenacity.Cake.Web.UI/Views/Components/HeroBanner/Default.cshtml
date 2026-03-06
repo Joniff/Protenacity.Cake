@@ -23,7 +23,7 @@
                             <source media="(min-width:1200px)" srcset="/images/transparent.png?width=2560&amp;height=600&amp;quality=70">
                             <source media="(min-width:768px)" srcset="/images/transparent.png?width=1200&amp;height=480&amp;quality=70">
                             <source media="(min-width:480px)" srcset="/images/transparent.png?width=768&amp;height=320&amp;quality=70">
-                            <img src="/images/transparent.png?width=480&amp;height=240&amp;quality=70" alt="transparent" class="w-100 h-100" style="background-color:@(slide.Block.Settings?.Color ?? "#ffffff")" aria-hidden="true">
+                            <img src="/images/transparent.png?width=480&amp;height=240&amp;quality=70" alt="transparent" class="w-100 h-100" style="background-color:#ffffff" aria-hidden="true">
                         </picture>
                     }
                     else
@@ -32,6 +32,7 @@
                         {
                             Image = slide.Block.Content.Image,
                             ImageCrop = EditorImageCrops.Banner,
+                            WidthFactorImage = 100,
                             AlternateTitle = slide.Block.Content.Image.AlternateText()
                         }))
                     }

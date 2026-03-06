@@ -13,7 +13,8 @@
             @(await Component.InvokeAsync(ResponsiveImageViewComponent.Name, new ResponsiveImage
             {
                 Image = image,
-                ImageCrop = EditorImageCrops.Full
+                ImageCrop = EditorImageCrops.Full,
+                WidthFactorImage = 100
             }))
         </div>
 
