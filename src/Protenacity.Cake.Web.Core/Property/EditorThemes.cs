@@ -37,6 +37,18 @@ public enum EditorThemes
 
     [Description("Candy Floss")]
     CandyFloss,
+
+    [Description("Mana")]
+    Mana,
+
+    [Description("Goldfish")]
+    Goldfish,
+
+    [Description("Bumblebee")]
+    Bumblebee,
+
+    [Description("Avacado")]
+    Avacado,
 }
 
 public class EditorThemesValueConverter(IDataTypeService dataTypeService)

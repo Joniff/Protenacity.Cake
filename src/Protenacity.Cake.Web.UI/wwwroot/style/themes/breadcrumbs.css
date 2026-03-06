@@ -7,7 +7,11 @@
 .theme-poinciana,
 .theme-golden-sands,
 .theme-myrtle,
-.theme-candy-floss {
+.theme-candy-floss,
+.theme-mana,
+.theme-goldfish,
+.theme-avacado,
+.theme-bumblebee {
     --cake-l-bread: #0c3571;
     --cake-l-breadactive: #0e2c5b;
     --cake-l-breadhover: #3b1e7c;

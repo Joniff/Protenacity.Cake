@@ -118,6 +118,18 @@ public class ThemeTagHelper(IViewService viewService, IResponsiveImageService re
 
             case EditorThemes.CandyFloss:
                 return "theme-candy-floss";
+
+            case EditorThemes.Mana:
+                return "theme-mana";
+
+            case EditorThemes.Goldfish:
+                return "theme-goldfish";
+
+            case EditorThemes.Avacado:
+                return "theme-avacado";
+
+            case EditorThemes.Bumblebee:
+                return "theme-bumblebee";
         }
         throw new ArgumentException(nameof(EditorThemes) + " invalid value of " + theme);
     }
@@ -134,6 +146,9 @@ public class ThemeTagHelper(IViewService viewService, IResponsiveImageService re
 
             case EditorSubthemes.Tertiary:
                 return "theme-tertiary";
+
+            case EditorSubthemes.Quaternary:
+                return "theme-quaternary";
         }
         throw new ArgumentException(nameof(EditorSubthemes) + " invalid value of " + subtheme);
     }

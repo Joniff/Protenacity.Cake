@@ -16,7 +16,10 @@ public enum EditorSubthemes
     Secondary,
 
     [Description("Tertiary")]
-    Tertiary
+    Tertiary,
+
+    [Description("Quaternary")]
+    Quaternary
 }
 
 public class EditorSubthemesValueConverter(IDataTypeService dataTypeService)
