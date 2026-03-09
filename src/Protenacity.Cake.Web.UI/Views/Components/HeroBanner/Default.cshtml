@@ -50,7 +50,7 @@
                                     <span class="card-text text-light">@Html.Raw(slide.Block.Content.Description)</span>
                                     @if (!string.IsNullOrWhiteSpace(slide.Block.Content.Link?.Url))
                                     {
-                                        <a href="@slide.Block.Content.Link?.Url" target="@(string.IsNullOrWhiteSpace(slide.Block.Content.Link?.Target) ? "_self" : slide.Block.Content.Link?.Target)" class="btn btn-primary">
+                                        <a href="@slide.Block.Content.Link?.Url" target="@(string.IsNullOrWhiteSpace(slide.Block.Content.Link?.Target) ? "_self" : slide.Block.Content.Link?.Target)" class="btn btn-theme">
                                             @(string.IsNullOrWhiteSpace(slide.Block.Content.Link?.Name) ? slide.Block.Content.Link?.Url : slide.Block.Content.Link?.Name)
                                         </a>
                                     }

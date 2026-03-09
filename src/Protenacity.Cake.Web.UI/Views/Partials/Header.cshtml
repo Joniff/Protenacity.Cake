@@ -58,7 +58,7 @@
                                 <form class="d-none d-lg-block" role="search" method="get" action="@View.CurrentDomainPage.SearchPage.Url">
                                     <div class="input-group">
                                         <input type="search" class="form-control border-0" name="@Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString" aria-label="Search @View.CurrentDomainPage.Title" value="@View.CurrentSearchCriteria(Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString)">
-                                        <button class="btn btn-link bg-white input-group-append" type="submit">
+                                        <button class="btn btn-link bg-green input-group-append" type="submit">
                                             <span class="fa-solid fa-magnifying-glass"></span>
                                         </button>
                                     </div>
@@ -113,7 +113,7 @@
     <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvas@(Model.GetHashCode())" aria-labelledby="offcanvas@(Model.GetHashCode())Label">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvas@(Model.GetHashCode())Label">Menu</h5>
-            <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close text-reset btn-close-green" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav flex-grow-1 pe-3">
@@ -124,14 +124,14 @@
                         if (link.Submenus?.Any() == true)
                         {
                             <li class="nav-item dropdown">
-                                <a class="nav-link pl-0 text-white dropdown-toggle" href="#smallmenu@(link.Key)" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="smallmenu@(link.Key)">
+                                <a class="nav-link pl-0 text-green dropdown-toggle" href="#smallmenu@(link.Key)" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="smallmenu@(link.Key)">
                                     @(string.IsNullOrWhiteSpace(link.TopMenu.Name) ? link.TopMenu.Url : link.TopMenu.Name)
                                 </a>
                                 <ul class="bg-dark collapse list-inline" id="smallmenu@(link.Key)">
                                     @foreach (var sublink in link.Submenus)
                                     {
                                         <li>
-                                            <a class="dropdown-item pl-0 text-white" href="@sublink.Url" target="@(string.IsNullOrWhiteSpace(sublink.Target) ? "_self" : sublink.Target)">
+                                            <a class="dropdown-item pl-0 text-green" href="@sublink.Url" target="@(string.IsNullOrWhiteSpace(sublink.Target) ? "_self" : sublink.Target)">
                                                 &nbsp;&nbsp;
                                                 @(string.IsNullOrWhiteSpace(sublink.Name) ? sublink.Url : sublink.Name)
                                             </a>
@@ -143,7 +143,7 @@
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link pl-0 text-white" href="@link.TopMenu.Url" target="@(string.IsNullOrWhiteSpace(link.TopMenu.Target) ? "_self" : link.TopMenu.Target)">
+                                <a class="nav-link pl-0 text-green" href="@link.TopMenu.Url" target="@(string.IsNullOrWhiteSpace(link.TopMenu.Target) ? "_self" : link.TopMenu.Target)">
                                     @(string.IsNullOrWhiteSpace(link.TopMenu.Name) ? link.TopMenu.Url : link.TopMenu.Name)
                                 </a>
                             </li>

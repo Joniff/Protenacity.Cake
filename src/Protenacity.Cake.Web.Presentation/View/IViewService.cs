@@ -13,6 +13,7 @@ public interface IViewService
     Uri CanonicalUri { get; }
     IFurnitureTab CurrentFurniture { get; }
     string CurrentFurnitureUrl { get; }
+    IFurnitureTab CurrentBreadcrumb { get; }
     string? Parse(string? text, IDictionary<string, string>? values = null);
     string? Parse(IHtmlEncodedString? text, IDictionary<string, string>? values = null);
     IDictionary<string, string> StandardParseValues { get; }

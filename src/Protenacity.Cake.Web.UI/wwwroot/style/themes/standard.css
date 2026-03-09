@@ -1,0 +1,579 @@
+﻿/* Alerts */
+
+.theme-alert-warning {
+    background-color: #feedd6;
+    color: #32210a;
+}
+
+.theme-alert-primary {
+    background-color: #efcfd2;
+    color: #230306
+}
+
+.theme-alert-secondary {
+    background-color: #ccdfed;
+    color: #230306
+}
+
+.theme-alert-success {
+    background-color: #d6e4d1;
+    color: #0a1805
+}
+
+.theme-alert-info {
+    background-color: #cfe9f0;
+    color: #0e7590
+}
+
+.theme-slate {
+    --cake-theme-1d-bg: #343a40; /* Primary Dark Background */
+    --cake-theme-1d-fg: #ffffff; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: #a8aaad; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #3f4034; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #eaeae9; /* Secondary Dark Foreground */
+    --cake-theme-2d-hl: #a8aaad; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #3c3440; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #eae9ea; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: #a8aaad; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #403a34; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #eae9ea; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: #a8aaad; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #ffffff; /* Primary Light Background */
+    --cake-theme-1l-fg: #0b0c0c; /* Primary Light Foreground */
+    --cake-theme-1l-hl: #3f4034; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #f8f9fa; /* Secondary Light Background */
+    --cake-theme-2l-fg: #0b0c0c; /* Secondary Light Foreground */
+    --cake-theme-2l-hl: #3f4034; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #e9ecef; /* Tertiary Light Background */
+    --cake-theme-3l-fg: #0b0c0c; /* Tertiary Light Foreground */
+    --cake-theme-3l-hl: #3f4034; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #d5d4d2; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #010101; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: #3f4034; /* Primary Dark Foreground */
+}
+
+.theme-venice {
+    --cake-theme-1d-bg: #2c5177; /* Primary Dark Background */
+    --cake-theme-1d-fg: #ffffff; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #112438; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #f8f8f9; /* Secondary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #77522c; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #f1ede8; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #51772c; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #ecf1e9; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #ffffff; /* Primary Light Background */
+    --cake-theme-1l-fg: #112438; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #d2dae3; /* Secondary Light Background */
+    --cake-theme-2l-fg: #112438; /* Secondary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #e3dad2; /* Tertiary Light Background */
+    --cake-theme-3l-fg: #1c1105; /* Tertiary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #dae3d4; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #1a2a0a; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-metallic-seaweed {
+    --cake-theme-1d-bg: #0d7d88; /* Primary Dark Background */
+    --cake-theme-1d-fg: #e9f2f3; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #022c31; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #e9f2f3; /* Secondary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #88180d; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #f5e8e6; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #88620d; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #f3efe8; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #e9f2f3; /* Primary Light Background */
+    --cake-theme-1l-fg: #011e22; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #d4e4e6; /* Secondary Light Background */
+    --cake-theme-2l-fg: #011e22; /* Secondary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #f5e8e6; /* Tertiary Light Background */
+    --cake-theme-3l-fg: #010000; /* Tertiary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #f3efe8; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #221601; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-deep-dairei {
+    --cake-theme-1d-bg: #802427; /* Primary Dark Background */
+    --cake-theme-1d-fg: #f4e8e7; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #1f0404; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #f8f8f9; /* Secondary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #242780; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #e6e9f3; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #525d18; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #f0f2e9; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #ffffff; /* Primary Light Background */
+    --cake-theme-1l-fg: #3d0c0e; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #f4e8e7; /* Secondary Light Background */
+    --cake-theme-2l-fg: #3d0c0e; /* Secondary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #e6e9f3; /* Tertiary Light Background */
+    --cake-theme-3l-fg: #07082e; /* Tertiary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #f0f2e9; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #272e07; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-cactus-flower {
+    --cake-theme-1d-bg: #193d6a; /* Primary Dark Background */
+    --cake-theme-1d-fg: #e6eaf0; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #071a31; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #e6eaf0; /* Secondary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #6a4619; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #f0ebe7; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #5d6a19; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #edefe8; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #ffffff; /* Primary Light Background */
+    --cake-theme-1l-fg: #193d6a; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #e6eaf0; /* Secondary Light Background */
+    --cake-theme-2l-fg: #193d6a; /* Secondary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #f0ebe7; /* Tertiary Light Background */
+    --cake-theme-3l-fg: #180d02; /* Tertiary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #edefe8; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #1f2404; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-mystic-tulip {
+    --cake-theme-1d-bg: #986e65; /* Primary Dark Background */
+    --cake-theme-1d-fg: #fff8f6; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #45302b; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #fff8f6; /* Secondary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #3c575c; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #eff3f4; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #413c5c; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #efeff5; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #fff8f6; /* Primary Light Background */
+    --cake-theme-1l-fg: #2c1d1a; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #fee9e4; /* Secondary Light Background */
+    --cake-theme-2l-fg: #2c1d1a; /* Secondary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #eff3f4; /* Tertiary Light Background */
+    --cake-theme-3l-fg: #223438; /* Tertiary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #efeff5; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #262238; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-poinciana {
+    --cake-theme-1d-bg: #7b1a0f; /* Primary Dark Background */
+    --cake-theme-1d-fg: #f3e8e5; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #1e0201; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #f3e8e5; /* Secondary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #0f707b; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #e9f0f1; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #1a0f7b; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #e4e7f3; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #f3e8e5; /* Primary Light Background */
+    --cake-theme-1l-fg: #2c0402; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #e8d0cc; /* Secondary Light Background */
+    --cake-theme-2l-fg: #2c0402; /* Secondary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #e9f0f1; /* Tertiary Light Background */
+    --cake-theme-3l-fg: #011a1e; /* Tertiary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #e4e7f3; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #07033a; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-golden-sands {
+    --cake-theme-1d-bg: #140c00; /* Primary Dark Background */
+    --cake-theme-1d-fg: #ffe8c5; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #4f2f00; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #ffe8c5; /* Secondary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #04162e; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #e2e5e8; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #2b042e; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #ffdfff; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #fef4eb; /* Primary Light Background */
+    --cake-theme-1l-fg: #291400; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #fce9d7; /* Secondary Light Background */
+    --cake-theme-2l-fg: #291400; /* Secondary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #e2e5e8; /* Tertiary Light Background */
+    --cake-theme-3l-fg: #04162e; /* Tertiary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #e8e3e8; /* Quaternary Light Background */
+    --cake-theme-4l-fg: #2b042e; /* Quaternary Light Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-myrtle {
+    --cake-theme-1d-bg: #273a1b; /* Primary Dark Background */
+    --cake-theme-1d-fg: #e7e9e6; /* Primary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #3a1b1d; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #d5cccc; /* Secondary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #231b3a; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #e6e5ea; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #1b273a; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #e5e7e9; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #e7e9e6; /* Primary Light Background */
+    --cake-theme-1l-fg: #291400; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #eae5e5; /* Secondary Light Background */
+    --cake-theme-2l-fg: #311618; /* Secondary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #e6e5ea; /* Tertiary Light Background */
+    --cake-theme-3l-fg: #1d1631; /* Tertiary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #e5e7e9; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #1b273a; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-candy-floss {
+    --cake-theme-1d-bg: #ffbcd9; /* Primary Dark Background */
+    --cake-theme-1d-fg: #2e1f25; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #bcc3ff; /* Tertiary Dark Background */
+    --cake-theme-2d-fg: #2e1f25; /* Tertiary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #a3deb0; /* Secondary Dark Background */
+    --cake-theme-3d-fg: #1f2e22; /* Secondary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #ffefbc; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #2e2a1f; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #fff8fb; /* Primary Light Background */
+    --cake-theme-1l-fg: #2e1f25; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #e4e7ff; /* Secondary Light Background */
+    --cake-theme-2l-fg: #323448; /* Secondary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #d8ffe0; /* Tertiary Light Background */
+    --cake-theme-3l-fg: #1f2e22; /* Tertiary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #fff7de; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #2e2a1f; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-mana {
+    --cake-theme-1d-fg: #fdffe4; /* Primary Light Background */
+    --cake-theme-1d-bg: #2d2e1f; /* Primary Light Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-fg: #e0dfff; /* Secondary Light Background */
+    --cake-theme-2d-bg: #201f2e; /* Secondary Light Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-fg: #dcffe5; /* Tertiary Light Background */
+    --cake-theme-3d-bg: #1f2e23; /* Tertiary Light Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #2e1f2a; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #e8e6e7; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #fdffe4; /* Primary Light Background */
+    --cake-theme-1l-fg: #2d2e1f; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #e0dfff; /* Secondary Light Background */
+    --cake-theme-2l-fg: #020203; /* Secondary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #dcffe5; /* Tertiary Light Background */
+    --cake-theme-3l-fg: #020302; /* Tertiary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #e8e6e7; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #2e1f2a; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-goldfish {
+    --cake-theme-1d-bg: #ff6e00; /* Primary Dark Background */
+    --cake-theme-1d-fg: #fff2ea; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #be5000; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #ffd7c1; /* Secondary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #004680; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #eaf5ff; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #006326; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #e1ffe5; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #ffe4d6; /* Primary Light Background */
+    --cake-theme-1l-fg: #030100; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #ffc9ad; /* Tertiary Light Background */
+    --cake-theme-2l-fg: #030100; /* Tertiary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #c1e0ff; /* Secondary Light Background */
+    --cake-theme-3l-fg: #000103; /* Secondary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #c0ffc9; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #001604; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-avacado {
+    --cake-theme-1d-bg: #616a2f; /* Primary Dark Background */
+    --cake-theme-1d-fg: #f0f1ea; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #313615; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #f8faf0; /* Secondary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #20464c; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #f0f8fa; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #361531; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #fbeff8; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #e7e9de; /* Primary Light Background */
+    --cake-theme-1l-fg: #020200; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #d2d6c2; /* Tertiary Light Background */
+    --cake-theme-2l-fg: #020200; /* Tertiary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #e1f1f4; /* Secondary Light Background */
+    --cake-theme-3l-fg: #0e1213; /* Secondary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #f2d0eb; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #000202; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-bumblebee {
+    --cake-theme-1d-bg: #9e741a; /* Primary Dark Background */
+    --cake-theme-1d-fg: #fff1ec; /* Primary Dark Foreground */
+    --cake-theme-1d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2d-bg: #be4e22; /* Secondary Dark Background */
+    --cake-theme-2d-fg: #fff1ec; /* Secondary Dark Foreground */
+    --cake-theme-2d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3d-bg: #1a459e; /* Tertiary Dark Background */
+    --cake-theme-3d-fg: #eaf2ff; /* Tertiary Dark Foreground */
+    --cake-theme-3d-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4d-bg: #741a9e; /* Quaternary Dark Background */
+    --cake-theme-4d-fg: #f9eeff; /* Quaternary Dark Foreground */
+    --cake-theme-4d-hl: yellow; /* Primary Dark Foreground */
+
+    --cake-theme-1l-bg: #ffcb6b; /* Primary Light Background */
+    --cake-theme-1l-fg: #030200; /* Primary Light Foreground */
+    --cake-theme-1l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-2l-bg: #ffbd31; /* Tertiary Light Background */
+    --cake-theme-2l-fg: #030200; /* Tertiary Light Foreground */
+    --cake-theme-2l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-3l-bg: #d5e5ff; /* Secondary Light Background */
+    --cake-theme-3l-fg: #000103; /* Secondary Light Foreground */
+    --cake-theme-3l-hl: yellow; /* Primary Dark Foreground */
+    --cake-theme-4l-bg: #f3dcff; /* Quaternary Dark Background */
+    --cake-theme-4l-fg: #020003; /* Quaternary Dark Foreground */
+    --cake-theme-4l-hl: yellow; /* Primary Dark Foreground */
+}
+
+.theme-primary {
+    --cake-theme-l-bg: var(--cake-theme-1l-bg,red);
+    --cake-theme-l-fg: var(--cake-theme-1l-fg, green);
+    --cake-theme-l-hl: var(--cake-theme-1l-hl, green);
+    --cake-theme-d-bg: var(--cake-theme-1d-bg,red);
+    --cake-theme-d-fg: var(--cake-theme-1d-fg, green);
+    --cake-theme-d-hl: var(--cake-theme-1d-hl, green);
+}
+
+.theme-secondary {
+    --cake-theme-l-bg: var(--cake-theme-2l-bg,red);
+    --cake-theme-l-fg: var(--cake-theme-2l-fg, green);
+    --cake-theme-l-hl: var(--cake-theme-2l-hl, green);
+    --cake-theme-d-bg: var(--cake-theme-2d-bg,red);
+    --cake-theme-d-fg: var(--cake-theme-2d-fg, green);
+    --cake-theme-d-hl: var(--cake-theme-2d-hl, green);
+}
+
+.theme-tertiary {
+    --cake-theme-l-bg: var(--cake-theme-3l-bg,red);
+    --cake-theme-l-fg: var(--cake-theme-3l-fg, green);
+    --cake-theme-l-hl: var(--cake-theme-3l-hl, green);
+    --cake-theme-d-bg: var(--cake-theme-3d-bg,red);
+    --cake-theme-d-fg: var(--cake-theme-3d-fg, green);
+    --cake-theme-d-hl: var(--cake-theme-3d-hl, green);
+}
+
+.theme-quaternary {
+    --cake-theme-l-bg: var(--cake-theme-4l-bg,red);
+    --cake-theme-l-fg: var(--cake-theme-4l-fg, green);
+    --cake-theme-l-hl: var(--cake-theme-3d-hl, green);
+    --cake-theme-d-bg: var(--cake-theme-4d-bg,red);
+    --cake-theme-d-fg: var(--cake-theme-4d-fg, green);
+    --cake-theme-d-hl: var(--cake-theme-4d-hl, green);
+}
+
+.theme-light {
+    background-color: var(--cake-theme-l-bg,red) !important;
+    color: var(--cake-theme-l-fg, green) !important;
+    --cake-theme-bread: var(--cake-theme-l-fg, red);
+    --cake-theme-breadactive: var(--cake-theme-l-fg, red);
+    --cake-theme-breadhover: var(--cake-theme-l-hl, red);
+    --cake-theme-breadsep: var(--cake-theme-l-fg, red);
+    --cake-theme-btnborder: var(--cake-theme-l-fg, red);
+    --cake-theme-btnbg: var(--cake-theme-l-fg, red);
+    --cake-theme-btnfg: var(--cake-theme-l-bg, red);
+    --cake-theme-btncbc: var(--cake-theme-l-bg, red);
+    --cake-theme-th-fg: var(--cake-theme-l-hl, red);
+    --cake-theme-th-bg: var(--cake-theme-l-bg, red);
+    --cake-theme-td-fg: var(--cake-theme-l-bg, red);
+    --cake-theme-td-bg: var(--cake-theme-l-bg, red);
+    --cake-theme-a: var(--cake-theme-l-fg, red);
+    --cake-theme-a-hover: var(--cake-theme-l-hl, red);
+    --cake-theme-navbar: var(--cake-theme-l-fg, red);
+    --cake-theme-navbar-hover: var(--cake-theme-l-hl, red);
+    --cake-theme-code-fg: black;
+    --cake-theme-code-bg: white;
+}
+
+.theme-dark {
+    background-color: var(--cake-theme-d-bg,red) !important;
+    color: var(--cake-theme-d-fg, green) !important;
+    --cake-theme-bread: var(--cake-theme-d-fg, red);
+    --cake-theme-breadactive: var(--cake-theme-d-fg, red);
+    --cake-theme-breadhover: var(--cake-theme-d-hl, red);
+    --cake-theme-breadsep: var(--cake-theme-d-fg, red);
+    --cake-theme-btnborder: var(--cake-theme-d-fg, red);
+    --cake-theme-btnbg: var(--cake-theme-d-fg, red);
+    --cake-theme-btnfg: var(--cake-theme-d-bg, red);
+    --cake-theme-btncbc: var(--cake-theme-d-bg, red);
+    --cake-theme-th-fg: var(--cake-theme-d-hl, red);
+    --cake-theme-th-bg: var(--cake-theme-d-bg, red);
+    --cake-theme-td-fg: var(--cake-theme-d-bg, red);
+    --cake-theme-td-bg: var(--cake-theme-d-bg, red);
+    --cake-theme-a: var(--cake-theme-d-fg, red);
+    --cake-theme-a-hover: var(--cake-theme-d-hl, red);
+    --cake-theme-navbar: var(--cake-theme-d-fg, red);
+    --cake-theme-navbar-hover: var(--cake-theme-d-hl, red);
+    --cake-theme-code-fg: white;
+    --cake-theme-code-bg: black;
+}
+
+.breadcrumb a, .breadcrumb a:visited {
+    color: var(--cake-theme-bread, red);
+}
+
+.breadcrumb .active {
+    color: var(--cake-theme-breadactive, red);
+}
+
+.breadcrumb a:hover {
+    color: var(--cake-theme-breadhover, red);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--cake-theme-breadsep, red);
+}
+
+a.btn-theme {
+    border: 3px solid;
+    border-color: var(--cake-theme-btnborder,red);
+    background-color: var(--cake-theme-btnbg,red);
+    color: var(--cake-theme-btnfg, green);
+}
+
+a.btn-theme:hover {
+    border: 3px solid;
+    border-color: var(--cake-theme-btnborder,red);
+    background-color: var(--cake-theme-btnfg,red);
+    color: var(--cake-theme-btnbg, green);
+    transition: background-color 0.5s ease;
+}
+
+.show-click-arrow {
+    filter: invert(1) grayscale(100);
+}
+
+.show-click-arrow .carousel-control-next-icon {
+    background-color: unset;
+    opacity: 1;
+}
+
+.category-button-container {
+    background-color: var(--cake-theme-btncbc, green);
+}
+
+.category-button-container .nav-link:not(.active) {
+    color: var(--cake-theme-btncbc,red) !important;
+}
+
+th {
+    color: var(--cake-theme-th-fg,red);
+    background-color: var(--cake-theme-th-bg,red);
+}
+
+td {
+    color: var(--cake-theme-td-fg,red);
+    background-color: var(--cake-theme-td-fg,red);
+}
+
+.text a:not(.btn) {
+    color: var(--cake-theme-a,red);
+}
+
+.text a:hover:not(.btn) {
+    color: var(--cake-theme-a-hover,red);
+}
+
+.navbar a {
+    color: var(--cake-theme-navbar,red);
+}
+
+.navbar a:hover {
+    color: var(--cake-theme-navbar-hover,red);
+}
+
+.theme-dark code, code.theme-dark {
+    color: var(--cake-theme-code-fg);
+    background-color: var(--cake-theme-code-bg);
+}

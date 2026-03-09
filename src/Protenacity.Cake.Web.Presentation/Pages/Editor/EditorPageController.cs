@@ -143,12 +143,12 @@ public class EditorPageController(
 
         return CurrentTemplate(new EditorPageViewModel(model, publishedValueFallback)
         {
-            Breadcrumbs = viewService.CurrentFurniture.FurnitureBreadcrumbStatus == BreadcrumbStatuses.Show 
+            Breadcrumbs = viewService.CurrentBreadcrumb.FurnitureBreadcrumbStatus == BreadcrumbStatuses.Show 
                 ? model.Ancestors<EditorPage>().Reverse().Select(p => new Tuple<string, string>(string.IsNullOrWhiteSpace(p.Title) ? p.Name : p.Title, p.Url())) 
                 : null,
-            BreadcrumbSubtheme = viewService.CurrentFurniture.FurnitureBreadcrumbSubtheme,
-            BreadcrumbThemeShade = viewService.CurrentFurniture.FurnitureBreadcrumbThemeShade,
-            BreadcrumbsColor = viewService.CurrentFurniture.FurnitureBreadcrumbsColor,
+            BreadcrumbSubtheme = viewService.CurrentBreadcrumb.FurnitureBreadcrumbSubtheme,
+            BreadcrumbThemeShade = viewService.CurrentBreadcrumb.FurnitureBreadcrumbThemeShade,
+            BreadcrumbsColor = viewService.CurrentBreadcrumb.FurnitureBreadcrumbsColor,
             PageTitleSubtheme = model.PageTitleSubtheme == EditorSubthemes.Inherit ? viewService.CurrentSubtheme : model.PageTitleSubtheme,
             PageTitleThemeShade = model.PageTitleThemeShade == EditorThemeShades.Inherit ? viewService.CurrentThemeShade : model.PageTitleThemeShade,
             Alert = viewService.CurrentAlert,
