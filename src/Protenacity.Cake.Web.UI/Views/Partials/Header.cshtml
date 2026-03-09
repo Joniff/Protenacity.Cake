@@ -7,7 +7,7 @@
                 <div class="container">
                     @if (Model.FurnitureLogoImage != null)
                     {
-                        <a class="navbar-brand" href="@View.CurrentFurnitureUrl">
+                        <a class="navbar-brand pe-0 me-0" href="@View.CurrentFurnitureUrl">
                             <img src="@Model.FurnitureLogoImage.Url()" style="height:60px;width:@(Math.Floor(((double)Model.FurnitureLogoRatio) / 6.0))px" alt="@View.CurrentDomainPage.Title">
                         </a>
                     }
@@ -19,7 +19,7 @@
                         </div>
                     }
 
-                    <div class="navbar-text ms-auto d-flex">
+                    <div class="navbar-text ms-auto d-flex ps-0 ms-0">
 
                         @if (Model.FurnitureShowHeaderMenuOnLargerDevices && Model.FurnitureHeaderMenu?.Any() == true &&
                             Model.FurnitureHeaderMenuPosition == HeaderMenuPositions.InsideRight)
@@ -31,34 +31,37 @@
 
                         @if (Model.FurnitureShowHelp && !string.IsNullOrEmpty(View.CurrentDomainPage.HelpPage?.Url))
                         {
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="@View.CurrentDomainPage.HelpPage.Url" target="@(string.IsNullOrWhiteSpace(View.CurrentDomainPage.HelpPage.Target) ? "_self" : View.CurrentDomainPage.HelpPage.Target)">
-                                        @if (string.IsNullOrWhiteSpace(View.CurrentDomainPage.HelpPage.Name))
-                                        {
+                            <div class="">
+                                <a class="btn header-help" href="@View.CurrentDomainPage.HelpPage.Url" target="@(string.IsNullOrWhiteSpace(View.CurrentDomainPage.HelpPage.Target) ? "_self" : View.CurrentDomainPage.HelpPage.Target)">
+                                    @if (string.IsNullOrWhiteSpace(View.CurrentDomainPage.HelpPage.Name))
+                                    {
+                                        <i class="fa-solid fa-circle-info"></i>
+                                    }
+                                    else
+                                    {
+                                        <span class="d-lg-none">
                                             <i class="fa-solid fa-circle-info"></i>
-                                        }
-                                        else
-                                        {
+                                        </span>
+                                        <span class="d-none d-lg-block">
                                             @View.CurrentDomainPage.HelpPage.Name
-                                        }
-                                    </a>
-                                </li>
-                            </ul>
+                                        </span>
+                                    }
+                                </a>
+                            </div>
                         }
                         @if (View.CurrentDomainPage.SearchPage != null && Model.FurnitureShowSearchBar)
                         {
-                            <div class="ps-3">
+                            <div class="">
                                 <div class="d-lg-none justify-content-end">
-                                    <button class="btn btn-light toggle-site-search" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSiteSearch" aria-expanded="false" aria-controls="collapseSiteSearch">
+                                    <a class="btn toggle-site-search" data-bs-toggle="collapse" data-bs-target="#collapseSiteSearch" aria-expanded="false" aria-controls="collapseSiteSearch">
                                         <span id="showSiteSearch" class="fa-solid fa-magnifying-glass"></span>
                                         <span id="hideSiteSearch" class="fa-solid fa-xmark"></span>
-                                    </button>
+                                    </a>
                                 </div>
-                                <form class="d-none d-lg-block" role="search" method="get" action="@View.CurrentDomainPage.SearchPage.Url">
+                                <form class="d-none d-lg-block header-search" role="search" method="get" action="@View.CurrentDomainPage.SearchPage.Url">
                                     <div class="input-group">
                                         <input type="search" class="form-control border-0" name="@Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString" aria-label="Search @View.CurrentDomainPage.Title" value="@View.CurrentSearchCriteria(Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString)">
-                                        <button class="btn btn-link bg-green input-group-append" type="submit">
+                                        <button class="btn btn-link input-group-append" type="submit">
                                             <span class="fa-solid fa-magnifying-glass"></span>
                                         </button>
                                     </div>
@@ -70,9 +73,9 @@
                     @if (Model.FurnitureShowHeaderMenuOnSmallerDevices && Model.FurnitureHeaderMenu?.Any() == true)
                     {
                         <div class="navbar-toggler">
-                            <btn class="btn btn-light toggle-site-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvas@(Model.GetHashCode())" aria-controls="offcanvas@(Model.GetHashCode())">
+                            <a class="btn toggle-site-search" data-bs-toggle="offcanvas" data-bs-target="#offcanvas@(Model.GetHashCode())" aria-controls="offcanvas@(Model.GetHashCode())">
                                 <span class="bi bi-list"></span>
-                            </btn>
+                            </a>
                         </div>
                     }
                 </div>
@@ -92,11 +95,11 @@
             @if (View.CurrentDomainPage.SearchPage != null && Model.FurnitureShowSearchBar)
             {
                 <div class="collapse" id="collapseSiteSearch">
-                    <form class="d-block d-lg-none bg-light p-3" role="search" method="get" action="@View.CurrentDomainPage.SearchPage.Url">
+                    <form class="d-block d-lg-none p-3 header-search" role="search" method="get" action="@View.CurrentDomainPage.SearchPage.Url">
                         <div class="container">
                             <div class="input-group">
-                                <input type="search" class="form-control" name="Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString" aria-label="Search @View.CurrentDomainPage.Title" value="@View.CurrentSearchCriteria(Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString)">
-                                <button class="btn btn-dark input-group-append" type="submit">
+                                <input type="search" class="form-control" name="@Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString" aria-label="Search @View.CurrentDomainPage.Title" value="@View.CurrentSearchCriteria(Protenacity.Cake.Web.Presentation.Editor.Search.SearchViewComponent.QueryString)">
+                                <button class="btn input-group-append" type="submit">
                                     <span class="fa-solid fa-magnifying-glass"></span>
                                 </button>
                             </div>

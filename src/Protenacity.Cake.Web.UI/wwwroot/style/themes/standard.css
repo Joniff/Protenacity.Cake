@@ -577,3 +577,33 @@ td {
     color: var(--cake-theme-code-fg);
     background-color: var(--cake-theme-code-bg);
 }
+
+.header-search .btn {
+    border: 3px solid;
+    border-color: var(--cake-theme-btnborder,red);
+    background-color: var(--cake-theme-btnbg,red);
+    color: var(--cake-theme-btnfg, green);
+}
+
+.header-search .btn:hover {
+    border: 3px solid;
+    border-color: var(--cake-theme-btnborder,red);
+    background-color: var(--cake-theme-btnbg,red);
+    color: var(--cake-theme-a-hover, green);
+    transition: background-color 0.5s ease;
+}
+
+.header-search input {
+    border: 3px solid !important;
+    border-color: var(--cake-theme-btnborder,red) !important;
+    background-color: var(--cake-theme-btnfg,red);
+    color: var(--cake-theme-btnbg, green);
+}
+
+.header-help {
+    color: var(--cake-theme-a, green);
+}
+
+.header-help:hover {
+    color: var(--cake-theme-a-hover, green);
+}
