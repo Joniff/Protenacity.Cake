@@ -28,6 +28,7 @@ using Protenacity.Cake.Web.Presentation.View;
 using Sagara.FeedReader;
 using Sagara.FeedReader.Feeds;
 using System.Collections.ObjectModel;
+using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Models.Blocks;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Core.Strings;
@@ -121,6 +122,12 @@ internal class EditorService(
                     blocks.AddRange(LoadMedia(index, MediaViewComponent.Name, content.Defaults, source));
                     continue;   // Next foreach
 
+                case EditorImageEmbedded.ModelTypeAlias:
+                case EditorImagePrimary.ModelTypeAlias:
+                case EditorImagePanel.ModelTypeAlias:
+                    blocks.AddRange(LoadImages(index, source));
+                    continue;   // Next foreach
+
                 //case EditorFormEntriesEmbedded.ModelTypeAlias:
                 //    var contentPaging = LoadFormEntries(index, content.Defaults, source);
                 //    if (contentPaging?.Item2.Any() == true)
@@ -157,12 +164,6 @@ internal class EditorService(
                 case EditorTextEmbedded.ModelTypeAlias:
                 case EditorTextPanel.ModelTypeAlias:
                     content.EditorComponent = TextViewComponent.Name;
-                    break;
-
-                case EditorImageEmbedded.ModelTypeAlias:
-                case EditorImagePrimary.ModelTypeAlias:
-                case EditorImagePanel.ModelTypeAlias:
-                    content.EditorComponent = ImageViewComponent.Name;
                     break;
 
                 case EditorListPrimary.ModelTypeAlias:
@@ -613,6 +614,38 @@ internal class EditorService(
                 });
             }
         }
+        return blocks;
+    }
+
+    private IEnumerable<IEditorContent> LoadImages(int index, BlockListItem source)
+    {
+        var content = source.Content as IEditorImageEmbedded;
+        var orderSettings = source.Settings as IEditorImageEmbeddedSettings;
+        var blocks = new List<IEditorContent>();
+
+        if (content?.Images?.Any() != true)
+        {
+            return blocks;
+        }
+
+        foreach (var item in content.Images)
+        {
+            blocks.Add(new EditorContent<MediaWithCrops>
+            {
+                Index = index++,
+                Id = EncodeId("images-" + item.Name),
+                Header = new HtmlEncodedString(item.Name),
+                EditorComponent = ImageViewComponent.Name,
+#if NET9_0_OR_GREATER
+                Block = new BlockListItem(item.Key, source.Content, source.SettingsKey, source.Settings),
+#else
+                Block = new BlockListItem(Udi.Create(Constants.UdiEntityType.Document, item.Key), item, source.SettingsUdi, source.Settings),
+#endif
+                Defaults = new EditorDefaults(),
+                ExtraData = item
+            });
+        }
+
         return blocks;
     }
 

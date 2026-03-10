@@ -1,26 +1,22 @@
-﻿@model BlockListItem<IEditorImageEmbedded, IEditorImageEmbeddedSettings>
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Image.ImageViewModel
 
-@if (Model.Content.Images?.Any() == true)
-{
-    foreach (var image in Model.Content.Images)
+<div class="d-flex">
+    @if (Model.FullScreen == true)
     {
-        @if (Model.Settings?.Fullscreen == true)
-        {
-            @:<a href="@image.Url()" data-toggle="lightbox">
-        }
-
-        <div class="d-block w-100 mb-2">
-            @(await Component.InvokeAsync(ResponsiveImageViewComponent.Name, new ResponsiveImage
-            {
-                Image = image,
-                ImageCrop = EditorImageCrops.Full,
-                WidthFactorImage = 100
-            }))
-        </div>
-
-        @if (Model.Settings?.Fullscreen == true)
-        {
-            @:</a>
-        }
+        @:<a href="@Model.Image.Url()" data-toggle="lightbox">
     }
-}
+
+    <div class="d-block w-100 mb-2">
+        @(await Component.InvokeAsync(ResponsiveImageViewComponent.Name, new ResponsiveImage
+        {
+            Image = Model.Image,
+            ImageCrop = EditorImageCrops.Full,
+            WidthFactorImage = 100
+        }))
+    </div>
+
+    @if (Model.FullScreen == true)
+    {
+        @:</a>
+    }
+</div>
