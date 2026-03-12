@@ -20,7 +20,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 {
 	/// <summary>Badge Settings</summary>
 	[PublishedModel("editorRibbonBadgeSettings")]
-	public partial class EditorRibbonBadgeSettings : PublishedElementModel, IEditorBackgroundSettings
+	public partial class EditorRibbonBadgeSettings : PublishedElementModel, IEditorBackgroundSettings, IEditorBorderSettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,18 +50,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		// properties
 
 		///<summary>
-		/// Color: True = Keep as a colour image or False = Use theme to gradient image 
+		/// Image Shape: Specific Image Shape
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("color")]
-		public virtual bool Color => this.Value<bool>(_publishedValueFallback, "color");
-
-		///<summary>
-		/// Icon Shape: Specific Icon Shape
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("iconShape")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBadgeIconShape IconShape => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorBadgeIconShape>(_publishedValueFallback, "iconShape");
+		[ImplementPropertyType("imageShape")]
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape ImageShape => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape>(_publishedValueFallback, "imageShape");
 
 		///<summary>
 		/// Override Colours: OR Set the background to your own specific colour, image or gradient. If set will override current Subtheme.
@@ -84,5 +77,20 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
 		[ImplementPropertyType("themeShade")]
 		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
+
+		///<summary>
+		/// Border Color: Select color for border
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("borderColor")]
+		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor BorderColor => global::Protenacity.Cake.Web.Core.Constitution.EditorBorderSettings.GetBorderColor(this, _publishedValueFallback);
+
+		///<summary>
+		/// Border Edges: Which edges do you wish the border to be displayed on. Select all 4 options to complete the border
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[ImplementPropertyType("borderEdges")]
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges BorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorBorderSettings.GetBorderEdges(this, _publishedValueFallback);
 	}
 }

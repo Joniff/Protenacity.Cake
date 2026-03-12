@@ -22,9 +22,17 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	/// <summary>Ribbon Base Settings</summary>
 	public partial interface IEditorRibbonBaseSettings : IPublishedElement
 	{
-		/// <summary>Default Icon Shape</summary>
+		/// <summary>Color</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		global::Protenacity.Cake.Web.Core.Property.EditorBadgeIconShape DefaultIconShape { get; }
+		bool Color { get; }
+
+		/// <summary>Default Image Shape</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape DefaultImageShape { get; }
+
+		/// <summary>Image Size</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes ImageSize { get; }
 	}
 
 	/// <summary>Ribbon Base Settings</summary>
@@ -59,14 +67,36 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		// properties
 
 		///<summary>
-		/// Default Icon Shape: Default shape for Icons
+		/// Color: True = Keep as a colour image or False = Use theme to gradient image 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("defaultIconShape")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBadgeIconShape DefaultIconShape => GetDefaultIconShape(this, _publishedValueFallback);
+		[ImplementPropertyType("color")]
+		public virtual bool Color => GetColor(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Default Icon Shape</summary>
+		/// <summary>Static getter for Color</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorBadgeIconShape GetDefaultIconShape(IEditorRibbonBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorBadgeIconShape>(publishedValueFallback, "defaultIconShape");
+		public static bool GetColor(IEditorRibbonBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<bool>(publishedValueFallback, "color");
+
+		///<summary>
+		/// Default Image Shape: Default shape for Icons
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[ImplementPropertyType("defaultImageShape")]
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape DefaultImageShape => GetDefaultImageShape(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Default Image Shape</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		public static global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape GetDefaultImageShape(IEditorRibbonBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape>(publishedValueFallback, "defaultImageShape");
+
+		///<summary>
+		/// Image Size: How to size image compared to rest of the information
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[ImplementPropertyType("imageSize")]
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes ImageSize => GetImageSize(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Image Size</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		public static global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes GetImageSize(IEditorRibbonBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes>(publishedValueFallback, "imageSize");
 	}
 }

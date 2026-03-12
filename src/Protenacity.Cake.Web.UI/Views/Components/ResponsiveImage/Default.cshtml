@@ -1,7 +1,8 @@
 ﻿@model Protenacity.Cake.Web.Presentation.Editor.ResponsiveImage.IResponsiveImageViewModel
 @{
     var opacity = string.Empty;
-    var background = "background-color:" + View.CurrentDomainPage.ConfigDefaultImageMissingColor;
+    var background = string.Empty;
+
     if (Model.Opacity == -10)
     {
         opacity = "linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)),";
@@ -22,6 +23,10 @@
     {
         opacity = "linear-gradient(rgba(0, 0, 0, 0." + Model.Opacity + "), rgba(0, 0, 0, 0." + Model.Opacity + ")),";
         background = "background-color:black;opacity:" + (Math.Abs(Model.Opacity) / 10.0) + ";";
+    }
+    else if (!Model.TransparentBackground)
+    {
+        background = "background-color:" + View.CurrentDomainPage.ConfigDefaultImageMissingColor;
     }
 
     var width = "w-100";

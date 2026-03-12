@@ -3,10 +3,15 @@ using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
 
-public enum EditorBadgeIconShape
+public enum EditorBadgeImageShape
 {
+    Default,
+
     [Description("Circle")]
     Circle,
+
+    [Description("Diamond")]
+    Diamond,
 
     [Description("Hexagon")]
     Hexagon,
@@ -22,7 +27,7 @@ public enum EditorBadgeIconShape
 }
 
 public class EditorBadgeIconShapeValueConverter(IDataTypeService dataTypeService)
-    : PropertyValueConverterBase<EditorBadgeIconShape>(dataTypeService)
+    : PropertyValueConverterBase<EditorBadgeImageShape>(dataTypeService)
 {
-    public override string DataTypeName => "Editor Badge Icon Shape";
+    public override string DataTypeName => "Editor Badge Image Shape";
 }

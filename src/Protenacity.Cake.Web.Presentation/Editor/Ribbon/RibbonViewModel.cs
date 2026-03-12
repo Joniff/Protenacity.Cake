@@ -7,6 +7,7 @@ public class RibbonViewModel
 {
     public required string Id { get; init; }
     public required IEnumerable<BadgeViewModel> Badges { get; init; }
+    public EditorCardStyleImageSizes ImageSize { get; init; }
     public EditorSubthemes Subtheme { get; init; }
     public EditorThemeShades ThemeShade { get; init; }
     public BlockListModel? OverrideColor { get; init; }

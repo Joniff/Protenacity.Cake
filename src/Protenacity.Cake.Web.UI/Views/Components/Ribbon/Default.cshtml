@@ -1,10 +1,107 @@
 ﻿@model Protenacity.Cake.Web.Presentation.Editor.Ribbon.RibbonViewModel
 
-<div id="@(Model.Id)" class="row">
-    @foreach (var badge in Model.Badges)
+@{
+    var imageSize = 0;
+
+    switch (Model.ImageSize)
     {
-        <div class="col">
-            @Html.Raw(badge.Header)
-        </div>
+        case EditorCardStyleImageSizes.XXSmall:
+            imageSize = 2;
+            break;
+
+        case EditorCardStyleImageSizes.XSmall:
+            imageSize = 3;
+            break;
+
+        case EditorCardStyleImageSizes.Small:
+            imageSize = 4;
+            break;
+
+        case EditorCardStyleImageSizes.Medium:
+            imageSize = 5;
+            break;
+
+        case EditorCardStyleImageSizes.Large:
+            imageSize = 6;
+            break;
+
+        case EditorCardStyleImageSizes.XLarge:
+            imageSize = 7;
+            break;
+
+        case EditorCardStyleImageSizes.XXLarge:
+            imageSize = 8;
+            break;
+
+        case EditorCardStyleImageSizes.XXXLarge:
+            imageSize = 9;
+            break;
     }
+
+}
+<div class="container">
+    <div class="row" style="max-height:5em;">
+        @foreach (var badge in Model.Badges)
+        {
+            if (badge.Urls.Any() != true)
+            {
+                imageSize = 0;
+            }
+
+            var shape = "";
+
+            switch (badge.Shape)
+            {
+                case EditorBadgeImageShape.Circle:
+                    shape = "rounded-circle";
+                    break;
+
+                case EditorBadgeImageShape.Diamond:
+                    shape = "rounded-diamond";
+                    break;
+
+                case EditorBadgeImageShape.Square:
+                    shape = "rounded";
+                    break;
+
+                case EditorBadgeImageShape.Triangle:
+                    shape = "rounded-triangle";
+                    break;
+
+                case EditorBadgeImageShape.Hexagon:
+                    shape = "rounded-hexagon";
+                    break;
+
+                case EditorBadgeImageShape.Star:
+                    shape = "rounded-star";
+                    break;
+            }
+
+            <div class="col @(!string.IsNullOrWhiteSpace(badge.Url) ? "cursor-pointer" : null)" @(!string.IsNullOrWhiteSpace(badge.Url) ? "onclick=window.location.href='" + Uri.EscapeDataString(badge.Url) + "';" : null)>
+                <theme subtheme="badge.Subtheme" shade="badge.ThemeShade" override="badge.OverrideColor" border-color="@badge.BorderColor" border-edges="@badge.BorderEdges" class="row align-items-center">
+
+                    <div class="row align-items-center">
+                        @if (imageSize != 0)
+                        {
+                            <div class="col-auto m-0 p-1">
+                                <img src="@badge.Urls.Last().Item2" style="height:3em;" alt="@badge.AlternateTitle" class="@(shape) @(!badge.Color ? "filter-grayscale" : null)">
+                            </div>
+                        }
+                        <div class="col-auto">
+                            @if (badge.Header?.HasContent() == true)
+                            {
+                                <div class="fw-bold">
+                                    @Html.Raw(badge.Header.ToHeader())
+                                </div>
+                            }
+                            @if (badge.Text?.HasContent() == true)
+                            {
+                                <small>@Html.Raw(badge.Text.ToHeader())</small>
+                            }
+                        </div>
+                    </div>
+                </theme>
+            </div>
+        }
+    </div>
 </div>

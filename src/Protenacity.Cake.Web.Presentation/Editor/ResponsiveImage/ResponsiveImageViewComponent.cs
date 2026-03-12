@@ -22,6 +22,7 @@ public class ResponsiveImageViewComponent(IResponsiveImageService responsiveImag
             return View(new ResponsiveImageViewModel
             {
                 AlternateTitle = responsiveImage.AlternateTitle,
+                TransparentBackground = responsiveImage.TransparentBackground,
                 BackgroundId = responsiveImage.BackgroundId,
                 Opacity = responsiveImage.Opacity,
                 Urls = responsiveImageService.ImageUrls(responsiveImage.Image, responsiveImage.ImageCrop, responsiveImage.WidthFactorImage, responsiveImage.ImageQuality ?? viewService.CurrentDomainPage.ConfigImageQuality),

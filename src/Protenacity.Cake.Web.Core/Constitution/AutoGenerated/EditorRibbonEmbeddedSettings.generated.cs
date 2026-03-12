@@ -87,10 +87,24 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges BorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorBorderSettings.GetBorderEdges(this, _publishedValueFallback);
 
 		///<summary>
-		/// Default Icon Shape: Default shape for Icons
+		/// Color: True = Keep as a colour image or False = Use theme to gradient image 
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
-		[ImplementPropertyType("defaultIconShape")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBadgeIconShape DefaultIconShape => global::Protenacity.Cake.Web.Core.Constitution.EditorRibbonBaseSettings.GetDefaultIconShape(this, _publishedValueFallback);
+		[ImplementPropertyType("color")]
+		public virtual bool Color => global::Protenacity.Cake.Web.Core.Constitution.EditorRibbonBaseSettings.GetColor(this, _publishedValueFallback);
+
+		///<summary>
+		/// Default Image Shape: Default shape for Icons
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[ImplementPropertyType("defaultImageShape")]
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape DefaultImageShape => global::Protenacity.Cake.Web.Core.Constitution.EditorRibbonBaseSettings.GetDefaultImageShape(this, _publishedValueFallback);
+
+		///<summary>
+		/// Image Size: How to size image compared to rest of the information
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.1.0+2832436")]
+		[ImplementPropertyType("imageSize")]
+		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes ImageSize => global::Protenacity.Cake.Web.Core.Constitution.EditorRibbonBaseSettings.GetImageSize(this, _publishedValueFallback);
 	}
 }

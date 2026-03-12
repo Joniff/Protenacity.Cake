@@ -57,6 +57,7 @@ public class RssFeedViewComponent(IViewService viewService) : BaseViewComponent
                 Id = Name + id,
                 AlternateTitle = name,
                 BackgroundId = null,
+                TransparentBackground = false,
                 Opacity = 0,
                 ImageQuality = imageQuality,
                 Urls = hasImage ? new Tuple<int?, string>[] { 

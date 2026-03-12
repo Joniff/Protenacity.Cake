@@ -76,4 +76,35 @@ public abstract class ThemeViewComponent
         }
         return pageSize;
     }
+
+    public int WidthFactor(EditorCardStyleImageSizes size)
+    {
+        switch (size)
+        {
+            case EditorCardStyleImageSizes.XXSmall:
+                return 33;
+
+            case EditorCardStyleImageSizes.XSmall:
+                return 50;
+
+            case EditorCardStyleImageSizes.Small:
+                return 66;
+
+            case EditorCardStyleImageSizes.Medium:
+                return 100;
+
+            case EditorCardStyleImageSizes.Large:
+                return 133;
+
+            case EditorCardStyleImageSizes.XLarge:
+                return 150;
+
+            case EditorCardStyleImageSizes.XXLarge:
+                return 166;
+
+            case EditorCardStyleImageSizes.XXXLarge:
+                return 200;
+        }
+        return 100;
+    }
 }
