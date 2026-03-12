@@ -1,0 +1,10 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.Ribbon.RibbonViewModel
+
+<div id="@(Model.Id)" class="row">
+    @foreach (var badge in Model.Badges)
+    {
+        <div class="col">
+            @Html.Raw(badge.Header)
+        </div>
+    }
+</div>

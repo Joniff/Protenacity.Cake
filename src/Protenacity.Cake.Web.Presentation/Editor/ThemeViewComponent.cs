@@ -1,9 +1,9 @@
-﻿using Protenacity.Cake.Web.Core.Constitution;
+﻿using Microsoft.AspNetCore.Mvc;
+using Protenacity.Cake.Web.Core.Constitution;
 using Protenacity.Cake.Web.Core.Property;
-using Protenacity.Cake.Web.Presentation.View;
-using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics.CodeAnalysis;
 using Umbraco.Cms.Core.Models.Blocks;
+using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace Protenacity.Cake.Web.Presentation.Editor;
 
@@ -39,63 +39,13 @@ public abstract class ThemeViewComponent
 
     public bool StyleShowClickArrow([DisallowNull] IEditorContent content) => (content.Block?.Settings as IEditorCardBaseSettings)?.ShowClickArrow == true;
 
-    private string SubthemeKey => nameof(ThemeViewComponent) + nameof(EditorSubthemes);
+    public EditorSubthemes Subtheme(IEditorContent content) => Subtheme(content.Block?.Settings);
 
-    public EditorSubthemes Subtheme()
-    {
-        var obj = TempData[SubthemeKey];
-        if (obj != null)
-        {
-            return (EditorSubthemes)obj;
-        }
-        return EditorSubthemes.Inherit;
-    }
+    public EditorSubthemes Subtheme(IPublishedElement? setting) => (setting as IEditorBackgroundSettings)?.Subtheme ?? EditorSubthemes.Inherit;
 
-    public EditorSubthemes Subtheme([DisallowNull] IEditorContent content)
-    {
-        var background = content.Block?.Settings as IEditorBackgroundSettings;
-        if (background != null && background.Subtheme != EditorSubthemes.Inherit)
-        {
-            TempData[SubthemeKey] = (int)background.Subtheme;
-            return background.Subtheme;
-        }
-        //var obj = TempData[SubthemeKey];
-        //if (obj != null)
-        //{
-        //    return (EditorSubthemes)obj;
-        //}
-        TempData[SubthemeKey] = (int)content.Defaults.CardStyleSubtheme;
-        return content.Defaults.CardStyleSubtheme;
-    }
 
-    private string ThemeShadeKey = nameof(ThemeViewComponent) + nameof(EditorThemeShades);
-
-    public EditorThemeShades ThemeShade()
-    {
-        var obj = TempData[ThemeShadeKey];
-        if (obj != null)
-        {
-            return (EditorThemeShades)obj;
-        }
-        return EditorThemeShades.Inherit;
-    }
-
-    public EditorThemeShades ThemeShade([DisallowNull] IEditorContent content)
-    {
-        var background = content.Block?.Settings as IEditorBackgroundSettings;
-        if (background != null && background.ThemeShade != EditorThemeShades.Inherit)
-        {
-            TempData[ThemeShadeKey] = (int)background.ThemeShade;
-            return background.ThemeShade;
-        }
-        //var obj = TempData[ThemeShadeKey];
-        //if (obj != null)
-        //{
-        //    return (EditorThemeShades)obj;
-        //}
-        TempData[ThemeShadeKey] = (int)content.Defaults.CardStyleThemeShade;
-        return content.Defaults.CardStyleThemeShade;
-    }
+    public EditorThemeShades ThemeShade(IEditorContent content) => ThemeShade(content.Block?.Settings);
+    public EditorThemeShades ThemeShade(IPublishedElement? setting) => (setting as IEditorBackgroundSettings)?.ThemeShade ?? EditorThemeShades.Inherit;
 
     public BlockListModel? OverrideColor([DisallowNull] IEditorContent content) => (content.Block?.Settings as IEditorBackgroundSettings)?.OverrideColor?.Any() == true
         ? (content.Block?.Settings as IEditorBackgroundSettings)?.OverrideColor

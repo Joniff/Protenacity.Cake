@@ -6,6 +6,9 @@
 		<CompressionEnabled>false</CompressionEnabled>
 		<!-- Disable compression. E.g. for umbraco backoffice files. These files should be precompressed by node and not let dotnet handle it -->
 	</PropertyGroup>
+	<ItemGroup>
+	  <Content Remove="Views\Components\Ribbon\Default.cshtml" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Umbraco.Cms" Version="17.1.0" />

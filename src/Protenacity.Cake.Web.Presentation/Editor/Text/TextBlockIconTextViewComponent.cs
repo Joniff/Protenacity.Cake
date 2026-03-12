@@ -35,8 +35,8 @@ public class TextBlockIconTextViewComponent : ThemeViewComponent
         {
             Icon = content.Icon,
             Text = content.Text ?? new HtmlEncodedString(""),
-            Subtheme = settings.Subtheme == Core.Property.EditorSubthemes.Inherit ? Subtheme() : settings.Subtheme,
-            Shade = settings.ThemeShade == Core.Property.EditorThemeShades.Inherit ? ThemeShade() : settings.ThemeShade,
+            Subtheme = settings.Subtheme,
+            Shade = settings.ThemeShade,
             OverrideColor = settings.OverrideColor,
             IconColor = settings.IconColor?.Color,
             LinkUrl = url,

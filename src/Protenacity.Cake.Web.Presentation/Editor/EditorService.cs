@@ -15,6 +15,7 @@ using Protenacity.Cake.Web.Presentation.Editor.List;
 using Protenacity.Cake.Web.Presentation.Editor.Map;
 using Protenacity.Cake.Web.Presentation.Editor.OpeningTimes;
 using Protenacity.Cake.Web.Presentation.Editor.Paging;
+using Protenacity.Cake.Web.Presentation.Editor.Ribbon;
 using Protenacity.Cake.Web.Presentation.Editor.Script;
 using Protenacity.Cake.Web.Presentation.Editor.Search;
 using Protenacity.Cake.Web.Presentation.Editor.SectionLinks;
@@ -239,6 +240,12 @@ internal class EditorService(
                 case EditorSelectMediaPrimary.ModelTypeAlias:
                     blocks.AddRange(LoadMedia(index, DownloadMediaViewComponent.Name, content.Defaults, source));
                     continue;   // Next foreach
+
+                case EditorRibbonEmbedded.ModelTypeAlias:
+                case EditorRibbonPrimary.ModelTypeAlias:
+                case EditorRibbonPanel.ModelTypeAlias:
+                    content.EditorComponent = RibbonViewComponent.Name;
+                    break;
 
                 default:
                     throw new ApplicationException(source.Content.ContentType.Alias + " is unknown Editor Component");

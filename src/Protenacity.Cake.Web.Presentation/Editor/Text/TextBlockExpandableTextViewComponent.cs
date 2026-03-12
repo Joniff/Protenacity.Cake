@@ -26,10 +26,9 @@ public class TextBlockExpandableTextViewComponent : ThemeViewComponent
             Id = Name + Guid.NewGuid().ToString("N"),
             Header = content.Header ?? new HtmlEncodedString(nameof(TextBlockExpandableTextViewModel.Header)),
             Text = content.Text ?? new HtmlEncodedString(nameof(TextBlockExpandableTextViewModel.Text)),
-            Subtheme = settings.Subtheme == Core.Property.EditorSubthemes.Inherit ? Subtheme(): settings.Subtheme,
-            Shade = settings.ThemeShade == Core.Property.EditorThemeShades.Inherit ? ThemeShade() : settings.ThemeShade,
+            Subtheme = settings.Subtheme,
+            Shade = settings.ThemeShade,
             OverrideColor = settings.OverrideColor,
-            //IconColor = settings.IconColor?.Color,
             InitialState = settings.InitialState
         });
     }
