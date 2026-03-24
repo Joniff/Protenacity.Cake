@@ -8,6 +8,7 @@ public class ListViewModel
     public required string Id { get; init; }
     public EditorListTypes ListType { get; init; }
     public required IEnumerable<IEditorContent> Blocks { get; init; }
+    public int MinColumns { get; init; }
     public int MaxColumns { get; init; }
     public IPagingViewModel? Paging { get; init; }
 }

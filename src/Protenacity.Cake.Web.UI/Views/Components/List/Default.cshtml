@@ -4,7 +4,7 @@
 {
     case EditorListTypes.Grid:
         <text>
-            <div class="row row-cols-1 row-cols-md-@(Model.MaxColumns > 1 ? 2 : 1) row-cols-lg-@Model.MaxColumns">
+            <div class="row row-cols-@(Model.MinColumns) row-cols-md-@(Model.MinColumns + ((Model.MaxColumns - Model.MinColumns) / 2)) row-cols-lg-@Model.MaxColumns">
                 @foreach (var block in Model.Blocks)
                 {
                     <div class="col mb-2">

@@ -1,5 +1,6 @@
-﻿/* Alerts */
-
+﻿.navbar-nav .nav-link.show {
+    color: unset;
+}
 .theme-alert-warning {
     background-color: #feedd6;
     color: #32210a;
@@ -474,6 +475,8 @@
     --cake-theme-navbar-hover: var(--cake-theme-l-hl, red);
     --cake-theme-code-fg: black;
     --cake-theme-code-bg: white;
+    --cake-theme-menu-bg: var(--cake-theme-l-bg,red);
+    --cake-theme-menu-fg: var(--cake-theme-l-fg,red);
 }
 
 .theme-dark {
@@ -497,6 +500,8 @@
     --cake-theme-navbar-hover: var(--cake-theme-d-hl, red);
     --cake-theme-code-fg: white;
     --cake-theme-code-bg: black;
+    --cake-theme-menu-bg: var(--cake-theme-d-bg,red);
+    --cake-theme-menu-fg: var(--cake-theme-d-fg,red);
 }
 
 .breadcrumb a, .breadcrumb a:visited {
@@ -573,9 +578,13 @@ td {
     color: var(--cake-theme-navbar-hover,red);
 }
 
-.theme-dark code, code.theme-dark {
+.dropdown-menu, .dropdown-menu a:hover {
+    background-color: var(--cake-theme-menu-bg,red);
+}
+
+code {
     color: var(--cake-theme-code-fg);
-    background-color: var(--cake-theme-code-bg);
+    background-color: var(--cake-theme-code-bg) !important;
 }
 
 .header-search .btn {

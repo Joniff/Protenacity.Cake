@@ -1,12 +1,12 @@
 ﻿using HtmlAgilityPack;
-using Microsoft.AspNetCore.Html;
 using Umbraco.Cms.Core.Strings;
 
 namespace Protenacity.Cake.Web.Core.Extensions;
 
 public static class IHtmlContentExtensions
 {
-    public static string Truncate(this IHtmlEncodedString htmlString, int maxLength, string suffix = "...") => String.IsNullOrWhiteSpace(htmlString.ToString()) ? "" : htmlString.ToText().Truncate(maxLength, suffix);
+    public static string Truncate(this IHtmlEncodedString htmlString, int maxLength, string suffix = "...") 
+        => String.IsNullOrWhiteSpace(htmlString.ToString()) ? "" : htmlString.ToText().Truncate(maxLength, suffix);
 
     private static IHtmlEncodedString EmptyHtmlString() => new HtmlEncodedString("");
 

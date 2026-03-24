@@ -87,11 +87,14 @@ public class ListViewComponent(IEditorService editorService) : ViewComponent
             return Content(string.Empty);
         }
 
+        var listbaseSettings = content.Block?.Settings as IEditorListBaseSettings;
+
         return View(new ListViewModel
         {
             Id = Name + Guid.NewGuid().ToString("N"),
             ListType = (content.Block?.Settings as EditorListPrimarySettings)?.ListType ?? Core.Property.EditorListTypes.Grid,
-            MaxColumns = (content.Block?.Settings as IEditorListBaseSettings)?.MaxColumns ?? 3,
+            MinColumns = listbaseSettings != null && listbaseSettings.MinColumns > 0 ? listbaseSettings.MinColumns : 1,
+            MaxColumns = listbaseSettings != null && listbaseSettings.MaxColumns > 0 ? listbaseSettings.MaxColumns : 3,
             Blocks = blocks.Contents,
             Paging = blocks.Paging
         });
