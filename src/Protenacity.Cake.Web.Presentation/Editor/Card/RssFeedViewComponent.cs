@@ -50,7 +50,7 @@ public class RssFeedViewComponent(IViewService viewService) : BaseViewComponent
             var imageQuality = viewService.CurrentDomainPage.ConfigImageQuality;
             var id = Guid.NewGuid().ToString("N");
             var hasImage = !string.IsNullOrWhiteSpace(content.ExtraData?.ImageUrl);
-            var widthFactor = WidthFactor(styleImageSize);
+            var widthFactor = WidthFactor(styleImageLocation, styleImageSize);
 
             return View(GetTemplate(hasImage, styleImageLocation), new CardViewModel
             {
@@ -64,7 +64,7 @@ public class RssFeedViewComponent(IViewService viewService) : BaseViewComponent
                     new Tuple<int?, string>(null, content.ExtraData?.ImageUrl ?? throw new ArgumentNullException("Should have already checked for Null"))
                 } : Enumerable.Empty<Tuple<int?, string>>(),
                 WidthFactorImage = widthFactor,
-                WidthFactorContainer = styleImageLocation == EditorCardStyleImageLocations.Top ? widthFactor : 100,
+                WidthFactorContainer = 100,
                 RoundedEdges = GetRoundedEdges(hasImage, styleImageLocation),
                 Action = new ActionViewModel
                 {

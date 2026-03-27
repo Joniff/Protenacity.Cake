@@ -359,7 +359,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("cookieConsentModalPosition")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.CookieConsentPositions CookieConsentModalPosition => global::Protenacity.Cake.Web.Core.Constitution.CookieConsentTab.GetCookieConsentModalPosition(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.CookieConsentPositions> CookieConsentModalPosition => global::Protenacity.Cake.Web.Core.Constitution.CookieConsentTab.GetCookieConsentModalPosition(this, _publishedValueFallback);
 
 		///<summary>
 		/// Reject All: Text on button that rejects all cookies except those that are deemed necessary for website function
@@ -475,7 +475,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("configDefaultAsideBorderEdges")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges ConfigDefaultAsideBorderEdges => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigDefaultAsideBorderEdges(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges> ConfigDefaultAsideBorderEdges => global::Protenacity.Cake.Web.Core.Constitution.DomainConfigurationTab.GetConfigDefaultAsideBorderEdges(this, _publishedValueFallback);
 
 		///<summary>
 		/// Missing Image Background Color: What col,our to use when an image is missing

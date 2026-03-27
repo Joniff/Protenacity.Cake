@@ -53,11 +53,11 @@ public abstract class PropertyValueConverterBase<E>(IDataTypeService dataTypeSer
         return true;
     }
 
-    private E? Convert(object? obj)
+    private object? Convert(object? obj)
     {
         if (obj == null)
         {
-            return default(E);
+            return null;
         }
 
         switch (obj)
@@ -65,7 +65,7 @@ public abstract class PropertyValueConverterBase<E>(IDataTypeService dataTypeSer
             case string source:
                 if (string.IsNullOrEmpty(source))
                 {
-                    return default(E);
+                    return null;
                 }
                 if (source[0] == '[' && source[source.Length - 1] == ']')
                 {
@@ -83,7 +83,7 @@ public abstract class PropertyValueConverterBase<E>(IDataTypeService dataTypeSer
 
 
     public object? ConvertIntermediateToObject(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object? inter, bool preview)
-        => Convert(inter );
+        => Convert(inter);
 
     public object ConvertIntermediateToXPath(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object inter, bool preview)
     {
@@ -94,6 +94,8 @@ public abstract class PropertyValueConverterBase<E>(IDataTypeService dataTypeSer
         => Convert(source);
 
     public PropertyCacheLevel GetPropertyCacheLevel(IPublishedPropertyType propertyType) => PropertyCacheLevel.Element;
-    public bool? IsValue(object? value, PropertyValueLevel level) => Convert(value) != null;
-    Type IPropertyValueConverter.GetPropertyValueType(IPublishedPropertyType propertyType) => typeof(E);
+    public bool? IsValue(object? value, PropertyValueLevel level) => true;
+    public Type GetPropertyValueType(IPublishedPropertyType propertyType) =>
+        typeof(Nullable<>).MakeGenericType(typeof(E));   //typeof(E?);
 }
+

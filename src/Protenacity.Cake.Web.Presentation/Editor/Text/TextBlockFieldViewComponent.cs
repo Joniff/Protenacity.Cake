@@ -67,8 +67,8 @@ public class TextBlockFieldViewComponent(IViewService viewService) : ThemeViewCo
         return View(new TextBlockFieldViewModel
         {
             Text = new HtmlEncodedString(parse),
-            Subtheme = settings.Subtheme,
-            Shade = settings.ThemeShade,
+            Subtheme = settings.Subtheme ?? Core.Property.EditorSubthemes.Primary,
+            Shade = settings.ThemeShade ?? Core.Property.EditorThemeShades.Light,
             OverrideColor = settings.OverrideColor
         });
     }

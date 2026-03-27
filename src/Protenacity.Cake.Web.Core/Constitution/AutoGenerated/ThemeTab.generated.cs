@@ -24,15 +24,15 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorSubthemes PageSubtheme { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes> PageSubtheme { get; }
 
 		/// <summary>Theme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorThemes PageTheme { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemes> PageTheme { get; }
 
 		/// <summary>Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorThemeShades PageThemeShade { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades> PageThemeShade { get; }
 	}
 
 	/// <summary>Theme Tab</summary>
@@ -71,32 +71,32 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("pageSubtheme")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes PageSubtheme => GetPageSubtheme(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes> PageSubtheme => GetPageSubtheme(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorSubthemes GetPageSubtheme(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes>(publishedValueFallback, "pageSubtheme");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes> GetPageSubtheme(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes>>(publishedValueFallback, "pageSubtheme");
 
 		///<summary>
 		/// Theme: Theme for this page. Inherit = Use same theme as parent page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("pageTheme")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemes PageTheme => GetPageTheme(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemes> PageTheme => GetPageTheme(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Theme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorThemes GetPageTheme(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorThemes>(publishedValueFallback, "pageTheme");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemes> GetPageTheme(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemes>>(publishedValueFallback, "pageTheme");
 
 		///<summary>
 		/// Shade: Overall shade of page.  Inherit = Use same intensity as parent page. Light = Bright page with dark text. Dark = Dark page with light text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("pageThemeShade")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades PageThemeShade => GetPageThemeShade(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades> PageThemeShade => GetPageThemeShade(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorThemeShades GetPageThemeShade(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades>(publishedValueFallback, "pageThemeShade");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades> GetPageThemeShade(IThemeTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades>>(publishedValueFallback, "pageThemeShade");
 	}
 }

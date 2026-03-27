@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
@@ -28,6 +27,5 @@ public enum EditorCardStyleImageLocations
 public class EditorCardStyleImageLocationsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<EditorCardStyleImageLocations>(dataTypeService)
 {
-
     public override string DataTypeName => "Editor Card Image Style";
 }

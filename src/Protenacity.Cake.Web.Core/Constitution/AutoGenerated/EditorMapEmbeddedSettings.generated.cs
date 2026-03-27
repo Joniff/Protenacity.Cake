@@ -54,13 +54,13 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("icon")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorMapIcons Icon => global::Protenacity.Cake.Web.Core.Constitution.EditorMapBaseSettings.GetIcon(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorMapIcons> Icon => global::Protenacity.Cake.Web.Core.Constitution.EditorMapBaseSettings.GetIcon(this, _publishedValueFallback);
 
 		///<summary>
 		/// Ratio: The map will resize to fit the width of the block given, this decides to height portion in ration to the width. 2 : 1 = Twice as wide as high 1 : 1 = Square  
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("ratio")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorMapRatios Ratio => global::Protenacity.Cake.Web.Core.Constitution.EditorMapBaseSettings.GetRatio(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorMapRatios> Ratio => global::Protenacity.Cake.Web.Core.Constitution.EditorMapBaseSettings.GetRatio(this, _publishedValueFallback);
 	}
 }

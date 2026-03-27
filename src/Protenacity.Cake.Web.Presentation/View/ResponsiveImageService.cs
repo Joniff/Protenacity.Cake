@@ -43,7 +43,7 @@ internal class ResponsiveImageService : IResponsiveImageService
         new int[] { 0, 90, 90 }
     };
 
-    public IEnumerable<Tuple<int?, string>> ImageUrls(MediaWithCrops? media, EditorImageCrops crop, int widthFactor, int quality)
+    public IEnumerable<Tuple<int?, string>> ImageUrls(MediaWithCrops? media, EditorImageCrops crop, int factor, int quality)
     {
         int[][]? breakpoints = null;
         var imageUrls = new List<Tuple<int?, string>>();
@@ -83,8 +83,8 @@ internal class ResponsiveImageService : IResponsiveImageService
         if (media == null)
         {
             var last = breakpoints.Last();
-            var width = last[1];
-            var height = (last[2] * widthFactor) / 100;
+            var width = (last[1] * (200 - factor)) / 100;
+            var height = (last[2] * factor) / 100;
             var base64 = $"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"{width}\" height=\"{height}\" viewBox=\"0 0 {width} {height}\"><path d=\"M0,0h1v1H0\" fill=\"#00f\"/></svg>";
             imageUrls.Add(new Tuple<int?, string>(null, HttpUtility.HtmlDecode("data:image/svg+xml;base64," + System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(base64)))));
         }
@@ -93,8 +93,8 @@ internal class ResponsiveImageService : IResponsiveImageService
             foreach (var breakpoint in breakpoints)
             {
                 var url = media.GetCropUrl(
-                    width: breakpoint[1], 
-                    height: (breakpoint[2] * widthFactor) / 100, 
+                    width: (breakpoint[1] * (200 - factor)) / 100,
+                    height: (breakpoint[2] * factor) / 100, 
                     cropAlias: cropName, 
                     quality: quality, 
                     imageCropMode: ImageCropMode.Crop, 

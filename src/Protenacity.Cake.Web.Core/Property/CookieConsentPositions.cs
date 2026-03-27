@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
@@ -37,6 +36,5 @@ public enum CookieConsentPositions
 public class CookieConsentPositionsValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<CookieConsentPositions>(dataTypeService)
 {
-
     public override string DataTypeName => "Cookie Consent Position";
 }

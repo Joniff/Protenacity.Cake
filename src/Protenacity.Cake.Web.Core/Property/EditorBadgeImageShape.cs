@@ -5,8 +5,6 @@ namespace Protenacity.Cake.Web.Core.Property;
 
 public enum EditorBadgeImageShape
 {
-    Default,
-
     [Description("Circle")]
     Circle,
 

@@ -10,6 +10,10 @@
     var imageSize = 5;
     switch (Model.ImageStyleSize)
     {
+        case EditorCardStyleImageSizes.XXXSmall:
+            imageSize = 1;
+            break;
+
         case EditorCardStyleImageSizes.XXSmall:
             imageSize = 2;
             break;
@@ -40,14 +44,16 @@
     }
 }
 
-<div class="d-flex h-100 @(clickable?"cursor-pointer" : null)" @(clickable ? "onclick=this.querySelector('a').click();" : null)>
-    <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" override="Model.OverrideColor" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="card border-0" id="@(Model.BackgroundId)">
+<div class="d-flex h-100 @(clickable ? "action-card" : null)">
+    <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" override="Model.OverrideColor" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="card border-0 w-100" id="@(Model.BackgroundId)">
 
         <div class="row g-0 h-100">
-            <div class="col-md-@imageSize">
-                @(await Component.InvokeAsync(ResponsiveImageViewComponent.Name, Model))
+            <div class="col-@imageSize position-relative">
+                <div class="position-absolute top-0 bottom-0 start-0 end-0">
+                    @(await Component.InvokeAsync(ResponsiveImageViewComponent.Name, Model))
+                </div>
             </div>
-            <div class="col-md-@(12 - imageSize)">
+            <div class="col-@(12 - imageSize)">
                 <div class="card-body border-0">
                     @if (Model.Header?.HasContent() == true && Model.HeaderStyle == EditorCardStyleHeaders.Show)
                     {

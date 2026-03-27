@@ -24,7 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Collapsed Size Unit</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits CollapsedSizeUnit { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits> CollapsedSizeUnit { get; }
 
 		/// <summary>Collapsed Size Value</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
@@ -32,11 +32,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Expand Collapse Method</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods ExpandCollapseMethod { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods> ExpandCollapseMethod { get; }
 
 		/// <summary>Intial State</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates InitialState { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates> InitialState { get; }
 	}
 
 	/// <summary>Expandable Section Base Settings</summary>
@@ -75,11 +75,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("collapsedSizeUnit")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits CollapsedSizeUnit => GetCollapsedSizeUnit(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits> CollapsedSizeUnit => GetCollapsedSizeUnit(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Collapsed Size Unit</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits GetCollapsedSizeUnit(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits>(publishedValueFallback, "collapsedSizeUnit");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits> GetCollapsedSizeUnit(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits>>(publishedValueFallback, "collapsedSizeUnit");
 
 		///<summary>
 		/// Collapsed Size Value: Value for Collapsed Size. What this value means depends on what the Unit is.
@@ -97,21 +97,21 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("expandCollapseMethod")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods ExpandCollapseMethod => GetExpandCollapseMethod(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods> ExpandCollapseMethod => GetExpandCollapseMethod(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Expand Collapse Method</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods GetExpandCollapseMethod(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods>(publishedValueFallback, "expandCollapseMethod");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods> GetExpandCollapseMethod(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods>>(publishedValueFallback, "expandCollapseMethod");
 
 		///<summary>
 		/// Intial State
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("initialState")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates InitialState => GetInitialState(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates> InitialState => GetInitialState(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Intial State</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates GetInitialState(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates>(publishedValueFallback, "initialState");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates> GetInitialState(IEditorExpandableSectionBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates>>(publishedValueFallback, "initialState");
 	}
 }

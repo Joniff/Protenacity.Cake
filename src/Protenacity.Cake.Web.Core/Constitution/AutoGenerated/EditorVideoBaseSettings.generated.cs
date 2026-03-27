@@ -24,7 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Ratio</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios Ratio { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios> Ratio { get; }
 
 		/// <summary>Show Controls</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
@@ -67,11 +67,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("ratio")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios Ratio => GetRatio(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios> Ratio => GetRatio(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Ratio</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios GetRatio(IEditorVideoBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios>(publishedValueFallback, "ratio");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios> GetRatio(IEditorVideoBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorVideoRatios>>(publishedValueFallback, "ratio");
 
 		///<summary>
 		/// Show Controls: Show controls to stop, start and skip

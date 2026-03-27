@@ -57,7 +57,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.SeoStatuses SeoStatus { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.SeoStatuses> SeoStatus { get; }
 
 		/// <summary>Thumbnail</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
@@ -198,11 +198,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("seoStatus")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.SeoStatuses SeoStatus => GetSeoStatus(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.SeoStatuses> SeoStatus => GetSeoStatus(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Status</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.SeoStatuses GetSeoStatus(ISeoTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.SeoStatuses>(publishedValueFallback, "seoStatus");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.SeoStatuses> GetSeoStatus(ISeoTab that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.SeoStatuses>>(publishedValueFallback, "seoStatus");
 
 		///<summary>
 		/// Thumbnail: Image shown when linked from search engines like Google or from other pages within this site

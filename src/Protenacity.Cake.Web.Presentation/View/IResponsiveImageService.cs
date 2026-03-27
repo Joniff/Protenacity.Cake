@@ -5,5 +5,5 @@ namespace Protenacity.Cake.Web.Presentation.View;
 
 public interface IResponsiveImageService
 {
-    IEnumerable<Tuple<int?, string>> ImageUrls(MediaWithCrops? media, EditorImageCrops crop, int widthFactor, int quality);
+    IEnumerable<Tuple<int?, string>> ImageUrls(MediaWithCrops? media, EditorImageCrops crop, int factor, int quality);
 }

@@ -32,10 +32,10 @@ public class TextBlockCodeViewComponent : ThemeViewComponent
         return View(new TextBlockCodeViewModel
         {
             Id = Name + Guid.NewGuid().ToString("N"),
-            Language = content.Language,
+            Language = content.Language ?? EditorCodeLanguage.CSharp,
             Text = content.Code,
-            Subtheme = settings.Subtheme,
-            Shade = settings.ThemeShade,
+            Subtheme = settings.Subtheme ?? EditorSubthemes.Primary,
+            Shade = settings.ThemeShade ?? EditorThemeShades.Light,
             OverrideColor = settings.OverrideColor,
             EnableSyntaxHighlighting = settings.SyntaxHighlight,
             AddDependencyLibrary = FirstTime(),

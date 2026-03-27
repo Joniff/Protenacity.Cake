@@ -29,23 +29,23 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Default Card Border Edges </summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges StyleCardBorderEdges { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges> StyleCardBorderEdges { get; }
 
 		/// <summary>Default Card Date</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorCardStyleDates StyleCardDate { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleDates> StyleCardDate { get; }
 
 		/// <summary>Default Card Header</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorCardStyleHeaders StyleCardHeader { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleHeaders> StyleCardHeader { get; }
 
 		/// <summary>Default Card Image Location</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageLocations StyleCardImage { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageLocations> StyleCardImage { get; }
 
 		/// <summary>Default Card Image Size</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes StyleCardImageSize { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes> StyleCardImageSize { get; }
 
 		/// <summary>Default Card Colour Override</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
@@ -54,19 +54,19 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Default Card Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorSubthemes StyleCardSubtheme { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes> StyleCardSubtheme { get; }
 
 		/// <summary>Default Card Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTexts StyleCardText { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTexts> StyleCardText { get; }
 
 		/// <summary>Default Card Time</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTimes StyleCardTime { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTimes> StyleCardTime { get; }
 
 		/// <summary>Default Card Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorThemeShades StyleDefaultCardThemeShade { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades> StyleDefaultCardThemeShade { get; }
 	}
 
 	/// <summary>Card Default Settings</summary>
@@ -118,55 +118,55 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleCardBorderEdges")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges StyleCardBorderEdges => GetStyleCardBorderEdges(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges> StyleCardBorderEdges => GetStyleCardBorderEdges(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Card Border Edges </summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges GetStyleCardBorderEdges(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges>(publishedValueFallback, "styleCardBorderEdges");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges> GetStyleCardBorderEdges(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges>>(publishedValueFallback, "styleCardBorderEdges");
 
 		///<summary>
 		/// Default Card Date: Do we show the date on cards
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleCardDate")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleDates StyleCardDate => GetStyleCardDate(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleDates> StyleCardDate => GetStyleCardDate(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Card Date</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorCardStyleDates GetStyleCardDate(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleDates>(publishedValueFallback, "styleCardDate");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleDates> GetStyleCardDate(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleDates>>(publishedValueFallback, "styleCardDate");
 
 		///<summary>
 		/// Default Card Header: Do we show the Header on cards
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleCardHeader")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleHeaders StyleCardHeader => GetStyleCardHeader(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleHeaders> StyleCardHeader => GetStyleCardHeader(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Card Header</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorCardStyleHeaders GetStyleCardHeader(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleHeaders>(publishedValueFallback, "styleCardHeader");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleHeaders> GetStyleCardHeader(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleHeaders>>(publishedValueFallback, "styleCardHeader");
 
 		///<summary>
 		/// Default Card Image Location: Only valid for Cards. Where to place the image in relations to the other elements
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleCardImage")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageLocations StyleCardImage => GetStyleCardImage(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageLocations> StyleCardImage => GetStyleCardImage(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Card Image Location</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageLocations GetStyleCardImage(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageLocations>(publishedValueFallback, "styleCardImage");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageLocations> GetStyleCardImage(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageLocations>>(publishedValueFallback, "styleCardImage");
 
 		///<summary>
 		/// Default Card Image Size
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleCardImageSize")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes StyleCardImageSize => GetStyleCardImageSize(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes> StyleCardImageSize => GetStyleCardImageSize(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Card Image Size</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes GetStyleCardImageSize(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes>(publishedValueFallback, "styleCardImageSize");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes> GetStyleCardImageSize(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes>>(publishedValueFallback, "styleCardImageSize");
 
 		///<summary>
 		/// Default Card Colour Override: OR ignore themes and override cards with these colours, images or gradients
@@ -186,43 +186,43 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleCardSubtheme")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes StyleCardSubtheme => GetStyleCardSubtheme(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes> StyleCardSubtheme => GetStyleCardSubtheme(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Card Subtheme</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorSubthemes GetStyleCardSubtheme(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes>(publishedValueFallback, "styleCardSubtheme");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes> GetStyleCardSubtheme(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes>>(publishedValueFallback, "styleCardSubtheme");
 
 		///<summary>
 		/// Default Card Text: Do we show the Text on cards
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleCardText")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTexts StyleCardText => GetStyleCardText(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTexts> StyleCardText => GetStyleCardText(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Card Text</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTexts GetStyleCardText(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTexts>(publishedValueFallback, "styleCardText");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTexts> GetStyleCardText(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTexts>>(publishedValueFallback, "styleCardText");
 
 		///<summary>
 		/// Default Card Time: Do we show the time on cards
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleCardTime")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTimes StyleCardTime => GetStyleCardTime(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTimes> StyleCardTime => GetStyleCardTime(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Card Time</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTimes GetStyleCardTime(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTimes>(publishedValueFallback, "styleCardTime");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTimes> GetStyleCardTime(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTimes>>(publishedValueFallback, "styleCardTime");
 
 		///<summary>
 		/// Default Card Shade: Whether any cards are displayed in light mode with dark text or dark mode with light text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleDefaultCardThemeShade")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades StyleDefaultCardThemeShade => GetStyleDefaultCardThemeShade(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades> StyleDefaultCardThemeShade => GetStyleDefaultCardThemeShade(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Card Shade</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorThemeShades GetStyleDefaultCardThemeShade(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades>(publishedValueFallback, "styleDefaultCardThemeShade");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades> GetStyleDefaultCardThemeShade(IEditorCardDefaultSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades>>(publishedValueFallback, "styleDefaultCardThemeShade");
 	}
 }

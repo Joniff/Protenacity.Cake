@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
@@ -16,6 +15,5 @@ public enum ActionStyleClickAreas
 public class ActionStyleClickAreasValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<ActionStyleClickAreas>(dataTypeService)
 {
-
     public override string DataTypeName => "Editor Card Action Click Area";
 }

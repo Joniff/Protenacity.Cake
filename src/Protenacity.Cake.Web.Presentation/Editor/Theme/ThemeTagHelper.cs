@@ -42,13 +42,10 @@ public class ThemeTagHelper(IViewService viewService, IResponsiveImageService re
     [HtmlAttributeName("tag")]
     public string Tag { get; set; } = "div";
 
-    private string GradientAngle(EditorGradientTypes type)
+    private string GradientAngle(EditorGradientTypes? type)
     {
         switch (type)
         {
-            case EditorGradientTypes.Top:
-                return "to bottom";
-
             case EditorGradientTypes.Left:
                 return "to right";
 
@@ -59,7 +56,7 @@ public class ThemeTagHelper(IViewService viewService, IResponsiveImageService re
                 return "circle";
 
             default:
-                throw new ApplicationException("Unknown " + nameof(EditorGradientTypes));
+                return "to bottom";
         }
     }
 

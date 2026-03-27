@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
@@ -22,6 +21,5 @@ public enum AsideStatuses
 public class AsideStatusesValueConverter(IDataTypeService dataTypeService)
     : PropertyValueConverterBase<AsideStatuses>(dataTypeService)
 {
-
     public override string DataTypeName => "Aside Status";
 }

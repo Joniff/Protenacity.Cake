@@ -1,6 +1,7 @@
-﻿.navbar-nav .nav-link.show {
+﻿.navbar-nav .nav-link.show, link.active, .navbar-nav .nav-link.show {
     color: unset;
 }
+
 .theme-alert-warning {
     background-color: #feedd6;
     color: #32210a;
@@ -527,12 +528,12 @@ a.btn-theme {
     color: var(--cake-theme-btnfg, green);
 }
 
-a.btn-theme:hover {
+a.btn-theme:hover, .action-card:hover a.btn-theme {
     border: 3px solid;
     border-color: var(--cake-theme-btnborder,red);
     background-color: var(--cake-theme-btnfg,red);
     color: var(--cake-theme-btnbg, green);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.2s ease;
 }
 
 .show-click-arrow {
@@ -571,15 +572,15 @@ td {
 }
 
 .navbar a {
-    color: var(--cake-theme-navbar,red);
+    color: var(--cake-theme-navbar,red) !important;
 }
 
 .navbar a:hover {
-    color: var(--cake-theme-navbar-hover,red);
+    color: var(--cake-theme-navbar-hover,red) !important;
 }
 
 .dropdown-menu, .dropdown-menu a:hover {
-    background-color: var(--cake-theme-menu-bg,red);
+    background-color: var(--cake-theme-menu-bg,red) !important;
 }
 
 code {
@@ -599,7 +600,7 @@ code {
     border-color: var(--cake-theme-btnborder,red);
     background-color: var(--cake-theme-btnbg,red);
     color: var(--cake-theme-a-hover, green);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.2s ease;
 }
 
 .header-search input {

@@ -24,15 +24,15 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Action Style</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.ActionStyles StyleAction { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyles> StyleAction { get; }
 
 		/// <summary>Action Alignment</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments StyleActionAlignment { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments> StyleActionAlignment { get; }
 
 		/// <summary>Action Click Area</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas StyleActionClickArea { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas> StyleActionClickArea { get; }
 	}
 
 	/// <summary>Action Settings</summary>
@@ -71,32 +71,32 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleAction")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyles StyleAction => GetStyleAction(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyles> StyleAction => GetStyleAction(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Action Style</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.ActionStyles GetStyleAction(IEditorActionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.ActionStyles>(publishedValueFallback, "styleAction");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyles> GetStyleAction(IEditorActionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyles>>(publishedValueFallback, "styleAction");
 
 		///<summary>
 		/// Action Alignment: Location of Button or Link. Absolute = Will position over the top of other items (if applicable). Relative = Will try and make other items flow around it (if applicable).
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleActionAlignment")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments StyleActionAlignment => GetStyleActionAlignment(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments> StyleActionAlignment => GetStyleActionAlignment(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Action Alignment</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments GetStyleActionAlignment(IEditorActionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments>(publishedValueFallback, "styleActionAlignment");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments> GetStyleActionAlignment(IEditorActionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments>>(publishedValueFallback, "styleActionAlignment");
 
 		///<summary>
 		/// Action Click Area: Which area that can clicked
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleActionClickArea")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas StyleActionClickArea => GetStyleActionClickArea(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas> StyleActionClickArea => GetStyleActionClickArea(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Action Click Area</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas GetStyleActionClickArea(IEditorActionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas>(publishedValueFallback, "styleActionClickArea");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas> GetStyleActionClickArea(IEditorActionEmbeddedSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas>>(publishedValueFallback, "styleActionClickArea");
 	}
 }

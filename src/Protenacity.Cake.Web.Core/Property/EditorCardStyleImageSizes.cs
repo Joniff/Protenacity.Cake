@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Services;
 
 namespace Protenacity.Cake.Web.Core.Property;
@@ -8,6 +7,9 @@ public enum EditorCardStyleImageSizes
 {
     [Description("Medium")]
     Medium,
+
+    [Description("XXX Small")]
+    XXXSmall,
 
     [Description("XX Small")]
     XXSmall,

@@ -6,7 +6,7 @@
         @foreach (var aside in Model.Item2)
         {
             <div class="mt-3 mb-3">
-                <theme subtheme="(aside.Block?.Settings as IEditorBackgroundSettings)?.Subtheme" shade="(aside.Block?.Settings as IEditorBackgroundSettings)?.ThemeShade" class="p-3" override="(aside.Block?.Settings as IEditorBackgroundSettings)?.OverrideColor" border-color="@(!string.IsNullOrWhiteSpace((aside.Block?.Settings as IEditorBorderSettings)?.BorderColor?.Color) ? (aside.Block?.Settings as IEditorBorderSettings)?.BorderColor : View.CurrentDomainPage.ConfigDefaultAsideBorderColor)" border-edges="@((aside.Block?.Settings as IEditorBorderSettings)?.BorderEdges ?? View.CurrentDomainPage.ConfigDefaultAsideBorderEdges)">
+                <theme subtheme="(aside.Block?.Settings as IEditorBackgroundSettings)?.Subtheme" shade="(aside.Block?.Settings as IEditorBackgroundSettings)?.ThemeShade" class="p-3" override="(aside.Block?.Settings as IEditorBackgroundSettings)?.OverrideColor" border-color="@(!string.IsNullOrWhiteSpace((aside.Block?.Settings as IEditorBorderSettings)?.BorderColor?.Color) ? (aside.Block?.Settings as IEditorBorderSettings)?.BorderColor : View.CurrentDomainPage.ConfigDefaultAsideBorderColor)" border-edges="@((aside.Block?.Settings as IEditorBorderSettings)?.BorderEdges ?? View.CurrentDomainPage.ConfigDefaultAsideBorderEdges ?? EditorBorderEdges.None)">
                     @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.Group.GroupViewComponent.Name, aside))
                 </theme>
             </div>

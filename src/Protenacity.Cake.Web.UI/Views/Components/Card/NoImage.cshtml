@@ -3,7 +3,7 @@
     var clickable = Model.ActionClickArea == ActionStyleClickAreas.Card && !string.IsNullOrEmpty(Model.Action?.Url);
 }
 
-<div class="d-flex h-100 @(clickable?"cursor-pointer" : null)" @(clickable ? "onclick=this.querySelector('a').click();" : null)>
+<div class="d-flex h-100 @(clickable ? "action-card" : null)">
     <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" override="Model.OverrideColor" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="card w-100 border-0">
 
         <div class="card-body border-0">

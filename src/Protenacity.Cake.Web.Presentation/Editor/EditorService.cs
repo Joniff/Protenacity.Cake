@@ -320,32 +320,32 @@ internal class EditorService(
 
             if (cardSettings?.StyleImage != null)
             {
-                defaults.CardStyleImageLocation = cardSettings.StyleImage;
+                defaults.CardStyleImageLocation = cardSettings.StyleImage ?? EditorCardStyleImageLocations.Top;
             }
 
             if (cardSettings?.StyleHeader != null)
             {
-                defaults.CardStyleHeader = cardSettings.StyleHeader;
+                defaults.CardStyleHeader = cardSettings.StyleHeader ?? EditorCardStyleHeaders.Show;
             }
 
             if (cardSettings?.StyleDate != null)
             {
-                defaults.CardStyleDate = cardSettings.StyleDate;
+                defaults.CardStyleDate = cardSettings.StyleDate ?? EditorCardStyleDates.Show;
             }
 
             if (cardSettings?.StyleTime != null)
             {
-                defaults.CardStyleTime = cardSettings.StyleTime;
+                defaults.CardStyleTime = cardSettings.StyleTime ?? EditorCardStyleTimes.Show;
             }
 
             if (cardSettings?.StyleText != null)
             {
-                defaults.CardStyleText = cardSettings.StyleText;
+                defaults.CardStyleText = cardSettings.StyleText ?? EditorCardStyleTexts.Show;
             }
 
             if (actionSettings?.StyleAction != null)
             {
-                defaults.CardStyleAction = actionSettings.StyleAction;
+                defaults.CardStyleAction = actionSettings.StyleAction ?? ActionStyles.Button;
             }
 
             if (backgroundSettings?.OverrideColor?.Any() == true)

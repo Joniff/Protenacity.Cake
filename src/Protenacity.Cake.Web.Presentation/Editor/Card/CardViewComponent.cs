@@ -47,7 +47,7 @@ public class CardViewComponent(IViewService viewService,
         {
             var imageQuality = viewService.CurrentDomainPage.ConfigImageQuality;
             var id = Guid.NewGuid().ToString("N");
-            var widthFactor = WidthFactor(styleImageSize);
+            var widthFactor = WidthFactor(styleImageLocation, styleImageSize);
             return View(GetTemplate(cardContent?.Image != null, styleImageLocation), new CardViewModel
             {
                 Id = Name + id,
@@ -58,7 +58,7 @@ public class CardViewComponent(IViewService viewService,
                 ImageQuality = imageQuality,
                 Urls = responsiveImageService.ImageUrls(cardContent?.Image, EditorImageCrops.Poster, widthFactor, imageQuality),
                 WidthFactorImage = widthFactor,
-                WidthFactorContainer = styleImageLocation == EditorCardStyleImageLocations.Top ? widthFactor : 100,
+                WidthFactorContainer = 100,
                 RoundedEdges = GetRoundedEdges(cardContent?.Image != null, styleImageLocation),
                 Action = action,
                 Header = cardContent?.Header,

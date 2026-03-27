@@ -62,6 +62,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("headingDescriptionStatus")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.CategoryHeadingDescriptionStatuses HeadingDescriptionStatus => this.Value<global::Protenacity.Cake.Web.Core.Property.CategoryHeadingDescriptionStatuses>(_publishedValueFallback, "headingDescriptionStatus");
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.CategoryHeadingDescriptionStatuses> HeadingDescriptionStatus => this.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.CategoryHeadingDescriptionStatuses>>(_publishedValueFallback, "headingDescriptionStatus");
 	}
 }

@@ -31,8 +31,8 @@ public class StepperViewComponent : ThemeViewComponent
                 Header = editorStep.Item2.Header,
                 Text = editorStep.Item2.Text,
                 IconText = (editorStep.Item1 + 1).ToString(),
-                Subtheme = editorStep.Item3?.Subtheme == null || editorStep.Item3.Subtheme == EditorSubthemes.Inherit ? Subtheme(content) : editorStep.Item3.Subtheme,
-                ThemeShade = editorStep.Item3?.ThemeShade == null || editorStep.Item3.ThemeShade == EditorThemeShades.Inherit ? ThemeShade(content) : editorStep.Item3.ThemeShade,
+                Subtheme = editorStep.Item3?.Subtheme == null || editorStep.Item3.Subtheme == EditorSubthemes.Inherit ? Subtheme(content) : editorStep.Item3.Subtheme ?? EditorSubthemes.Primary,
+                ThemeShade = editorStep.Item3?.ThemeShade == null || editorStep.Item3.ThemeShade == EditorThemeShades.Inherit ? ThemeShade(content) : editorStep.Item3.ThemeShade ?? EditorThemeShades.Light,
                 OverrideColor = editorStep.Item3?.OverrideColor,
                 BorderColor = editorStep.Item3?.BorderColor?.Color,
                 BorderEdges = editorStep.Item3?.BorderEdges ?? EditorBorderEdges.All

@@ -54,7 +54,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("icon")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons Icon => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons>(_publishedValueFallback, "icon");
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons> Icon => this.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons>>(_publishedValueFallback, "icon");
 
 		///<summary>
 		/// Link: Turn icon and text into an optional link to a webpage or media item

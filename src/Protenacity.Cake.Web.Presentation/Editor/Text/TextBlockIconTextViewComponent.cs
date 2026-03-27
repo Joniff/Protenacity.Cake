@@ -33,10 +33,10 @@ public class TextBlockIconTextViewComponent : ThemeViewComponent
 
         return View(new TextBlockIconTextViewModel
         {
-            Icon = content.Icon,
+            Icon = content.Icon ?? EditorNamedIcons.Asterisk,
             Text = content.Text ?? new HtmlEncodedString(""),
-            Subtheme = settings.Subtheme,
-            Shade = settings.ThemeShade,
+            Subtheme = settings.Subtheme ?? EditorSubthemes.Primary,
+            Shade = settings.ThemeShade ?? Core.Property.EditorThemeShades.Light,
             OverrideColor = settings.OverrideColor,
             IconColor = settings.IconColor?.Color,
             LinkUrl = url,

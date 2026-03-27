@@ -50,7 +50,7 @@ public class PageViewComponent(IViewService viewService,
             var imageQuality = viewService.CurrentDomainPage.ConfigImageQuality;
             var id = Guid.NewGuid().ToString("N");
             var date = (page?.SeoDatePublished ?? DateTime.MinValue) != DateTime.MinValue ? page?.SeoDatePublished : page?.UpdateDate;
-            var widthFactor = WidthFactor(styleImageSize);
+            var widthFactor = WidthFactor(styleImageLocation, styleImageSize);
 
             return View(GetTemplate(page?.SeoThumbnail != null, styleImageLocation), new CardViewModel
             {
@@ -62,7 +62,7 @@ public class PageViewComponent(IViewService viewService,
                 ImageQuality = imageQuality,
                 Urls = responsiveImageService.ImageUrls(page?.SeoThumbnail, EditorImageCrops.Poster, widthFactor, imageQuality),
                 WidthFactorImage = widthFactor,
-                WidthFactorContainer = styleImageLocation == EditorCardStyleImageLocations.Top ? widthFactor : 100,
+                WidthFactorContainer = 100,
                 RoundedEdges = GetRoundedEdges(page?.SeoThumbnail != null, styleImageLocation),
                 Action = action,
                 Header = action?.Name,

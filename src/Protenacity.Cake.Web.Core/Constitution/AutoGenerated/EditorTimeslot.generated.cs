@@ -62,7 +62,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("day")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorDayOfWeek Day => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorDayOfWeek>(_publishedValueFallback, "day");
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorDayOfWeek> Day => this.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorDayOfWeek>>(_publishedValueFallback, "day");
 
 		///<summary>
 		/// Open Time: Start time of this venue opening in 24 hour clock. 00:00 to 23:59

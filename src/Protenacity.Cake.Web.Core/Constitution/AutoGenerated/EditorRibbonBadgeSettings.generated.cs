@@ -54,7 +54,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("imageShape")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape ImageShape => this.Value<global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape>(_publishedValueFallback, "imageShape");
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape> ImageShape => this.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape>>(_publishedValueFallback, "imageShape");
 
 		///<summary>
 		/// Override Colours: OR Set the background to your own specific colour, image or gradient. If set will override current Subtheme.
@@ -69,14 +69,14 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("subtheme")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes> Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Shade: Change section to dark or light mode. Inherit = Use whichever mode the page has
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("themeShade")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades> ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
 
 		///<summary>
 		/// Border Color: Select color for border
@@ -91,6 +91,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("borderEdges")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges BorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorBorderSettings.GetBorderEdges(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges> BorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorBorderSettings.GetBorderEdges(this, _publishedValueFallback);
 	}
 }

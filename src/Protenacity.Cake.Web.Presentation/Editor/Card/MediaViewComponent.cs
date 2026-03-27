@@ -46,7 +46,7 @@ public class MediaViewComponent(IViewService viewService,
             var imageQuality = viewService.CurrentDomainPage.ConfigImageQuality;
             var id = Guid.NewGuid().ToString("N");
             var size = ((long)(content!.Block?.Content?.GetProperty(Constants.Conventions.Media.Bytes)?.GetValue() ?? 0L)).ToReadableFileSize();
-            var widthFactor = WidthFactor(styleImageSize);
+            var widthFactor = WidthFactor(styleImageLocation, styleImageSize);
             return View(GetTemplate(media != null, styleImageLocation), new CardViewModel
             {
                 Id = Name + id,
@@ -57,7 +57,7 @@ public class MediaViewComponent(IViewService viewService,
                 ImageQuality = imageQuality,
                 Urls = responsiveImageService.ImageUrls(media, EditorImageCrops.Poster, widthFactor, imageQuality),
                 WidthFactorImage = widthFactor,
-                WidthFactorContainer = styleImageLocation == EditorCardStyleImageLocations.Top ? widthFactor : 100,
+                WidthFactorContainer = 100,
                 RoundedEdges = GetRoundedEdges(media != null, styleImageLocation),
                 Action = action == null ? null : new ActionViewModel
                 {

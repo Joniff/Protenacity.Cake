@@ -28,11 +28,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 
 		/// <summary>Default Image Shape</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape DefaultImageShape { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape> DefaultImageShape { get; }
 
 		/// <summary>Image Size</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes ImageSize { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes> ImageSize { get; }
 	}
 
 	/// <summary>Ribbon Base Settings</summary>
@@ -82,21 +82,21 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("defaultImageShape")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape DefaultImageShape => GetDefaultImageShape(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape> DefaultImageShape => GetDefaultImageShape(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Default Image Shape</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape GetDefaultImageShape(IEditorRibbonBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape>(publishedValueFallback, "defaultImageShape");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape> GetDefaultImageShape(IEditorRibbonBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBadgeImageShape>>(publishedValueFallback, "defaultImageShape");
 
 		///<summary>
 		/// Image Size: How to size image compared to rest of the information
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("imageSize")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes ImageSize => GetImageSize(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes> ImageSize => GetImageSize(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Image Size</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes GetImageSize(IEditorRibbonBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes>(publishedValueFallback, "imageSize");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes> GetImageSize(IEditorRibbonBaseSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes>>(publishedValueFallback, "imageSize");
 	}
 }

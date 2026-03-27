@@ -77,34 +77,65 @@ public abstract class ThemeViewComponent
         return pageSize;
     }
 
-    public int WidthFactor(EditorCardStyleImageSizes size)
+    public int WidthFactor(EditorCardStyleImageLocations location, EditorCardStyleImageSizes size)
     {
-        switch (size)
+        switch (location)
         {
-            case EditorCardStyleImageSizes.XXSmall:
-                return 33;
+            case EditorCardStyleImageLocations.Left:
+            case EditorCardStyleImageLocations.Right:
+                switch (size)
+                {
+                    case EditorCardStyleImageSizes.XXXSmall:
+                        return 190;
 
-            case EditorCardStyleImageSizes.XSmall:
-                return 50;
+                    case EditorCardStyleImageSizes.XXSmall:
+                        return 167;
 
-            case EditorCardStyleImageSizes.Small:
-                return 66;
+                    case EditorCardStyleImageSizes.XSmall:
+                        return 150;
 
-            case EditorCardStyleImageSizes.Medium:
+                    case EditorCardStyleImageSizes.Small:
+                        return 134;
+
+                    default:
+                        return 100;
+                }
+
+            case EditorCardStyleImageLocations.Top:
+            case EditorCardStyleImageLocations.Bottom:
+                switch (size)
+                {
+                    case EditorCardStyleImageSizes.XXXSmall:
+                        return 10;
+
+                    case EditorCardStyleImageSizes.XXSmall:
+                        return 33;
+
+                    case EditorCardStyleImageSizes.XSmall:
+                        return 50;
+
+                    case EditorCardStyleImageSizes.Small:
+                        return 66;
+
+                    case EditorCardStyleImageSizes.Large:
+                        return 134;
+
+                    case EditorCardStyleImageSizes.XLarge:
+                        return 150;
+
+                    case EditorCardStyleImageSizes.XXLarge:
+                        return 167;
+
+                    case EditorCardStyleImageSizes.XXXLarge:
+                        return 190;
+
+                    default:
+                        return 100;
+                }
+
+            default:
                 return 100;
 
-            case EditorCardStyleImageSizes.Large:
-                return 133;
-
-            case EditorCardStyleImageSizes.XLarge:
-                return 150;
-
-            case EditorCardStyleImageSizes.XXLarge:
-                return 166;
-
-            case EditorCardStyleImageSizes.XXXLarge:
-                return 200;
         }
-        return 100;
     }
 }

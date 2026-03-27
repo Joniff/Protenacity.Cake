@@ -26,11 +26,11 @@ public class TextBlockSummaryViewComponent : ThemeViewComponent
             Id = Name + Guid.NewGuid().ToString("N"),
             Header = content?.Header?.HasContent() == true ? content.Header : null,
             Text = content?.Text?.HasContent() == true ? content.Text : new HtmlEncodedString(nameof(TextBlockExpandableTextViewModel.Text)),
-            Subtheme = settings.Subtheme,
-            Shade = settings.ThemeShade,
+            Subtheme = settings.Subtheme ?? Core.Property.EditorSubthemes.Primary,
+            Shade = settings.ThemeShade ?? Core.Property.EditorThemeShades.Light,
             OverrideColor = settings.OverrideColor,
             BorderColor = settings.BorderColor?.Color,
-            BorderEdges = settings.BorderEdges
+            BorderEdges = settings.BorderEdges ?? Core.Property.EditorBorderEdges.None
         });
     }
 }

@@ -61,6 +61,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("orientation")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorStepperOrientation Orientation => global::Protenacity.Cake.Web.Core.Constitution.EditorStepperEmbeddedSettings.GetOrientation(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorStepperOrientation> Orientation => global::Protenacity.Cake.Web.Core.Constitution.EditorStepperEmbeddedSettings.GetOrientation(this, _publishedValueFallback);
 	}
 }

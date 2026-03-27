@@ -54,21 +54,21 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleAction")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyles StyleAction => global::Protenacity.Cake.Web.Core.Constitution.EditorActionEmbeddedSettings.GetStyleAction(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyles> StyleAction => global::Protenacity.Cake.Web.Core.Constitution.EditorActionEmbeddedSettings.GetStyleAction(this, _publishedValueFallback);
 
 		///<summary>
 		/// Action Alignment: Location of Button or Link. Absolute = Will position over the top of other items (if applicable). Relative = Will try and make other items flow around it (if applicable).
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleActionAlignment")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments StyleActionAlignment => global::Protenacity.Cake.Web.Core.Constitution.EditorActionEmbeddedSettings.GetStyleActionAlignment(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyleAlignments> StyleActionAlignment => global::Protenacity.Cake.Web.Core.Constitution.EditorActionEmbeddedSettings.GetStyleActionAlignment(this, _publishedValueFallback);
 
 		///<summary>
 		/// Action Click Area: Which area that can clicked
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleActionClickArea")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas StyleActionClickArea => global::Protenacity.Cake.Web.Core.Constitution.EditorActionEmbeddedSettings.GetStyleActionClickArea(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyleClickAreas> StyleActionClickArea => global::Protenacity.Cake.Web.Core.Constitution.EditorActionEmbeddedSettings.GetStyleActionClickArea(this, _publishedValueFallback);
 
 		///<summary>
 		/// Override Colours: OR Set the background to your own specific colour, image or gradient. If set will override current Subtheme.
@@ -83,14 +83,14 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("subtheme")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes> Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Shade: Change section to dark or light mode. Inherit = Use whichever mode the page has
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("themeShade")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades> ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
 
 		///<summary>
 		/// Border Color: Select color for border
@@ -105,7 +105,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("borderEdges")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges BorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorBorderSettings.GetBorderEdges(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorBorderEdges> BorderEdges => global::Protenacity.Cake.Web.Core.Constitution.EditorBorderSettings.GetBorderEdges(this, _publishedValueFallback);
 
 		///<summary>
 		/// Show Click Arrow: Show a click arror aligned to the right, giving an indication that clicking this card will provide an event. 
@@ -119,49 +119,49 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleDate")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleDates StyleDate => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleDate(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleDates> StyleDate => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleDate(this, _publishedValueFallback);
 
 		///<summary>
 		/// Header: Do we show the Header
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleHeader")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleHeaders StyleHeader => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleHeader(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleHeaders> StyleHeader => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleHeader(this, _publishedValueFallback);
 
 		///<summary>
 		/// Image Location: Where to place the image in relations to the other elements
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleImage")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageLocations StyleImage => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleImage(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageLocations> StyleImage => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleImage(this, _publishedValueFallback);
 
 		///<summary>
 		/// Image Size: How to size image compared to rest of the card information
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleImageSize")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes StyleImageSize => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleImageSize(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleImageSizes> StyleImageSize => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleImageSize(this, _publishedValueFallback);
 
 		///<summary>
 		/// Text: Do we show the Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleText")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTexts StyleText => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleText(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTexts> StyleText => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleText(this, _publishedValueFallback);
 
 		///<summary>
 		/// Time: Do we show the Time
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleTime")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTimes StyleTime => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleTime(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorCardStyleTimes> StyleTime => global::Protenacity.Cake.Web.Core.Constitution.EditorCardBaseSettings.GetStyleTime(this, _publishedValueFallback);
 
 		///<summary>
 		/// Order: Order of items
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("order")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorOrders Order => global::Protenacity.Cake.Web.Core.Constitution.EditorOrderSettings.GetOrder(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorOrders> Order => global::Protenacity.Cake.Web.Core.Constitution.EditorOrderSettings.GetOrder(this, _publishedValueFallback);
 
 		///<summary>
 		/// Download: Specify that the Media Items should be downloaded to the clients machine and not shown in browser

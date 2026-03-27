@@ -43,7 +43,7 @@ public class RibbonViewComponent(
             OverrideColor = setting?.OverrideColor,
             BorderColor = setting?.BorderColor?.Color,
             BorderEdges = setting?.BorderEdges ?? EditorBorderEdges.None,
-            Shape = setting?.ImageShape == EditorBadgeImageShape.Default ? defaultImageShape : setting?.ImageShape ?? EditorBadgeImageShape.Square
+            Shape = setting?.ImageShape ?? EditorBadgeImageShape.Square
         };
     }
 
@@ -53,7 +53,7 @@ public class RibbonViewComponent(
         var ribbonSettings = content.Block?.Settings as IEditorRibbonBaseSettings;
         var imageQuality = viewService.CurrentDomainPage.ConfigImageQuality;
         var imageSize = ribbonSettings?.ImageSize ?? EditorCardStyleImageSizes.Medium;
-        var widthFactor = WidthFactor(imageSize);
+        var widthFactor = WidthFactor(EditorCardStyleImageLocations.Left, imageSize);
 
         if (ribbon?.Badges?.Any() != true)
         {

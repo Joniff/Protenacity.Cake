@@ -9,10 +9,10 @@
     }
 }
 
-<div class="d-flex h-100 @(clickable?"cursor-pointer" : null)" @(clickable ? "onclick=this.querySelector('a').click();" : null)>
+<div class="d-flex h-100 @(clickable ? "action-card" : null)">
     <theme subtheme="Model.Subtheme" shade="Model.ThemeShade" override="Model.OverrideColor" border-color="@Model.BorderColor" border-edges="@Model.BorderEdges" class="card border-0" id="@(Model.BackgroundId)">
 
-        <div class="card-body border-0">
+        <div class="card-body border-0 pb-0">
             @if (Model.Header?.HasContent() == true && Model.HeaderStyle == EditorCardStyleHeaders.Show)
             {
                 @if (Model.Action?.Style == ActionStyles.Header)

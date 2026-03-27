@@ -54,6 +54,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("order")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorOrders Order => global::Protenacity.Cake.Web.Core.Constitution.EditorOrderSettings.GetOrder(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorOrders> Order => global::Protenacity.Cake.Web.Core.Constitution.EditorOrderSettings.GetOrder(this, _publishedValueFallback);
 	}
 }

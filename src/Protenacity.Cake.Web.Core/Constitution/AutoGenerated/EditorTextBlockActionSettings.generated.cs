@@ -54,6 +54,6 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("styleAction")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.ActionStyles StyleAction => this.Value<global::Protenacity.Cake.Web.Core.Property.ActionStyles>(_publishedValueFallback, "styleAction");
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyles> StyleAction => this.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.ActionStyles>>(_publishedValueFallback, "styleAction");
 	}
 }

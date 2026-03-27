@@ -14,42 +14,42 @@ public class ListViewComponent(IEditorService editorService) : ViewComponent
 
         if (cardSettings?.StyleCardImage != null)
         {
-            content.Defaults.CardStyleImageLocation = cardSettings.StyleCardImage;
+            content.Defaults.CardStyleImageLocation = cardSettings.StyleCardImage ?? Core.Property.EditorCardStyleImageLocations.Top;
         }
 
         if (cardSettings?.StyleCardImageSize != null)
         {
-            content.Defaults.CardStyleImageSize = cardSettings.StyleCardImageSize;
+            content.Defaults.CardStyleImageSize = cardSettings.StyleCardImageSize ?? Core.Property.EditorCardStyleImageSizes.Medium;
         }
 
         if (cardSettings?.StyleCardHeader != null)
         {
-            content.Defaults.CardStyleHeader = cardSettings.StyleCardHeader;
+            content.Defaults.CardStyleHeader = cardSettings.StyleCardHeader ?? Core.Property.EditorCardStyleHeaders.Show;
         }
 
         if (cardSettings?.StyleCardDate != null)
         {
-            content.Defaults.CardStyleDate = cardSettings.StyleCardDate;
+            content.Defaults.CardStyleDate = cardSettings.StyleCardDate ?? Core.Property.EditorCardStyleDates.Show;
         }
 
         if (cardSettings?.StyleCardTime != null)
         {
-            content.Defaults.CardStyleTime = cardSettings.StyleCardTime;
+            content.Defaults.CardStyleTime = cardSettings.StyleCardTime ?? Core.Property.EditorCardStyleTimes.Show;
         }
 
         if (cardSettings?.StyleCardText != null)
         {
-            content.Defaults.CardStyleText = cardSettings.StyleCardText;
+            content.Defaults.CardStyleText = cardSettings.StyleCardText ?? Core.Property.EditorCardStyleTexts.Show;
         }
 
         if ((cardSettings?.StyleCardSubtheme ?? Core.Property.EditorSubthemes.Inherit) != Core.Property.EditorSubthemes.Inherit)
         {
-            content.Defaults.CardStyleSubtheme = cardSettings!.StyleCardSubtheme;
+            content.Defaults.CardStyleSubtheme = cardSettings!.StyleCardSubtheme ?? Core.Property.EditorSubthemes.Primary;
         }
 
         if ((cardSettings?.StyleDefaultCardThemeShade ?? Core.Property.EditorThemeShades.Inherit) != Core.Property.EditorThemeShades.Inherit)
         {
-            content.Defaults.CardStyleThemeShade = cardSettings!.StyleDefaultCardThemeShade;
+            content.Defaults.CardStyleThemeShade = cardSettings!.StyleDefaultCardThemeShade ?? Core.Property.EditorThemeShades.Light;
         }
 
         if (cardSettings?.StyleCardOverrideColor?.Any() == true)
@@ -66,17 +66,17 @@ public class ListViewComponent(IEditorService editorService) : ViewComponent
 
         if (actionSettings?.StyleAction != null)
         {
-            content.Defaults.CardStyleAction = actionSettings.StyleAction;
+            content.Defaults.CardStyleAction = actionSettings.StyleAction ?? Core.Property.ActionStyles.Button;
         }
 
         if (actionSettings?.StyleActionClickArea != null)
         {
-            content.Defaults.CardStyleActionClickArea = actionSettings.StyleActionClickArea;
+            content.Defaults.CardStyleActionClickArea = actionSettings.StyleActionClickArea ?? Core.Property.ActionStyleClickAreas.Action;
         }
 
         if (actionSettings?.StyleActionAlignment != null)
         {
-            content.Defaults.CardStyleActionAlignment = actionSettings.StyleActionAlignment;
+            content.Defaults.CardStyleActionAlignment = actionSettings.StyleActionAlignment ?? Core.Property.ActionStyleAlignments.Right;
         }
 
         var blocks = editorService.Load(null, content.Defaults, (content.Block?.Content as IEditorListEmbedded)?.ListBlocks);

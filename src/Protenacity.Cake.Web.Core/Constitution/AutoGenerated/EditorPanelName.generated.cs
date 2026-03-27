@@ -24,7 +24,7 @@ namespace Protenacity.Cake.Web.Core.Constitution
 	{
 		/// <summary>Icon</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons PanelIcon { get; }
+		global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons> PanelIcon { get; }
 
 		/// <summary>Name</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
@@ -68,11 +68,11 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("panelIcon")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons PanelIcon => GetPanelIcon(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons> PanelIcon => GetPanelIcon(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Icon</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
-		public static global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons GetPanelIcon(IEditorPanelName that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons>(publishedValueFallback, "panelIcon");
+		public static global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons> GetPanelIcon(IEditorPanelName that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorNamedIcons>>(publishedValueFallback, "panelIcon");
 
 		///<summary>
 		/// Name: Text used to select panel in tab strip or accordion

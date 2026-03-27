@@ -62,21 +62,21 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("subtheme")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorSubthemes Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorSubthemes> Subtheme => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetSubtheme(this, _publishedValueFallback);
 
 		///<summary>
 		/// Shade: Change section to dark or light mode. Inherit = Use whichever mode the page has
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("themeShade")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorThemeShades ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorThemeShades> ThemeShade => global::Protenacity.Cake.Web.Core.Constitution.EditorBackgroundSettings.GetThemeShade(this, _publishedValueFallback);
 
 		///<summary>
 		/// Collapsed Size Unit: Screen Percentage = How much of the screen in percentage should be taken up by this section when section is in collapsed mode. Valid numbers are from 0 for invisible, to 100 the total screen size. The section height can be larger than the screen size.  Section Height = How much of the section should we display when in collapsed mode. Valid numbers are 0 for invisible to 100 the total section size which effectively negates the purpose of this section.  Fixed Height = Height in font units of em where 1 = height of normal font. Valid number are from 0 for invisible to the total section height as measured in font heights.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("collapsedSizeUnit")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits CollapsedSizeUnit => global::Protenacity.Cake.Web.Core.Constitution.EditorExpandableSectionBaseSettings.GetCollapsedSizeUnit(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionCollapseSizeUnits> CollapsedSizeUnit => global::Protenacity.Cake.Web.Core.Constitution.EditorExpandableSectionBaseSettings.GetCollapsedSizeUnit(this, _publishedValueFallback);
 
 		///<summary>
 		/// Collapsed Size Value: Value for Collapsed Size. What this value means depends on what the Unit is.
@@ -90,13 +90,13 @@ namespace Protenacity.Cake.Web.Core.Constitution
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("expandCollapseMethod")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods ExpandCollapseMethod => global::Protenacity.Cake.Web.Core.Constitution.EditorExpandableSectionBaseSettings.GetExpandCollapseMethod(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionExpandCollapseMethods> ExpandCollapseMethod => global::Protenacity.Cake.Web.Core.Constitution.EditorExpandableSectionBaseSettings.GetExpandCollapseMethod(this, _publishedValueFallback);
 
 		///<summary>
 		/// Intial State
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.2.2+11a412c")]
 		[ImplementPropertyType("initialState")]
-		public virtual global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates InitialState => global::Protenacity.Cake.Web.Core.Constitution.EditorExpandableSectionBaseSettings.GetInitialState(this, _publishedValueFallback);
+		public virtual global::System.Nullable<global::Protenacity.Cake.Web.Core.Property.EditorExpandableSectionInitialStates> InitialState => global::Protenacity.Cake.Web.Core.Constitution.EditorExpandableSectionBaseSettings.GetInitialState(this, _publishedValueFallback);
 	}
 }
