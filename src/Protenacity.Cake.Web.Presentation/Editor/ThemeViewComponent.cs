@@ -118,16 +118,16 @@ public abstract class ThemeViewComponent
                         return 66;
 
                     case EditorCardStyleImageSizes.Large:
-                        return 134;
+                        return 115;
 
                     case EditorCardStyleImageSizes.XLarge:
-                        return 150;
+                        return 120;
 
                     case EditorCardStyleImageSizes.XXLarge:
-                        return 167;
+                        return 130;
 
                     case EditorCardStyleImageSizes.XXXLarge:
-                        return 190;
+                        return 150;
 
                     default:
                         return 100;

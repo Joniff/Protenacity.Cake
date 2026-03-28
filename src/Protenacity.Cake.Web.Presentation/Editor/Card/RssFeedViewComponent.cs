@@ -58,7 +58,7 @@ public class RssFeedViewComponent(IViewService viewService) : BaseViewComponent
                 AlternateTitle = name,
                 BackgroundId = null,
                 TransparentBackground = false,
-                Opacity = 0,
+                Opacity = styleImageLocation == EditorCardStyleImageLocations.Behind ? 5 : 0,
                 ImageQuality = imageQuality,
                 Urls = hasImage ? new Tuple<int?, string>[] { 
                     new Tuple<int?, string>(null, content.ExtraData?.ImageUrl ?? throw new ArgumentNullException("Should have already checked for Null"))
