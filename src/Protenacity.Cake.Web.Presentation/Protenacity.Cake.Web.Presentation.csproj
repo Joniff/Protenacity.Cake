@@ -16,7 +16,7 @@
 		<PackageReference Include="Umbraco.Cms.Infrastructure" Version="[17.1.0,21.0.0)" />
 		<PackageReference Include="Umbraco.Cms.Web.Common" Version="[17.1.0,21.0.0)" />
 		<PackageReference Include="Umbraco.Cms.Web.Website" Version="[17.1.0,21.0.0)" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.5" />
 		<PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="[3.0.1,4.0.0)" />
 		<PackageReference Include="ZiggyCreatures.FusionCache" Version="2.5.0" />
 		<PackageReference Include="Sagara.FeedReader" Version="2.1.0" />

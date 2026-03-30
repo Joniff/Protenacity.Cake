@@ -21,7 +21,7 @@ public class MapViewComponent : ViewComponent
         return View(new MapViewModel
         {
             Map = map.MapPosition,
-            Ratio = ((double)settings.Ratio) / 36.0
+            Ratio = ((double)(settings.Ratio ?? Core.Property.EditorMapRatios.Ratio1x1)) / 36.0
         });
     }
 }
