@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find C:/development/Protenacity/Cake/src -maxdepth 2 -name README* -o -name Makefile -o -name build.*)"
+    ]
+  }
+}
