@@ -9,7 +9,9 @@ public abstract class BaseViewComponent() : ThemeViewComponent
     protected const string TopTemplate = "~/Views/Components/Card/Top.cshtml";
     protected const string BottomTemplate = "~/Views/Components/Card/Bottom.cshtml";
     protected const string LeftTemplate = "~/Views/Components/Card/Left.cshtml";
+    protected const string ResponsiveLeftTemplate = "~/Views/Components/Card/ResponsiveLeft.cshtml";
     protected const string RightTemplate = "~/Views/Components/Card/Right.cshtml";
+    protected const string ResponsiveRightTemplate = "~/Views/Components/Card/ResponsiveRight.cshtml";
     protected const string BehindTemplate = "~/Views/Components/Card/Behind.cshtml";
     protected const string NoImageTemplate = "~/Views/Components/Card/NoImage.cshtml";
 
@@ -34,8 +36,14 @@ public abstract class BaseViewComponent() : ThemeViewComponent
             case EditorCardStyleImageLocations.Left:
                 return LeftTemplate;
 
+            case EditorCardStyleImageLocations.ResponsiveLeft:
+                return ResponsiveLeftTemplate;
+
             case EditorCardStyleImageLocations.Right:
                 return RightTemplate;
+
+            case EditorCardStyleImageLocations.ResponsiveRight:
+                return ResponsiveRightTemplate;
 
             case EditorCardStyleImageLocations.Behind:
                 return BehindTemplate;
@@ -64,14 +72,15 @@ public abstract class BaseViewComponent() : ThemeViewComponent
                 return ResponseImageRoundedEdges.Bottom;
 
             case EditorCardStyleImageLocations.Left:
+            case EditorCardStyleImageLocations.ResponsiveLeft:
                 return ResponseImageRoundedEdges.Left;
 
             case EditorCardStyleImageLocations.Right:
+            case EditorCardStyleImageLocations.ResponsiveRight:
                 return ResponseImageRoundedEdges.Right;
 
             case EditorCardStyleImageLocations.Behind:
                 return ResponseImageRoundedEdges.All;
-
         }
 
         throw new ApplicationException("Unknown Image Location Style");

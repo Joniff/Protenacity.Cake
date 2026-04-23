@@ -1,9 +1,9 @@
-﻿using Protenacity.Cake.Web.Core.Constitution;
+﻿using Microsoft.AspNetCore.Mvc;
+using Protenacity.Cake.Web.Core.Constitution;
 using Protenacity.Cake.Web.Core.Extensions;
 using Protenacity.Cake.Web.Core.Property;
 using Protenacity.Cake.Web.Presentation.Editor.Action;
 using Protenacity.Cake.Web.Presentation.View;
-using Microsoft.AspNetCore.Mvc;
 using Umbraco.Cms.Core.Strings;
 
 namespace Protenacity.Cake.Web.Presentation.Editor.Card;
@@ -14,19 +14,17 @@ public class CardViewComponent(IViewService viewService,
 {
     public const string Name = nameof(Card);
 
-    public IViewComponentResult Invoke(IEditorContent content)
+    private IViewComponentResult NonResponsive(EditorCardStyleImageLocations styleImageLocation, IEditorContent content)
     {
         var cardContent = content.Block?.Content as IEditorCardBase;
         var actionContent = content.Block?.Content as IEditorActionEmbedded;
         var downloadSettings = content.Block?.Settings as IEditorSelectMediaDownloadSettings;
 
-        var styleImageLocation = StyleImageLocation(content);
         var styleImageSize = StyleImageSize(content);
         var styleHeader = StyleHeader(content);
         var styleDate = StyleDate(content);
         var styleTime = StyleTime(content);
         var styleText = StyleText(content);
-
         IActionViewModel? action = string.IsNullOrWhiteSpace(actionContent?.Link?.Url) ? null : new ActionViewModel
         {
             Style = StyleAction(content),
@@ -80,11 +78,43 @@ public class CardViewComponent(IViewService viewService,
                 BorderColor = BorderColor(content),
                 BorderEdges = BorderEdges(content)
             });
-        } 
+        }
         else if (action != null)
         {
             return View(ActionViewComponent.Template, action);
         }
         return Content(string.Empty);
+    }
+
+    public IViewComponentResult Invoke(object? model)
+    {
+        EditorCardStyleImageLocations styleImageLocation = EditorCardStyleImageLocations.Hide;
+        IEditorContent? editorContent;
+
+        var style = model as Tuple<EditorCardStyleImageLocations, IEditorContent>;
+        if (style != null)
+        {
+            styleImageLocation = style.Item1;
+            editorContent = style.Item2;
+        }
+        else
+        {
+            editorContent = model as IEditorContent;
+            if (editorContent == null)
+            {
+                return Content(string.Empty);
+            }
+            styleImageLocation = StyleImageLocation(editorContent);
+        }
+
+        switch (styleImageLocation)
+        {
+            case EditorCardStyleImageLocations.ResponsiveLeft:
+            case EditorCardStyleImageLocations.ResponsiveRight:
+                return View(GetTemplate(true, styleImageLocation), editorContent);
+
+            default:
+                return NonResponsive(styleImageLocation, editorContent);
+        }
     }
 }

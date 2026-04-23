@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "umbraco-mcp": {
-      "command": "npx",
-      "args": ["@umbraco-cms/mcp-dev@latest"]
-    }
-  }
-}

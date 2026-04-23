@@ -1,5 +1,6 @@
 using Protenacity.Cake.Web.Core.Proxy;
 using ZiggyCreatures.Caching.Fusion;
+using OpenIddict.Server.AspNetCore;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -20,13 +21,15 @@ builder.Services.AddFusionCache().WithOptions(opt =>
     opt.FactorySoftTimeout = TimeSpan.FromMinutes(30);
 });
 
-builder.Services.AddOpenIddict()
-    .AddServer(options =>
-    {
-        options.Configure(options => options.RequireProofKeyForCodeExchange = false);
-    });
+//builder.Services.AddOpenIddict().AddServer(options =>
+//{
+//    options.Configure(options => options.RequireProofKeyForCodeExchange = false);
+//});
 
-
+builder.Services.Configure<OpenIddictServerAspNetCoreOptions>(options =>
+{
+    options.DisableTransportSecurityRequirement = true;
+});
 
 WebApplication app = builder.Build();
 app.UseForwardedHeaders();

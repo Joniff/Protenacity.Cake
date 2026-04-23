@@ -14,8 +14,14 @@ public enum EditorCardStyleImageLocations
     [Description("Left")]
     Left,
 
+    [Description("Responsive Left")]
+    ResponsiveLeft,
+
     [Description("Right")]
     Right,
+
+    [Description("Responsive Right")]
+    ResponsiveRight,
 
     [Description("Behind")]
     Behind,

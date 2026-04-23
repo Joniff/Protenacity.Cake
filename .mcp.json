@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "umbraco-ai": {
+      "command": "node",
+      "args": ["C:/Development/UmbracoMcp/UmbracoMcp17-3-0/dist/index.js"],
+      "env": {
+        "NODE_TLS_REJECT_UNAUTHORIZED": "0",
+        "UMBRACO_CLIENT_ID": "umbraco-back-office-mcp",
+        "UMBRACO_CLIENT_SECRET": "1234567890",
+        "UMBRACO_BASE_URL": "https://localhost:44302"
+      }
+    }
+  }
+}

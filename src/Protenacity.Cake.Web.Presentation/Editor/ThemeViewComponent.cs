@@ -82,7 +82,9 @@ public abstract class ThemeViewComponent
         switch (location)
         {
             case EditorCardStyleImageLocations.Left:
+            case EditorCardStyleImageLocations.ResponsiveLeft:
             case EditorCardStyleImageLocations.Right:
+            case EditorCardStyleImageLocations.ResponsiveRight:
                 switch (size)
                 {
                     case EditorCardStyleImageSizes.XXXSmall:

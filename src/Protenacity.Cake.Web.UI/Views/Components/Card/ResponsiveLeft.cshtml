@@ -1,0 +1,8 @@
+﻿@model Protenacity.Cake.Web.Presentation.Editor.IEditorContent
+
+<div class="d-sm-none">
+    @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.Card.CardViewComponent.Name, new Tuple<EditorCardStyleImageLocations, IEditorContent>(EditorCardStyleImageLocations.Top, Model)))
+</div>
+<div class="d-sm-block d-none">
+    @(await Component.InvokeAsync(Protenacity.Cake.Web.Presentation.Editor.Card.CardViewComponent.Name, new Tuple<EditorCardStyleImageLocations, IEditorContent>(EditorCardStyleImageLocations.Left, Model)))
+</div>

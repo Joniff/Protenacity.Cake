@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{DC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{96838ECC-55F8-4A3B-B6E8-535410C4BB10}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{7B64967B-ABD7-41C4-99D9-D3A3D8CBE85E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protenacity.Commands.TestApiEndPoint", "Protenacity.Commands.TestApiEndPoint\Protenacity.Commands.TestApiEndPoint.csproj", "{2B49333A-E210-4A0C-B04E-587B0A804B6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,10 @@ Global
 		{D0EF85D3-0482-44E5-8A96-21229C443F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0EF85D3-0482-44E5-8A96-21229C443F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0EF85D3-0482-44E5-8A96-21229C443F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B49333A-E210-4A0C-B04E-587B0A804B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B49333A-E210-4A0C-B04E-587B0A804B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B49333A-E210-4A0C-B04E-587B0A804B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B49333A-E210-4A0C-B04E-587B0A804B6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +91,7 @@ Global
 		{4A9F9833-FDE9-4DD4-B8B9-DFD331C6DDE0} = {DCA22E4D-C531-4241-A985-F29EBD26293A}
 		{B0014453-8F23-E2A2-00D9-1066E1D29C62} = {DCA22E4D-C531-4241-A985-F29EBD26293A}
 		{D0EF85D3-0482-44E5-8A96-21229C443F5D} = {DCA22E4D-C531-4241-A985-F29EBD26293A}
+		{2B49333A-E210-4A0C-B04E-587B0A804B6B} = {7B64967B-ABD7-41C4-99D9-D3A3D8CBE85E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {45A4460F-F95D-43D0-AE7E-7FA76DBC4CC5}

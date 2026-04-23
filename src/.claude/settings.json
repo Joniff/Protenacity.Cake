@@ -1,0 +1,7 @@
+{
+  "enabledPlugins": {
+    "umbraco-cms-backoffice-skills@umbraco-backoffice-marketplace": false,
+    "umbraco-mcp-skills@umbraco-mcp-server-sdk-plugins": false,
+    "umbraco-cms-backoffice-testing-skills@umbraco-backoffice-marketplace": false
+  }
+}
