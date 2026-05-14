@@ -14,7 +14,7 @@
 		<PackageReference Include="Umbraco.Cms.Core" Version="[17.1.0,21.0.0)" />
 		<PackageReference Include="Umbraco.Cms.Infrastructure" Version="[17.1.0,21.0.0)" />
 		<PackageReference Include="Umbraco.Cms.Web.Common" Version="[17.1.0,21.0.0)" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[10.0.8,11)" />
 		<PackageReference Include="ZiggyCreatures.FusionCache" Version="2.5.0" />
 	</ItemGroup>
 	

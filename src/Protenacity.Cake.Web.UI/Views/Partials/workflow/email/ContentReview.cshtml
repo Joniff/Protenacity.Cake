@@ -1,0 +1,30 @@
+﻿@model Umbraco.Workflow.Core.Email.Models.HtmlReviewEmailModel
+
+@{
+    string itemsString = Model.TaskCount > 1 ? "items" : "item";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Workflow: content reviews due for @Model.GroupName (@Model.TaskCount @itemsString) </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+<body>
+    <div>
+        <h1>Hello @Model.To.Name,</h1>
+        <p>Please review the following @itemsString:</p>
+        <ul>
+            @foreach (var task in Model.ReviewTasks)
+            {
+                <li>
+                    <a href="@(Model.To.IsExternalEmail ? task.Url : task.BackofficeUrl)">@task.NodeName (due on @task.DueOn?.ToString("d MMMM, yyyy"))</a>
+                </li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

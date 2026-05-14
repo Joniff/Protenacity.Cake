@@ -21,10 +21,10 @@ builder.Services.AddFusionCache().WithOptions(opt =>
     opt.FactorySoftTimeout = TimeSpan.FromMinutes(30);
 });
 
-//builder.Services.AddOpenIddict().AddServer(options =>
-//{
-//    options.Configure(options => options.RequireProofKeyForCodeExchange = false);
-//});
+builder.Services.AddOpenIddict().AddServer(options =>
+{
+    options.Configure(options => options.RequireProofKeyForCodeExchange = false);
+});
 
 builder.Services.Configure<OpenIddictServerAspNetCoreOptions>(options =>
 {
