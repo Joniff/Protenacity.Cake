@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using System.Text;
 using Umbraco.Cms.Core.Strings;
 
 namespace Protenacity.Cake.Web.Core.Extensions;
@@ -6,7 +7,7 @@ namespace Protenacity.Cake.Web.Core.Extensions;
 public static class IHtmlContentExtensions
 {
     public static string Truncate(this IHtmlEncodedString htmlString, int maxLength, string suffix = "...") 
-        => String.IsNullOrWhiteSpace(htmlString.ToString()) ? "" : htmlString.ToText().Truncate(maxLength, suffix);
+        => String.IsNullOrWhiteSpace(htmlString.ToString()) ? "" : htmlString.ToText(' ').Truncate(maxLength, suffix);
 
     private static IHtmlEncodedString EmptyHtmlString() => new HtmlEncodedString("");
 
@@ -70,13 +71,14 @@ public static class IHtmlContentExtensions
         return new HtmlEncodedString(document.DocumentNode.InnerHtml);
     }
 
-    public static IHtmlEncodedString ToText(this IHtmlEncodedString data)
+    public static IHtmlEncodedString ToText(this IHtmlEncodedString data, char? separator = null)
     {
         if (data == null)
         {
             return EmptyHtmlString();
         }
 
+        var text = new StringBuilder();
         var document = new HtmlDocument();
         document.LoadHtml(data.ToString()!);
 
@@ -90,25 +92,29 @@ public static class IHtmlContentExtensions
         while (nodes.Any())
         {
             var node = nodes.Dequeue();
-            var parentNode = node.ParentNode;
 
             if (node.Name != "#text")
             {
                 var childNodes = node.SelectNodes("./*|./text()");
 
-                if (childNodes != null)
+                if (childNodes?.Any() == true)
                 {
                     foreach (var child in childNodes)
                     {
                         nodes.Enqueue(child);
-                        parentNode.InsertBefore(child, node);
                     }
                 }
-
-                parentNode.RemoveChild(node);
+            }
+            else
+            {
+                if (separator != null && text.Length != 0)
+                {
+                    text.Append(separator);
+                }
+                text.Append(node.InnerText);
             }
         }
-        return new HtmlEncodedString(document.DocumentNode.InnerHtml);
+        return new HtmlEncodedString(text.ToString());
     }
 
     public static bool HasContent(this IHtmlEncodedString data)

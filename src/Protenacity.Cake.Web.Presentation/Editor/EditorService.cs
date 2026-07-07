@@ -271,10 +271,10 @@ internal class EditorService(
                 return pages.OrderByDescending(p => p.CreateDate);
 
             case EditorOrders.AtoZ:
-                return pages.OrderBy(p => p.PageTitleName?.HasContent() == true ? p.PageTitleName.ToText().ToString() : p.Name);
+                return pages.OrderBy(p => p.PageTitleName?.HasContent() == true ? p.PageTitleName.ToText(' ').ToString() : p.Name);
 
             case EditorOrders.ZtoA:
-                return pages.OrderByDescending(p => p.PageTitleName?.HasContent() == true ? p.PageTitleName.ToText().ToString() : p.Name);
+                return pages.OrderByDescending(p => p.PageTitleName?.HasContent() == true ? p.PageTitleName.ToText(' ').ToString() : p.Name);
 
             default:
                 return pages;

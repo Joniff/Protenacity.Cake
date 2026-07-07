@@ -1,8 +1,5 @@
 ﻿using Protenacity.Cake.Web.Core.Constitution;
 using Protenacity.Cake.Web.Presentation.Search.Internal;
-using Microsoft.Extensions.Logging;
-using Umbraco.Cms.Core.Services.Navigation;
-using Umbraco.Cms.Core.Web;
 
 namespace Protenacity.Cake.Web.Presentation.Search;
 

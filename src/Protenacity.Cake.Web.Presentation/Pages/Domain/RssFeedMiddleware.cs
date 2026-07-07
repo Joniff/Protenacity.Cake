@@ -64,7 +64,7 @@ public class RssFeedMiddleware(IRuntimeState runtimeState,
                     new XElement(rssFeedNamespace + "link", new Uri(currentUri, page.Url())),
                     new XElement(rssFeedNamespace + "pubDate", (page.SeoDatePublished != DateTime.MinValue ? page.SeoDatePublished : page.UpdateDate).ToUniversalTime().ToString("ddd, dd MMM yyyy HH:mm:ss zzz")),
                     new XElement(rssFeedNamespace + "title", string.IsNullOrWhiteSpace(page.Title) ? page.Name : page.Title),
-                    new XElement(rssFeedNamespace + "description", string.IsNullOrWhiteSpace(page.SeoDescription) ? page.SeoAbstract?.ToText() : page.SeoDescription),
+                    new XElement(rssFeedNamespace + "description", string.IsNullOrWhiteSpace(page.SeoDescription) ? page.SeoAbstract?.ToText(' ') : page.SeoDescription),
                     new XElement(rssFeedNamespace + "guid", new XAttribute("isPermaLink", "false"), page.Key.ToString("n")),
                     page.SeoThumbnail != null ? new XElement(rssFeedNamespace + "image", new Uri(viewService.CurrentUri, page.SeoThumbnail?.GetCropUrl(EditorImageCrops.Card))) : null);
 

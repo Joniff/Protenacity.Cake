@@ -94,12 +94,12 @@ public class EditorSearchInternalService(
 
     private string? RichTextField(BlockItemData block, string alias) =>
         RichTextPropertyEditorHelper.TryParseRichTextEditorValue(block.Value<string>(alias), jsonSerializer, logger, out var value)
-        ? WebUtility.HtmlDecode(new HtmlEncodedString(value.Markup).ToText().ToString())
+        ? WebUtility.HtmlDecode(new HtmlEncodedString(value.Markup).ToText(' ').ToString())
         : null;
 
     private string? RichTextField(IContent content, string alias) =>
         RichTextPropertyEditorHelper.TryParseRichTextEditorValue(content.GetValue<string>(alias), jsonSerializer, logger, out var value)
-        ? WebUtility.HtmlDecode(new HtmlEncodedString(value.Markup).ToText().ToString())
+        ? WebUtility.HtmlDecode(new HtmlEncodedString(value.Markup).ToText(' ').ToString())
         : null;
 
     private string? RichTextBlocks(BlockItemData block, string alias)
@@ -123,7 +123,7 @@ public class EditorSearchInternalService(
                 {
                     if (RichTextPropertyEditorHelper.TryParseRichTextEditorValue(value.Value, jsonSerializer, logger, out var markup))
                     {
-                        results.Add(WebUtility.HtmlDecode(new HtmlEncodedString(markup.Markup).ToText().ToString() ?? string.Empty));
+                        results.Add(WebUtility.HtmlDecode(new HtmlEncodedString(markup.Markup).ToText(' ').ToString() ?? string.Empty));
                     }
                 }
             }
@@ -467,7 +467,6 @@ public class EditorSearchInternalService(
         }
         return new Tuple<int, IEnumerable<string>>(lowest, didYouMean);
     }
-
 
     private static string? HighlightMatches(string? value, int start, IEnumerable<Fragment> fragments, IEditorSearchOptions options)
     {
